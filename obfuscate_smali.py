@@ -4,8 +4,12 @@ import random
 from os import remove
 from shutil import move
 from urllib3.connectionpool import xrange
+import threading
+from queue import Queue
 
-
+NOP_REPLACEMENT_COUNT = 0
+FILE = 0
+NOP_VALID_OP_CODE_LIST=1
 
 def remove_new_line(file):
     with open(file, "r+") as in_file:
@@ -41,21 +45,54 @@ def open_file_input(file_name):  # Open a file for inline editing
 def random_nop_interval():  # Randomize the number of nop(s)
     return random.sample(xrange(3), 1)[0]+1
 
-def change_all_file(smali_file_list):
+
+def threader(my_queue):
+    # This function will get the item from the queue and run the function port_scan
+    while True:
+        item = my_queue.get()
+        add_nop_in_method(item[FILE], item[NOP_VALID_OP_CODE_LIST])
+        remove_new_line(item[FILE])
+        my_queue.task_done()
+
+
+def change_all_file(smali_file_list, file_list_size):
     """Add the nop in all the smali class file"""
     """Whack all the function haha"""
+    global NOP_REPLACEMENT_COUNT
+    my_queue = Queue()
+    # This function will create the worker/threads
+    for x in range(100):
+        t = threading.Thread(target=threader, args=(my_queue,))
+        t.daemon = True
+        t.start()
+
+    print("Total Number of Files to Scan: " + str(file_list_size))
+    print("Average waiting time: " + str((file_list_size / 60) / 2) + " seconds.")
     print("Generating Junk NOP...")
+    opcode_list = get_valid_op_code()
     for smali_file in smali_file_list:  # For each file
-        add_nop_in_method(smali_file, get_valid_op_code())
-        remove_new_line(smali_file)
+        my_queue.put([smali_file, opcode_list])
+        # remove_new_line(smali_file)
+    my_queue.join()
+    print("Total Number of files with generated NOP: " + str(NOP_REPLACEMENT_COUNT))
     print("Removing all new lines...")
 
 
 def add_nop_in_method(smali_file, valid_op_code):
     """Add multiple nop sequence of random length (1-3) between two nop-valid instruction"""
+    global NOP_REPLACEMENT_COUNT
     count = 0
     overwrite_flag = False
-    with open(smali_file,'r+') as in_file, open("temp123123.txt", 'w') as out_file:
+
+    """Generate new temp file to be accessed, due to multithreaded. It might access the same file name, therefore causing an error"""
+    file_name_item = str(smali_file).split("\\")
+    file_name = file_name_item.pop()
+    file_name = "new_" + file_name
+    file_name_item.append(file_name)
+    file_name = "\\".join(file_name_item)
+
+
+    with open(smali_file,'r+') as in_file, open(file_name, 'w') as out_file:
         smali_content = in_file.readlines()
         for smali_line in smali_content:
             out_file.write(smali_line)
@@ -74,23 +111,10 @@ def add_nop_in_method(smali_file, valid_op_code):
                 pass
 
     if overwrite_flag:
-        print("Writing NOP to : " + smali_file)
         remove(smali_file)
-        move("temp123123.txt",smali_file)
+        move(file_name,smali_file)
+        NOP_REPLACEMENT_COUNT +=1
+    else:
+        remove(file_name)
 
-
-    # count = 0
-    # for smali_line in open_file_input(smali_file):  # For each line
-    #     line_op_code = re.search(r'^([ ]*)(?P<opCode>([^ ]+)) ', smali_line)
-    #     if line_op_code is not None:
-    #         op_code = line_op_code.group('opCode')
-    #         if op_code in valid_op_code:
-    #             if count == 0:
-    #                 print("Writing NOP to : " + smali_file)
-    #                 count +=1
-    #                 nop_count = random_nop_interval()  # Randomize the number of nop(s)
-    #                 print('    nop\n' * nop_count)
-    #             else:
-    #                 nop_count = random_nop_interval()  # Randomize the number of nop(s)
-    #                 print('    nop\n' * nop_count)
 
