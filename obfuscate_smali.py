@@ -47,7 +47,7 @@ def random_nop_interval():  # Randomize the number of nop(s)
 
 
 def threader(my_queue):
-    # This function will get the item from the queue and run the function port_scan
+    # This function will get the item from the queue and run the function add_nop_in_method()
     while True:
         item = my_queue.get()
         add_nop_in_method(item[FILE], item[NOP_VALID_OP_CODE_LIST])
@@ -70,6 +70,12 @@ def change_all_file(smali_file_list, file_list_size):
     print("Average waiting time: " + str((file_list_size / 60) / 2) + " seconds.")
     print("Generating Junk NOP...")
     opcode_list = get_valid_op_code()
+
+    my_file = open('file_list.txt','w')
+    for item in smali_file_list:
+        my_file.write(item+'\n')
+    my_file.close
+
     for smali_file in smali_file_list:  # For each file
         my_queue.put([smali_file, opcode_list])
         # remove_new_line(smali_file)
