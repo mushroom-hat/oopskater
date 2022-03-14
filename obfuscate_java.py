@@ -2,7 +2,7 @@ import re
 
 TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 OBFUS_TESTFILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\test.java"
-FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\RecordFragment.java"
+FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 
 OK = 1
 BAD = 0
@@ -34,6 +34,9 @@ def remove_empty_lines(line_dict):
     for line_number, line in list(line_dict.items()):
         if line == "\n":  # if line is an empty line, remove it from the dictionary
             del line_dict[line_number]
+
+        # remove spaces if there are two or more spaces
+        line_dict[line_number] = re.sub(' +', ' ', line)
 
     return change_key(line_dict)
 
