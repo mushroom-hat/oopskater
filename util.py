@@ -11,6 +11,15 @@ import string
 from contextlib import contextmanager
 
 LOCALS_PATTERN = re.compile(r"\s+\.locals\s(?P<local_count>\d+)")
+# .class <other_optional_stuff> <class_name;>  # Every class name ends with ;
+CLASS_PATTEN = re.compile(r"\.class.+?(?P<class_name>\S+?;)", re.UNICODE)
+# .method <other_optional_stuff> <method_name>(<param>)<return_type>
+METHOD_PATTEN = re.compile(
+    r"\.method.+?(?P<method_name>\S+?)"
+    r"\((?P<method_param>\S*?)\)"
+    r"(?P<method_return>\S+)",
+    re.UNICODE,
+)
 
 @contextmanager
 def inplace_edit_file(file_name: str):
@@ -60,3 +69,34 @@ def inplace_edit_file(file_name: str):
             os.unlink(backup_file_name)
         except OSError:
             pass
+
+
+def get_smali_method_overload():
+    return get_text_from_file(
+        os.path.join(
+            os.path.dirname(__file__),
+            "resources",
+            "smali",
+            "overloaded_method_body.smali",
+        )
+    )
+
+def get_text_from_file(file_name: str):
+    try:
+        with open(file_name, "r", encoding="utf-8") as file:
+            return file.read()
+    except Exception as e:
+            print('Error during reading file "{0}": {1}'.format(file_name, e))
+
+def get_random_list_permutations(input_list: list):
+    permuted_list = list(itertools.permutations(input_list))
+    random.shuffle(permuted_list)
+    return permuted_list
+
+def get_non_empty_lines_from_file(file_name: str):
+    try:
+        with open(file_name, "r", encoding="utf-8") as file:
+            # Return a list with the non-blank lines contained in the file.
+            return list(filter(None, (line.rstrip() for line in file)))
+    except Exception as e:
+        print('Error during reading file "{0}": {1}'.format(file_name, e))

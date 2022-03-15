@@ -5,10 +5,12 @@ import threading
 import obfuscate_smali_nop
 import obfuscate_smali_goto
 import obfuscate_smali_debug_removal
+import obfuscate_smali_overloading
 from queue import Queue
 
 NOP_REPLACEMENT_COUNT = 0
 DEBUG_REPLACEMENT_COUNT = 0
+OVERLOADING_REPLACEMENT_COUNT = 0
 
 def remove_new_line(file):
     with open(file, "r+") as in_file:
@@ -26,6 +28,7 @@ def threader(my_queue):
     # This function will get the item from the queue and run the function add_nop_in_method()
     global NOP_REPLACEMENT_COUNT
     global DEBUG_REPLACEMENT_COUNT
+    global OVERLOADING_REPLACEMENT_COUNT
     while True:
         file = my_queue.get()
         status_nop = obfuscate_smali_nop.add_nop_in_method(file)
@@ -34,6 +37,9 @@ def threader(my_queue):
         status_debug = obfuscate_smali_debug_removal.debugRemoval(file)
         if (status_debug):
             DEBUG_REPLACEMENT_COUNT += 1
+        status_overloading = obfuscate_smali_overloading.add_method_overloads(file)
+        if status_overloading:
+            OVERLOADING_REPLACEMENT_COUNT += 1
 
         # remove_new_line(item[FILE])
         my_queue.task_done()
@@ -64,6 +70,7 @@ def change_all_file(smali_file_list, file_list_size):
     my_queue.join()
     print("Total Number of files with generated NOP: " + str(NOP_REPLACEMENT_COUNT))
     print("Total Number of files with removed debugging line: " + str(DEBUG_REPLACEMENT_COUNT))
+    print("Total Number of files with overloading features added: " + str(OVERLOADING_REPLACEMENT_COUNT))
     print("Removing all new lines...")
 
 
