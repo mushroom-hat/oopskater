@@ -1,13 +1,13 @@
+import os
 import re
 import random
 
 # Change here
-TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
+# TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 OBFUS_TESTFILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\test.java"
 FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 VARIABLES_DICT = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\variables.dict"
-OK = 1
-BAD = 0
+TEST_DIR = r"C:\\Users\\tayzh\\Documents\\SIT\\Year 1 Sem 2\\ICT2207 Mobile Security\\Project\\Coursework2 (Working Dir)\\Java_Test_Files\\"
 
 # Takes in a java file as parameter, returns a dictionary that has line number as key and line as value.
 # Each line is separate by \r\n
@@ -39,6 +39,10 @@ def remove_empty_lines(line_dict):
 
         if line == "\n":  # if line is an empty line, remove it from the dictionary
             del line_dict[line_number]
+
+        # placement of statement might chance later
+        if "@Override" in line and "\n" in line:
+            line_dict[line_number] = line.replace("\n", "")
 
     return change_key(line_dict)
 
@@ -142,10 +146,10 @@ def dissect_code(line_dict):
         if "import" in line:
             import_statements.append(line)
 
-        if "public class" in line or "private class" in line:
+        if " class " in line or " class " in line:
             each_class.append(line)
             next_line = line_number + 1
-            while next_line <= len(line_dict) and ("public class" not in line_dict[next_line] or "private class" not in line_dict[next_line]):
+            while next_line <= len(line_dict) and (" class " not in line_dict[next_line] or " class " not in line_dict[next_line]):
                 each_class.append(line_dict[next_line])
                 next_line += 1
 
@@ -164,6 +168,7 @@ def write_to_file(line_dict):
 # NOT DONE
 def rename_variables(method):
     obfuscated_method = []
+    variable_types = ["String", "byte[]", "int", "float", "char", "boolean"]
     for line in method:
         methodname = re.search(r'([a-zA-Z0-9_]+) =', line)
         if methodname:
@@ -174,12 +179,23 @@ def rename_variables(method):
 
     return method
 
+
+# def rename_method_name(method):
+#     method_line = method[0]
+#     if "@Override" in method_line:  # don't replace method name if it is overwritten from somewhere else i.e., interfaces
+#     methodname = re.search(r'(?:(?:public)|(?:private)|(?:static)|(?:protected)\s+)*', method_line)
+#     print(methodname)
+#     #method_line = method_line.replace(methodname, random_obfuscated_string)
+#
+#     return 0
+
 # obfuscate each method in a class, returns a class
 def obfuscate(java_methods):
     methods = []
     obfuscated_methods = []
     for each_method in java_methods:
         print(each_method)
+        #each_method = rename_method_name(each_method)
         each_method = rename_variables(each_method)
         methods.append(each_method)
         obfuscated_methods = obfuscated_methods + each_method
@@ -187,25 +203,35 @@ def obfuscate(java_methods):
     return obfuscated_methods
 
 def main():
-    line_dict = readfile(FILEPATH)
-    code = []
 
-    #  dissecting java files into smaller functions for easier obfuscation
-    # java_classes = identify_java_classes(line_dict)
+    modified_package_statement = ""
+    modified_import_statements = []
+    modified_interface_statements = []
+    modified_class_definitions = []
 
-    # DATA OBFUSCATION -------------------
+    for filename in os.listdir(TEST_DIR):
+        line_dict = readfile(TEST_DIR + filename)
+        code = []
 
-    # DESIGN OBFUSCATION -----------------
+        #  dissecting java files into smaller functions for easier obfuscation
+        # java_classes = identify_java_classes(line_dict)
 
+        # DATA OBFUSCATION -------------------
 
-    # LAYOUT OBFUSCATION -----------------
-    line_dict = remove_comments(line_dict)
-    line_dict = remove_empty_lines(line_dict)
-    package_statement, import_statements, interface_statements, class_definitions = dissect_code(line_dict)
+        # DESIGN OBFUSCATION -----------------
+
+        # LAYOUT OBFUSCATION -----------------
+        line_dict = remove_comments(line_dict)
+        line_dict = remove_empty_lines(line_dict)
+
+        package_statement, import_statements, interface_statements, class_definitions = dissect_code(line_dict)
+        modified_package_statement = package_statement
+        modified_import_statements += import_statements
+        modified_interface_statements += interface_statements
+        modified_class_definitions += class_definitions
+
     obfuscated_classes = []
-
-
-    for each_class in class_definitions:
+    for each_class in modified_class_definitions:
         java_methods = identify_java_methods(each_class)
         obfuscated_classes.append(obfuscate(java_methods))
 
@@ -213,8 +239,8 @@ def main():
 
     # CONTROL FLOW OBFUSCATION ------------
 
-    # repackage into a
-    line_dict = repackage(package_statement, import_statements, interface_statements, obfuscated_classes)
+    # repackage into an apk
+    line_dict = repackage(modified_package_statement, set(modified_import_statements), modified_interface_statements, modified_class_definitions)
     write_to_file(line_dict)
     #  write_to_file(code)
 
@@ -222,6 +248,8 @@ def main():
 def repackage(package_statement, import_statements, interface_statements, obfuscated_classes):
     line_dict = {1: package_statement}
     line_number = 2  # start from line 2 as line 1 is occupied by package statement
+
+    header_class = False
     for imp in import_statements:
         line_dict[line_number] = imp
         line_number += 1
@@ -231,11 +259,20 @@ def repackage(package_statement, import_statements, interface_statements, obfusc
         line_number += 1
 
     for each_class in obfuscated_classes:
-        for line in each_class:
-            line_dict[line_number] = line
-            line_number += 1
+        if not header_class:
+            for line in each_class:
+                line_dict[line_number] = line
+                line_number += 1
+            header_class = True
+        else:
+            for line in each_class:
+                if "public class" in line:
+                    line = line.replace("public class", "class")
+                line_dict[line_number] = line
+                line_number += 1
 
     return line_dict
+
 
 if __name__ == '__main__':
     main()
