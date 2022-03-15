@@ -1,11 +1,9 @@
 # Import other python modules
 from PyQt5.QtGui import QIcon
-
-import bf_autocross
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
 import sys
+import main
 
 
 class Ui_MainWindow(object):
@@ -75,7 +73,7 @@ class Ui_MainWindow(object):
                 importedItem = self.op_dir[0].replace("/", r"\\")
                 self.label.setText(self.op_dir[0])
                 print(importedItem)
-                msg = bf_autocross.process_importedFile(importedItem)
+                msg = main.process_importedFile(importedItem)
 
         else:
             self.op_dir = QtWidgets.QFileDialog.getExistingDirectory(None, 'Select project folder:', '',
@@ -86,7 +84,7 @@ class Ui_MainWindow(object):
                 importedItem = self.op_dir.replace("/", r"\\")
                 self.label.setText(self.op_dir)
                 print("Imported Item: " + importedItem)
-                msg = bf_autocross.process_importedFile(importedItem)
+                msg = main.process_importedFile(importedItem)
 
         print(msg)
 

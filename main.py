@@ -2,7 +2,7 @@
 
 import os
 import obfuscate_smali
-import obfuscate_java
+# import obfuscate_java
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
@@ -65,10 +65,34 @@ def enumerate_directories(folderpath):
 
     return list_of_java_files, list_of_kt_files, list_of_smali_files
 
+def find_smali_files(dir):
+    files_list = []
+    extensions = ('.smali')
+    for subdir, dirs, files in os.walk(dir):
+        for file in files:
+            ext = os.path.splitext(file)[-1].lower()
+            if ext in extensions:
+                files_list.append(os.path.join(subdir, file))
+    return files_list
+
+def obfuscate_smali_file(dir):
+    # # Getting all smali fies in the directory
+    print("Looping Folder Directory to look for smali files.....")
+    list_of_smali_files = find_smali_files(dir)
+    list_of_cleaned_smali_files = []
+    for file_path in list_of_smali_files:
+        list_of_cleaned_smali_files.append(clean_smali_files_path(file_path))
+    obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files))
+
+
+
+def clean_smali_files_path(file_path):
+    obj = file_path.split("\\")
+    return "\\".join(list(filter(lambda x: x != "", obj)))
+
 
 def process_importedFile(importedFile):
     global TARGET_FOLDERPATH
-
     TARGET_FOLDERPATH = importedFile
     # if apk is supplied, decompile the apk into current directory
     if importedFile.endswith('.apk'):
@@ -93,11 +117,10 @@ def process_importedFile(importedFile):
                 print(lines.strip("\n"))
 
     # ---- OBFUSCATION PART
-
-
     if TARGET_FOLDERPATH != "":
+        obfuscate_smali_file(TARGET_FOLDERPATH)
         # lastly, recompile it back to APK
-        #recompile()
+        recompile()
         return "Success"
 
 
