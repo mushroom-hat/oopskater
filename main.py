@@ -12,8 +12,8 @@ import sys
 # TO-DO
 # get apk name, check for existing folders after recompiling, catch errors by java apktool
 
-OUTPUT_FOLDERPATH = ""  # the absolute path of folder where all decompiled files and recompiled APK will be stored at
-TARGET_FOLDERPATH = ""
+OUTPUT_FOLDER_PATH = ""  # the absolute path of folder where all decompiled files and recompiled APK will be stored at
+TARGET_FOLDER_PATH = ""
 
 
 
@@ -32,11 +32,11 @@ def decompile_apk(filepath):
 # recompile a directory of java/kotlin source codes OR smali files into an apk
 # MUST SUPPLY FOLDERPATH (containing obfuscated code)
 def recompile():
-    if TARGET_FOLDERPATH != "":
+    if TARGET_FOLDER_PATH != "":
         try:
             print("===== COMPILING BACK TO APK =====")
-            os.system("java -jar apktool.jar b \"{}\"".format(TARGET_FOLDERPATH))
-            print("APK successfully recompiled to {}\\dist\\".format(TARGET_FOLDERPATH))
+            os.system("java -jar apktool.jar b \"{}\"".format(TARGET_FOLDER_PATH))
+            print("APK successfully recompiled to {}\\dist\\".format(TARGET_FOLDER_PATH))
 
         except Exception as e:
             print(e)
@@ -75,6 +75,7 @@ def find_smali_files(dir):
                 files_list.append(os.path.join(subdir, file))
     return files_list
 
+
 def obfuscate_smali_file(dir):
     # # Getting all smali fies in the directory
     print("Looping Folder Directory to look for smali files.....")
@@ -84,6 +85,11 @@ def obfuscate_smali_file(dir):
         list_of_cleaned_smali_files.append(clean_smali_files_path(file_path))
     obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files))
 
+    """Testing output function"""
+    with open("file_list.txt", 'w') as output_file:
+        for item in list_of_cleaned_smali_files:
+            output_file.write(item + "\n")
+
 
 
 def clean_smali_files_path(file_path):
@@ -92,16 +98,16 @@ def clean_smali_files_path(file_path):
 
 
 def process_importedFile(importedFile):
-    global TARGET_FOLDERPATH
-    TARGET_FOLDERPATH = importedFile
+    global TARGET_FOLDER_PATH
+    TARGET_FOLDER_PATH = importedFile
     # if apk is supplied, decompile the apk into current directory
     if importedFile.endswith('.apk'):
         decompiled_directory = decompile_apk(importedFile)
-        TARGET_FOLDERPATH = decompiled_directory
+        TARGET_FOLDER_PATH = decompiled_directory
 
     # if file supplied is not an apk, it means it is a folder containing either android source code or smali files
     # proceed to enumerate the supplied folder for relevant files
-    java_files, kt_files, smali_files = enumerate_directories(TARGET_FOLDERPATH)
+    java_files, kt_files, smali_files = enumerate_directories(TARGET_FOLDER_PATH)
     if not java_files and not kt_files and not smali_files:
         return "No Smali/Java/Kotlin files found"
 
@@ -111,14 +117,12 @@ def process_importedFile(importedFile):
         for lines in f.readlines():
             # strip line spaces at the end
             lines = lines.rstrip()
-
             if ";" in lines:
-
                 print(lines.strip("\n"))
 
     # ---- OBFUSCATION PART
-    if TARGET_FOLDERPATH != "":
-        obfuscate_smali_file(TARGET_FOLDERPATH)
+    if TARGET_FOLDER_PATH != "":
+        obfuscate_smali_file(TARGET_FOLDER_PATH)
         # lastly, recompile it back to APK
         recompile()
         return "Success"
