@@ -8,6 +8,7 @@ import obfuscate_smali_debug_removal
 from queue import Queue
 
 NOP_REPLACEMENT_COUNT = 0
+DEBUG_REPLACEMENT_COUNT = 0
 
 def remove_new_line(file):
     with open(file, "r+") as in_file:
@@ -24,13 +25,16 @@ def remove_new_line(file):
 def threader(my_queue):
     # This function will get the item from the queue and run the function add_nop_in_method()
     global NOP_REPLACEMENT_COUNT
+    global DEBUG_REPLACEMENT_COUNT
     while True:
         file = my_queue.get()
-        status = obfuscate_smali_nop.add_nop_in_method(file)
-        if (status):
+        status_nop = obfuscate_smali_nop.add_nop_in_method(file)
+        if (status_nop):
             NOP_REPLACEMENT_COUNT += 1
+        status_debug = obfuscate_smali_debug_removal.debugRemoval(file)
+        if (status_debug):
+            DEBUG_REPLACEMENT_COUNT += 1
 
-        #obfuscate_smali_debug_removal.debugRemoval(file)
         # remove_new_line(item[FILE])
         my_queue.task_done()
 
@@ -47,7 +51,7 @@ def change_all_file(smali_file_list, file_list_size):
 
     print("Total Number of Files to Scan: " + str(file_list_size))
     print("Average waiting time: " + str((file_list_size / 60) / 2) + " seconds.")
-    print("Generating Junk NOP...")
+    print("Generating Junk NOP and Removing Debugging lines...")
 
     my_file = open('file_list.txt', 'w')
     for item in smali_file_list:
@@ -59,6 +63,7 @@ def change_all_file(smali_file_list, file_list_size):
         # remove_new_line(smali_file)
     my_queue.join()
     print("Total Number of files with generated NOP: " + str(NOP_REPLACEMENT_COUNT))
+    print("Total Number of files with removed debugging line: " + str(DEBUG_REPLACEMENT_COUNT))
     print("Removing all new lines...")
 
 
