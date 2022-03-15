@@ -1,12 +1,13 @@
 import re
+import random
 
+# Change here
 TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 OBFUS_TESTFILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\test.java"
 FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
-
+VARIABLES_DICT = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\variables.dict"
 OK = 1
 BAD = 0
-
 
 # Takes in a java file as parameter, returns a dictionary that has line number as key and line as value.
 # Each line is separate by \r\n
@@ -19,6 +20,7 @@ def readfile(filepath):
         line_number += 1
     return line_dict
 
+RENAME_DICT = readfile(VARIABLES_DICT)  ## this dictionary stores all the variables that were renamed and the renamed string
 
 def change_key(line_dict):
     temp_dict = {}
@@ -29,14 +31,14 @@ def change_key(line_dict):
 
     return temp_dict
 
-# takes in a dictionary of lines and remove empty lines
+# takes in a dictionary of lines and remove empty lines (i.e., new lines)
 def remove_empty_lines(line_dict):
     for line_number, line in list(line_dict.items()):
-        if line == "\n":  # if line is an empty line, remove it from the dictionary
-            del line_dict[line_number]
-
         # remove spaces if there are two or more spaces
         line_dict[line_number] = re.sub(' +', ' ', line)
+
+        if line == "\n":  # if line is an empty line, remove it from the dictionary
+            del line_dict[line_number]
 
     return change_key(line_dict)
 
@@ -105,7 +107,6 @@ def identify_java_methods(each_class):  # returns a list containing each functio
         number_of_function_lines = 0
         # check if line is the start of function
         if ("public" in line or "private" in line) and ("{" in line or "{" in each_class[line_number + 1]) and ";" not in line:  # start of function
-            print(line)
             # append current line and move to next line
             java_fn.append(line)
             next_line_number = line_number + 1
@@ -123,11 +124,7 @@ def identify_java_methods(each_class):  # returns a list containing each functio
 
     return methods
 
-# takes in a list of java functions and change variables in each function
-#def change_variable_names(java_functions):
-   # for function in java_functions:
 
-   # return java_functions
 
 # takes in a java source code and dissect it into the Java Structure. We are following the standard java structure for each file
 # 1) Package Statement
@@ -141,7 +138,6 @@ def dissect_code(line_dict):
     interface_statements = []
     class_definitions = []
     each_class = []
-
     for line_number, line in line_dict.items():
         if "import" in line:
             import_statements.append(line)
@@ -149,7 +145,7 @@ def dissect_code(line_dict):
         if "public class" in line or "private class" in line:
             each_class.append(line)
             next_line = line_number + 1
-            while ("public class" not in line_dict[next_line] or "private class" not in line) and next_line < len(line_dict):
+            while next_line <= len(line_dict) and ("public class" not in line_dict[next_line] or "private class" not in line_dict[next_line]):
                 each_class.append(line_dict[next_line])
                 next_line += 1
 
@@ -157,15 +153,38 @@ def dissect_code(line_dict):
 
     return package_statement, import_statements, interface_statements, class_definitions
 
-def write_to_file(code):
+def write_to_file(line_dict):
     obfus_code = []
     write_f = open(OBFUS_TESTFILE, "w")
 
-    for l in code:
-        for line in l:
-            write_f.write(line)
+    for line_number, line in line_dict.items():
+        write_f.write(line)
 
-# # Takes in the java code as parameter, returns a list of functions
+# takes in a list of java functions and change variables in each function
+# NOT DONE
+def rename_variables(method):
+    obfuscated_method = []
+    for line in method:
+        methodname = re.search(r'([a-zA-Z0-9_]+) =', line)
+        if methodname:
+            #print(methodname.group(0))
+            pass
+    random_numb = random.randint(0, 9999)
+    random_variable_name = list(RENAME_DICT[random_numb])
+
+    return method
+
+# obfuscate each method in a class, returns a class
+def obfuscate(java_methods):
+    methods = []
+    obfuscated_methods = []
+    for each_method in java_methods:
+        print(each_method)
+        each_method = rename_variables(each_method)
+        methods.append(each_method)
+        obfuscated_methods = obfuscated_methods + each_method
+
+    return obfuscated_methods
 
 def main():
     line_dict = readfile(FILEPATH)
@@ -183,21 +202,40 @@ def main():
     line_dict = remove_comments(line_dict)
     line_dict = remove_empty_lines(line_dict)
     package_statement, import_statements, interface_statements, class_definitions = dissect_code(line_dict)
+    obfuscated_classes = []
+
+
     for each_class in class_definitions:
         java_methods = identify_java_methods(each_class)
-        for m in java_methods:
-            print(m)
-        # obfuscate each method
+        obfuscated_classes.append(obfuscate(java_methods))
 
     # line_dict = remove_spaces(line_dict)
-    #java_functions = change_variable_names(java_functions)
 
     # CONTROL FLOW OBFUSCATION ------------
 
-
-
-    write_to_file(java_methods)
+    # repackage into a
+    line_dict = repackage(package_statement, import_statements, interface_statements, obfuscated_classes)
+    write_to_file(line_dict)
     #  write_to_file(code)
+
+# write all relevant lines into a dictionary for further writing to a file.
+def repackage(package_statement, import_statements, interface_statements, obfuscated_classes):
+    line_dict = {1: package_statement}
+    line_number = 2  # start from line 2 as line 1 is occupied by package statement
+    for imp in import_statements:
+        line_dict[line_number] = imp
+        line_number += 1
+
+    for interface in interface_statements:
+        line_dict[line_number] = interface
+        line_number += 1
+
+    for each_class in obfuscated_classes:
+        for line in each_class:
+            line_dict[line_number] = line
+            line_number += 1
+
+    return line_dict
 
 if __name__ == '__main__':
     main()
