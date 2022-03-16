@@ -1,3 +1,4 @@
+
 import logging
 import os
 import re
@@ -9,23 +10,20 @@ from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Util.Padding import pad
 
 #from obfuscapk import obfuscator_category
-from obfuscapk import util
-#from obfuscapk.obfuscation import
+import util
+#from obfuscapk.obfuscation import Obfuscation
+
+encryption_secret = "This-key-need-to-be-32-character"
 
 
-
-def encrypt_string(input_string: str):
+def encrypt_string(input_string, encryption_secret):
     input_string = input_string.encode(errors="replace").decode("unicode_escape")
     key = PBKDF2(password = encryption_secret, salt = encryption_secret.encode(), dkLen=32,count=128)
     encrypted_string = hexlify(AES.new(key=key, mode=AES.MODE_ECB).encrypt(pad(input_string.encode(errors="replace"),AES.block_size))).decode()
     return encrypted_string
 
-def obfuscateEnc(smali_file):
-    encryption_secret = "This-key-need-to-be-32-character"
-    encrypted_strings: Set[str] = set()
-    #print('Running "{0}" obfuscator'.format(self.__class__.__name__))
-    print('Encrypting constant strings in file "{0}"'.format(smali_file))
-
+def encrypt(smali_file):
+    print("Encrypting ", smali_file)
     # .field <other_optional_stuff> <string_name>:Ljava/lang/String; =
     # "<string_value>"
     static_string_pattern = re.compile(
@@ -33,68 +31,84 @@ def obfuscateEnc(smali_file):
         r'Ljava/lang/String;\s=\s"(?P<string_value>.+)"',
         re.UNICODE,
     )
-    with open(smali_file, "r", encoding="utf-8") as current_file:
-        lines = current_file.readlines()
 
-    class_name = None
-    # Static strings positions.
-    static_string_index: List[int] = []
+    encryption_secret = "This-key-need-to-be-32-character"
 
-    # Static string names.
-    static_string_name: List[str] = []
+    try:
+        encrypted_strings: Set[str] = set()
+        with open(smali_file, "r", encoding="utf-8") as current_file:
+            lines = current_file.readlines()
 
-    # Static string values.
-    static_string_value: List[str] = []
+        class_name = None
 
-    direct_methods_line = -1
-    static_constructor_line = -1
+        # Line numbers where a static string is declared.
+        static_string_index: List[int] = []
 
-    # Constant string positions.
-    string_index: List[int] = []
+        # Names of the static strings.
+        static_string_name: List[str] = []
 
-    # Registers containing the constant strings.
-    string_register: List[str] = []
+        # Values of the static strings.
+        static_string_value: List[str] = []
 
-    # Values of the constant strings.
-    string_value: List[str] = []
+        direct_methods_line = -1
+        static_constructor_line = -1
 
-    current_local_count = 0
-    for line_number, line in enumerate(lines):
+        # Line numbers where a constant string is declared.
+        string_index: List[int] = []
 
-        if not class_name:
-            class_match = util.class_pattern.match(line)
-            if class_match:
-                class_name = class_match.group("class_name")
+        # Registers containing the constant strings.
+        string_register: List[str] = []
+
+        # Values of the constant strings.
+        string_value: List[str] = []
+
+        current_local_count = 0
+        for line_number, line in enumerate(lines):
+
+            if not class_name:
+                class_match = util.class_pattern.match(line)
+                if class_match:
+                    class_name = class_match.group("class_name")
+                    continue
+
+            if line.startswith("# direct methods"):
+                direct_methods_line = line_number
                 continue
 
-        if line.startswith("# direct methods"):
-            direct_methods_line = line_number
-            continue
+            if line.startswith(".method") and line.strip().endswith(
+                "static constructor <clinit>()V"
+            ):
+                static_constructor_line = line_number
+                continue
 
-        if line.startswith(".method") and line.strip().endswith(
-            "static constructor <clinit>()V"
-        ):
-            static_constructor_line = line_number
-            continue
+            static_string_match = static_string_pattern.match(line)
+            if static_string_match and static_string_match.group(
+                "string_value"
+            ):
+                # A static non empty string initialization was found.
+                static_string_index.append(line_number)
+                static_string_name.append(
+                    static_string_match.group("string_name")
+                )
+                static_string_value.append(
+                    static_string_match.group("string_value")
+                )
 
-        static_string_match = static_string_pattern.match(line)
-        if static_string_match and static_string_match.group("string_value"):
-            # A static non empty string initialization was found.
-            static_string_index.append(line_number)
-            static_string_name.append(
-                static_string_match.group("string_name")
-            )
-            static_string_value.append(
-                static_string_match.group("string_value")
-            )
-
-            #check if register count exceeds 15 (>15 no encrypt)
+            # We are iterating the lines in order, so each time we enter a
+            # method we'll find the declaration with the number of local
+            # registers available. When we'll encounter a constant string later
+            # in the body of the method, we'll look at its register value and if
+            # it's greater than 15 we won't encrypt it (the invoke instruction
+            # that we need later won't take registers with values greater
+            # than 15).
             match = util.locals_pattern.match(line)
             if match:
                 current_local_count = int(match.group("local_count"))
                 continue
 
-            #if string has parameter regisster, check if register n + locals <=15
+            # If the constant string has a register v0-v15 we can proceed with
+            # the encryption, but if it uses a p<number> register, before
+            # encrypting we have to check if <number> + locals <= 15.
             string_match = util.const_string_pattern.match(line)
             if string_match and string_match.group("string"):
                 reg_type = string_match.group("register")[:1]
@@ -107,7 +121,8 @@ def obfuscateEnc(smali_file):
                     string_register.append(string_match.group("register"))
                     string_value.append(string_match.group("string"))
 
-        #Encrypt constant string_register
+        # Const string encryption.
+
         for string_number, index in enumerate(string_index):
             lines[index] = (
                 '\tconst-string/jumbo {register}, "{enc_string}"\n'
@@ -116,13 +131,14 @@ def obfuscateEnc(smali_file):
                 ";->decryptString(Ljava/lang/String;)Ljava/lang/String;\n"
                 "\n\tmove-result-object {register}\n".format(
                     register=string_register[string_number],
-                    enc_string=encrypt_string(string_value[string_number]),
+                    enc_string=encrypt_string(string_value[string_number],encryption_secret),
                 )
             )
 
             encrypted_strings.add(string_value[string_number])
 
-        #Encrypt static strings
+        # Static string encryption.
+
         static_string_encryption_code = ""
         for string_number, index in enumerate(static_string_index):
             # Remove the original initialization.
@@ -138,7 +154,7 @@ def obfuscateEnc(smali_file):
                 "\n\tsput-object v0, {class_name}->"
                 "{string_name}:Ljava/lang/String;\n\n".format(
                     enc_string=encrypt_string(
-                        static_string_value[string_number]
+                        static_string_value[string_number],encryption_secret
                     ),
                     class_name=class_name,
                     string_name=static_string_name[string_number],
@@ -183,3 +199,9 @@ def obfuscateEnc(smali_file):
         with open(smali_file, "w", encoding="utf-8") as current_file:
             current_file.writelines(lines)
 
+    except Exception as e:
+        print(
+            'Error during execution of "{0}" obfuscator: {1}')
+        raise
+
+encrypt("application/smali_classes3/com/example/myapplication/BuildConfig.smali")
