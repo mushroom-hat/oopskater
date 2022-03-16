@@ -3,8 +3,10 @@ import random
 import util
 
 PARAM_TYPES = ["Ljava/lang/String;", "Z", "B", "S", "C", "I", "F"]
+
+
 def add_method_overloads_to_file(smali_file, overloaded_method_body, class_names_to_ignore):
-    new_methods_num: int = 0
+    global PARAM_TYPES
     with util.inplace_edit_file(smali_file) as (in_file, out_file):
         skip_remaining_lines = False
         class_name = None
@@ -66,13 +68,12 @@ def add_method_overloads_to_file(smali_file, overloaded_method_body, class_names
                     )
                     out_file.write(overloaded_signature)
                     out_file.write(overloaded_method_body)
-                    new_methods_num += 1
                 # Print original method.
                 out_file.write(line)
-
             else:
                 out_file.write(line)
     return 1
+
 
 def get_android_class_names(file_name):
     return util.get_non_empty_lines_from_file(file_name)
@@ -82,13 +83,9 @@ def add_method_overloads(smali_file):
     try:
         method_overload_body_file = open("resources/overloaded_method_body.smali.txt", "r", encoding="utf-8")
         overloaded_method_body = method_overload_body_file.read()
-
-        if add_method_overloads_to_file(
-            smali_file, overloaded_method_body, set(get_android_class_names("resources/android_class_names_api.txt"))
-        ):
+        if add_method_overloads_to_file(smali_file, overloaded_method_body,
+                                        set(get_android_class_names("resources/android_class_names_api.txt"))):
             return 1
         return 0
     except:
         return 0
-
-

@@ -4,6 +4,10 @@ import os
 import random
 import re
 import string
+from hashlib import md5
+
+
+from tqdm import tqdm
 
 ########################################################################################
 #                                Common regex patterns.                                #
@@ -20,6 +24,10 @@ METHOD_PATTEN = re.compile(
     r"(?P<method_return>\S+)",
     re.UNICODE,
 )
+
+def get_string_md5(input_string: str) -> str:
+    return md5(input_string.encode()).hexdigest()
+
 
 @contextmanager
 def inplace_edit_file(file_name: str):
@@ -70,6 +78,20 @@ def inplace_edit_file(file_name: str):
         except OSError:
             pass
 
+# When iterating over list L, "for element in show_list_progress(L, interactive=True)"
+# will show a progress bar. When setting "interactive=False", no progress bar will be
+# shown. While using this method, no other code should write to standard output.
+def show_list_progress(the_list: list,interactive: bool = False,unit: str = "file",description: str = None):
+    if not interactive:
+        return the_list
+    else:
+        return tqdm(
+            the_list,
+            dynamic_ncols=True,
+            unit=unit,
+            desc=description,
+            bar_format="{l_bar}{bar}|[{elapsed}<{remaining}, {rate_fmt}]",
+        )
 
 def get_smali_method_overload():
     return get_text_from_file(
@@ -100,3 +122,7 @@ def get_non_empty_lines_from_file(file_name: str):
             return list(filter(None, (line.rstrip() for line in file)))
     except Exception as e:
         print('Error during reading file "{0}": {1}'.format(file_name, e))
+
+
+def get_random_string(length: int) -> str:
+    return "".join(random.choices(string.ascii_letters, k=length))
