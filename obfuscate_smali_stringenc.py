@@ -1,4 +1,3 @@
-
 import logging
 import os
 import re
@@ -10,11 +9,35 @@ from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Util.Padding import pad
 
 #from obfuscapk import obfuscator_category
-import util
+# import util
 #from obfuscapk.obfuscation import Obfuscation
 
 encryption_secret = "This-key-need-to-be-32-character"
+# .class <other_optional_stuff> <class_name;>  # Every class name ends with ;
+classPattern = re.compile(r"\.class.+?(?P<class_name>\S+?;)", re.UNICODE)
+# .locals <number>
+locPattern = re.compile(r"\s+\.locals\s(?P<local_count>\d+)")
+# <spaces> const-string <register>, "<string>"  # This also matches const-string/jumbo
+consStrPattern = re.compile(r"\s+const-string(/jumbo)?\s(?P<register>[vp0-9]+),\s" r'"(?P<string>.+)"',re.UNICODE,)
 
+def get_text_from_file(file_name: str) -> str:
+    try:
+        with open(file_name, "r", encoding="utf-8") as file:
+            return file.read()
+    except Exception as e:
+        print('Error during reading file "{0}": {1}'.format(file_name, e))
+        raise
+
+def get_decrypt_string_smali_code(encryption_secret: str) -> str:
+    text = get_text_from_file(
+        os.path.join(
+            os.path.dirname(__file__), "resources", "smali", "DecryptString.smali"
+        )
+    )
+    return replace_default_secret_key(text, encryption_secret)
+
+def replace_default_secret_key(text: str, encryption_secret: str) -> str:
+    return text.replace("This-key-need-to-be-32-character", encryption_secret)
 
 def encrypt_string(input_string, encryption_secret):
     input_string = input_string.encode(errors="replace").decode("unicode_escape")
@@ -22,17 +45,15 @@ def encrypt_string(input_string, encryption_secret):
     encrypted_string = hexlify(AES.new(key=key, mode=AES.MODE_ECB).encrypt(pad(input_string.encode(errors="replace"),AES.block_size))).decode()
     return encrypted_string
 
-def encrypt(smali_file):
+def encrypt(smali_file, encryption_secret):
     print("Encrypting ", smali_file)
     # .field <other_optional_stuff> <string_name>:Ljava/lang/String; =
     # "<string_value>"
-    static_string_pattern = re.compile(
+    staticStringPattern = re.compile(
         r"\.field.+?static.+?(?P<string_name>\S+?):"
         r'Ljava/lang/String;\s=\s"(?P<string_value>.+)"',
         re.UNICODE,
-    )
-
-    encryption_secret = "This-key-need-to-be-32-character"
+)
 
     try:
         encrypted_strings: Set[str] = set()
@@ -42,16 +63,16 @@ def encrypt(smali_file):
         class_name = None
 
         # Line numbers where a static string is declared.
-        static_string_index: List[int] = []
+        staticStringPos: List[int] = []
 
         # Names of the static strings.
-        static_string_name: List[str] = []
+        staticStringName: List[str] = []
 
         # Values of the static strings.
-        static_string_value: List[str] = []
+        staticStringVal: List[str] = []
 
-        direct_methods_line = -1
-        static_constructor_line = -1
+        methodsLines = -1
+        constructorPos = -1
 
         # Line numbers where a constant string is declared.
         string_index: List[int] = []
@@ -66,31 +87,31 @@ def encrypt(smali_file):
         for line_number, line in enumerate(lines):
 
             if not class_name:
-                class_match = util.class_pattern.match(line)
+                class_match = classPattern.match(line)
                 if class_match:
                     class_name = class_match.group("class_name")
                     continue
 
             if line.startswith("# direct methods"):
-                direct_methods_line = line_number
+                methodsLines = line_number
                 continue
 
             if line.startswith(".method") and line.strip().endswith(
                 "static constructor <clinit>()V"
             ):
-                static_constructor_line = line_number
+                constructorPos = line_number
                 continue
 
-            static_string_match = static_string_pattern.match(line)
+            static_string_match = staticStringPattern.match(line)
             if static_string_match and static_string_match.group(
                 "string_value"
             ):
                 # A static non empty string initialization was found.
-                static_string_index.append(line_number)
-                static_string_name.append(
+                staticStringPos.append(line_number)
+                staticStringName.append(
                     static_string_match.group("string_name")
                 )
-                static_string_value.append(
+                staticStringVal.append(
                     static_string_match.group("string_value")
                 )
 
@@ -101,7 +122,7 @@ def encrypt(smali_file):
             # it's greater than 15 we won't encrypt it (the invoke instruction
             # that we need later won't take registers with values greater
             # than 15).
-            match = util.locals_pattern.match(line)
+            match = locPattern.match(line)
             if match:
                 current_local_count = int(match.group("local_count"))
                 continue
@@ -109,7 +130,7 @@ def encrypt(smali_file):
             # If the constant string has a register v0-v15 we can proceed with
             # the encryption, but if it uses a p<number> register, before
             # encrypting we have to check if <number> + locals <= 15.
-            string_match = util.const_string_pattern.match(line)
+            string_match = consStrPattern.match(line)
             if string_match and string_match.group("string"):
                 reg_type = string_match.group("register")[:1]
                 reg_number = int(string_match.group("register")[1:])
@@ -140,7 +161,7 @@ def encrypt(smali_file):
         # Static string encryption.
 
         static_string_encryption_code = ""
-        for string_number, index in enumerate(static_string_index):
+        for string_number, index in enumerate(staticStringPos):
             # Remove the original initialization.
             lines[index] = "{0}\n".format(lines[index].split(" = ")[0])
 
@@ -154,33 +175,33 @@ def encrypt(smali_file):
                 "\n\tsput-object v0, {class_name}->"
                 "{string_name}:Ljava/lang/String;\n\n".format(
                     enc_string=encrypt_string(
-                        static_string_value[string_number],encryption_secret
+                        staticStringVal[string_number],encryption_secret
                     ),
                     class_name=class_name,
-                    string_name=static_string_name[string_number],
+                    string_name=staticStringName[string_number],
                 )
             )
 
-            encrypted_strings.add(static_string_value[string_number])
+            encrypted_strings.add(staticStringVal[string_number])
 
         if static_string_encryption_code != "":
-            if static_constructor_line != -1:
+            if constructorPos != -1:
                 # Add static string encryption to the existing static constructor.
-                local_match = util.locals_pattern.match(
-                    lines[static_constructor_line + 1]
+                local_match = locPattern.match(
+                    lines[constructorPos + 1]
                 )
                 if local_match:
                     # At least one register is needed.
                     local_count = int(local_match.group("local_count"))
                     if local_count == 0:
-                        lines[static_constructor_line + 1] = "\t.locals 1\n"
-                    lines[static_constructor_line + 2] = "\n{0}".format(
+                        lines[constructorPos + 1] = "\t.locals 1\n"
+                    lines[constructorPos + 2] = "\n{0}".format(
                         static_string_encryption_code
                     )
             else:
                 # Add a new static constructor for the static string encryption.
-                if direct_methods_line != -1:
-                    new_constructor_line = direct_methods_line
+                if methodsLines != -1:
+                    new_constructor_line = methodsLines
                 else:
                     new_constructor_line = len(lines) - 1
 
@@ -199,9 +220,28 @@ def encrypt(smali_file):
         with open(smali_file, "w", encoding="utf-8") as current_file:
             current_file.writelines(lines)
 
+            # encryption_secret = obfuscation_info.encryption_secret
+            obfuscationDecryptflag = False;
+            if (
+                    not obfuscationDecryptflag and encrypted_strings
+            ):
+                # Add to the app the code for decrypting the encrypted strings. The code
+                # for decrypting can be put in any smali directory, since it will be
+                # moved to the correct directory when rebuilding the application.
+                destination_dir = os.path.dirname(smali_file)
+                destination_file = os.path.join(destination_dir, "DecryptString.smali")
+                with open(
+                        destination_file, "w", encoding="utf-8"
+                ) as decrypt_string_smali:
+                    decrypt_string_smali.write(
+                        get_decrypt_string_smali_code(encryption_secret)
+                    )
+                    obfuscationDecryptflag = True
+        print(len(encrypted_strings)," strings encrypted")
     except Exception as e:
         print(
             'Error during execution of "{0}" obfuscator: {1}')
         raise
 
-encrypt("application/smali_classes3/com/example/myapplication/BuildConfig.smali")
+encrypt("application/smali_classes3/com/example/myapplication/BuildConfig.smali", "This-key-need-to-be-32-character")
+
