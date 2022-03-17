@@ -14,18 +14,9 @@ from tqdm import tqdm
 ########################################################################################
 from contextlib import contextmanager
 
-locPattern = re.compile(r"\s+\.locals\s(?P<local_count>\d+)")
-
+LOCALS_PATTERN = re.compile(r"\s+\.locals\s(?P<local_count>\d+)")
 # .class <other_optional_stuff> <class_name;>  # Every class name ends with ;
-classPattern = re.compile(r"\.class.+?(?P<class_name>\S+?;)", re.UNICODE)
-
-# <spaces> const-string <register>, "<string>"  AND const-string/jumbo
-consStrPattern = re.compile(
-    r"\s+const-string(/jumbo)?\s(?P<register>[vp0-9]+),\s" r'"(?P<string>.+)"',
-    re.UNICODE,
-)
-
-
+CLASS_PATTEN = re.compile(r"\.class.+?(?P<class_name>\S+?;)", re.UNICODE)
 # .method <other_optional_stuff> <method_name>(<param>)<return_type>
 METHOD_PATTEN = re.compile(
     r"\.method.+?(?P<method_name>\S+?)"
@@ -135,14 +126,3 @@ def get_non_empty_lines_from_file(file_name: str):
 
 def get_random_string(length: int) -> str:
     return "".join(random.choices(string.ascii_letters, k=length))
-
-def get_decrypt_string_smali_code(encryption_secret: str) -> str:
-    text = get_text_from_file(
-        os.path.join(
-            os.path.dirname(__file__), "resources", "smali", "DecryptString.smali"
-        )
-    )
-    return replace_default_secret_key(text, encryption_secret)
-
-def replace_default_secret_key(text: str, encryption_secret: str) -> str:
-    return text.replace("This-key-need-to-be-32-character", encryption_secret)
