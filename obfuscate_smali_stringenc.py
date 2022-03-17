@@ -46,7 +46,7 @@ def encrypt_string(input_string, encryption_secret):
     return encrypted_string
 
 def encrypt(smali_file, encryption_secret):
-    print("Encrypting ", smali_file)
+    print("Encrypting \"" + smali_file+"\"")
     # .field <other_optional_stuff> <string_name>:Ljava/lang/String; =
     # "<string_value>"
     staticStringPattern = re.compile(
@@ -237,11 +237,12 @@ def encrypt(smali_file, encryption_secret):
                         get_decrypt_string_smali_code(encryption_secret)
                     )
                     obfuscationDecryptflag = True
-        print(len(encrypted_strings)," strings encrypted")
+        if(len(encrypted_strings)!=0):
+            print("\n"+str(len(encrypted_strings))+" strings encrypted in \""+smali_file+"\"")
     except Exception as e:
         print(
             'Error during execution of "{0}" obfuscator: {1}')
         raise
 
-encrypt("application/smali_classes3/com/example/myapplication/BuildConfig.smali", "This-key-need-to-be-32-character")
+#encrypt("application/smali_classes3/com/example/myapplication/BuildConfig.smali", "This-key-need-to-be-32-character")
 

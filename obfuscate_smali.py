@@ -10,6 +10,8 @@ import obfuscate_smali_renaming
 import time
 from queue import Queue
 
+import obfuscate_smali_stringenc
+
 NOP_REPLACEMENT_COUNT = 0
 DEBUG_REPLACEMENT_COUNT = 0
 OVERLOADING_REPLACEMENT_COUNT = 0
@@ -31,11 +33,15 @@ def threader(my_queue):
     global NOP_REPLACEMENT_COUNT
     global DEBUG_REPLACEMENT_COUNT
     global OVERLOADING_REPLACEMENT_COUNT
+    global STRING_ENCRYPTION_COUNT
     while True:
         file = my_queue.get()
         status_nop = obfuscate_smali_nop.add_nop_in_method(file)
         if status_nop:
             NOP_REPLACEMENT_COUNT += 1
+        status_strEnc = obfuscate_smali_stringenc.encrypt(file,"This-key-need-to-be-32-character")
+        if status_strEnc:
+            STRING_ENCRYPTION_COUNT += 1
         status_debug = obfuscate_smali_debug_removal.debugRemoval(file)
         if status_debug:
             DEBUG_REPLACEMENT_COUNT += 1
