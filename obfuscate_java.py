@@ -29,7 +29,6 @@ def get_random_string():
     random_numb = random.randint(0, 9999)
     random_list = f.readlines()
     random_str = random_list[random_numb].replace("\n", "")
-
     return random_str
 def change_key(line_dict):
     temp_dict = {}
@@ -160,6 +159,7 @@ def identify_java_methods(each_class):  # returns a list containing each functio
                 temp.append(line)
             i += 1
     methods[-1].append(" }\n")
+
     return methods
 
 
@@ -200,9 +200,8 @@ def write_to_file(line_dict, output_file):
         write_f.write(line)
 
 
-# takes in a list of java functions and change variables in each function
-# NOT DONE
-def rename_variables(method):
+# populate a global dictionary with pre-obfuscated variable name and obfuscated string
+def generate_obfuscated_variables(method):
     global LIST_OF_SET_STRING
     variable_types = ["String", "byte", "byte[]", "int", "float", "char", "boolean", "File"]
     for line in method:
@@ -230,13 +229,8 @@ def rename_variables(method):
 #     return 0
 
 # obfuscate each method in a class, returns a class
-def obfuscate(java_methods):
-    obfuscated_methods = []
-    for each_method in java_methods:
-        #each_method = rename_method_name(each_method)
-        rename_variables(each_method)  # populate a global dictionary with pre-obfuscated variable name and obfuscated string
-        obfuscated_methods = obfuscated_methods + each_method
-    return obfuscated_methods
+
+# populate a global dictionary with pre-obfuscated variable name and obfuscated string
 
 
 def check_full_text(original_text, variable, new_text):
@@ -285,7 +279,7 @@ def check_full_text(original_text, variable, new_text):
     return new_text + original_text
 
 
-def check_again2(line, variable):
+def check_again(line, variable):
     quoted_word = r''
     quote_pattern = '"(.*?)"'
     pattern = '[^a-zA-Z0-9]' + variable + '[^a-zA-Z0-9 ]'
@@ -311,42 +305,43 @@ def check_again2(line, variable):
     new_line = line.replace("TEMPCHAR_FOR_QUOTED_PATTERN", quoted_word)
     return new_line
 
-def rename(java_methods):
+def rename_variables(methods):
     # obfuscate using that dictionary
     obfuscated_methods = []
-    for each_method in java_methods:
+    for each_method in methods:
         line_counter = 0
         for line in each_method:
+            quote_pattern = '"(.*?)"'
+            quote_match_list = re.findall(quote_pattern, line)
             for variable_name, obfuscated_string in RENAME_DICT.items():
-                quote_pattern = '"(.*?)"'
-                pattern = ' ' + variable_name + ' '
-                match1 = re.search(pattern, line)
-                if match1:
-                    line = re.sub(pattern, " " + obfuscated_string + " ", line)
-                    each_method[line_counter] = line
-
-                pattern = '[^a-zA-Z0-9]' + variable_name + '[^a-zA-Z0-9 ]'
-                match2 = re.search(pattern, line)
-                if match2:
-                    start = match2.group(0)[0]
-                    end = match2.group(0)[-1]
-                    quote_match = re.search(quote_pattern, line)
-                    if quote_match:
-                        each_method[line_counter] = check_again2(line, variable_name)
-                    else:
+                if not quote_match_list:  # if there are no quotes in the line, just obfuscate normally
+                    quote_pattern = '"(.*?)"'
+                    pattern = ' ' + variable_name + ' '
+                    match1 = re.search(pattern, line)
+                    if match1:
+                        line = re.sub(pattern, " " + obfuscated_string + " ", line)
+                        each_method[line_counter] = line
+                    pattern = '[^a-zA-Z0-9 ]' + variable_name + " "
+                    match3 = re.search(pattern, line)
+                    if match3:
+                        temp = line
+                        start = match3.group(0)[0]
+                        end = match3.group(0)[-1]
                         line = re.sub(pattern, start + obfuscated_string + end, line)
+                        # print(temp + " <====> " + line)
                         each_method[line_counter] = line
 
-                pattern = '[^a-zA-Z0-9 ]' + variable_name + " "
-                match3 = re.search(pattern, line)
-                if match3:
-                    temp = line
-                    start = match3.group(0)[0]
-                    end = match3.group(0)[-1]
-                    line = re.sub(pattern, start + obfuscated_string + end, line)
-                    # print(temp + " <====> " + line)
-                    each_method[line_counter] = line
-
+                else:   # if there is a quote match, handle it differently
+                    pattern = '[^a-zA-Z0-9]' + variable_name + '[^a-zA-Z0-9 ]'
+                    match2 = re.search(pattern, line)
+                    if match2:
+                        start = match2.group(0)[0]
+                        end = match2.group(0)[-1]
+                        if quote_match_list:
+                            each_method[line_counter] = check_again(line, variable_name)
+                        else:
+                            line = re.sub(pattern, start + obfuscated_string + end, line)
+                            each_method[line_counter] = line
 
             line_counter += 1
         obfuscated_methods.append(each_method)
@@ -355,7 +350,6 @@ def rename(java_methods):
 
 
 def main():
-    modified_package_statement = ""
 
     for filename in os.listdir(TEST_DIR):
         line_dict = readfile(TEST_DIR + filename)
@@ -375,15 +369,15 @@ def main():
         package_statement, import_statements, interface_statements, class_definitions = dissect_code(line_dict)
         obfuscated_classes = []
         for each_class in class_definitions:
-            print(each_class)
-            java_methods = identify_java_methods(each_class)
-            obfuscated_classes.append(obfuscate(java_methods))
-
-        obfuscated_classes = rename(obfuscated_classes)
+            java_methods = identify_java_methods(each_class)  # returns a list of methods in each class
+            for each_method in java_methods:
+                generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
+            java_methods = rename_variables(java_methods)
+            obfuscated_classes += java_methods
 
         # CONTROL FLOW OBFUSCATION ------------
         # repackage into an apk
-        line_dict = repackage(modified_package_statement, set(import_statements), interface_statements, obfuscated_classes)
+        line_dict = repackage(package_statement, set(import_statements), interface_statements, obfuscated_classes)
         #line_dict = remove_spaces(line_dict)
 
         output_filename = "obfuscated_" + filename
