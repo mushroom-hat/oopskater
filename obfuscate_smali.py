@@ -1,4 +1,4 @@
-import os
+
 import threading
 
 # Import custom function
@@ -34,14 +34,12 @@ def threader(my_queue):
     global DEBUG_REPLACEMENT_COUNT
     global OVERLOADING_REPLACEMENT_COUNT
     global STRING_ENCRYPTION_COUNT
-    global encryption_secret
-    encryption_secret = "This-key-need-to-be-32-character"
     while True:
         file = my_queue.get()
         status_nop = obfuscate_smali_nop.add_nop_in_method(file)
         if status_nop:
             NOP_REPLACEMENT_COUNT += 1
-        status_strEnc = obfuscate_smali_stringenc.encrypt(file,encryption_secret)
+        status_strEnc = obfuscate_smali_stringenc.encrypt(file,"This-key-need-to-be-32-character")
         if status_strEnc:
             STRING_ENCRYPTION_COUNT += 1
         status_debug = obfuscate_smali_debug_removal.debugRemoval(file)
@@ -95,25 +93,8 @@ def change_all_file(smali_file_list, file_list_size):
     print("Total Number of files with generated NOP: " + str(NOP_REPLACEMENT_COUNT))
     print("Total Number of files with removed debugging line: " + str(DEBUG_REPLACEMENT_COUNT))
     print("Total Number of files with overloading features added: " + str(OVERLOADING_REPLACEMENT_COUNT))
-    print("Total Number of files with strings encrypted: " + str(OVERLOADING_REPLACEMENT_COUNT))
     print("Removing all new lines...")
-    if(OVERLOADING_REPLACEMENT_COUNT>0):
-        obfuscationDecryptflag = False;
-        if (
-                not obfuscationDecryptflag
-        ):
-            # Add to the app the code for decrypting the encrypted strings. The code
-            # for decrypting can be put in any smali directory, since it will be
-            # moved to the correct directory when rebuilding the application.
-            destination_dir = os.path.dirname(smali_file)
-            destination_file = os.path.join(destination_dir, "DecryptString.smali")
-            with open(
-                    destination_file, "w", encoding="utf-8"
-            ) as decrypt_string_smali:
-                decrypt_string_smali.write(
-                    obfuscate_smali_stringenc.get_decrypt_string_smali_code(encryption_secret)
-                )
-                obfuscationDecryptflag = True
+
 
 
     """============================================="""
