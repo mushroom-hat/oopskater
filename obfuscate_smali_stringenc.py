@@ -220,7 +220,7 @@ def encrypt(smali_file, encryption_secret):
         with open(smali_file, "w", encoding="utf-8") as current_file:
             current_file.writelines(lines)
 
-            # encryption_secret = obfuscation_info.encryption_secret
+            # # encryption_secret = obfuscation_info.encryption_secret
             # obfuscationDecryptflag = False;
             # if (
             #         not obfuscationDecryptflag and encrypted_strings
@@ -236,9 +236,10 @@ def encrypt(smali_file, encryption_secret):
             #         decrypt_string_smali.write(
             #             get_decrypt_string_smali_code(encryption_secret)
             #         )
-            #         obfuscationDecryptflag = True
+            #         # obfuscationDecryptflag = True
         if(len(encrypted_strings)!=0):
             print("\n"+str(len(encrypted_strings))+" strings encrypted in \""+smali_file+"\"")
+            return 1
     except Exception as e:
         print(
             'Error during execution of "{0}" obfuscator: {1}')
