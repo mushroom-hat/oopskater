@@ -137,10 +137,6 @@ class Ui_MainWindow(object):
                 for line in differ.compare(file_1.readlines(), file_2.readlines()):
                     file_out.write(line)
 
-
-
-
-
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
