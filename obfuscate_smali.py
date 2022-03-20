@@ -12,7 +12,7 @@ import obfuscate_smali_nop
 import obfuscate_smali_goto
 import obfuscate_smali_debug_removal
 import obfuscate_smali_overloading
-import obfuscate_smali_renaming
+import obfuscate_smali_field_renaming
 import time
 from queue import Queue
 
@@ -22,6 +22,9 @@ NOP_REPLACEMENT_COUNT = 0
 DEBUG_REPLACEMENT_COUNT = 0
 OVERLOADING_REPLACEMENT_COUNT = 0
 STRING_ENCRYPTION_COUNT =0
+RENAME_COUNT = 0
+GOTO_COUNT = 0
+
 ENC_SECRET = ""
 ANDROID_MANIFEST_FILE = "AndroidManifest.xml"
 ANDROID_MANIFEST_TREE = None
@@ -60,19 +63,20 @@ def threader(my_queue):
         status_debug = obfuscate_smali_debug_removal.debugRemoval(file)
         if status_debug:
             DEBUG_REPLACEMENT_COUNT += 1
-        # remove_new_line(item[FILE])
         my_queue.task_done()
 
 
-def change_all_file(smali_file_list, file_list_size, application_name):
-    global APPLICATION_NAME
-    global ANDROID_MANIFEST_FILE
+def change_all_file(smali_file_list, file_list_size, application_name, dir):
+    global APPLICATION_NAME, ANDROID_MANIFEST_FILE
+    global RENAME_COUNT, NOP_REPLACEMENT_COUNT, DEBUG_REPLACEMENT_COUNT, OVERLOADING_REPLACEMENT_COUNT, \
+        STRING_ENCRYPTION_COUNT, GOTO_COUNT
     ANDROID_MANIFEST_FILE = "\\" + application_name + "\\" + ANDROID_MANIFEST_FILE
     APPLICATION_NAME = application_name
-    start_time = time.time()
 
-    """Add the nop in all the smali class file"""
-    """Whack all the function haha"""
+    """============================================="""
+    """ ======= Creating Multi Thread Queue ========"""
+    """============================================="""
+    start_time = time.time()
     my_queue = Queue()
     # This function will create the worker/threads
     for x in range(100):
@@ -81,20 +85,6 @@ def change_all_file(smali_file_list, file_list_size, application_name):
         t.start()
 
     print("Total Number of Files to Scan: " + str(file_list_size))
-
-
-    # """============================================="""
-    # """ ======== Rename Feature Declarations========"""
-    # """============================================="""
-    # print("Trying to rename some statements/declarations....")
-    # if obfuscate_smali_renaming.rename(ANDROID_MANIFEST_FILE, smali_file_list):
-    #     print("Renaming went well.")
-    # else:
-    #     print("Something went wrong with renaming... Exiting...")
-
-
-
-
     print("Generating Junk NOP and Removing Debugging lines...")
     print("Average waiting time: " + str((file_list_size / 60) / 2) + " seconds.")
 
@@ -105,6 +95,7 @@ def change_all_file(smali_file_list, file_list_size, application_name):
         my_file.write(item + '\n')
     my_file.close
 
+
     """===================================================="""
     """ Adding NOP, Overloading. Removing Debugging lines. """
     """===================================================="""
@@ -114,12 +105,22 @@ def change_all_file(smali_file_list, file_list_size, application_name):
         # remove_new_line(smali_file)
     my_queue.join()
 
+    """============================================="""
+    """ =========== Adding GOTO Statements =========="""
+    """============================================="""
+    GOTO_COUNT = 0
+    print("Adding Goto statements....")
+    for smali_file in smali_file_list:
+        if (obfuscate_smali_goto.add_goto(smali_file)):
+            GOTO_COUNT += 1
+
+    """=================================================="""
+    """ ======== Rename and Overloading Feature  ======="""
+    """=================================================="""
+    RENAME_COUNT = obfuscate_smali_field_renaming.rename(smali_file_list)
     OVERLOADING_REPLACEMENT_COUNT = obfuscate_smali_overloading.add_method_overloads(smali_file_list, [], 2)
 
-    print("Total Number of files with generated NOP: " + str(NOP_REPLACEMENT_COUNT))
-    print("Total Number of files with removed debugging line: " + str(DEBUG_REPLACEMENT_COUNT))
-    print("Total Number of files with overloading features added: " + str(OVERLOADING_REPLACEMENT_COUNT))
-    print("Total Number of files with encrypted strings: "+str(STRING_ENCRYPTION_COUNT))
+
     if(STRING_ENCRYPTION_COUNT>0):
         # Add to the app the code for decrypting the encrypted strings. The code
         # for decrypting can be put in any smali directory, since it will be
@@ -134,19 +135,18 @@ def change_all_file(smali_file_list, file_list_size, application_name):
             )
 
 
-    """============================================="""
-    """ ===========Adding GOTO Statements =========="""
-    """============================================="""
-    goto_count = 0
-    print("Adding Goto statements....")
-    for smali_file in smali_file_list:
-        if (obfuscate_smali_goto.add_goto(smali_file)):
-            goto_count += 1
-    print("Total files added with goto statement: " + str(goto_count))
-
-
-
+    print_statistics()
     end_time = time.time()
     print("Total execution time: " + str(end_time - start_time))
 
 
+def print_statistics():
+    global RENAME_COUNT, NOP_REPLACEMENT_COUNT, DEBUG_REPLACEMENT_COUNT, OVERLOADING_REPLACEMENT_COUNT, \
+        STRING_ENCRYPTION_COUNT, GOTO_COUNT
+
+    print("Total Number of line fields renamed: " + str(RENAME_COUNT))
+    print("Total Number of files with generated NOP: " + str(NOP_REPLACEMENT_COUNT))
+    print("Total Number of files with removed debugging line: " + str(DEBUG_REPLACEMENT_COUNT))
+    print("Total Number of files with overloading features added: " + str(OVERLOADING_REPLACEMENT_COUNT))
+    print("Total Number of files with goto lines added: " + str(GOTO_COUNT))
+    print("Total Number of files with encrypted strings: " + str(STRING_ENCRYPTION_COUNT))

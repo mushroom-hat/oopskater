@@ -151,129 +151,160 @@ def rename_class_declarations(list_of_smali_file, interactive: bool = False):
     return renamed_classes
 
 
-
-
-
-def rename_class_usages_in_smali(list_of_smali_files, rename_transformations, interactive: bool = False):
+def rename_class_usages_in_smali_file(smali_files, rename_transformations):
     global PACKAGE_NAME
     global ENCRYPTED_PACKAGE_NAME
-    dot_rename_transformations = slash_to_dot_notation_for_classes(rename_transformations)
     count = 0
+    filename = ""
+    rename_transformations = slash_to_dot_notation_for_classes(rename_transformations)
+
     # Adding package name.
+    rename_transformations[PACKAGE_NAME] = ENCRYPTED_PACKAGE_NAME
+
+    for smali_file in util.show_list_progress(smali_files,interactive=False,description="Renaming class usages"):
+        with util.inplace_edit_file(smali_file) as (in_file, out_file):
+            for line in in_file:
+                # Rename classes used as strings with . instead of /.
+                string_match = STRING_PATTERN.search(line)
+                if (string_match and string_match.group("string_value") in rename_transformations):
+                    line = line.replace(string_match.group("string_value"),
+                        rename_transformations[
+                            string_match.group("string_value")
+                        ],
+                    )
+
+                # Sometimes classes are used in annotations as strings
+                # without trailing ;
+                if (string_match and "{0};".format(string_match.group("string_value")) in rename_transformations):
+                    line = line.replace(
+                        string_match.group("string_value"),
+                        rename_transformations[
+                            "{0};".format(string_match.group("string_value"))
+                        ][:-1],
+                    )
+
+                # Rename classes used with the "classic" syntax
+                # (leading L and trailing ;).
+                class_names = util.CLASS_NAME_PATTEN.findall(line)
+                for class_name in class_names:
+                    if class_name in rename_transformations:
+                        line = line.replace(class_name, rename_transformations[class_name])
+
+                out_file.write(line)
+                count += 1
+                filename = smali_file
+        print("Renamed Classes in: " + filename)
+
+    return count
+
+def rename_class_usages_in_xml(xml_files, rename_transformations):
+    global PACKAGE_NAME
+    global ENCRYPTED_PACKAGE_NAME
+    count = 0
+    filename = ""
+    dot_rename_transformations = slash_to_dot_notation_for_classes(rename_transformations)
+
+    # Add package name.
     dot_rename_transformations[PACKAGE_NAME] = ENCRYPTED_PACKAGE_NAME
-    for smali_file in util.show_list_progress(list_of_smali_files,interactive=interactive,description="Renaming class usages in smali files"):
-        try:
-            with util.inplace_edit_file(smali_file) as (in_file, out_file):
-                for line in in_file:
-                    # Rename classes used as strings with . instead of /.
-                    string_match = STRING_PATTERN.search(line)
-                    if (
-                            string_match
-                            and string_match.group("string_value")
-                            in dot_rename_transformations
-                    ):
-                        line = line.replace(
-                            string_match.group("string_value"),
-                            dot_rename_transformations[
-                                string_match.group("string_value")
-                            ],
-                        )
-                        count += 1
 
-                    # Sometimes classes are used in annotations as strings without trailing ;
-                    if (
-                            string_match
-                            and "{0};".format(string_match.group("string_value"))
-                            in rename_transformations
-                    ):
-                        line = line.replace(
-                            string_match.group("string_value"),
-                            rename_transformations[
-                                "{0};".format(string_match.group("string_value"))
-                            ][:-1],
-                        )
-                        count += 1
+    for xml_file in util.show_list_progress(xml_files, interactive=False, description="Renaming xml files",):
+        with open(xml_file, "r", encoding="utf-8") as selected_file:
+            file_content = selected_file.read()
 
-                    # Rename classes used with the "classic" syntax (leading L and trailing ;).
-                    class_names = CLASS_NAME_PATTERN.findall(line)
-                    for class_name in class_names:
-                        if class_name in rename_transformations:
-                            line = line.replace(
-                                class_name, rename_transformations[class_name]
-                            )
-                            count += 1
-                    out_file.write(line)
-        except:
-            print("Error "+smali_file)
-            pass
+        # Replace strings from longest to shortest (to avoid replacing partial strings).
+        for old_name in sorted(dot_rename_transformations, reverse=True, key=len):
+            file_content = file_content.replace(old_name, dot_rename_transformations[old_name])
+            count += 1
+
+            # Activity without package name (".ActivityName")
+            if ('"{0}"'.format(old_name.replace(PACKAGE_NAME, ""))in file_content):
+                file_content = file_content.replace(
+                    '"{0}"'.format(old_name.replace(PACKAGE_NAME, "")),
+                    '"{0}"'.format(
+                        dot_rename_transformations[old_name].replace(ENCRYPTED_PACKAGE_NAME, "")
+                    ),
+                )
+                print("Renamed XML Classes in: " + filename)
+
+        with open(xml_file, "w", encoding="utf-8") as selected_file:
+            selected_file.write(file_content)
+            filename = xml_file
+
+
     return count
 
 
 
 
-
-""" Testing function """
-def rename(manifest_file, list_of_smali_files, interactive: bool = False):
+def rename(manifest_file, list_of_smali_files, dir):
     global PACKAGE_NAME
     global ENCRYPTED_PACKAGE_NAME
     global CLASS_NAME_TO_SMALI_FILE
-    manifest_file = str(manifest_file).replace("/",'\\')
-    manifest_file = os.getcwd() + "\\" + manifest_file
-    manifest_file = manifest_file.replace('\\\\', '\\')
-    print("Absolute Path: " + manifest_file)
-    Xml.register_namespace(
-        "android", "http://schemas.android.com/apk/res/android"
-    )
-    xml_parser = Xml.XMLParser(encoding="utf-8")
-    manifest_tree = Xml.parse(manifest_file, parser=xml_parser)
-    print("Manifest Tree: " + str(manifest_tree))
-    manifest_root = manifest_tree.getroot()
-    print("Manifest Root: " + str(manifest_root))
-    print("Mapping Android Manifest")
-    PACKAGE_NAME = manifest_root.get("package")
-    print("Package Name: " + str(PACKAGE_NAME))
+    try:
+        manifest_file = str(manifest_file).replace("/", '\\')
+        manifest_file = os.getcwd() + "\\" + manifest_file
+        manifest_file = manifest_file.replace('\\\\', '\\')
+        print("Absolute Path: " + manifest_file)
+        Xml.register_namespace("android", "http://schemas.android.com/apk/res/android")
+        xml_parser = Xml.XMLParser(encoding="utf-8")
+        manifest_tree = Xml.parse(manifest_file, parser=xml_parser)
+        print("Manifest Tree: " + str(manifest_tree))
+        manifest_root = manifest_tree.getroot()
+        print("Manifest Root: " + str(manifest_root))
+        print("Mapping Android Manifest")
+        PACKAGE_NAME = manifest_root.get("package")
+        print("Package Name: " + str(PACKAGE_NAME))
 
-    if not PACKAGE_NAME:
-        raise Exception(
-            "Unable to extract package name from application manifest"
-        )
+        if not PACKAGE_NAME:
+            raise Exception(
+                "Unable to extract package name from application manifest"
+            )
 
-    # Get a mapping between class name and smali file path.
-    for smali_file in util.show_list_progress(
-            list_of_smali_files,
-            interactive=interactive,
-            description="Class name to smali file mapping",
-    ):
-        with open(smali_file, "r", encoding="utf-8") as current_file:
-            class_name = None
-            for line in current_file:
-                if not class_name:
-                    # Every smali file contains a class.
-                    class_match = CLASS_PATTERN.match(line)
-                    if class_match:
-                        CLASS_NAME_TO_SMALI_FILE[
-                            class_match.group("class_name")
-                        ] = smali_file
-                        break
-    transform_package_name(manifest_root)
-    # Write the changes into the manifest file.
-    manifest_tree.write(manifest_file, encoding="utf-8")
-    xml_files: Set[str] = set(
-        os.path.join(root, file_name)
-        for root, dir_names, file_names in os.walk(
-            "application/res"
+        # Get a mapping between class name and smali file path.
+        for smali_file in util.show_list_progress(list_of_smali_files, interactive=False, description="Smali file mapping"):
+            with open(smali_file, "r", encoding="utf-8") as current_file:
+                class_name = None
+                for line in current_file:
+                    if not class_name:
+                        # Every smali file contains a class.
+                        class_match = CLASS_PATTERN.match(line)
+                        if class_match:
+                            CLASS_NAME_TO_SMALI_FILE[class_match.group("class_name")] = smali_file
+                            break
+        transform_package_name(manifest_root)
+        # Write the changes into the manifest file.
+        manifest_tree.write(manifest_file, encoding="utf-8")
+        resource_path = str((os.path.join(dir, "res", ""))).split("\\")
+        print(resource_path)
+        resource_path = [item for item in resource_path if item != '']
+        resource_path = "\\".join(resource_path)
+        print(resource_path)
+
+        print("Resources Path: " + resource_path)
+        xml_files: Set[str] = set(
+            os.path.join(root, file_name)
+            for root, dir_names, file_names in os.walk(resource_path)
+            for file_name in file_names
+            if file_name.endswith(".xml") and ("layout" in root or "xml" in root)  # Only res/layout-*/ and res/xml-*/ folders.
         )
-        for file_name in file_names
-        if file_name.endswith(".xml")
-        and (
-                "layout" in root or "xml" in root
-        )  # Only res/layout-*/ and res/xml-*/ folders.
-    )
-    xml_files.add(manifest_file)
-    print("Encrypted Package Name: " + str(ENCRYPTED_PACKAGE_NAME))
-    print("Done Mapping Android Manifest. \nTrying to rename classes")
-    class_rename_transformations = rename_class_declarations(list_of_smali_files)
-    count = rename_class_usages_in_smali(list_of_smali_files, class_rename_transformations)
-    print("Total Rename: " + str(count)+ " seconds.")
+        print(str(xml_files))
+        xml_files.add(manifest_file)
+        print("Encrypted Package Name: " + str(ENCRYPTED_PACKAGE_NAME))
+        print("Done Mapping Android Manifest. \nTrying to rename classes")
+
+
+        class_rename_transformations = rename_class_declarations(list_of_smali_files)
+
+        class_rename_count = rename_class_usages_in_smali_file(list_of_smali_files, class_rename_transformations)
+        print("Total Class Rename: " + str(class_rename_count) + ".")
+
+        print("Renaming XML Files Now.")
+        xml_rename_count = rename_class_usages_in_xml(list(xml_files),class_rename_transformations)
+        print("Total XML Rename: " + str(xml_rename_count) + ".")
+
+        return 1
+    except:
+        return 0
+
 
 
