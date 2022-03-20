@@ -60,8 +60,9 @@ def add_nop_in_method(smali_file):
         if overwrite_flag:
             remove(smali_file)
             move(file_name, smali_file)
+            return 1
         else:
             remove(file_name)
-        return 1
+            return 0
     except:
         return 0

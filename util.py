@@ -98,8 +98,7 @@ def get_smali_method_overload():
         os.path.join(
             os.path.dirname(__file__),
             "resources",
-            "smali",
-            "overloaded_method_body.smali",
+            "overloaded_method_body.smali.txt",
         )
     )
 
