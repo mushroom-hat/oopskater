@@ -13,6 +13,7 @@ import obfuscate_smali_goto
 import obfuscate_smali_debug_removal
 import obfuscate_smali_overloading
 import obfuscate_smali_field_renaming
+import obfuscate_smali_reflection
 import time
 from queue import Queue
 
@@ -105,6 +106,7 @@ def change_all_file(smali_file_list, file_list_size, application_name, dir):
         # remove_new_line(smali_file)
     my_queue.join()
 
+
     """============================================="""
     """ =========== Adding GOTO Statements =========="""
     """============================================="""
@@ -114,11 +116,13 @@ def change_all_file(smali_file_list, file_list_size, application_name, dir):
         if (obfuscate_smali_goto.add_goto(smali_file)):
             GOTO_COUNT += 1
 
-    """=================================================="""
-    """ ======== Rename and Overloading Feature  ======="""
-    """=================================================="""
+    """=========================================================="""
+    """ ======== Rename, Overloading Reflection Feature  ======="""
+    """========================================================="""
     RENAME_COUNT = obfuscate_smali_field_renaming.rename(smali_file_list)
     OVERLOADING_REPLACEMENT_COUNT = obfuscate_smali_overloading.add_method_overloads(smali_file_list, [], 2)
+    obfuscate_smali_reflection.reflection(smali_file_list)
+
 
 
     if(STRING_ENCRYPTION_COUNT>0):
