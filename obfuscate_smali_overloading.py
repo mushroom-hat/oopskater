@@ -7,10 +7,13 @@ PARAM_TYPES = ["Ljava/lang/String;", "Z", "B", "S", "C", "I", "F"]
 
 def add_method_overloads_to_file(smali_file, overloaded_method_body, class_names_to_ignore):
     global PARAM_TYPES
+    new_methods_num: int = 0
     with util.inplace_edit_file(smali_file) as (in_file, out_file):
+
         skip_remaining_lines = False
         class_name = None
         for line in in_file:
+
             if skip_remaining_lines:
                 out_file.write(line)
                 continue
@@ -68,24 +71,31 @@ def add_method_overloads_to_file(smali_file, overloaded_method_body, class_names
                     )
                     out_file.write(overloaded_signature)
                     out_file.write(overloaded_method_body)
+                    new_methods_num += 1
+
                 # Print original method.
                 out_file.write(line)
             else:
                 out_file.write(line)
-    return 1
+
+    return new_methods_num
 
 
 def get_android_class_names(file_name):
     return util.get_non_empty_lines_from_file(file_name)
 
 
-def add_method_overloads(smali_file):
-    try:
-        method_overload_body_file = open("resources/overloaded_method_body.smali.txt", "r", encoding="utf-8")
-        overloaded_method_body = method_overload_body_file.read()
-        if add_method_overloads_to_file(smali_file, overloaded_method_body,
-                                        set(get_android_class_names("resources/android_class_names_api.txt"))):
-            return 1
-        return 0
-    except:
-        return 0
+def add_method_overloads(smali_files, class_names_to_ignore, max_methods_to_add: int = 2, interactive: bool = False):
+    overloaded_method_body = util.get_smali_method_overload()
+    added_methods = 0
+    count = 0
+    for smali_file in util.show_list_progress(smali_files, interactive=interactive, description="Overload smali files"):
+
+        if added_methods < max_methods_to_add:
+            added_methods += add_method_overloads_to_file(
+                smali_file, overloaded_method_body, class_names_to_ignore
+            )
+            count += 1
+        else:
+            break
+    return count
