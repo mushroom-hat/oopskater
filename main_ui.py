@@ -1,7 +1,10 @@
 # Import other python modules
+from time import sleep
+
+from PyQt5.QtCore import QThread, pyqtSignal, QObject
 from PyQt5.QtGui import QIcon
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QFileDialog, QMessageBox
+from PyQt5.QtWidgets import QFileDialog, QMessageBox, QMainWindow
 import sys
 import main
 
@@ -67,27 +70,56 @@ class Ui_MainWindow(object):
 
     def importFile(self):
         print("Opening File Dialog...")
+        importedItem = None
         if self.checkDirectoryOrFile():
             self.op_dir = QFileDialog.getOpenFileName(None, "Open a file", "",
                                                       "All Files (*.*)'")
             if self.op_dir != ('', ''):
                 importedItem = self.op_dir[0].replace("/", r"\\")
                 self.label.setText(self.op_dir[0])
-                print(importedItem)
-                msg = main.process_importedFile(importedItem)
+                print("Imported File: " + importedItem)
 
         else:
             self.op_dir = QtWidgets.QFileDialog.getExistingDirectory(None, 'Select project folder:', '',
-                                                                      QtWidgets.QFileDialog.ShowDirsOnly)
+                                                                     QtWidgets.QFileDialog.ShowDirsOnly)
             print(self.op_dir)
 
             if self.op_dir != ('', ''):
                 importedItem = self.op_dir.replace("/", r"\\")
                 self.label.setText(self.op_dir)
                 print("Imported Item: " + importedItem)
-                msg = main.process_importedFile(importedItem)
 
-        print(msg)
+
+        self.worker = WorkerThreadProcessing(importedItem)
+        self.worker.start()
+        self.worker.finished.connect(self.evt_worker_finished)
+        self.worker.upgrade_progress.connect(self.evt_upgrade_progress)
+
+
+    def evt_worker_finished(self):
+        self.label.setText("Completed.")
+
+    def evt_upgrade_progress(self, value):
+        self.label.setText(value)
+
+
+class WorkerThreadProcessing(QThread):
+    upgrade_progress = pyqtSignal(str)
+
+    def __init__(self, importFile):
+        super().__init__()
+        self.importItem = importFile
+        print("In class: " + self.importItem)
+
+    def run(self):
+        print("Starting")
+        self.upgrade_progress.emit("Processing ... ")
+        self.result = main.process_importedFile(self.importItem, self.upgrade_progress)
+        if self.result == 1:
+            self.upgrade_progress.emit("Success :)")
+        else:
+            self.upgrade_progress.emit("Something went wrong.")
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
