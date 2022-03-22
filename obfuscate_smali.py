@@ -5,7 +5,7 @@ import util
 from typing import List, Set, Dict, Union
 from os import walk
 import xml.etree.cElementTree as Xml
-
+from cryptography.fernet import Fernet
 
 # Import custom function
 import obfuscate_smali_nop
@@ -52,15 +52,15 @@ def threader(my_queue):
     global OVERLOADING_REPLACEMENT_COUNT
     global STRING_ENCRYPTION_COUNT
     global ENC_SECRET
-    ENC_SECRET = "This-key-need-to-be-32-character"
+    ENC_SECRET = genSec(32)
     while True:
         file = my_queue.get()
         status_nop = obfuscate_smali_nop.add_nop_in_method(file)
         if status_nop:
             NOP_REPLACEMENT_COUNT += 1
-        status_strEnc = obfuscate_smali_stringenc.encrypt(file,ENC_SECRET)
-        if status_strEnc:
-            STRING_ENCRYPTION_COUNT += 1
+        # status_strEnc = obfuscate_smali_stringenc.encrypt(file,ENC_SECRET)
+        # if status_strEnc:
+        #     STRING_ENCRYPTION_COUNT += 1
         status_debug = obfuscate_smali_debug_removal.debugRemoval(file)
         if status_debug:
             DEBUG_REPLACEMENT_COUNT += 1
@@ -154,3 +154,8 @@ def print_statistics():
     print("Total Number of files with overloading features added: " + str(OVERLOADING_REPLACEMENT_COUNT))
     print("Total Number of files with goto lines added: " + str(GOTO_COUNT))
     print("Total Number of files with encrypted strings: " + str(STRING_ENCRYPTION_COUNT))
+
+def genSec(size):
+    keysec = Fernet.generate_key()
+    keysec = keysec[2:size+2]
+    return keysec
