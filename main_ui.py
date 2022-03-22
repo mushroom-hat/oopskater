@@ -7,7 +7,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QMessageBox, QMainWindow
 import sys
 import main
-
+import difflib
+from difflib import Differ
 
 class Ui_MainWindow(object):
 
@@ -31,11 +32,24 @@ class Ui_MainWindow(object):
         self.pushButton.setObjectName("pushButton")
         self.pushButton.clicked.connect(self.importFile)
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setMargin(15)
         self.label.setGeometry(QtCore.QRect(0, 560, 751, 61))
         self.label.setStyleSheet("font: 75 11pt \"Arial\";\n"
                                  "border-color: black;\n"
                                  "background-color: rgb(255, 255, 255);")
+
+        self.pushButton2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton2.setGeometry(QtCore.QRect(150, 400, 200, 61))
+        self.pushButton2.setStyleSheet("background-color: rgb(34, 196, 255);\n"
+                                      "font: 75 11pt \"Arial\" bold;\n"
+                                      "")
+        self.pushButton2.setObjectName("pushButton2")
+        self.pushButton2.clicked.connect(self.comparisonFile)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(0, 560, 751, 61))
+        self.label.setStyleSheet("font: 75 11pt \"Arial\";\n"
+                                 "border-color: black;\n"
+                                 "background-color: rgb(255, 255, 255);")
+
         self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -52,6 +66,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "Import"))
+        self.pushButton2.setText(_translate("MainWindow", "File Comparison"))
         self.label.setText(_translate("MainWindow", "Not File / Directory Selected."))
 
     def checkDirectoryOrFile(self):
@@ -101,6 +116,28 @@ class Ui_MainWindow(object):
 
     def evt_upgrade_progress(self, value):
         self.label.setText(value)
+
+    def comparisonFile(self):
+        self.op_dir = QFileDialog.getOpenFileName(None, "Open a file", "",
+                                                  "All Files (*.*)'")
+        if self.op_dir != ('', ''):
+            f1 = self.op_dir[0].replace("/", r"\\")
+            self.label.setText(self.op_dir[0])
+            print("First file: " + f1)
+
+        self.op_dir = QFileDialog.getOpenFileName(None, "Open a file", "",
+                                                  "All Files (*.*)'")
+
+        if self.op_dir != ('', ''):
+            f2 = self.op_dir[0].replace("/", r"\\")
+            self.label.setText(self.op_dir[0])
+            print("Second file: " + f2)
+
+        with open(f1) as file_1, open(f2) as file_2:
+            differ = Differ()
+            with open('diff.txt', 'w') as file_out:
+                for line in differ.compare(file_1.readlines(), file_2.readlines()):
+                    file_out.write(line)
 
 
 class WorkerThreadProcessing(QThread):
