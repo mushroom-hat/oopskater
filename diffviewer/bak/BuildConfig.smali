@@ -1,10 +1,10 @@
-.class public final Ledu/singaporetech/travelapp/BuildConfig;
+.class public final Lcom/example/myapplication/BuildConfig;
 .super Ljava/lang/Object;
 .source "BuildConfig.java"
 
 
 # static fields
-.field public static final APPLICATION_ID:Ljava/lang/String; = "edu.singaporetech.travelapp"
+.field public static final APPLICATION_ID:Ljava/lang/String; = "com.example.myapplication"
 
 .field public static final BUILD_TYPE:Ljava/lang/String; = "debug"
 
@@ -26,7 +26,7 @@
 
     move-result v0
 
-    sput-boolean v0, Ledu/singaporetech/travelapp/BuildConfig;->DEBUG:Z
+    sput-boolean v0, Lcom/example/myapplication/BuildConfig;->DEBUG:Z
 
     return-void
 .end method

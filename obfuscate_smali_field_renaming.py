@@ -13,7 +13,8 @@ def get_class_names(smali_files):
             for line in current_file:
                 class_match = util.CLASS_PATTEN.match(line)
                 if class_match:
-                    # This is probably a SDK class, but we have its declaration so we can change the fields inside it.
+                    # This is probably a SDK class, but we have its declaration so
+                    # we can change the fields inside it.
                     if class_match.group("class_name").startswith(("Landroid", "Ljava")):
                         class_names.add(class_match.group("class_name"))
                     # There is only one class declaration per file.

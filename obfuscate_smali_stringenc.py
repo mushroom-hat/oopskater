@@ -4,13 +4,11 @@ import re
 from binascii import hexlify
 from typing import List, Set
 
+#install pycryptodome for Crypto.cipher requirements
 from Crypto.Cipher import AES
 from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Util.Padding import pad
 
-#from obfuscapk import obfuscator_category
-# import util
-#from obfuscapk.obfuscation import Obfuscation
 
 encryption_secret = "This-key-need-to-be-32-character"
 # .class <other_optional_stuff> <class_name;>  # Every class name ends with ;
@@ -20,24 +18,18 @@ locPattern = re.compile(r"\s+\.locals\s(?P<local_count>\d+)")
 # <spaces> const-string <register>, "<string>"  # This also matches const-string/jumbo
 consStrPattern = re.compile(r"\s+const-string(/jumbo)?\s(?P<register>[vp0-9]+),\s" r'"(?P<string>.+)"',re.UNICODE,)
 
-def get_text_from_file(file_name: str) -> str:
+def get_decrypt_string_smali_code(encryption_secret):
+    fileName =  os.path.dirname(__file__), "resources", "smali", "DecryptString.smali"
     try:
-        with open(file_name, "r", encoding="utf-8") as file:
-            return file.read()
+        with open( fileName, "r", encoding="utf-8") as file:
+            text = file.read()
     except Exception as e:
-        print('Error during reading file "{0}": {1}'.format(file_name, e))
-        raise
+        print("ERROR CREATING DECRYPTOR FILE---Original File Cannot be Read at "+fileName+"\nException filed:\n"+str(e))
 
-def get_decrypt_string_smali_code(encryption_secret: str) -> str:
-    text = get_text_from_file(
-        os.path.join(
-            os.path.dirname(__file__), "resources", "smali", "DecryptString.smali"
-        )
-    )
-    return replace_default_secret_key(text, encryption_secret)
+    #replace default enc key
+    text = text.replace("This-key-need-to-be-32-character", encryption_secret)
+    return text
 
-def replace_default_secret_key(text: str, encryption_secret: str) -> str:
-    return text.replace("This-key-need-to-be-32-character", encryption_secret)
 
 def encrypt_string(input_string, encryption_secret):
     input_string = input_string.encode(errors="replace").decode("unicode_escape")
@@ -49,11 +41,7 @@ def encrypt(smali_file, encryption_secret):
     print("Encrypting \"" + smali_file+"\"")
     # .field <other_optional_stuff> <string_name>:Ljava/lang/String; =
     # "<string_value>"
-    staticStringPattern = re.compile(
-        r"\.field.+?static.+?(?P<string_name>\S+?):"
-        r'Ljava/lang/String;\s=\s"(?P<string_value>.+)"',
-        re.UNICODE,
-)
+    staticStringPattern = re.compile(r"\.field.+?static.+?(?P<string_name>\S+?):"r'Ljava/lang/String;\s=\s"(?P<string_value>.+)"',re.UNICODE,)
 
     try:
         encrypted_strings: Set[str] = set()
@@ -115,21 +103,13 @@ def encrypt(smali_file, encryption_secret):
                     static_string_match.group("string_value")
                 )
 
-            # We are iterating the lines in order, so each time we enter a
-            # method we'll find the declaration with the number of local
-            # registers available. When we'll encounter a constant string later
-            # in the body of the method, we'll look at its register value and if
-            # it's greater than 15 we won't encrypt it (the invoke instruction
-            # that we need later won't take registers with values greater
-            # than 15).
+            #check if const-string register value more than 15
             match = locPattern.match(line)
             if match:
                 current_local_count = int(match.group("local_count"))
                 continue
 
-            # If the constant string has a register v0-v15 we can proceed with
-            # the encryption, but if it uses a p<number> register, before
-            # encrypting we have to check if <number> + locals <= 15.
+            #if using p register, must check if register + locals <15
             string_match = consStrPattern.match(line)
             if string_match and string_match.group("string"):
                 reg_type = string_match.group("register")[:1]
@@ -142,8 +122,7 @@ def encrypt(smali_file, encryption_secret):
                     string_register.append(string_match.group("register"))
                     string_value.append(string_match.group("string"))
 
-        # Const string encryption.
-
+        #encrypt strings
         for string_number, index in enumerate(string_index):
             lines[index] = (
                 '\tconst-string/jumbo {register}, "{enc_string}"\n'
@@ -159,7 +138,6 @@ def encrypt(smali_file, encryption_secret):
             encrypted_strings.add(string_value[string_number])
 
         # Static string encryption.
-
         static_string_encryption_code = ""
         for string_number, index in enumerate(staticStringPos):
             # Remove the original initialization.

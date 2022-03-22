@@ -1,12 +1,12 @@
 # Import other python modules
-from time import sleep
+import os
 
-from PyQt5.QtCore import QThread, pyqtSignal, QObject
-from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import QThread, pyqtSignal
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QFileDialog, QMessageBox, QMainWindow
+from PyQt5.QtWidgets import QFileDialog, QMessageBox
 import sys
 import main
+import diffviewer.mainwindow as diffviewer
 
 
 class Ui_MainWindow(object):
@@ -96,8 +96,14 @@ class Ui_MainWindow(object):
         self.worker.upgrade_progress.connect(self.evt_upgrade_progress)
 
 
+
+
     def evt_worker_finished(self):
         self.label.setText("Completed.")
+        windows_diff = diffviewer.MainWindow()
+        windows_diff.start(os.getcwd() + '\\diffviewer\\bak', os.getcwd() + '\\diffviewer\\new')
+
+
 
     def evt_upgrade_progress(self, value):
         self.label.setText(value)
@@ -112,8 +118,8 @@ class WorkerThreadProcessing(QThread):
         print("In class: " + self.importItem)
 
     def run(self):
-        print("Starting")
         self.upgrade_progress.emit("Processing ... ")
+        print("Processing")
         self.result = main.process_importedFile(self.importItem, self.upgrade_progress)
         if self.result == 1:
             self.upgrade_progress.emit("Success :)")

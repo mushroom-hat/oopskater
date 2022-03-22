@@ -6,6 +6,7 @@ from time import sleep
 from PyQt5.QtCore import pyqtSignal
 
 import obfuscate_smali
+import obfuscate_smali_files
 # import obfuscate_java
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -47,10 +48,10 @@ def recompile():
             print("===== COMPILING BACK TO APK =====")
             os.system("java -jar apktool.jar b \"{}\"".format(TARGET_FOLDER_PATH))
             print("APK successfully recompiled to {}\\dist\\".format(TARGET_FOLDER_PATH))
-            print("===== GENERATING APK KEY =====")
-            os.system("keytool -genkey -v -keystore signing.keystore -keyalg RSA -keysize 2048 -validity 10000")
+            # print("===== GENERATING APK KEY =====")
+            # os.system("keytool -genkey -v -keystore signing.keystore -keyalg RSA -keysize 2048 -validity 10000")
             print("===== SIGNING APK w key =====")
-            os.system("build-tools\\32.0.0\\apksigner.bat sign --ks signing.keystore " + APPLICATION_NAME  + "\\dist\\" + APPLICATION_NAME + ".apk")
+            os.system("build-tools\\32.0.0\\apksigner.bat sign --ks signing.keystore --ks-pass pass:123123 " + APPLICATION_NAME  + "\\dist\\" + APPLICATION_NAME + ".apk")
 
 
 
@@ -114,7 +115,12 @@ def obfuscate_smali_file(dir):
                 list_of_cleaned_smali_files.append(filtered_file_path)
     except:
         print("Something went wrong finding smali files.")
+
+    obfuscate_smali_files.backup_files(list_of_cleaned_smali_files)
     obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME, dir)
+    obfuscate_smali_files.generate_new_files(list_of_cleaned_smali_files)
+
+
 
 
 
@@ -130,7 +136,7 @@ def process_importedFile(importedFile, ui_thread):
     global TARGET_FOLDER_PATH, UI_THREAD
     UI_THREAD = ui_thread
     TARGET_FOLDER_PATH = importedFile
-
+    print("Starting import")
     # if apk is supplied, decompile the apk into current directory
     if importedFile.endswith('.apk'):
         ui_thread.emit("Decompiling APK ... ")

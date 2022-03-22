@@ -14,6 +14,7 @@ import obfuscate_smali_debug_removal
 import obfuscate_smali_overloading
 import obfuscate_smali_field_renaming
 import obfuscate_smali_reflection
+import obfuscate_smali_remove_empty_spaces
 import time
 from queue import Queue
 
@@ -31,18 +32,6 @@ ANDROID_MANIFEST_FILE = "AndroidManifest.xml"
 ANDROID_MANIFEST_TREE = None
 ANDROID_MANIFEST_ROOT = None
 APPLICATION_NAME = ""
-
-
-def remove_new_line(file):
-    with open(file, "r+") as in_file:
-        content = in_file.readlines()
-        content = [line for line in content]
-        content = [line.replace('\n', '') for line in content]
-        content = "".join(list(filter(lambda x: x != "", content)))
-        in_file.seek(0)
-        in_file.write(content)
-        in_file.truncate()
-
 
 
 def threader(my_queue):
