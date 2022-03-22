@@ -16,13 +16,7 @@
 # static fields
 .field public static final f1c457c44:I = 0x7f0b001c
 
-.field public static final f1c457c44mGWJnxfo:I = 0x7f0b001c
-
-.field public static final f1c457c44tuQjnUGl:I = 0x7f0b001c
-
-.field public static final f1c457c44kYxbVAqJ:I = 0x7f0b001c
-
-.field public static final f1c457c44wziMCckk:I = 0x7f0b001c
+.field public static final f1c457c44BaVQbgXb:I = 0x7f0b001c
 
 
 # direct methods

@@ -16,13 +16,9 @@
 # static fields
 .field public static final f3f93a441:I = 0x7f0f001c
 
-.field public static final f3f93a441zgWMDnnA:I = 0x7f0f001c
+.field public static final f3f93a441SnslCLgm:I = 0x7f0f001c
 
-.field public static final f3f93a441bYVLIlvq:I = 0x7f0f001c
-
-.field public static final f3f93a441PARngsot:I = 0x7f0f001c
-
-.field public static final f3f93a441zYfiCyeP:I = 0x7f0f001c
+.field public static final f3f93a441KpaatOsp:I = 0x7f0f001c
 
 
 # direct methods

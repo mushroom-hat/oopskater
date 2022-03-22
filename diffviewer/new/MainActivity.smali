@@ -63,13 +63,12 @@
     
     const v0, 0x7f0b001c
     nop
-    nop
-    nop
 
     invoke-virtual {p0, v0}, Lcom/example/myapplication/MainActivity;->setContentView(I)V
 
     
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+    nop
     nop
 
 	const-string/jumbo v1, "c2c42fb7a8b7b0730bd9a1d62f7b6dc26fe7f8a33a31be934c73d25e498bd44a"

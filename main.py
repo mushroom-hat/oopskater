@@ -39,7 +39,7 @@ def decompile_apk(filepath):
 
 
 # recompile a directory of java/kotlin source codes OR smali files into an apk
-# MUST SUPPLY FOLDERPATH (containing obfuscated code)
+# MUST SUPPLY FOLDER_PATH (containing obfuscated code)
 def recompile():
     global UI_THREAD
     UI_THREAD.emit("Recompiling APK")

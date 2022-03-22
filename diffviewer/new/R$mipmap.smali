@@ -16,13 +16,11 @@
 # static fields
 .field public static final fae0a9abc:I = 0x7f0d0000
 
-.field public static final fae0a9abcQKKrCwMO:I = 0x7f0d0000
-
-.field public static final fae0a9abcCtuZOjVd:I = 0x7f0d0000
+.field public static final fae0a9abcbOLSTdFn:I = 0x7f0d0000
 
 .field public static final f9534a7db:I = 0x7f0d0001
 
-.field public static final f9534a7dbiiIhWLKj:I = 0x7f0d0001
+.field public static final f9534a7dbvPnYPJAF:I = 0x7f0d0001
 
 
 # direct methods
