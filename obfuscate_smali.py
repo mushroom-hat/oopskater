@@ -47,9 +47,9 @@ def threader(my_queue):
         status_nop = obfuscate_smali_nop.add_nop_in_method(file)
         if status_nop:
             NOP_REPLACEMENT_COUNT += 1
-        # status_strEnc = obfuscate_smali_stringenc.encrypt(file,ENC_SECRET)
-        # if status_strEnc:
-        #     STRING_ENCRYPTION_COUNT += 1
+        status_strEnc = obfuscate_smali_stringenc.encrypt(file,ENC_SECRET)
+        if status_strEnc:
+            STRING_ENCRYPTION_COUNT += 1
         status_debug = obfuscate_smali_debug_removal.debugRemoval(file)
         if status_debug:
             DEBUG_REPLACEMENT_COUNT += 1
