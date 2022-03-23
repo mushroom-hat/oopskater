@@ -5,7 +5,7 @@ import util
 from typing import List, Set, Dict, Union
 from os import walk
 import xml.etree.cElementTree as Xml
-
+from cryptography.fernet import Fernet
 
 # Import custom function
 import obfuscate_smali_nop
@@ -41,7 +41,8 @@ def threader(my_queue):
     global OVERLOADING_REPLACEMENT_COUNT
     global STRING_ENCRYPTION_COUNT
     global ENC_SECRET
-    ENC_SECRET = "This-key-need-to-be-32-character"
+    ENC_SECRET = genSec(32)
+    #ENC_SECRET = "This-key-need-to-be-32-character"
     while True:
         file = my_queue.get()
         status_nop = obfuscate_smali_nop.add_nop_in_method(file)
@@ -115,11 +116,10 @@ def change_all_file(smali_file_list, file_list_size, application_name, dir):
 
 
     if(STRING_ENCRYPTION_COUNT>0):
-        # Add to the app the code for decrypting the encrypted strings. The code
-        # for decrypting can be put in any smali directory, since it will be
-        # moved to the correct directory when rebuilding the application.
+        # add decryptstring file to app
         destination_dir = os.path.dirname(smali_file)
         destination_file = os.path.join(destination_dir, "DecryptString.smali")
+        #print("insertingFile with"+ENC_SECRET)
         with open(
                 destination_file, "w", encoding="utf-8"
         ) as decrypt_string_smali:
@@ -143,3 +143,9 @@ def print_statistics():
     print("Total Number of files with overloading features added: " + str(OVERLOADING_REPLACEMENT_COUNT))
     print("Total Number of files with goto lines added: " + str(GOTO_COUNT))
     print("Total Number of files with encrypted strings: " + str(STRING_ENCRYPTION_COUNT))
+
+def genSec(size):
+    keysec = str(Fernet.generate_key())
+    se ="".join(ch for ch in keysec if ch.isalnum())
+    keysec = se[2:size+2]
+    return keysec
