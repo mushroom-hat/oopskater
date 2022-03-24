@@ -5,6 +5,7 @@ from time import sleep
 
 from PyQt5.QtCore import pyqtSignal
 
+import obfuscate_java
 import obfuscate_smali
 import obfuscate_smali_files
 # import obfuscate_java
@@ -121,10 +122,6 @@ def obfuscate_smali_file(dir):
     obfuscate_smali_files.generate_new_files(list_of_cleaned_smali_files)
 
 
-
-
-
-
 def clean_smali_files_path(file_path):
     global UI_THREAD
     UI_THREAD.emit("Cleaning Smali Files Paths ... ")
@@ -149,19 +146,13 @@ def process_importedFile(importedFile, ui_thread):
     if not java_files and not kt_files and not smali_files:
         ui_thread.emit("No Smali/Java/Kotlin files found")
         return "No Smali/Java/Kotlin files found"
-
-    for file in java_files:
-        print(file)
-        f = open(file, "r")
-        for lines in f.readlines():
-            # strip line spaces at the end
-            lines = lines.rstrip()
-            if ";" in lines:
-                print(lines.strip("\n"))
-
     # ---- OBFUSCATION PART
     if TARGET_FOLDER_PATH != "":
-        obfuscate_smali_file(TARGET_FOLDER_PATH)
+        if java_files:
+            obfuscate_java.obfuscate(TARGET_FOLDER_PATH)
+        elif smali_files:
+            obfuscate_smali_file(TARGET_FOLDER_PATH)
+
         # lastly, recompile it back to APK
         recompile()
         return 1
