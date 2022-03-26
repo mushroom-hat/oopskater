@@ -77,12 +77,10 @@ class Ui_MainWindow(object):
             if self.op_dir != ('', ''):
                 importedItem = self.op_dir[0].replace("/", r"\\")
                 self.label.setText(self.op_dir[0])
-                print("Imported File: " + importedItem)
 
         else:
             self.op_dir = QtWidgets.QFileDialog.getExistingDirectory(None, 'Select project folder:', '',
                                                                      QtWidgets.QFileDialog.ShowDirsOnly)
-            print(self.op_dir)
 
             if self.op_dir != ('', ''):
                 importedItem = self.op_dir.replace("/", r"\\")
@@ -115,11 +113,9 @@ class WorkerThreadProcessing(QThread):
     def __init__(self, importFile):
         super().__init__()
         self.importItem = importFile
-        print("In class: " + self.importItem)
 
     def run(self):
         self.upgrade_progress.emit("Processing ... ")
-        print("Processing")
         self.result = main.process_importedFile(self.importItem, self.upgrade_progress)
         if self.result == 1:
             self.upgrade_progress.emit("Success :)")

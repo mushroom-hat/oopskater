@@ -14,7 +14,7 @@ from tkinter.simpledialog import askstring
 class MainWindow:
     def start(self, leftpath = None, rightpath = None):
         self.main_window = Tk()
-        self.main_window.title('Pydiff')
+        self.main_window.title('Text Difference Viewer')
         self.__main_window_ui = MainWindowUI(self.main_window)
 
         self.leftFile = ''

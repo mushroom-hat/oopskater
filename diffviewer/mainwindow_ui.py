@@ -1,11 +1,6 @@
-
-from tkinter import *
-from tkinter.messagebox import showerror
-from tkinter import font
-from tkinter import ttk
-from tkinter.ttk import Treeview
-import os
+from tkinter.ttk import *
 from searchtextdialog import *
+
 
 class MainWindowUI:
 

@@ -14,7 +14,7 @@ def backup_files(list_of_files):
     for file in list_of_files:
         src = str(file)
         dst = backup_path + str(file.split('\\')[-1])
-        print(src, "<====> ", dst)
+        # print(src, "<====> ", dst)
         shutil.copy(src, dst, follow_symlinks=False)
 
 
@@ -28,5 +28,5 @@ def generate_new_files(list_of_files):
     for file in list_of_files:
         src = str(file)
         dst = new_path + str(file.split('\\')[-1])
-        print(src, "<====> ", dst)
+        # print(src, "<====> ", dst)
         shutil.copy(src, dst, follow_symlinks=False)

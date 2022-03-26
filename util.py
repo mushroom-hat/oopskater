@@ -201,13 +201,13 @@ INVOKE_PATTERN = re.compile(
 )
 
 def get_android_class_names():
-    return get_non_empty_lines_from_file(
+    return set(get_non_empty_lines_from_file(
         os.path.join(
             os.path.dirname(__file__), "resources", "android_class_names_api.txt"
         )
-    )
+    ))
 
-def get_api_reflection_smali_code() -> str:
+def get_api_reflection_smali_code():
     return get_text_from_file(
         os.path.join(
             os.path.dirname(__file__), "resources", "ApiReflection.smali.txt"

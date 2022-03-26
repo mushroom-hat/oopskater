@@ -3,7 +3,7 @@ import re
 
 import util
 
-ANDROID_CLASS_NAMES = set(util.get_android_class_names())
+ANDROID_CLASS_NAMES = util.get_android_class_names()
 OBFUSCATOR_INSTRUCTION_LENGTH: int = 0
 OBFUSCATOR_INSTRUCTION_LIMIT: int = 60000
 PRIMITIVE_TYPES = {"I", "Z", "B", "S", "J", "F", "D", "C"}
@@ -355,7 +355,7 @@ def reflection(list_of_smali_files):
                                                   description="Obfuscating using reflection"):
             OBFUSCATOR_INSTRUCTION_LENGTH = 0
             OBFUSCATOR_INSTRUCTION_LIMIT = 60000
-            print('Obfuscating using reflection in file "{0}"'.format(smali_file))
+            # print('Obfuscating using reflection in file "{0}"'.format(smali_file))
 
             # There is no space for further reflection instructions.
             if OBFUSCATOR_INSTRUCTION_LENGTH >= OBFUSCATOR_INSTRUCTION_LIMIT:

@@ -46,7 +46,7 @@ def encrypt_string(input_string, encryption_secret):
     return encrypted_string
 
 def encrypt(smali_file, encryption_secret):
-    print("Encrypting \"" + smali_file+"\"")
+    # print("Encrypting \"" + smali_file+"\"")
     # .field <other_optional_stuff> <string_name>:Ljava/lang/String; =
     # "<string_value>"
     staticStringPattern = re.compile(
@@ -215,7 +215,7 @@ def encrypt(smali_file, encryption_secret):
             return 1
 
 
-        print(str(len(encrypted_strings))+" strings encrypted in \""+smali_file+"\"")
+        # print(str(len(encrypted_strings))+" strings encrypted in \""+smali_file+"\"")
     except Exception as e:
         print(
             'Error during execution of "{0}" obfuscator: {1}')

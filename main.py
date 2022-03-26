@@ -29,10 +29,14 @@ UI_THREAD = None
 def decompile_apk(filepath):
     global APPLICATION_NAME
     try:
+        print("Filepath :",filepath)
         APPLICATION_NAME = (str(filepath.split("\\")[-1])).split(".")[0]
         print("===== DECOMPILING FROM APK =====")
         os.system("java -jar apktool.jar d \"{}\"".format(filepath))
         decompiled_directory = filepath.split(".")[0]
+        decompiled_directory = decompiled_directory.split('\\')
+        decompiled_directory = '\\'.join([x for x in decompiled_directory if x != 'assets'])
+        print("File Directory :",decompiled_directory)
         print("APK successfully decompiled to {}".format(decompiled_directory))
         return decompiled_directory
     except Exception as e:
@@ -118,7 +122,7 @@ def obfuscate_smali_file(dir):
         print("Something went wrong finding smali files.")
 
     obfuscate_smali_files.backup_files(list_of_cleaned_smali_files)
-    obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME, dir)
+    obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME)
     obfuscate_smali_files.generate_new_files(list_of_cleaned_smali_files)
 
 

@@ -1,10 +1,5 @@
 import os
 import threading
-import hashlib
-import util
-from typing import List, Set, Dict, Union
-from os import walk
-import xml.etree.cElementTree as Xml
 from cryptography.fernet import Fernet
 
 # Import custom function
@@ -14,7 +9,6 @@ import obfuscate_smali_debug_removal
 import obfuscate_smali_overloading
 import obfuscate_smali_field_renaming
 import obfuscate_smali_reflection
-import obfuscate_smali_remove_empty_spaces
 import time
 from queue import Queue
 
@@ -57,7 +51,7 @@ def threader(my_queue):
         my_queue.task_done()
 
 
-def change_all_file(smali_file_list, file_list_size, application_name, dir):
+def change_all_file(smali_file_list, file_list_size, application_name):
     global APPLICATION_NAME, ANDROID_MANIFEST_FILE
     global RENAME_COUNT, NOP_REPLACEMENT_COUNT, DEBUG_REPLACEMENT_COUNT, OVERLOADING_REPLACEMENT_COUNT, \
         STRING_ENCRYPTION_COUNT, GOTO_COUNT
@@ -80,11 +74,11 @@ def change_all_file(smali_file_list, file_list_size, application_name, dir):
     print("Average waiting time: " + str((file_list_size / 60) / 2) + " seconds.")
 
 
-    """ For Jia Zhe debugging purposes. """
-    my_file = open('file_list.txt', 'w')
-    for item in smali_file_list:
-        my_file.write(item + '\n')
-    my_file.close
+    # """ For Jia Zhe debugging purposes. """
+    # my_file = open('file_list.txt', 'w')
+    # for item in smali_file_list:
+    #     my_file.write(item + '\n')
+    # my_file.close
 
 
     """===================================================="""
