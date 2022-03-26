@@ -15,56 +15,25 @@
 
 
 # static fields
-.field public static final f10711ddb:I = 0x7f090000
+.field public static final abc_config_activityDefaultDur:I = 0x7f090000
 
-.field public static final f10711ddbUejVabVs:I = 0x7f090000
+.field public static final abc_config_activityShortDur:I = 0x7f090001
 
-.field public static final f10711ddbJeYrUtbl:I = 0x7f090000
+.field public static final cancel_button_image_alpha:I = 0x7f090002
 
-.field public static final f10711ddbzyXXGKTe:I = 0x7f090000
+.field public static final config_tooltipAnimTime:I = 0x7f090003
 
-.field public static final f965dd4fb:I = 0x7f090001
+.field public static final google_play_services_version:I = 0x7f090004
 
-.field public static final f965dd4fbHVoIeUEI:I = 0x7f090001
-
-.field public static final f965dd4fbzYTmeajQ:I = 0x7f090001
-
-.field public static final fcde4576d:I = 0x7f090002
-
-.field public static final fcde4576dMMsqnZVZ:I = 0x7f090002
-
-.field public static final fcde4576dhqPWaqYT:I = 0x7f090002
-
-.field public static final f8243ce3b:I = 0x7f090003
-
-.field public static final f8243ce3bPtDZeBaL:I = 0x7f090003
-
-.field public static final f8243ce3bLFFDCyQs:I = 0x7f090003
-
-.field public static final f2a926a97:I = 0x7f090004
-
-.field public static final f2a926a97GuRzlzJY:I = 0x7f090004
-
-.field public static final fdd5731af:I = 0x7f090005
-
-.field public static final fdd5731aftRZqBttt:I = 0x7f090005
+.field public static final status_bar_notification_info_maxnum:I = 0x7f090005
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
+    .line 895
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method

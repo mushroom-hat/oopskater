@@ -39,13 +39,8 @@
 
 	:before_first_instruction
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$2;->val$snapshotsClient:Lcom/google/android/gms/games/SnapshotsClient;
-    nop
     nop
     nop
     nop
@@ -58,21 +53,12 @@
 
 	goto/32 :before_first_instruction
 
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 
 # virtual methods
 .method public onComplete(Lcom/google/android/gms/tasks/Task;)V
     .locals 6
-
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
 
 	goto/32 :after_last_instruction
 
@@ -93,9 +79,6 @@
 
     const/4 v0, 0x0
     nop
-    nop
-    nop
-    nop
 
     
     invoke-static {v0}, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->access$102(Z)Z
@@ -104,8 +87,6 @@
     invoke-static {p1}, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->access$000(Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/games/snapshot/Snapshot;
 
     move-result-object p1
-    nop
-    nop
     nop
     nop
     nop
@@ -125,31 +106,20 @@
     nop
     nop
     nop
-    nop
-    nop
-    nop
 
     
     invoke-static {p1}, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;->deserialize(Lcom/google/android/gms/games/snapshot/Snapshot;)Lcom/tpcstld/twozerogame/snapshot/SnapshotData;
 
     move-result-object v1
     nop
-    nop
-    nop
 
     if-eqz v1, :cond_1
-    nop
-    nop
-    nop
     nop
 
     
     invoke-virtual {v1}, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;->getHighScore()J
 
     move-result-wide v1
-    nop
-    nop
-    nop
     nop
     nop
 
@@ -162,14 +132,8 @@
 
     cmp-long v5, v1, v3
     nop
-    nop
-    nop
-    nop
 
     if-lez v5, :cond_1
-    nop
-    nop
-    nop
     nop
 
     return-void
@@ -181,15 +145,10 @@
     move-result-object v1
     nop
     nop
-    nop
-    nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;->serialize()[B
 
     move-result-object v2
-    nop
-    nop
-    nop
     nop
 
     invoke-interface {v1, v2}, Lcom/google/android/gms/games/snapshot/SnapshotContents;->writeBytes([B)Z
@@ -199,16 +158,10 @@
     nop
     nop
     nop
-    nop
-    nop
 
     invoke-direct {v1}, Lcom/google/android/gms/games/snapshot/SnapshotMetadataChange$Builder;-><init>()V
 
-	const-string/jumbo v2, "2783e5c0bdf6b210e47b50b254cdc43ec2c2a5212aec7d55711c4bdbb00dd8b32ce4f308aceca4a010836b6b9d57345276e07468c8d07ce6ced35183e210dc6ca169d26b4520946b318e8eb5901db0f1"
-
-	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
-
-	move-result-object v2
+	const-string/jumbo v2, "ce68e60c6d82430ff0d77b958282a96084755480948aea68136bbe27c6b9795d"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -222,26 +175,16 @@
 
     move-result-object v1
     nop
-    nop
-    nop
-    nop
 
     
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;->getHighScore()J
 
     move-result-wide v2
     nop
-    nop
-    nop
-    nop
-    nop
-    nop
 
     invoke-virtual {v1, v2, v3}, Lcom/google/android/gms/games/snapshot/SnapshotMetadataChange$Builder;->setProgressValue(J)Lcom/google/android/gms/games/snapshot/SnapshotMetadataChange$Builder;
 
     move-result-object v0
-    nop
-    nop
     nop
     nop
 
@@ -250,26 +193,14 @@
 
     move-result-object v0
     nop
-    nop
-    nop
-    nop
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$2;->val$snapshotsClient:Lcom/google/android/gms/games/SnapshotsClient;
-    nop
-    nop
-    nop
-    nop
     nop
 
     invoke-interface {v1, p1, v0}, Lcom/google/android/gms/games/SnapshotsClient;->commitAndClose(Lcom/google/android/gms/games/snapshot/Snapshot;Lcom/google/android/gms/games/snapshot/SnapshotMetadataChange;)Lcom/google/android/gms/tasks/Task;
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 
 	:after_last_instruction
 

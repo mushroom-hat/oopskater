@@ -4,45 +4,25 @@
 
 
 # instance fields
-.field private f9dd4e461:I
+.field private x:I
 
-.field private f9dd4e461INyqfDLU:I
-
-.field private f9dd4e461NMqyrJti:I
-
-.field private f41529076:I
-
-.field private f41529076gLjrFPdl:I
+.field private y:I
 
 
 # direct methods
 .method public constructor <init>(II)V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    
-    iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->f9dd4e461:I
-    nop
-    nop
+    .line 8
+    iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->x:I
 
-    
-    iput p2, p0, Lcom/tpcstld/twozerogame/Cell;->f41529076:I
-    nop
-    nop
-    nop
+    .line 9
+    iput p2, p0, Lcom/tpcstld/twozerogame/Cell;->y:I
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 
@@ -50,83 +30,35 @@
 .method public getX()I
     .locals 1
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
-    iget v0, p0, Lcom/tpcstld/twozerogame/Cell;->f9dd4e461:I
-    nop
-    nop
+    .line 13
+    iget v0, p0, Lcom/tpcstld/twozerogame/Cell;->x:I
 
     return v0
-    nop
-    nop
-    nop
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 .method public getY()I
     .locals 1
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
-    iget v0, p0, Lcom/tpcstld/twozerogame/Cell;->f41529076:I
-    nop
+    .line 21
+    iget v0, p0, Lcom/tpcstld/twozerogame/Cell;->y:I
 
     return v0
-    nop
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 .method setX(I)V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
-    iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->f9dd4e461:I
-    nop
-    nop
-    nop
+    .line 17
+    iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->x:I
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 .method setY(I)V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
-    iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->f41529076:I
-    nop
-    nop
+    .line 25
+    iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->y:I
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method

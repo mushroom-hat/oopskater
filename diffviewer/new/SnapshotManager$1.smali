@@ -39,10 +39,6 @@
 
 	:before_first_instruction
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$1;->val$callback:Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$Callback;
     nop
@@ -56,21 +52,12 @@
 
 	goto/32 :before_first_instruction
 
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 
 # virtual methods
 .method public onComplete(Lcom/google/android/gms/tasks/Task;)V
     .locals 1
-
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
 
 	goto/32 :after_last_instruction
 
@@ -96,12 +83,8 @@
     nop
     nop
     nop
-    nop
 
     if-nez p1, :cond_0
-    nop
-    nop
-    nop
     nop
     nop
 
@@ -113,13 +96,8 @@
 
     move-result-object p1
     nop
-    nop
 
     if-eqz p1, :cond_1
-    nop
-    nop
-    nop
-    nop
     nop
     nop
 
@@ -127,19 +105,11 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$1;->val$callback:Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$Callback;
     nop
     nop
-    nop
-    nop
-    nop
 
     invoke-interface {v0, p1}, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$Callback;->run(Lcom/tpcstld/twozerogame/snapshot/SnapshotData;)V
 
     :cond_1
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 
 	:after_last_instruction
 

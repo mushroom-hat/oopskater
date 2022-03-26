@@ -33,19 +33,10 @@
 
 	:before_first_instruction
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
     
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 
 	:after_last_instruction
 

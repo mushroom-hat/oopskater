@@ -38,39 +38,22 @@
 .method constructor <init>(Lcom/tpcstld/twozerogame/MainActivity;ZLcom/google/android/gms/auth/api/signin/GoogleSignInClient;)V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
+    .line 173
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
 
     iput-boolean p2, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->val$noLoginPrompt:Z
-    nop
-    nop
 
     iput-object p3, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->val$signInClient:Lcom/google/android/gms/auth/api/signin/GoogleSignInClient;
-    nop
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 
 # virtual methods
 .method public onComplete(Lcom/google/android/gms/tasks/Task;)V
     .locals 2
-
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
     .param p1    # Lcom/google/android/gms/tasks/Task;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -84,147 +67,90 @@
         }
     .end annotation
 
-    
+    .line 176
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result v0
-    nop
 
     if-nez v0, :cond_0
-    nop
-    nop
 
-    
+    .line 177
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
 
     invoke-static {p1}, Lcom/tpcstld/twozerogame/MainActivity;->access$000(Lcom/tpcstld/twozerogame/MainActivity;)Z
 
     move-result p1
-    nop
-    nop
-    nop
 
     if-nez p1, :cond_2
-    nop
 
     iget-boolean p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->val$noLoginPrompt:Z
-    nop
-    nop
 
     if-nez p1, :cond_2
-    nop
-    nop
 
-    
+    .line 178
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
-    nop
-    nop
 
     const/4 v0, 0x1
-    nop
-    nop
 
     invoke-static {p1, v0}, Lcom/tpcstld/twozerogame/MainActivity;->access$002(Lcom/tpcstld/twozerogame/MainActivity;Z)Z
 
-    
+    .line 179
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
-    nop
 
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->val$signInClient:Lcom/google/android/gms/auth/api/signin/GoogleSignInClient;
-    nop
 
     invoke-virtual {v0}, Lcom/google/android/gms/auth/api/signin/GoogleSignInClient;->getSignInIntent()Landroid/content/Intent;
 
     move-result-object v0
-    nop
-    nop
 
     const/16 v1, 0x2329
-    nop
-    nop
-    nop
 
     invoke-virtual {p1, v0, v1}, Lcom/tpcstld/twozerogame/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
-    nop
-    nop
 
-    
+    .line 182
     :cond_0
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-    nop
-    nop
 
-	const-string/jumbo v1, "9a87a1d05d0a4d70d85c40ad922f33164b499e80c7538acb68d7b64a38d88fbd84fe0757f7af5c3f8b3631df8564d2af"
-
-	invoke-static {v1}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
-
-	move-result-object v1
-    nop
-    nop
+    const-string v1, "Successfully logged into Google."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    
+    .line 184
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object v0
-    nop
-    nop
-    nop
 
     if-eqz v0, :cond_1
-    nop
 
-    
+    .line 185
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
-    nop
-    nop
 
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object p1
-    nop
-    nop
-    nop
 
     check-cast p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
-    nop
 
     invoke-static {v0, p1}, Lcom/google/android/gms/games/Games;->getGamesClient(Landroid/app/Activity;Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)Lcom/google/android/gms/games/GamesClient;
 
     move-result-object p1
-    nop
 
-    
+    .line 186
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
-    nop
 
     invoke-static {v0}, Lcom/tpcstld/twozerogame/MainActivity;->access$100(Lcom/tpcstld/twozerogame/MainActivity;)Lcom/tpcstld/twozerogame/MainView;
 
     move-result-object v0
-    nop
-    nop
 
     invoke-interface {p1, v0}, Lcom/google/android/gms/games/GamesClient;->setViewForPopups(Landroid/view/View;)Lcom/google/android/gms/tasks/Task;
 
-    
+    .line 189
     :cond_1
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
-    nop
-    nop
 
     new-instance v0, Lcom/tpcstld/twozerogame/MainActivity$1$1;
-    nop
-    nop
-    nop
 
     invoke-direct {v0, p0}, Lcom/tpcstld/twozerogame/MainActivity$1$1;-><init>(Lcom/tpcstld/twozerogame/MainActivity$1;)V
 
@@ -233,9 +159,4 @@
     :cond_2
     :goto_0
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method

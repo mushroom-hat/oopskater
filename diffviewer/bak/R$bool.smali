@@ -15,36 +15,17 @@
 
 
 # static fields
-.field public static final f8660544d:I = 0x7f040000
+.field public static final abc_action_bar_embed_tabs:I = 0x7f040000
 
-.field public static final f8660544dIHplRAQE:I = 0x7f040000
-
-.field public static final f8660544dtrBSfZWt:I = 0x7f040000
-
-.field public static final f6ee85f72:I = 0x7f040001
-
-.field public static final f6ee85f72BlVMgxtQ:I = 0x7f040001
-
-.field public static final f6ee85f72dkeAztig:I = 0x7f040001
-
-.field public static final f6ee85f72zjuRrYoO:I = 0x7f040001
+.field public static final abc_config_actionMenuItemAllCaps:I = 0x7f040001
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
+    .line 343
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method

@@ -25,23 +25,12 @@
 .method constructor <init>(Lcom/tpcstld/twozerogame/InputListener;)V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
+    .line 126
     iput-object p1, p0, Lcom/tpcstld/twozerogame/InputListener$1;->this$0:Lcom/tpcstld/twozerogame/InputListener;
-    nop
-    nop
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 
@@ -49,31 +38,16 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
+    .line 129
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener$1;->this$0:Lcom/tpcstld/twozerogame/InputListener;
-    nop
-    nop
-    nop
 
     invoke-static {p1}, Lcom/tpcstld/twozerogame/InputListener;->access$000(Lcom/tpcstld/twozerogame/InputListener;)Lcom/tpcstld/twozerogame/MainView;
 
     move-result-object p1
-    nop
 
-    iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
-    nop
+    iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->game:Lcom/tpcstld/twozerogame/MainGame;
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/MainGame;->newGame()V
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method

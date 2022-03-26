@@ -29,14 +29,8 @@
 
 	:before_first_instruction
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1$1;->this$1:Lcom/tpcstld/twozerogame/MainActivity$1;
-    nop
-    nop
     nop
     nop
     nop
@@ -49,21 +43,12 @@
 
 	goto/32 :before_first_instruction
 
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 
 # virtual methods
 .method public run(Lcom/tpcstld/twozerogame/snapshot/SnapshotData;)V
     .locals 1
-
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
 
 	goto/32 :after_last_instruction
 
@@ -88,20 +73,13 @@
 
     move-result-object v0
     nop
-    nop
 
-    iget-object v0, v0, Lcom/tpcstld/twozerogame/MainView;->fcf43892a:Lcom/tpcstld/twozerogame/MainGame;
-    nop
+    iget-object v0, v0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
 
     invoke-virtual {v0, p1}, Lcom/tpcstld/twozerogame/MainGame;->handleSnapshot(Lcom/tpcstld/twozerogame/snapshot/SnapshotData;)V
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 
 	:after_last_instruction
 

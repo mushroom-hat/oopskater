@@ -4,117 +4,55 @@
 
 
 # static fields
-.field private static final f973f317d:Z = false
+.field private static final DEBUG_ENABLED:Z = false
 
-.field private static final f973f317dcbYEdqjx:Z = false
+.field private static final PREMADE_MAP:[[I
 
-.field private static final f973f317dNMqKwgtL:Z = false
-
-.field private static final f973f317duEoeHMVd:Z = false
-
-.field private static final fda0e57d8:[[I
-
-.field private static final fda0e57d8HLFIaBml:[[I
-
-.field private static final fda0e57d8vDcYVHym:[[I
-
-.field private static final fda0e57d8JCwjhDDA:[[I
-
-.field private static final fda0e57d8yEADAsoX:[[I
-
-.field private static final f01bfe9db:J = 0x2697dcL
-
-.field private static final f01bfe9dbJwwUzvYz:J = 0x2697dcL
-
-.field private static final f01bfe9dbrlRgAVzv:J = 0x2697dcL
-
-.field private static final f01bfe9dbtgIxAfLU:J = 0x2697dcL
-
-.field private static final f01bfe9dbqrTOvNva:J = 0x2697dcL
+.field private static final STARTING_SCORE:J = 0x2697dcL
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
     const/4 v0, 0x4
-    nop
-    nop
 
-    
+    .line 17
     new-array v1, v0, [[I
-    nop
-    nop
-    nop
 
     new-array v2, v0, [I
-    nop
-    nop
-    nop
 
     fill-array-data v2, :array_0
 
     const/4 v3, 0x0
-    nop
-    nop
 
     aput-object v2, v1, v3
-    nop
-    nop
 
     new-array v2, v0, [I
-    nop
 
     fill-array-data v2, :array_1
 
     const/4 v3, 0x1
-    nop
-    nop
-    nop
 
     aput-object v2, v1, v3
-    nop
-    nop
-    nop
 
     new-array v2, v0, [I
-    nop
-    nop
 
     fill-array-data v2, :array_2
 
     const/4 v3, 0x2
-    nop
-    nop
-    nop
 
     aput-object v2, v1, v3
-    nop
-    nop
 
     new-array v0, v0, [I
-    nop
-    nop
-    nop
 
     fill-array-data v0, :array_3
 
     const/4 v2, 0x3
-    nop
 
     aput-object v0, v1, v2
-    nop
-    nop
-    nop
 
-    sput-object v1, Lcom/tpcstld/twozerogame/DebugTools;->fda0e57d8:[[I
-    nop
-    nop
-    nop
+    sput-object v1, Lcom/tpcstld/twozerogame/DebugTools;->PREMADE_MAP:[[I
 
     return-void
 
@@ -149,37 +87,19 @@
         0x0
         0x0
     .end array-data
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 .method constructor <init>()V
     .locals 0
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
-    
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 .method static generatePremadeMap()Ljava/util/List;
     .locals 1
-
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -193,36 +113,14 @@
     .end annotation
 
     const/4 v0, 0x0
-    nop
 
     return-object v0
-    nop
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
 
 .method static getStartingScore()J
     .locals 2
 
-	goto/32 :after_last_instruction
-
-	:before_first_instruction
-
     const-wide/16 v0, 0x0
-    nop
-    nop
-    nop
 
     return-wide v0
-    nop
-    nop
-    nop
-
-	:after_last_instruction
-
-	goto/32 :before_first_instruction
-
 .end method
