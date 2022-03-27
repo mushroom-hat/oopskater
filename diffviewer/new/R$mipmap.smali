@@ -17,13 +17,9 @@
 # static fields
 .field public static final f799efb55:I = 0x7f0c0000
 
-.field public static final f799efb55tmUtLniZ:I = 0x7f0c0000
+.field public static final f799efb55KyFnkJyQ:I = 0x7f0c0000
 
-.field public static final f799efb55CKmtEpPW:I = 0x7f0c0000
-
-.field public static final f799efb55uaqspGIe:I = 0x7f0c0000
-
-.field public static final f799efb55mkUnhrXd:I = 0x7f0c0000
+.field public static final f799efb55euKPoYaI:I = 0x7f0c0000
 
 
 # direct methods

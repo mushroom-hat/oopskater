@@ -6,99 +6,83 @@
 # static fields
 .field private static final fa34eb248:Ljava/lang/String;
 
-.field private static final fa34eb248kldiKVvV:Ljava/lang/String;
-
-.field private static final fa34eb248eViKYKHp:Ljava/lang/String;
-
-.field private static final fa34eb248TOWrKAJt:Ljava/lang/String;
+.field private static final fa34eb248UGsYaltg:Ljava/lang/String;
 
 .field private static final fc569edc6:Ljava/lang/String;
 
-.field private static final fc569edc6QBlGYMDK:Ljava/lang/String;
+.field private static final fc569edc6hJBNvqtF:Ljava/lang/String;
+
+.field private static final fc569edc6dNIHGSnW:Ljava/lang/String;
 
 .field private static final fd770ba3c:Ljava/lang/String;
 
-.field private static final fd770ba3cpfHRvuas:Ljava/lang/String;
-
-.field private static final fd770ba3cBRBwKunh:Ljava/lang/String;
-
-.field private static final fd770ba3cUpaHKaJF:Ljava/lang/String;
+.field private static final fd770ba3cJcEyMrUK:Ljava/lang/String;
 
 .field private static final ffba7416d:Ljava/lang/String;
 
-.field private static final ffba7416dWfiiLEyE:Ljava/lang/String;
-
-.field private static final ffba7416dTeNvixFM:Ljava/lang/String;
-
-.field private static final ffba7416dAdzREYuv:Ljava/lang/String;
-
-.field private static final ffba7416dNaJAKBLG:Ljava/lang/String;
+.field private static final ffba7416dBgrekHru:Ljava/lang/String;
 
 .field private static final f26e33056:Ljava/lang/String;
 
-.field private static final f26e33056RXDMImaS:Ljava/lang/String;
+.field private static final f26e33056HPEYphFF:Ljava/lang/String;
 
-.field private static final f26e33056KaUXQtye:Ljava/lang/String;
+.field private static final f26e33056ZtQxWRmy:Ljava/lang/String;
 
-.field private static final f26e33056zMniGYGz:Ljava/lang/String;
+.field private static final f26e33056pmLBTERD:Ljava/lang/String;
 
-.field private static final f26e33056KsbTQSsm:Ljava/lang/String;
+.field private static final f26e33056ExvVGHCb:Ljava/lang/String;
 
 .field private static final f5de99252:I = 0x2329
 
-.field private static final f5de99252tObvDOil:I = 0x2329
-
-.field private static final f5de99252zqyeKJdy:I = 0x2329
-
-.field private static final f5de99252xhdyJFCD:I = 0x2329
-
-.field private static final f5de99252nKaoQYHj:I = 0x2329
+.field private static final f5de99252KfQMgGyk:I = 0x2329
 
 .field private static final fc9b2281f:Ljava/lang/String;
 
-.field private static final fc9b2281fVljYIICU:Ljava/lang/String;
-
-.field private static final fc9b2281fTSkkmLXY:Ljava/lang/String;
+.field private static final fc9b2281fPpYArMGQ:Ljava/lang/String;
 
 .field private static final f3874b614:Ljava/lang/String;
 
-.field private static final f3874b614rboeGQRD:Ljava/lang/String;
+.field private static final f3874b614PQwOLJCK:Ljava/lang/String;
 
-.field private static final f3874b614ZsJlFfiG:Ljava/lang/String;
+.field private static final f3874b614XYWvmUrH:Ljava/lang/String;
 
-.field private static final f3874b614uSqrUcxy:Ljava/lang/String;
+.field private static final f3874b614oKtmrUlC:Ljava/lang/String;
 
 .field private static final f73b987f5:Ljava/lang/String;
 
-.field private static final f73b987f5AycJJvqU:Ljava/lang/String;
-
-.field private static final f73b987f5XIvbKFvc:Ljava/lang/String;
-
-.field private static final f73b987f5dwqFzyxW:Ljava/lang/String;
+.field private static final f73b987f5OchRFDZX:Ljava/lang/String;
 
 .field private static final f622366c7:Ljava/lang/String;
 
-.field private static final f622366c7QwxWLAxq:Ljava/lang/String;
+.field private static final f622366c7evzOBZDn:Ljava/lang/String;
 
-.field private static final f622366c7OuPVRSkr:Ljava/lang/String;
-
-.field private static final f622366c7MWXrujFO:Ljava/lang/String;
+.field private static final f622366c7XmaVLdEW:Ljava/lang/String;
 
 .field private static final f49da85b6:Ljava/lang/String;
 
-.field private static final f49da85b6ywyqgqJQ:Ljava/lang/String;
+.field private static final f49da85b6KAdZHFJf:Ljava/lang/String;
+
+.field private static final f49da85b6cHXoxdTX:Ljava/lang/String;
+
+.field private static final f49da85b6yQiBuSkP:Ljava/lang/String;
 
 
 # instance fields
 .field private f1bb6d1df:Z
 
-.field private f1bb6d1dfTyTgXEqu:Z
+.field private f1bb6d1dfbvkppfqM:Z
+
+.field private f1bb6d1dfcdtPsqwp:Z
+
+.field private f1bb6d1dfoKPEOtEI:Z
 
 .field private f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
 
-.field private f1bda80f2TDBlIaHq:Lcom/tpcstld/twozerogame/MainView;
+.field private f1bda80f2znZYHucj:Lcom/tpcstld/twozerogame/MainView;
 
-.field private f1bda80f2VCOkfZBq:Lcom/tpcstld/twozerogame/MainView;
+.field private f1bda80f2lhphWfVE:Lcom/tpcstld/twozerogame/MainView;
+
+.field private f1bda80f2eNTzXaxp:Lcom/tpcstld/twozerogame/MainView;
 
 
 # direct methods
@@ -109,7 +93,7 @@
 
 	:before_first_instruction
 
-	const-string/jumbo v0, "a82d54171a6c8295421c7a69b3597f51"
+	const-string/jumbo v0, "5c9ee38d665279b54bed1038fbffa86a"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -117,7 +101,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->fa34eb248:Ljava/lang/String;
 
-	const-string/jumbo v0, "63fbe759192e5ed0be01924843ed394a"
+	const-string/jumbo v0, "f9098fa195bf856a521507d2674614e6"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -125,7 +109,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->fc569edc6:Ljava/lang/String;
 
-	const-string/jumbo v0, "1ac0f1c1c6407cef620f8b52907fe854"
+	const-string/jumbo v0, "b89be616fc396176971c5d68846c8a42"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -133,7 +117,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->fd770ba3c:Ljava/lang/String;
 
-	const-string/jumbo v0, "9737b22af0884da5dc1d4f23a2538a1c"
+	const-string/jumbo v0, "8f68c2e62a516992eae58081e0a020bd"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -141,7 +125,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->ffba7416d:Ljava/lang/String;
 
-	const-string/jumbo v0, "8cd70698b8691e180e6ccf95d74fd1c9"
+	const-string/jumbo v0, "f88afc273a725e6332e2236cca56521d"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -149,7 +133,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->f26e33056:Ljava/lang/String;
 
-	const-string/jumbo v0, "a38f442dec6e93bfa4211415e6dfed81"
+	const-string/jumbo v0, "a2a9ddac7ca05fb09e766aba7d4378a0"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -157,7 +141,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->fc9b2281f:Ljava/lang/String;
 
-	const-string/jumbo v0, "b139387b14d907e3a43f89e95cdcd3cb"
+	const-string/jumbo v0, "0586066174d47e9765d4dd5ac4057879"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -165,7 +149,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->f3874b614:Ljava/lang/String;
 
-	const-string/jumbo v0, "2cb382e852cfb1d8bca8c2ec7d7db7f4"
+	const-string/jumbo v0, "97c5e4a5ab7da8dad252458562cfb22a"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -173,7 +157,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->f73b987f5:Ljava/lang/String;
 
-	const-string/jumbo v0, "4866168ca6e275c46a175752fcc38935"
+	const-string/jumbo v0, "890fecac8eadd97d0260407b3c4a7a56"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -181,7 +165,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainActivity;->f622366c7:Ljava/lang/String;
 
-	const-string/jumbo v0, "86c18c4b377460bf78d297fe2b9ce63d"
+	const-string/jumbo v0, "5fc45d7683594286b5f9b814900ac2f4"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -209,10 +193,11 @@
 
     const/4 v0, 0x0
     nop
-    nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bb6d1df:Z
+    nop
+    nop
     nop
 
     return-void
@@ -234,10 +219,9 @@
     iget-boolean p0, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bb6d1df:Z
     nop
     nop
+    nop
 
     return p0
-    nop
-    nop
     nop
 
 	:after_last_instruction
@@ -255,6 +239,7 @@
 
     
     iput-boolean p1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bb6d1df:Z
+    nop
     nop
 
     return p1
@@ -279,8 +264,10 @@
     iget-object p0, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
+    nop
 
     return-object p0
+    nop
     nop
     nop
 
@@ -300,8 +287,11 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
+    nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
@@ -316,10 +306,10 @@
 
     move-result-object v0
     nop
-    nop
-    nop
 
     const/4 v1, 0x0
+    nop
+    nop
     nop
 
     const/4 v2, 0x0
@@ -342,17 +332,17 @@
 
     iget-object v3, v3, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
+    nop
 
     array-length v3, v3
-    nop
-    nop
     nop
 
     if-ge v2, v3, :cond_5
     nop
+    nop
 
     const/4 v3, 0x0
-    nop
     nop
     nop
 
@@ -360,28 +350,29 @@
     :goto_1
     iget-object v4, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
-    nop
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
+    nop
+    nop
     nop
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
     nop
-    nop
 
     aget-object v4, v4, v1
-    nop
     nop
 
     array-length v4, v4
     nop
 
     if-ge v3, v4, :cond_4
+    nop
+    nop
     nop
 
     
@@ -394,7 +385,7 @@
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-	const-string/jumbo v5, "1e34d48c7b7fdd94b8b7cd9689c76d36"
+	const-string/jumbo v5, "6cc39c10f02f0d3eb6b6560a0ec98135"
 
 	invoke-static {v5}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -414,6 +405,7 @@
     const/4 v6, -0x1
     nop
     nop
+    nop
 
     invoke-interface {v0, v4, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
@@ -423,9 +415,9 @@
 
     const/4 v7, 0x0
     nop
-    nop
 
     if-lez v4, :cond_0
+    nop
     nop
     nop
 
@@ -437,32 +429,29 @@
     iget-object v8, v8, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
-    nop
 
     iget-object v8, v8, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
+    nop
+    nop
     nop
 
     iget-object v8, v8, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
     nop
-    nop
 
     aget-object v8, v8, v2
     nop
-    nop
 
     new-instance v9, Lcom/tpcstld/twozerogame/Tile;
-    nop
     nop
 
     invoke-direct {v9, v2, v3, v4}, Lcom/tpcstld/twozerogame/Tile;-><init>(III)V
 
     aput-object v9, v8, v3
     nop
+    nop
 
     goto :goto_2
-    nop
-    nop
     nop
 
     :cond_0
@@ -472,6 +461,7 @@
     
     iget-object v8, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
 
     iget-object v8, v8, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
@@ -479,17 +469,14 @@
 
     iget-object v8, v8, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
 
     iget-object v8, v8, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
 
     aget-object v8, v8, v2
     nop
-    nop
 
     aput-object v7, v8, v3
-    nop
     nop
 
     
@@ -498,10 +485,11 @@
     new-instance v8, Ljava/lang/StringBuilder;
     nop
     nop
+    nop
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-	const-string/jumbo v9, "2cb382e852cfb1d8bca8c2ec7d7db7f4"
+	const-string/jumbo v9, "97c5e4a5ab7da8dad252458562cfb22a"
 
 	invoke-static {v9}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -521,6 +509,7 @@
     move-result-object v5
     nop
     nop
+    nop
 
     invoke-interface {v0, v5, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
@@ -530,16 +519,14 @@
 
     if-lez v5, :cond_2
     nop
-    nop
-    nop
 
     
     iget-object v4, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
+    nop
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
-    nop
     nop
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
@@ -549,38 +536,42 @@
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/Grid;->f56bdbb6e:[[Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
 
     aget-object v4, v4, v2
     nop
-    nop
 
     new-instance v6, Lcom/tpcstld/twozerogame/Tile;
+    nop
+    nop
     nop
 
     invoke-direct {v6, v2, v3, v5}, Lcom/tpcstld/twozerogame/Tile;-><init>(III)V
 
     aput-object v6, v4, v3
     nop
+    nop
+    nop
 
     goto :goto_3
+    nop
     nop
 
     :cond_2
     if-nez v4, :cond_3
     nop
     nop
-    nop
 
     
     iget-object v4, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
-    nop
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
+    nop
+    nop
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
-    nop
     nop
 
     iget-object v4, v4, Lcom/tpcstld/twozerogame/Grid;->f56bdbb6e:[[Lcom/tpcstld/twozerogame/Tile;
@@ -594,16 +585,13 @@
 
     aput-object v7, v4, v3
     nop
-    nop
 
     :cond_3
     :goto_3
     add-int/lit8 v3, v3, 0x1
     nop
-    nop
 
     goto/16 :goto_1
-    nop
     nop
     nop
 
@@ -615,41 +603,36 @@
 
     goto/16 :goto_0
     nop
-    nop
 
     
     :cond_5
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
-    nop
-    nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
-    nop
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
 
     iget-wide v2, v2, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
     nop
-    nop
 
-	const-string/jumbo v4, "a38f442dec6e93bfa4211415e6dfed81"
+	const-string/jumbo v4, "a2a9ddac7ca05fb09e766aba7d4378a0"
 
 	invoke-static {v4}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v4
     nop
-    nop
 
     invoke-interface {v0, v4, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v2
+    nop
     nop
     nop
 
@@ -660,50 +643,49 @@
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
+    nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
     nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
-    nop
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
     nop
 
     iget-wide v2, v2, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
     nop
+    nop
 
-	const-string/jumbo v4, "9737b22af0884da5dc1d4f23a2538a1c"
+	const-string/jumbo v4, "8f68c2e62a516992eae58081e0a020bd"
 
 	invoke-static {v4}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v4
-    nop
-    nop
     nop
 
     invoke-interface {v0, v4, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v2
     nop
-    nop
-    nop
 
     iput-wide v2, v1, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
+    nop
     nop
     nop
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
@@ -712,13 +694,13 @@
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
+    nop
 
     iget-wide v2, v2, Lcom/tpcstld/twozerogame/MainGame;->fe6bde95d:J
     nop
     nop
-    nop
 
-	const-string/jumbo v4, "4866168ca6e275c46a175752fcc38935"
+	const-string/jumbo v4, "890fecac8eadd97d0260407b3c4a7a56"
 
 	invoke-static {v4}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -730,6 +712,7 @@
     invoke-interface {v0, v4, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v2
+    nop
     nop
     nop
 
@@ -746,27 +729,26 @@
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
-    nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
-    nop
     nop
     nop
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
+    nop
 
     iget-boolean v2, v2, Lcom/tpcstld/twozerogame/MainGame;->f375043c7:Z
     nop
     nop
-    nop
 
-	const-string/jumbo v3, "a82d54171a6c8295421c7a69b3597f51"
+	const-string/jumbo v3, "5c9ee38d665279b54bed1038fbffa86a"
 
 	invoke-static {v3}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v3
+    nop
     nop
     nop
 
@@ -779,37 +761,33 @@
 
     iput-boolean v2, v1, Lcom/tpcstld/twozerogame/MainGame;->f375043c7:Z
     nop
-    nop
-    nop
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
-    nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
-    nop
     nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
-    nop
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
 
     iget v2, v2, Lcom/tpcstld/twozerogame/MainGame;->fe18bcf4e:I
     nop
+    nop
+    nop
 
-	const-string/jumbo v3, "63fbe759192e5ed0be01924843ed394a"
+	const-string/jumbo v3, "f9098fa195bf856a521507d2674614e6"
 
 	invoke-static {v3}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v3
+    nop
     nop
 
     invoke-interface {v0, v3, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -836,27 +814,23 @@
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
-    nop
 
     iget v2, v2, Lcom/tpcstld/twozerogame/MainGame;->f613bda64:I
     nop
     nop
+    nop
 
-	const-string/jumbo v3, "b139387b14d907e3a43f89e95cdcd3cb"
+	const-string/jumbo v3, "0586066174d47e9765d4dd5ac4057879"
 
 	invoke-static {v3}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v3
     nop
     nop
-    nop
 
     invoke-interface {v0, v3, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v0
-    nop
-    nop
     nop
 
     iput v0, v1, Lcom/tpcstld/twozerogame/MainGame;->f613bda64:I
@@ -885,21 +859,20 @@
     move-result-object v0
     nop
     nop
+    nop
 
     
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
     nop
-    nop
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
-    nop
     nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
@@ -909,35 +882,32 @@
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
 
     
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
-    nop
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
-    nop
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/Grid;->f56bdbb6e:[[Lcom/tpcstld/twozerogame/Tile;
+    nop
     nop
 
     
     array-length v3, v1
     nop
-    nop
-    nop
 
-	const-string/jumbo v4, "86c18c4b377460bf78d297fe2b9ce63d"
+	const-string/jumbo v4, "5fc45d7683594286b5f9b814900ac2f4"
 
 	invoke-static {v4}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v4
-    nop
     nop
 
     invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -946,9 +916,8 @@
     array-length v3, v1
     nop
     nop
-    nop
 
-	const-string/jumbo v4, "1ac0f1c1c6407cef620f8b52907fe854"
+	const-string/jumbo v4, "b89be616fc396176971c5d68846c8a42"
 
 	invoke-static {v4}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -977,9 +946,9 @@
     if-ge v4, v5, :cond_3
     nop
     nop
-    nop
 
     const/4 v5, 0x0
+    nop
     nop
     nop
 
@@ -987,13 +956,15 @@
     :goto_1
     aget-object v6, v1, v3
     nop
+    nop
+    nop
 
     array-length v6, v6
     nop
     nop
-    nop
 
     if-ge v5, v6, :cond_2
+    nop
     nop
     nop
 
@@ -1004,23 +975,21 @@
 
     aget-object v6, v6, v5
     nop
-    nop
 
-	const-string/jumbo v7, "1e34d48c7b7fdd94b8b7cd9689c76d36"
+	const-string/jumbo v7, "6cc39c10f02f0d3eb6b6560a0ec98135"
 
 	invoke-static {v7}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v7
     nop
-    nop
-    nop
 
     if-eqz v6, :cond_0
+    nop
+    nop
     nop
 
     
     new-instance v6, Ljava/lang/StringBuilder;
-    nop
     nop
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1035,18 +1004,20 @@
 
     move-result-object v6
     nop
-    nop
 
     aget-object v8, v1, v4
     nop
+    nop
 
     aget-object v8, v8, v5
+    nop
     nop
     nop
 
     invoke-virtual {v8}, Lcom/tpcstld/twozerogame/Tile;->getValue()I
 
     move-result v8
+    nop
     nop
     nop
 
@@ -1075,6 +1046,7 @@
     move-result-object v6
     nop
     nop
+    nop
 
     invoke-interface {v0, v6, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
@@ -1082,28 +1054,27 @@
     :goto_2
     aget-object v6, v2, v4
     nop
-    nop
-    nop
 
     aget-object v6, v6, v5
     nop
     nop
+    nop
 
-	const-string/jumbo v8, "2cb382e852cfb1d8bca8c2ec7d7db7f4"
+	const-string/jumbo v8, "97c5e4a5ab7da8dad252458562cfb22a"
 
 	invoke-static {v8}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v8
     nop
     nop
+    nop
 
     if-eqz v6, :cond_1
+    nop
     nop
 
     
     new-instance v6, Ljava/lang/StringBuilder;
-    nop
-    nop
     nop
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1119,6 +1090,8 @@
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
+    nop
+    nop
     nop
 
     aget-object v7, v2, v4
@@ -1133,19 +1106,16 @@
     move-result v7
     nop
     nop
-    nop
 
     invoke-interface {v0, v6, v7}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_3
     nop
     nop
-    nop
 
     
     :cond_1
     new-instance v6, Ljava/lang/StringBuilder;
-    nop
     nop
     nop
 
@@ -1164,7 +1134,6 @@
     move-result-object v6
     nop
     nop
-    nop
 
     invoke-interface {v0, v6, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
@@ -1172,34 +1141,36 @@
     add-int/lit8 v5, v5, 0x1
     nop
     nop
+    nop
 
     goto/16 :goto_1
+    nop
     nop
 
     :cond_2
     add-int/lit8 v4, v4, 0x1
     nop
+    nop
+    nop
 
     goto/16 :goto_0
-    nop
-    nop
     nop
 
     
     :cond_3
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
-    nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
+    nop
     nop
 
     iget-wide v1, v1, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
     nop
     nop
-    nop
 
-	const-string/jumbo v3, "a38f442dec6e93bfa4211415e6dfed81"
+	const-string/jumbo v3, "a2a9ddac7ca05fb09e766aba7d4378a0"
 
 	invoke-static {v3}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1212,6 +1183,7 @@
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
+    nop
     nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1222,7 +1194,7 @@
     nop
     nop
 
-	const-string/jumbo v3, "9737b22af0884da5dc1d4f23a2538a1c"
+	const-string/jumbo v3, "8f68c2e62a516992eae58081e0a020bd"
 
 	invoke-static {v3}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1234,8 +1206,6 @@
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
-    nop
-    nop
     nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1244,12 +1214,14 @@
 
     iget-wide v1, v1, Lcom/tpcstld/twozerogame/MainGame;->fe6bde95d:J
     nop
+    nop
 
-	const-string/jumbo v3, "4866168ca6e275c46a175752fcc38935"
+	const-string/jumbo v3, "890fecac8eadd97d0260407b3c4a7a56"
 
 	invoke-static {v3}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v3
+    nop
     nop
 
     invoke-interface {v0, v3, v1, v2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
@@ -1257,24 +1229,18 @@
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
-    nop
-    nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
 
     iget-boolean v1, v1, Lcom/tpcstld/twozerogame/MainGame;->f375043c7:Z
     nop
-    nop
-    nop
 
-	const-string/jumbo v2, "a82d54171a6c8295421c7a69b3597f51"
+	const-string/jumbo v2, "5c9ee38d665279b54bed1038fbffa86a"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v2
-    nop
     nop
     nop
 
@@ -1282,6 +1248,7 @@
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
+    nop
     nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1291,18 +1258,22 @@
     iget v1, v1, Lcom/tpcstld/twozerogame/MainGame;->fe18bcf4e:I
     nop
     nop
+    nop
 
-	const-string/jumbo v2, "63fbe759192e5ed0be01924843ed394a"
+	const-string/jumbo v2, "f9098fa195bf856a521507d2674614e6"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v2
+    nop
     nop
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
+    nop
+    nop
     nop
 
     iget-object v1, v1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1311,8 +1282,10 @@
 
     iget v1, v1, Lcom/tpcstld/twozerogame/MainGame;->f613bda64:I
     nop
+    nop
+    nop
 
-	const-string/jumbo v2, "b139387b14d907e3a43f89e95cdcd3cb"
+	const-string/jumbo v2, "0586066174d47e9765d4dd5ac4057879"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1346,19 +1319,15 @@
 
     move-result-object v0
     nop
-    nop
 
     const/4 v1, 0x0
     nop
-    nop
 
-	const-string/jumbo v2, "8cd70698b8691e180e6ccf95d74fd1c9"
+	const-string/jumbo v2, "f88afc273a725e6332e2236cca56521d"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v2
-    nop
-    nop
     nop
 
     
@@ -1366,10 +1335,10 @@
 
     move-result v0
     nop
-    nop
 
     
     new-instance v2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;
+    nop
     nop
 
     sget-object v3, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->DEFAULT_GAMES_SIGN_IN:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
@@ -1386,17 +1355,22 @@
     new-array v1, v1, [Lcom/google/android/gms/common/api/Scope;
     nop
     nop
+    nop
 
     
     invoke-virtual {v2, v3, v1}, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;->requestScopes(Lcom/google/android/gms/common/api/Scope;[Lcom/google/android/gms/common/api/Scope;)Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;
 
     move-result-object v1
     nop
+    nop
+    nop
 
     
     invoke-virtual {v1}, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;->build()Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 
     move-result-object v1
+    nop
+    nop
     nop
 
     
@@ -1409,7 +1383,6 @@
     invoke-virtual {v1}, Lcom/google/android/gms/auth/api/signin/GoogleSignInClient;->silentSignIn()Lcom/google/android/gms/tasks/Task;
 
     move-result-object v2
-    nop
     nop
     nop
 
@@ -1444,8 +1417,11 @@
 
     const/16 p2, 0x2329
     nop
+    nop
+    nop
 
     if-eq p1, p2, :cond_0
+    nop
     nop
     nop
 
@@ -1455,16 +1431,14 @@
     :cond_0
     sget-object p1, Lcom/google/android/gms/auth/api/Auth;->GoogleSignInApi:Lcom/google/android/gms/auth/api/signin/GoogleSignInApi;
     nop
+    nop
 
     invoke-interface {p1, p3}, Lcom/google/android/gms/auth/api/signin/GoogleSignInApi;->getSignInResultFromIntent(Landroid/content/Intent;)Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;
 
     move-result-object p1
     nop
-    nop
-    nop
 
     if-nez p1, :cond_1
-    nop
     nop
 
     return-void
@@ -1475,8 +1449,10 @@
 
     move-result p2
     nop
+    nop
 
     if-nez p2, :cond_2
+    nop
     nop
     nop
 
@@ -1495,9 +1471,8 @@
 
     const/4 p3, 0x1
     nop
-    nop
 
-	const-string/jumbo v0, "8cd70698b8691e180e6ccf95d74fd1c9"
+	const-string/jumbo v0, "f88afc273a725e6332e2236cca56521d"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1531,10 +1506,8 @@
 
     move-result-object p2
     nop
-    nop
 
     if-eqz p2, :cond_3
-    nop
     nop
     nop
 
@@ -1550,10 +1523,11 @@
 
     move-result-object p1
     nop
+    nop
+    nop
 
     
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
-    nop
     nop
     nop
 
@@ -1590,11 +1564,12 @@
     
     new-instance v0, Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
+    nop
 
     invoke-direct {v0, p0}, Lcom/tpcstld/twozerogame/MainView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
-    nop
     nop
 
     
@@ -1603,15 +1578,13 @@
     move-result-object v0
     nop
     nop
-    nop
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
-    nop
 
-	const-string/jumbo v2, "9300529d86477770e3e57c130a5cb240"
+	const-string/jumbo v2, "f6595bbab5d30ede82d3c182002a08a8"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1628,14 +1601,18 @@
     move-result v0
     nop
     nop
+    nop
 
     iput-boolean v0, v1, Lcom/tpcstld/twozerogame/MainView;->fc70383a7:Z
+    nop
     nop
 
     if-eqz p1, :cond_0
     nop
+    nop
+    nop
 
-	const-string/jumbo v0, "4cdfcf941ab711b688345969a08342ed"
+	const-string/jumbo v0, "d1b3be1ae31c86cf146106a92b4599ef"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1650,10 +1627,8 @@
     move-result p1
     nop
     nop
-    nop
 
     if-eqz p1, :cond_0
-    nop
     nop
 
     
@@ -1685,13 +1660,14 @@
     const/4 v0, 0x1
     nop
     nop
+    nop
 
     const/16 v1, 0x52
     nop
     nop
-    nop
 
     if-ne p1, v1, :cond_0
+    nop
     nop
     nop
 
@@ -1701,14 +1677,16 @@
     :cond_0
     const/16 v1, 0x14
     nop
-    nop
-    nop
 
     if-ne p1, v1, :cond_1
+    nop
+    nop
     nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
+    nop
+    nop
     nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1735,30 +1713,32 @@
     if-ne p1, v1, :cond_2
     nop
     nop
-    nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
+    nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
+    nop
 
     const/4 p2, 0x0
-    nop
     nop
 
     invoke-virtual {p1, p2}, Lcom/tpcstld/twozerogame/MainGame;->move(I)V
 
     return v0
     nop
+    nop
 
     :cond_2
     const/16 v1, 0x15
     nop
-    nop
 
     if-ne p1, v1, :cond_3
+    nop
     nop
     nop
 
@@ -1767,6 +1747,8 @@
     nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
+    nop
     nop
 
     const/4 p2, 0x3
@@ -1777,19 +1759,20 @@
 
     return v0
     nop
+    nop
+    nop
 
     :cond_3
     const/16 v1, 0x16
     nop
+    nop
+    nop
 
     if-ne p1, v1, :cond_4
-    nop
     nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity;->f1bda80f2:Lcom/tpcstld/twozerogame/MainView;
-    nop
-    nop
     nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1876,15 +1859,15 @@
     
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-	const-string/jumbo v0, "4cdfcf941ab711b688345969a08342ed"
+	const-string/jumbo v0, "d1b3be1ae31c86cf146106a92b4599ef"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v0
     nop
+    nop
 
     const/4 v1, 0x1
-    nop
     nop
     nop
 

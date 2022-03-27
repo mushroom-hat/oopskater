@@ -6,13 +6,21 @@
 # instance fields
 .field private f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
 
-.field private f0946e2a7lJmjUaCD:[Lcom/tpcstld/twozerogame/Tile;
+.field private f0946e2a7muocdSIm:[Lcom/tpcstld/twozerogame/Tile;
+
+.field private f0946e2a7rdFDVHkF:[Lcom/tpcstld/twozerogame/Tile;
+
+.field private f0946e2a7AjOnTKAf:[Lcom/tpcstld/twozerogame/Tile;
 
 .field private final f2063c160:I
 
-.field private final f2063c160ihJMjFfk:I
+.field private final f2063c160izTTKQJx:I
 
-.field private final f2063c160frtnEban:I
+.field private final f2063c160mcVVfpaL:I
+
+.field private final f2063c160sEWuuRFs:I
+
+.field private final f2063c160sYVOAyXX:I
 
 
 # direct methods
@@ -38,7 +46,6 @@
     
     iput p3, p0, Lcom/tpcstld/twozerogame/Tile;->f2063c160:I
     nop
-    nop
 
     return-void
 
@@ -61,11 +68,11 @@
     move-result v0
     nop
     nop
+    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getY()I
 
     move-result p1
-    nop
     nop
     nop
 
@@ -78,10 +85,10 @@
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/Tile;->f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
 
     
     iput p2, p0, Lcom/tpcstld/twozerogame/Tile;->f2063c160:I
-    nop
     nop
 
     return-void
@@ -105,9 +112,9 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/Tile;->f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
     nop
     nop
-    nop
 
     return-object v0
+    nop
     nop
 
 	:after_last_instruction
@@ -126,8 +133,11 @@
     
     iget v0, p0, Lcom/tpcstld/twozerogame/Tile;->f2063c160:I
     nop
+    nop
+    nop
 
     return v0
+    nop
     nop
     nop
 
@@ -146,6 +156,7 @@
 
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/Tile;->f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
+    nop
     nop
 
     return-void
@@ -168,7 +179,6 @@
 
     move-result v0
     nop
-    nop
 
     invoke-virtual {p0, v0}, Lcom/tpcstld/twozerogame/Tile;->setX(I)V
 
@@ -176,7 +186,6 @@
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getY()I
 
     move-result p1
-    nop
     nop
     nop
 

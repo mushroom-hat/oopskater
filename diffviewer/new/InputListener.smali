@@ -9,139 +9,139 @@
 # static fields
 .field private static final f7f70966f:I = 0xfa
 
-.field private static final f7f70966fViWQBsvd:I = 0xfa
+.field private static final f7f70966fHVMcnVqx:I = 0xfa
+
+.field private static final f7f70966fTgNxLWqk:I = 0xfa
+
+.field private static final f7f70966fTcZjWWaL:I = 0xfa
 
 .field private static final fa33b041f:I = 0xa
 
-.field private static final fa33b041fQTngodSu:I = 0xa
+.field private static final fa33b041fAfQIaDbH:I = 0xa
 
-.field private static final fa33b041fZVAwXPsM:I = 0xa
+.field private static final fa33b041fqnPrUdNA:I = 0xa
+
+.field private static final fa33b041fsroDTaPS:I = 0xa
+
+.field private static final fa33b041fgctiWnYL:I = 0xa
 
 .field private static final fef1e60ea:I = 0x0
 
-.field private static final fef1e60eaUqAdiBHw:I = 0x0
+.field private static final fef1e60ealDqfCgCn:I = 0x0
 
-.field private static final fef1e60eaIMaNfRvG:I = 0x0
+.field private static final fef1e60eaazmzvQKR:I = 0x0
 
-.field private static final fef1e60eavzTFzOdW:I = 0x0
+.field private static final fef1e60eaYdGQejxc:I = 0x0
 
-.field private static final fef1e60eaFIEZxvcG:I = 0x0
+.field private static final fef1e60eaXxcHJzRG:I = 0x0
 
 .field private static final fa6e8b11e:I = 0x19
 
-.field private static final fa6e8b11edQaaUvsb:I = 0x19
+.field private static final fa6e8b11exoFPmbFx:I = 0x19
 
-.field private static final fa6e8b11eAySpbebJ:I = 0x19
-
-.field private static final fa6e8b11ewvRtCeov:I = 0x19
-
-.field private static final fa6e8b11eADJALrdt:I = 0x19
+.field private static final fa6e8b11etkxrBymx:I = 0x19
 
 
 # instance fields
 .field private fb587fade:Z
 
-.field private fb587fadewhzipNKg:Z
+.field private fb587fadeuSxxkqzN:Z
 
-.field private fb587fadeGSXryojd:Z
-
-.field private fb587fadeowfEwHUh:Z
+.field private fb587fadeTZmtTati:Z
 
 .field private f3975be87:Z
 
-.field private f3975be87UQLcvADg:Z
+.field private f3975be87zWZOdxqg:Z
 
-.field private f3975be87qoEHRjIq:Z
+.field private f3975be87miiPIjOf:Z
 
-.field private f3975be87dyulYDAj:Z
+.field private f3975be87wUMpdvAP:Z
 
 .field private f4c93db25:F
 
-.field private f4c93db25dubUtXGh:F
-
-.field private f4c93db25XeSnclBZ:F
-
-.field private f4c93db25djMUHgGS:F
-
-.field private f4c93db25TLWQERoC:F
+.field private f4c93db25ZEMDbRBf:F
 
 .field private fe0fa2347:F
 
-.field private fe0fa2347rEmwwevM:F
+.field private fe0fa2347IlBtNXrG:F
 
-.field private fe0fa2347mcrlVEXr:F
+.field private fe0fa2347svdUYtBN:F
 
-.field private fe0fa2347xDzLDJSC:F
+.field private fe0fa2347CxqBARYg:F
 
-.field private fe0fa2347GoaKdwGT:F
+.field private fe0fa2347JsiqiAKL:F
 
 .field private final f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
 
-.field private final f7d6c7318puUvnxxP:Lcom/tpcstld/twozerogame/MainView;
+.field private final f7d6c7318kcZcYJqF:Lcom/tpcstld/twozerogame/MainView;
 
-.field private final f7d6c7318SiqvwLmN:Lcom/tpcstld/twozerogame/MainView;
+.field private final f7d6c7318wFQRwagB:Lcom/tpcstld/twozerogame/MainView;
 
-.field private final f7d6c7318UylPiZpF:Lcom/tpcstld/twozerogame/MainView;
+.field private final f7d6c7318SVKvjikD:Lcom/tpcstld/twozerogame/MainView;
 
 .field private f47e13400:I
 
-.field private f47e13400stBHXPCJ:I
+.field private f47e13400XSgUXKQt:I
+
+.field private f47e13400qiqEWUvt:I
+
+.field private f47e13400iTtotwVl:I
+
+.field private f47e13400rdxgPDEs:I
 
 .field private f29bd33b7:F
 
-.field private f29bd33b7cjYiIioB:F
+.field private f29bd33b7rQrMmgvi:F
 
-.field private f29bd33b7ZdRhiNIM:F
+.field private f29bd33b7KAtJORWk:F
 
-.field private f29bd33b7LlvfsdYM:F
+.field private f29bd33b7ZJZgoOeV:F
 
-.field private f29bd33b7msPvspry:F
+.field private f29bd33b7qpajOUps:F
 
 .field private f1331cc69:F
 
-.field private f1331cc69sQXFFRpw:F
+.field private f1331cc69xEsDgjmz:F
 
-.field private f1331cc69oRWqKsjy:F
+.field private f1331cc69WkQabrKi:F
 
-.field private f1331cc69qzqTgptU:F
+.field private f1331cc69GLSxXqMZ:F
 
 .field private f01412ace:F
 
-.field private f01412aceEphAKMFh:F
+.field private f01412acepOVniWXv:F
 
-.field private f01412acevVFSPZvN:F
+.field private f01412acezHpcnKrt:F
 
-.field private f01412aceghDaptsz:F
-
-.field private f01412acekZHOkQdF:F
+.field private f01412acenJFauBdX:F
 
 .field private fe51824ac:F
 
-.field private fe51824actXAViXXA:F
+.field private fe51824acvldqzmdN:F
 
 .field private f6dfae740:I
 
-.field private f6dfae740fpLOqZLt:I
+.field private f6dfae740SNxYhOlq:I
 
-.field private f6dfae740QABKWMHf:I
+.field private f6dfae740fEGQZxNB:I
 
-.field private f6dfae740qVWkWaLb:I
+.field private f6dfae740QFNAaQcI:I
+
+.field private f6dfae740dEGLPaGg:I
 
 .field private f9dd4e461:F
 
-.field private f9dd4e461ZuNGpSmG:F
+.field private f9dd4e461KlKosWaf:F
 
-.field private f9dd4e461NSVIEhrB:F
+.field private f9dd4e461FpOPrZsU:F
+
+.field private f9dd4e461prUcDMoH:F
+
+.field private f9dd4e461BZApqawf:F
 
 .field private f41529076:F
 
-.field private f41529076XHEYqhHl:F
-
-.field private f41529076KGSzSChm:F
-
-.field private f41529076bbtqJlyd:F
-
-.field private f41529076JAdbSaEH:F
+.field private f41529076wIrMMJsE:F
 
 
 # direct methods
@@ -157,6 +157,8 @@
 
     const/4 v0, 0x1
     nop
+    nop
+    nop
 
     
     iput v0, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
@@ -168,21 +170,17 @@
     iput v0, p0, Lcom/tpcstld/twozerogame/InputListener;->f6dfae740:I
     nop
     nop
-    nop
 
     const/4 v0, 0x0
-    nop
-    nop
     nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/InputListener;->f3975be87:Z
     nop
-    nop
-    nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/InputListener;->fb587fade:Z
+    nop
     nop
 
     
@@ -209,9 +207,10 @@
     iget-object p0, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
-    nop
 
     return-object p0
+    nop
+    nop
     nop
 
 	:after_last_instruction
@@ -241,8 +240,6 @@
 
     if-eqz v1, :cond_0
     nop
-    nop
-    nop
 
     int-to-float v1, p1
     nop
@@ -250,19 +247,19 @@
 
     iget v2, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
     nop
+    nop
+    nop
 
     iget-object v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
+    nop
     nop
     nop
 
     iget v3, v3, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
     nop
     nop
-    nop
 
     add-int/2addr p1, v3
-    nop
-    nop
     nop
 
     int-to-float p1, p1
@@ -274,8 +271,6 @@
 
     move-result p1
     nop
-    nop
-    nop
 
     if-eqz p1, :cond_0
     nop
@@ -284,13 +279,12 @@
 
     int-to-float p1, p2
     nop
-    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
     nop
+    nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
-    nop
     nop
 
     iget v2, v2, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
@@ -298,7 +292,6 @@
     nop
 
     add-int/2addr p2, v2
-    nop
     nop
 
     int-to-float p2, p2
@@ -314,14 +307,16 @@
 
     if-eqz p1, :cond_0
     nop
+    nop
+    nop
 
     goto :goto_0
+    nop
     nop
     nop
 
     :cond_0
     const/4 v0, 0x0
-    nop
     nop
 
     :goto_0
@@ -345,7 +340,6 @@
     cmpg-float p1, p1, p2
     nop
     nop
-    nop
 
     if-gtz p1, :cond_0
     nop
@@ -354,27 +348,26 @@
     cmpg-float p1, p2, p3
     nop
     nop
-    nop
 
     if-gtz p1, :cond_0
+    nop
     nop
 
     const/4 p1, 0x1
     nop
-    nop
-    nop
 
     goto :goto_0
-    nop
     nop
     nop
 
     :cond_0
     const/4 p1, 0x0
     nop
+    nop
 
     :goto_0
     return p1
+    nop
     nop
     nop
 
@@ -397,7 +390,6 @@
     move-result v0
     nop
     nop
-    nop
 
     iget-object v1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
@@ -405,10 +397,9 @@
 
     iget v1, v1, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
     nop
-    nop
-    nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
+    nop
     nop
 
     iget v2, v2, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
@@ -416,6 +407,7 @@
     nop
 
     mul-int v1, v1, v2
+    nop
     nop
 
     mul-int v1, v1, p1
@@ -427,11 +419,8 @@
     cmpg-float p1, v0, p1
     nop
     nop
-    nop
 
     if-gtz p1, :cond_0
-    nop
-    nop
     nop
 
     const/4 p1, 0x1
@@ -441,16 +430,15 @@
 
     goto :goto_0
     nop
+    nop
 
     :cond_0
     const/4 p1, 0x0
     nop
     nop
-    nop
 
     :goto_0
     return p1
-    nop
     nop
 
 	:after_last_instruction
@@ -469,25 +457,25 @@
     
     iget v0, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
     nop
+    nop
+    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/InputListener;->f01412ace:F
-    nop
-    nop
     nop
 
     sub-float v2, v0, v1
     nop
     nop
+    nop
 
     sub-float/2addr v0, v1
-    nop
     nop
 
     mul-float v2, v2, v0
     nop
-    nop
 
     iget v0, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
+    nop
     nop
     nop
 
@@ -496,22 +484,18 @@
 
     sub-float v3, v0, v1
     nop
-    nop
 
     sub-float/2addr v0, v1
-    nop
     nop
 
     mul-float v3, v3, v0
     nop
-    nop
 
     add-float/2addr v2, v3
     nop
+    nop
 
     return v2
-    nop
-    nop
     nop
 
 	:after_last_instruction
@@ -535,10 +519,8 @@
     move-result p1
     nop
     nop
-    nop
 
     const/4 v0, 0x0
-    nop
     nop
 
     const/4 v1, 0x0
@@ -546,14 +528,12 @@
 
     const/4 v2, 0x1
     nop
-    nop
 
     if-eqz p1, :cond_17
     nop
     nop
 
     const/4 v3, 0x2
-    nop
     nop
 
     if-eq p1, v2, :cond_12
@@ -563,7 +543,6 @@
     nop
 
     goto/16 :goto_4
-    nop
     nop
 
     
@@ -577,6 +556,7 @@
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
     nop
+    nop
 
     
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
@@ -584,9 +564,9 @@
     move-result p1
     nop
     nop
+    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
-    nop
     nop
     nop
 
@@ -605,6 +585,8 @@
 
     move-result p1
     nop
+    nop
+    nop
 
     if-eqz p1, :cond_11
     nop
@@ -613,8 +595,10 @@
 
     iget-boolean p1, p0, Lcom/tpcstld/twozerogame/InputListener;->fb587fade:Z
     nop
+    nop
 
     if-nez p1, :cond_11
+    nop
     nop
 
     
@@ -624,26 +608,29 @@
 
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f29bd33b7:F
     nop
-    nop
 
     sub-float/2addr p1, p2
+    nop
     nop
 
     
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f4c93db25:F
     nop
-    nop
-    nop
 
     add-float/2addr p2, p1
+    nop
+    nop
     nop
 
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result p2
     nop
+    nop
+    nop
 
     iget v4, p0, Lcom/tpcstld/twozerogame/InputListener;->f4c93db25:F
+    nop
     nop
     nop
 
@@ -657,8 +644,11 @@
 
     move-result v5
     nop
+    nop
+    nop
 
     add-float/2addr v4, v5
+    nop
     nop
 
     const/high16 v5, 0x41200000    # 10.0f
@@ -676,6 +666,7 @@
 
     move-result p2
     nop
+    nop
 
     cmpl-float p2, p2, v5
     nop
@@ -683,16 +674,16 @@
 
     if-lez p2, :cond_1
     nop
+    nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
-    nop
     nop
 
     iget v4, p0, Lcom/tpcstld/twozerogame/InputListener;->f01412ace:F
     nop
-    nop
 
     sub-float/2addr p2, v4
+    nop
     nop
 
     
@@ -700,12 +691,16 @@
 
     move-result p2
     nop
+    nop
+    nop
 
     cmpl-float p2, p2, v1
     nop
     nop
+    nop
 
     if-lez p2, :cond_1
+    nop
     nop
     nop
 
@@ -715,9 +710,11 @@
 
     iput p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f01412ace:F
     nop
+    nop
 
     
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
+    nop
     nop
     nop
 
@@ -728,12 +725,16 @@
     
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f4c93db25:F
     nop
+    nop
+    nop
 
     
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f6dfae740:I
     nop
+    nop
 
     iput p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
+    nop
     nop
     nop
 
@@ -741,13 +742,15 @@
     :cond_1
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f4c93db25:F
     nop
-    nop
-    nop
 
     cmpl-float p2, p2, v1
     nop
+    nop
+    nop
 
     if-nez p2, :cond_2
+    nop
+    nop
     nop
 
     
@@ -762,6 +765,8 @@
 
     iget v4, p0, Lcom/tpcstld/twozerogame/InputListener;->f1331cc69:F
     nop
+    nop
+    nop
 
     sub-float/2addr p2, v4
     nop
@@ -769,9 +774,10 @@
     
     iget v4, p0, Lcom/tpcstld/twozerogame/InputListener;->fe0fa2347:F
     nop
+    nop
+    nop
 
     add-float/2addr v4, p2
-    nop
     nop
     nop
 
@@ -782,7 +788,6 @@
     nop
 
     iget v6, p0, Lcom/tpcstld/twozerogame/InputListener;->fe0fa2347:F
-    nop
     nop
 
     invoke-static {v6}, Ljava/lang/Math;->abs(F)F
@@ -796,12 +801,13 @@
     move-result v7
     nop
     nop
-    nop
 
     add-float/2addr v6, v7
     nop
 
     cmpg-float v4, v4, v6
+    nop
+    nop
     nop
 
     if-gez v4, :cond_3
@@ -811,6 +817,7 @@
 
     move-result v4
     nop
+    nop
 
     cmpl-float v4, v4, v5
     nop
@@ -818,7 +825,6 @@
     nop
 
     if-lez v4, :cond_3
-    nop
     nop
 
     iget v4, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
@@ -828,10 +834,9 @@
 
     iget v5, p0, Lcom/tpcstld/twozerogame/InputListener;->fe51824ac:F
     nop
-    nop
-    nop
 
     sub-float/2addr v4, v5
+    nop
     nop
     nop
 
@@ -839,8 +844,6 @@
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result v4
-    nop
-    nop
     nop
 
     cmpl-float v4, v4, v1
@@ -858,7 +861,6 @@
 
     iput v4, p0, Lcom/tpcstld/twozerogame/InputListener;->f01412ace:F
     nop
-    nop
 
     
     iget v4, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
@@ -871,11 +873,9 @@
     iput p2, p0, Lcom/tpcstld/twozerogame/InputListener;->fe0fa2347:F
     nop
     nop
-    nop
 
     
     iget v4, p0, Lcom/tpcstld/twozerogame/InputListener;->f6dfae740:I
-    nop
     nop
     nop
 
@@ -886,17 +886,17 @@
     :cond_3
     iget v4, p0, Lcom/tpcstld/twozerogame/InputListener;->fe0fa2347:F
     nop
-    nop
-    nop
 
     cmpl-float v4, v4, v1
     nop
 
     if-nez v4, :cond_4
     nop
+    nop
 
     
     iput p2, p0, Lcom/tpcstld/twozerogame/InputListener;->fe0fa2347:F
+    nop
     nop
     nop
 
@@ -906,13 +906,13 @@
 
     move-result v4
     nop
+    nop
+    nop
 
     cmpl-float v1, v4, v1
     nop
-    nop
 
     if-lez v1, :cond_11
-    nop
     nop
     nop
 
@@ -929,6 +929,7 @@
     const/high16 v1, -0x3c860000    # -250.0f
     nop
     nop
+    nop
 
     const/high16 v4, -0x3e380000    # -25.0f
     nop
@@ -938,17 +939,16 @@
 
     const/high16 v6, 0x41c80000    # 25.0f
     nop
-    nop
 
     const/4 v7, 0x3
-    nop
     nop
 
     cmpl-float v8, p2, v6
     nop
+    nop
+    nop
 
     if-ltz v8, :cond_5
-    nop
     nop
     nop
 
@@ -957,17 +957,15 @@
 
     move-result v8
     nop
-    nop
 
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result v9
     nop
     nop
+    nop
 
     cmpl-float v8, v8, v9
-    nop
-    nop
     nop
 
     if-gez v8, :cond_6
@@ -978,42 +976,43 @@
     :cond_5
     iget v8, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
     nop
-    nop
 
     iget v9, p0, Lcom/tpcstld/twozerogame/InputListener;->fe51824ac:F
     nop
+    nop
 
     sub-float/2addr v8, v9
+    nop
     nop
 
     cmpl-float v8, v8, v5
     nop
     nop
-    nop
 
     if-ltz v8, :cond_7
-    nop
     nop
 
     :cond_6
     iget v8, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
     nop
     nop
-    nop
 
     rem-int/lit8 v9, v8, 0x2
+    nop
+    nop
     nop
 
     if-eqz v9, :cond_7
     nop
     nop
+    nop
 
     mul-int/lit8 v8, v8, 0x2
-    nop
     nop
 
     
     iput v8, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
+    nop
     nop
     nop
 
@@ -1021,9 +1020,11 @@
     iput v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f6dfae740:I
     nop
     nop
+    nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
+    nop
     nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1035,6 +1036,8 @@
     :goto_0
     const/4 v0, 0x1
     nop
+    nop
+    nop
 
     goto :goto_1
     nop
@@ -1042,19 +1045,14 @@
     :cond_7
     cmpg-float v3, p2, v4
     nop
-    nop
-    nop
 
     if-gtz v3, :cond_8
-    nop
     nop
 
     
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result v3
-    nop
-    nop
     nop
 
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
@@ -1066,12 +1064,16 @@
     cmpl-float v3, v3, v8
     nop
     nop
+    nop
 
     if-gez v3, :cond_9
+    nop
+    nop
     nop
 
     :cond_8
     iget v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
+    nop
     nop
     nop
 
@@ -1081,32 +1083,35 @@
 
     sub-float/2addr v3, v8
     nop
+    nop
 
     cmpg-float v3, v3, v1
     nop
 
     if-gtz v3, :cond_a
     nop
+    nop
+    nop
 
     :cond_9
     iget v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
     nop
     nop
-    nop
 
     rem-int/lit8 v8, v3, 0x3
-    nop
     nop
 
     if-eqz v8, :cond_a
     nop
-    nop
 
     mul-int/lit8 v3, v3, 0x3
+    nop
+    nop
     nop
 
     
     iput v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
+    nop
     nop
     nop
 
@@ -1118,19 +1123,13 @@
     
     iget-object v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
-    nop
-    nop
 
     iget-object v3, v3, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
-    nop
     nop
 
     invoke-virtual {v3, v0}, Lcom/tpcstld/twozerogame/MainGame;->move(I)V
 
     goto :goto_0
-    nop
-    nop
     nop
 
     :cond_a
@@ -1138,9 +1137,9 @@
     cmpl-float v3, p1, v6
     nop
     nop
-    nop
 
     if-ltz v3, :cond_b
+    nop
     nop
     nop
 
@@ -1150,16 +1149,15 @@
     move-result v3
     nop
     nop
-    nop
 
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result v6
     nop
+    nop
+    nop
 
     cmpl-float v3, v3, v6
-    nop
-    nop
     nop
 
     if-gez v3, :cond_c
@@ -1171,17 +1169,16 @@
     iget v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
     nop
     nop
+    nop
 
     iget v6, p0, Lcom/tpcstld/twozerogame/InputListener;->f01412ace:F
-    nop
     nop
 
     sub-float/2addr v3, v6
     nop
+    nop
 
     cmpl-float v3, v3, v5
-    nop
-    nop
     nop
 
     if-ltz v3, :cond_d
@@ -1189,7 +1186,6 @@
 
     :cond_c
     iget v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
-    nop
     nop
 
     rem-int/lit8 v5, v3, 0x5
@@ -1199,15 +1195,20 @@
 
     if-eqz v5, :cond_d
     nop
+    nop
+    nop
 
     const/4 p1, 0x5
+    nop
     nop
 
     mul-int/lit8 v3, v3, 0x5
     nop
+    nop
 
     
     iput v3, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
+    nop
     nop
     nop
 
@@ -1220,9 +1221,9 @@
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
     nop
 
@@ -1246,7 +1247,6 @@
 
     if-gtz v3, :cond_e
     nop
-    nop
 
     
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
@@ -1258,58 +1258,54 @@
 
     move-result p2
     nop
-    nop
-    nop
 
     cmpl-float p1, p1, p2
     nop
 
     if-gez p1, :cond_f
     nop
-    nop
 
     :cond_e
     iget p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
     nop
     nop
+    nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f01412ace:F
     nop
-    nop
-    nop
 
     sub-float/2addr p1, p2
-    nop
-    nop
     nop
 
     cmpg-float p1, p1, v1
     nop
     nop
-    nop
 
     if-gtz p1, :cond_10
+    nop
+    nop
     nop
 
     :cond_f
     iget p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
     nop
-    nop
-    nop
 
     rem-int/lit8 p2, p1, 0x7
-    nop
     nop
     nop
 
     if-eqz p2, :cond_10
     nop
+    nop
+    nop
 
     const/4 p2, 0x7
     nop
     nop
+    nop
 
     mul-int/lit8 p1, p1, 0x7
+    nop
     nop
     nop
 
@@ -1317,15 +1313,16 @@
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
     nop
     nop
+    nop
 
     
     iput p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f6dfae740:I
     nop
+    nop
+    nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
-    nop
-    nop
     nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1348,11 +1345,10 @@
     iput-boolean v2, p0, Lcom/tpcstld/twozerogame/InputListener;->f3975be87:Z
     nop
     nop
+    nop
 
     
     iget p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
-    nop
-    nop
     nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f01412ace:F
@@ -1363,10 +1359,8 @@
     
     iget p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
     nop
-    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->fe51824ac:F
-    nop
     nop
 
     
@@ -1380,6 +1374,8 @@
 
     
     iget p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
+    nop
+    nop
     nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f1331cc69:F
@@ -1397,9 +1393,10 @@
     move-result p1
     nop
     nop
-    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
+    nop
+    nop
     nop
 
     
@@ -1412,37 +1409,30 @@
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
     nop
-    nop
-    nop
 
     
     iput v2, p0, Lcom/tpcstld/twozerogame/InputListener;->f47e13400:I
+    nop
     nop
     nop
 
     
     iput v2, p0, Lcom/tpcstld/twozerogame/InputListener;->f6dfae740:I
     nop
+    nop
 
     
     iget-boolean p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f3975be87:Z
     nop
-    nop
 
     if-nez p1, :cond_16
-    nop
-    nop
     nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
-    nop
-    nop
 
     iget p1, p1, Lcom/tpcstld/twozerogame/MainView;->f6e727e21:I
-    nop
-    nop
     nop
 
     iget-object p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
@@ -1452,11 +1442,12 @@
 
     iget p2, p2, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
     nop
-    nop
 
     invoke-direct {p0, p1, p2}, Lcom/tpcstld/twozerogame/InputListener;->iconPressed(II)Z
 
     move-result p1
+    nop
+    nop
     nop
 
     if-eqz p1, :cond_14
@@ -1465,6 +1456,7 @@
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
+    nop
     nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -1476,12 +1468,15 @@
 
     move-result p1
     nop
+    nop
 
     if-nez p1, :cond_13
     nop
 
     
     new-instance p1, Landroid/app/AlertDialog$Builder;
+    nop
+    nop
     nop
 
     iget-object p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
@@ -1491,11 +1486,12 @@
 
     move-result-object p2
     nop
+    nop
+    nop
 
     invoke-direct {p1, p2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     sget p2, Lcom/tpcstld/twozerogame/base/R$string;->f86266ee9:I
-    nop
     nop
 
     new-instance v0, Lcom/tpcstld/twozerogame/InputListener$1;
@@ -1519,7 +1515,6 @@
     const/4 v0, 0x0
     nop
     nop
-    nop
 
     
     invoke-virtual {p1, p2, v0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -1528,6 +1523,7 @@
     nop
 
     sget p2, Lcom/tpcstld/twozerogame/base/R$string;->f1cab3b37:I
+    nop
     nop
 
     
@@ -1547,7 +1543,6 @@
     move-result-object p1
     nop
     nop
-    nop
 
     
     invoke-virtual {p1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
@@ -1561,14 +1556,15 @@
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
+    nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/MainGame;->newGame()V
 
     goto :goto_4
+    nop
     nop
 
     
@@ -1580,11 +1576,14 @@
 
     iget p1, p1, Lcom/tpcstld/twozerogame/MainView;->fb1f2b9f1:I
     nop
+    nop
+    nop
 
     iget-object p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
 
     iget p2, p2, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
+    nop
     nop
     nop
 
@@ -1593,10 +1592,8 @@
     move-result p1
     nop
     nop
-    nop
 
     if-eqz p1, :cond_15
-    nop
     nop
 
     
@@ -1606,12 +1603,11 @@
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
-    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/MainGame;->revertUndoState()V
 
     goto :goto_4
+    nop
     nop
     nop
 
@@ -1621,8 +1617,6 @@
 
     move-result p1
     nop
-    nop
-    nop
 
     if-eqz p1, :cond_16
     nop
@@ -1630,9 +1624,9 @@
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
+    nop
 
     iget p1, p1, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
-    nop
     nop
 
     int-to-float p1, p1
@@ -1642,20 +1636,17 @@
 
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
     nop
-    nop
-    nop
 
     iget-object v0, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
+    nop
     nop
     nop
 
     iget v0, v0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
     nop
     nop
-    nop
 
     int-to-float v0, v0
-    nop
     nop
     nop
 
@@ -1663,8 +1654,10 @@
 
     move-result p1
     nop
+    nop
 
     if-eqz p1, :cond_16
+    nop
     nop
     nop
 
@@ -1681,10 +1674,8 @@
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
     nop
     nop
-    nop
 
     iget-object v0, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
-    nop
     nop
 
     iget v0, v0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
@@ -1701,28 +1692,35 @@
 
     move-result p1
     nop
+    nop
 
     if-eqz p1, :cond_16
     nop
+    nop
+    nop
 
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
+    nop
     nop
     nop
 
     iget-boolean p1, p1, Lcom/tpcstld/twozerogame/MainView;->fa8070ffd:Z
     nop
     nop
-    nop
 
     if-eqz p1, :cond_16
+    nop
+    nop
     nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
+    nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
     nop
 
@@ -1732,8 +1730,6 @@
     :goto_4
     return v2
     nop
-    nop
-    nop
 
     
     :cond_17
@@ -1741,9 +1737,9 @@
 
     move-result p1
     nop
+    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
-    nop
     nop
     nop
 
@@ -1752,24 +1748,22 @@
 
     move-result p1
     nop
+    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
-    nop
     nop
 
     
     iget p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f9dd4e461:F
     nop
     nop
+    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f01412ace:F
-    nop
     nop
 
     
     iget p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f41529076:F
-    nop
-    nop
     nop
 
     iput p2, p0, Lcom/tpcstld/twozerogame/InputListener;->fe51824ac:F
@@ -1785,10 +1779,10 @@
     iput p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f1331cc69:F
     nop
     nop
+    nop
 
     
     iput v1, p0, Lcom/tpcstld/twozerogame/InputListener;->f4c93db25:F
-    nop
     nop
     nop
 
@@ -1809,8 +1803,11 @@
     iget p1, p1, Lcom/tpcstld/twozerogame/MainView;->f6e727e21:I
     nop
     nop
+    nop
 
     iget-object p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
+    nop
+    nop
     nop
 
     iget p2, p2, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
@@ -1823,26 +1820,22 @@
     move-result p1
     nop
     nop
-    nop
 
     if-nez p1, :cond_18
-    nop
-    nop
     nop
 
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
+    nop
 
     iget p1, p1, Lcom/tpcstld/twozerogame/MainView;->fb1f2b9f1:I
-    nop
     nop
 
     iget-object p2, p0, Lcom/tpcstld/twozerogame/InputListener;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
 
     iget p2, p2, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
-    nop
     nop
 
     
@@ -1850,15 +1843,13 @@
 
     move-result p1
     nop
+    nop
 
     if-eqz p1, :cond_19
-    nop
-    nop
     nop
 
     :cond_18
     const/4 v0, 0x1
-    nop
     nop
 
     :cond_19
@@ -1866,6 +1857,7 @@
     nop
 
     return v2
+    nop
     nop
     nop
 

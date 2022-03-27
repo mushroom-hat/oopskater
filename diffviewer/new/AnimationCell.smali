@@ -6,43 +6,45 @@
 # instance fields
 .field private final f8da4907b:J
 
-.field private final f8da4907bOnOXDDdP:J
+.field private final f8da4907bmGOSLKFZ:J
 
-.field private final f8da4907bMnPsoZqs:J
+.field private final f8da4907bZGZzZawt:J
 
-.field private final f8da4907bHNCVQBqQ:J
+.field private final f8da4907bnghzUhqg:J
 
-.field private final f8da4907bdDmtUePx:J
+.field private final f8da4907biTOxKvNx:J
 
 .field private final fac0549da:I
 
-.field private final fac0549datlqyBaNi:I
+.field private final fac0549dajSnkjTSK:I
 
-.field private final fac0549daavdydzSk:I
+.field private final fac0549daQNIuTnMX:I
 
-.field private final fac0549daUynHYEYg:I
+.field private final fac0549dapJFFgHEa:I
 
 .field private final fae89394c:J
 
-.field private final fae89394cTYJXKZDs:J
-
-.field private final fae89394covcSXZcG:J
-
-.field private final fae89394cOceCZgLn:J
+.field private final fae89394cEjheAtCO:J
 
 .field public final f27353006:[I
 
-.field public final f27353006YpXlnHss:[I
+.field public final f27353006ZWrhSFDZ:[I
 
-.field public final f27353006uOkiVOzA:[I
+.field public final f27353006epzDyHdu:[I
 
-.field public final f27353006tDaYBbIv:[I
+.field public final f27353006oBecZZXP:[I
+
+.field public final f27353006UAeImoWF:[I
 
 .field private f3a57ff01:J
 
-.field private f3a57ff01jXNWfOiC:J
+.field private f3a57ff01XrXelsSK:J
 
-.field private f3a57ff01bTFFFMKx:J
+.field private f3a57ff01xSjoTgcQ:J
+
+.field private f3a57ff01tXtjpRxr:J
+
+.field private f3a57ff01ZHXWGSfC:J
 
 
 # direct methods
@@ -59,20 +61,22 @@
     
     iput p3, p0, Lcom/tpcstld/twozerogame/AnimationCell;->fac0549da:I
     nop
+    nop
+    nop
 
     
     iput-wide p4, p0, Lcom/tpcstld/twozerogame/AnimationCell;->f8da4907b:J
-    nop
     nop
     nop
 
     
     iput-wide p6, p0, Lcom/tpcstld/twozerogame/AnimationCell;->fae89394c:J
     nop
-    nop
 
     
     iput-object p8, p0, Lcom/tpcstld/twozerogame/AnimationCell;->f27353006:[I
+    nop
+    nop
     nop
 
     return-void
@@ -96,18 +100,18 @@
     iget-wide v0, p0, Lcom/tpcstld/twozerogame/AnimationCell;->f8da4907b:J
     nop
     nop
+    nop
 
     iget-wide v2, p0, Lcom/tpcstld/twozerogame/AnimationCell;->fae89394c:J
-    nop
     nop
     nop
 
     add-long/2addr v0, v2
     nop
     nop
-    nop
 
     iget-wide v2, p0, Lcom/tpcstld/twozerogame/AnimationCell;->f3a57ff01:J
+    nop
     nop
     nop
 
@@ -117,8 +121,6 @@
 
     if-gez v4, :cond_0
     nop
-    nop
-    nop
 
     const/4 v0, 0x1
     nop
@@ -126,16 +128,16 @@
 
     goto :goto_0
     nop
+    nop
+    nop
 
     :cond_0
     const/4 v0, 0x0
     nop
     nop
-    nop
 
     :goto_0
     return v0
-    nop
     nop
 
 	:after_last_instruction
@@ -160,6 +162,7 @@
     return v0
     nop
     nop
+    nop
 
 	:after_last_instruction
 
@@ -177,10 +180,8 @@
     
     iget-wide v0, p0, Lcom/tpcstld/twozerogame/AnimationCell;->f3a57ff01:J
     nop
-    nop
 
     iget-wide v2, p0, Lcom/tpcstld/twozerogame/AnimationCell;->fae89394c:J
-    nop
     nop
 
     sub-long/2addr v0, v2
@@ -188,27 +189,29 @@
 
     long-to-double v0, v0
     nop
-    nop
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    nop
     nop
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     mul-double v0, v0, v2
     nop
-    nop
 
     iget-wide v2, p0, Lcom/tpcstld/twozerogame/AnimationCell;->f8da4907b:J
     nop
-    nop
 
     long-to-double v2, v2
+    nop
+    nop
     nop
 
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr v0, v2
+    nop
+    nop
     nop
 
     const-wide/16 v2, 0x0
@@ -217,6 +220,7 @@
     invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v0
+    nop
     nop
 
     return-wide v0
@@ -244,8 +248,6 @@
 
     iget-wide v2, p0, Lcom/tpcstld/twozerogame/AnimationCell;->fae89394c:J
     nop
-    nop
-    nop
 
     cmp-long v4, v0, v2
     nop
@@ -262,8 +264,6 @@
 
     goto :goto_0
     nop
-    nop
-    nop
 
     :cond_0
     const/4 v0, 0x0
@@ -271,6 +271,7 @@
 
     :goto_0
     return v0
+    nop
     nop
     nop
 
@@ -290,11 +291,15 @@
     
     iget-wide v0, p0, Lcom/tpcstld/twozerogame/AnimationCell;->f3a57ff01:J
     nop
+    nop
 
     add-long/2addr v0, p1
     nop
+    nop
+    nop
 
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/AnimationCell;->f3a57ff01:J
+    nop
     nop
     nop
 

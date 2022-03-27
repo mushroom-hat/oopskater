@@ -14,29 +14,27 @@
 # static fields
 .field private static final f46d1ca4b:Ljava/lang/String;
 
-.field private static final f46d1ca4bSkpyvZAp:Ljava/lang/String;
+.field private static final f46d1ca4bakDZTesv:Ljava/lang/String;
 
-.field private static final f46d1ca4bftIyyMyx:Ljava/lang/String;
+.field private static final f46d1ca4bxbxzCPgw:Ljava/lang/String;
 
-.field private static final f46d1ca4bNjMfbEOx:Ljava/lang/String;
+.field private static final f46d1ca4bBznkusOo:Ljava/lang/String;
 
 .field private static final f4fa9034e:Ljava/lang/String;
 
-.field private static final f4fa9034eoOZjZOFg:Ljava/lang/String;
+.field private static final f4fa9034eGnWHPuCe:Ljava/lang/String;
 
-.field private static final f4fa9034etpYviVDA:Ljava/lang/String;
-
-.field private static final f4fa9034eoViGWOkx:Ljava/lang/String;
+.field private static final f4fa9034eRYMjsqvd:Ljava/lang/String;
 
 .field private static f3beb8fce:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
 
-.field private static f3beb8fceAGwAUXlL:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
+.field private static f3beb8fcerZuiHrAu:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
 
-.field private static f3beb8fceLDkVQgXZ:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
+.field private static f3beb8fceUxBWPPhm:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
 
 .field private static f5c1197fb:Z = false
 
-.field private static f5c1197fbrNITViDQ:Z = false
+.field private static f5c1197fbfYANeFmf:Z = false
 
 
 # direct methods
@@ -47,7 +45,7 @@
 
 	:before_first_instruction
 
-	const-string/jumbo v0, "a50875bdd27b624f11dd44ae043d4e229ebddae4bf41eb9735e8189326416845"
+	const-string/jumbo v0, "26310122981efd18c81db6f9ee11665f54b3dd71993a84a954f450d331b92899"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -55,7 +53,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->f46d1ca4b:Ljava/lang/String;
 
-	const-string/jumbo v0, "d7d8158782f01de0235195a224b3b687"
+	const-string/jumbo v0, "17c49b537fdf2e0594d2599baa8fc57b"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -102,9 +100,10 @@
     move-result-object p0
     nop
     nop
-    nop
 
     return-object p0
+    nop
+    nop
     nop
 
 	:after_last_instruction
@@ -127,6 +126,8 @@
     nop
 
     return p0
+    nop
+    nop
     nop
 
 	:after_last_instruction
@@ -180,9 +181,9 @@
     move-result v0
     nop
     nop
-    nop
 
     const/4 v1, 0x0
+    nop
     nop
     nop
 
@@ -192,14 +193,14 @@
 
     return-object v1
     nop
+    nop
+    nop
 
     
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object v0
-    nop
-    nop
     nop
 
     if-nez v0, :cond_1
@@ -225,9 +226,10 @@
 
     move-result-object p0
     nop
+    nop
+    nop
 
     check-cast p0, Lcom/google/android/gms/games/snapshot/Snapshot;
-    nop
     nop
 
     return-object p0
@@ -251,8 +253,12 @@
 
     move-result-object v0
     nop
+    nop
+    nop
 
     if-eqz v0, :cond_0
+    nop
+    nop
     nop
 
     
@@ -266,17 +272,17 @@
     const/4 v0, 0x1
     nop
     nop
-    nop
 
     const/4 v1, 0x4
     nop
+    nop
+    nop
 
-	const-string/jumbo v2, "d7d8158782f01de0235195a224b3b687"
+	const-string/jumbo v2, "17c49b537fdf2e0594d2599baa8fc57b"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v2
-    nop
     nop
     nop
 
@@ -323,17 +329,15 @@
     
     sput-object p1, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->f3beb8fce:Lcom/tpcstld/twozerogame/snapshot/SnapshotData;
     nop
+    nop
 
     
     invoke-static {p0}, Lcom/google/android/gms/auth/api/signin/GoogleSignIn;->getLastSignedInAccount(Landroid/content/Context;)Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
     move-result-object p1
     nop
-    nop
 
     if-eqz p1, :cond_1
-    nop
-    nop
     nop
 
     
@@ -348,12 +352,9 @@
     :cond_0
     const/4 v0, 0x1
     nop
-    nop
-    nop
 
     
     sput-boolean v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->f5c1197fb:Z
-    nop
     nop
     nop
 
@@ -367,14 +368,13 @@
 
     const/4 p1, 0x4
     nop
-    nop
-    nop
 
-	const-string/jumbo v1, "d7d8158782f01de0235195a224b3b687"
+	const-string/jumbo v1, "17c49b537fdf2e0594d2599baa8fc57b"
 
 	invoke-static {v1}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v1
+    nop
     nop
 
     
@@ -384,7 +384,6 @@
     nop
 
     new-instance v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$2;
-    nop
     nop
     nop
 

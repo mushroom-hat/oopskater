@@ -6,17 +6,17 @@
 # static fields
 .field private static f52bfda51:J = 0x1L
 
-.field private static f52bfda51TboLeaiP:J = 0x1L
-
-.field private static f52bfda51CNPHsrLR:J = 0x1L
-
-.field private static f52bfda51UjDtDxoV:J = 0x1L
+.field private static f52bfda51wCBhHvYg:J = 0x1L
 
 
 # instance fields
 .field private fb1e0e9e7:J
 
-.field private fb1e0e9e7gEvlCFAb:J
+.field private fb1e0e9e7vEWnbZph:J
+
+.field private fb1e0e9e7SevwgEgh:J
+
+.field private fb1e0e9e7JsBHWaVU:J
 
 
 # direct methods
@@ -73,11 +73,11 @@
 
     move-result-object p0
     nop
+    nop
 
     invoke-interface {p0}, Lcom/google/android/gms/games/snapshot/SnapshotContents;->readFully()[B
 
     move-result-object p0
-    nop
     nop
     nop
 
@@ -93,9 +93,12 @@
 
     return-object p0
     nop
+    nop
+    nop
 
     :catch_0
     const/4 p0, 0x0
+    nop
     nop
     nop
 
@@ -125,12 +128,11 @@
 
     invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
 
-	const-string/jumbo p0, "06462de78283f123e1846240a6c8aec6"
+	const-string/jumbo p0, "da24dbb7adc695686c2f83f14cb5b302"
 
 	invoke-static {p0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object p0
-    nop
     nop
     nop
 
@@ -138,13 +140,17 @@
 
     move-result-object p0
     nop
+    nop
 
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
     nop
+    nop
 
     const/4 v0, 0x0
+    nop
+    nop
     nop
 
     
@@ -152,19 +158,20 @@
 
     move-result-object v0
     nop
-    nop
 
     check-cast v0, Ljava/lang/String;
     nop
+    nop
+    nop
 
     sget-wide v1, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;->f52bfda51:J
-    nop
     nop
     nop
 
     invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v1
+    nop
     nop
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -186,10 +193,13 @@
 
     return-object p0
     nop
+    nop
+    nop
 
     
     :cond_0
     new-instance v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;
+    nop
     nop
     nop
 
@@ -199,6 +209,8 @@
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
+    nop
+    nop
     nop
 
     check-cast p0, Ljava/lang/String;
@@ -213,8 +225,6 @@
     invoke-direct {v0, v1, v2}, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;-><init>(J)V
 
     return-object v0
-    nop
-    nop
     nop
 
 	:after_last_instruction
@@ -234,7 +244,6 @@
 
     
     iget-wide v0, p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;->fb1e0e9e7:J
-    nop
     nop
 
     return-wide v0
@@ -258,6 +267,8 @@
     
     new-instance v0, Ljava/lang/StringBuilder;
     nop
+    nop
+    nop
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
@@ -268,7 +279,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-	const-string/jumbo v1, "06462de78283f123e1846240a6c8aec6"
+	const-string/jumbo v1, "da24dbb7adc695686c2f83f14cb5b302"
 
 	invoke-static {v1}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -280,7 +291,6 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;->fb1e0e9e7:J
-    nop
     nop
     nop
 

@@ -32,6 +32,8 @@
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$2;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
     nop
+    nop
+    nop
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,14 +62,17 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity$2;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
     nop
     nop
+    nop
 
     invoke-static {v0}, Lcom/tpcstld/twozerogame/MainActivity;->access$100(Lcom/tpcstld/twozerogame/MainActivity;)Lcom/tpcstld/twozerogame/MainView;
 
     move-result-object v0
     nop
     nop
+    nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
     nop
 

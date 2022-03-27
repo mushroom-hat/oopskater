@@ -6,215 +6,225 @@
 # static fields
 .field static final f20ab8a2a:I = 0x0
 
-.field static final f20ab8a2axJLFiScp:I = 0x0
-
-.field static final f20ab8a2aPlPuYWqK:I = 0x0
+.field static final f20ab8a2aZwOaIpgc:I = 0x0
 
 .field private static final f78388399:Ljava/lang/String;
 
-.field private static final f78388399HbUSRdUN:Ljava/lang/String;
+.field private static final f78388399JsgkTEkg:Ljava/lang/String;
+
+.field private static final f78388399nCNUXkUA:Ljava/lang/String;
+
+.field private static final f78388399SPwWjXuv:Ljava/lang/String;
 
 .field private static final feb0e3494:I = 0x2
 
-.field private static final feb0e3494fvllZguj:I = 0x2
+.field private static final feb0e3494ezThhdbb:I = 0x2
+
+.field private static final feb0e3494JvWIdGYv:I = 0x2
+
+.field private static final feb0e3494vIiKTBvN:I = 0x2
+
+.field private static final feb0e3494SRSLvVha:I = 0x2
 
 .field private static final f23c8b000:I = 0x3
 
-.field private static final f23c8b000lZuiTZrK:I = 0x3
+.field private static final f23c8b000IKahLlrV:I = 0x3
+
+.field private static final f23c8b000PksUeGmp:I = 0x3
 
 .field private static final f13169c79:I = -0x1
 
-.field private static final f13169c79EovTxJEA:I = -0x1
+.field private static final f13169c79ZQdJftMP:I = -0x1
 
-.field private static final f13169c79jUvXOImf:I = -0x1
+.field private static final f13169c79VqjvTgzu:I = -0x1
 
-.field private static final f13169c79ssVXySJU:I = -0x1
+.field private static final f13169c79NpwrLGPx:I = -0x1
 
 .field private static final f7ec141ac:I = 0x0
 
-.field private static final f7ec141acnCbJAuNo:I = 0x0
-
-.field private static final f7ec141acHZCgoysg:I = 0x0
-
-.field private static final f7ec141acxJixttkW:I = 0x0
+.field private static final f7ec141acZRrFVovM:I = 0x0
 
 .field private static final f0637aab6:I = 0x1
 
-.field private static final f0637aab6LeOFQSlQ:I = 0x1
+.field private static final f0637aab6WdVrYQyu:I = 0x1
+
+.field private static final f0637aab6soLFIuQF:I = 0x1
+
+.field private static final f0637aab6XBELtSTt:I = 0x1
 
 .field private static final ffba7416d:Ljava/lang/String;
 
-.field private static final ffba7416dWAHdarCM:Ljava/lang/String;
+.field private static final ffba7416dllWuxQQX:Ljava/lang/String;
 
-.field private static final ffba7416dCCyLoxsk:Ljava/lang/String;
+.field private static final ffba7416dDtJfPFNZ:Ljava/lang/String;
 
-.field private static final ffba7416dHxSvfscX:Ljava/lang/String;
+.field private static final ffba7416dVDlGqAqQ:Ljava/lang/String;
+
+.field private static final ffba7416dTxdAjSuv:Ljava/lang/String;
 
 .field static final fa58f8dc2:I = 0x1
 
-.field static final fa58f8dc2GkUnjKJD:I = 0x1
+.field static final fa58f8dc2iLiKOSMw:I = 0x1
 
-.field static final fa58f8dc2HZnedfCl:I = 0x1
-
-.field static final fa58f8dc2wyNzyahW:I = 0x1
-
-.field static final fa58f8dc2SKQjMumU:I = 0x1
+.field static final fa58f8dc2WtTgDZXz:I = 0x1
 
 .field static final f5d135dfe:I = 0x0
 
-.field static final f5d135dfeyMFttjwF:I = 0x0
+.field static final f5d135dfeMCeOeGNi:I = 0x0
 
-.field static final f5d135dfeUkvvIvzh:I = 0x0
-
-.field static final f5d135dfeJFRErmuX:I = 0x0
+.field static final f5d135dfeARiurJaE:I = 0x0
 
 .field private static final f366bb1a0:J = 0x5f5e100L
 
-.field private static final f366bb1a0IVKcCnVo:J = 0x5f5e100L
+.field private static final f366bb1a0ZEWQzoMr:J = 0x5f5e100L
 
-.field private static final f366bb1a0PsgoyFxV:J = 0x5f5e100L
+.field private static final f366bb1a0rDLHtQGt:J = 0x5f5e100L
+
+.field private static final f366bb1a0kbGphXGL:J = 0x5f5e100L
 
 .field private static final fe5f306e8:J = 0x1dcd6500L
 
-.field private static final fe5f306e8ARfdOaqb:J = 0x1dcd6500L
+.field private static final fe5f306e8IYCbibSY:J = 0x1dcd6500L
 
-.field private static final fe5f306e8woZQKuJx:J = 0x1dcd6500L
+.field private static final fe5f306e8jrueBRdB:J = 0x1dcd6500L
 
-.field private static final fe5f306e8eWDSKVEA:J = 0x1dcd6500L
+.field private static final fe5f306e8huKOCCFQ:J = 0x1dcd6500L
 
 .field private static final f4daf5541:J = 0xbebc200L
 
-.field private static final f4daf5541KuDBrsVV:J = 0xbebc200L
+.field private static final f4daf5541wyeSOEQz:J = 0xbebc200L
 
-.field private static final f4daf5541sWGeVENH:J = 0xbebc200L
+.field private static final f4daf5541LconcAzP:J = 0xbebc200L
 
-.field private static final f4daf5541DRcoLgYW:J = 0xbebc200L
-
-.field private static final f4daf5541JtEklhgH:J = 0xbebc200L
+.field private static final f4daf5541PYNyiOaW:J = 0xbebc200L
 
 .field static final f74a1f309:I = -0x1
 
-.field static final f74a1f309BwhGTyIG:I = -0x1
+.field static final f74a1f309JCfAsfcw:I = -0x1
 
-.field static final f74a1f309TxuhTlqs:I = -0x1
+.field static final f74a1f309KZIhypdB:I = -0x1
 
-.field static final f74a1f309QtSHXuzj:I = -0x1
-
-.field static final f74a1f309ZjSbfBjC:I = -0x1
+.field static final f74a1f309srmPfebJ:I = -0x1
 
 .field private static final f44def551:J = 0x5f5e100L
 
-.field private static final f44def551HMBNpFkK:J = 0x5f5e100L
+.field private static final f44def551QLJrgAPm:J = 0x5f5e100L
+
+.field private static final f44def551AeZohnyt:J = 0x5f5e100L
+
+.field private static final f44def551zyAQJVOf:J = 0x5f5e100L
+
+.field private static final f44def551tIPodbEn:J = 0x5f5e100L
 
 .field private static fe80a830c:I = 0x0
 
-.field private static fe80a830ckkHHnjNq:I = 0x0
+.field private static fe80a830ciyOjamzr:I = 0x0
+
+.field private static fe80a830coXpAVrCR:I = 0x0
+
+.field private static fe80a830caVHnLqlQ:I = 0x0
 
 .field private static final f5844b9bb:I = 0x800
 
-.field private static final f5844b9bbuAENLutS:I = 0x800
+.field private static final f5844b9bbuOfILKfK:I = 0x800
 
-.field private static final f5844b9bbGvirjIIl:I = 0x800
-
-.field private static final f5844b9bbUebZVzbY:I = 0x800
-
-.field private static final f5844b9bbMSARlVnT:I = 0x800
+.field private static final f5844b9bbhZnKtGvy:I = 0x800
 
 
 # instance fields
 .field f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
 
-.field f2bae8e82GtGMcdNQ:Lcom/tpcstld/twozerogame/AnimationGrid;
+.field f2bae8e82AVHTWkOP:Lcom/tpcstld/twozerogame/AnimationGrid;
+
+.field f2bae8e82BtxCyqpq:Lcom/tpcstld/twozerogame/AnimationGrid;
 
 .field private f757ef8d3:I
 
-.field private f757ef8d3ZBQupaxN:I
+.field private f757ef8d3BBDVjXkf:I
 
-.field private f757ef8d3uWLuAZvY:I
+.field private f757ef8d3SuBZoJYb:I
 
 .field private f73edf395:J
 
-.field private f73edf395Ixvmxchl:J
+.field private f73edf395kGyFMIOU:J
 
-.field private f73edf395hOBuCOqZ:J
-
-.field private f73edf395VKepqSjg:J
+.field private f73edf395lYtEJUNF:J
 
 .field f375043c7:Z
 
-.field f375043c7kfJEsHHE:Z
+.field f375043c7mYoWkRGU:Z
+
+.field f375043c7QWUwWimu:Z
 
 .field fe18bcf4e:I
 
-.field fe18bcf4eVdbxsDUg:I
-
-.field fe18bcf4eZXFmIyEk:I
-
-.field fe18bcf4exayONrjX:I
+.field fe18bcf4eNNOtJeun:I
 
 .field fff4a0084:Lcom/tpcstld/twozerogame/Grid;
 
-.field fff4a0084KRAZSHXX:Lcom/tpcstld/twozerogame/Grid;
+.field fff4a0084QmbBNoNe:Lcom/tpcstld/twozerogame/Grid;
 
-.field fff4a0084bZmTujUg:Lcom/tpcstld/twozerogame/Grid;
-
-.field fff4a0084HAtvqLUu:Lcom/tpcstld/twozerogame/Grid;
+.field fff4a0084TYXsCogC:Lcom/tpcstld/twozerogame/Grid;
 
 .field fb1e0e9e7:J
 
-.field fb1e0e9e7luwwsVZn:J
+.field fb1e0e9e7viYUfxBB:J
 
-.field fb1e0e9e7BdzapDPa:J
+.field fb1e0e9e7dGRgyMaQ:J
 
-.field fb1e0e9e7IQOkDpJo:J
+.field fb1e0e9e7VfStPdAo:J
 
 .field f613bda64:I
 
-.field f613bda64kIgFthgs:I
+.field f613bda64wVfEvegm:I
 
 .field fe6bde95d:J
 
-.field fe6bde95dynGvRqmY:J
+.field fe6bde95dnDKhdTQJ:J
 
-.field fe6bde95dDXKPLryH:J
+.field fe6bde95ddyrYqzaL:J
 
-.field fe6bde95dzyiyRWwn:J
+.field fe6bde95dxWoZVZxy:J
 
 .field private final f51ef5995:Landroid/content/Context;
 
-.field private final f51ef5995WgNwclnT:Landroid/content/Context;
+.field private final f51ef5995MErFtrJq:Landroid/content/Context;
 
-.field private final f51ef5995yTPssvjN:Landroid/content/Context;
+.field private final f51ef5995TmJpmHKz:Landroid/content/Context;
 
-.field private final f51ef5995rOAUvuuA:Landroid/content/Context;
+.field private final f51ef5995kwCjSuiY:Landroid/content/Context;
 
 .field private final f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
 
-.field private final f7d6c7318SdpmjDLa:Lcom/tpcstld/twozerogame/MainView;
+.field private final f7d6c7318OJtrrTZX:Lcom/tpcstld/twozerogame/MainView;
 
-.field private final f7d6c7318ZKcesNxQ:Lcom/tpcstld/twozerogame/MainView;
+.field private final f7d6c7318JzdnSYCK:Lcom/tpcstld/twozerogame/MainView;
 
-.field private final f7d6c7318CKXIvBjU:Lcom/tpcstld/twozerogame/MainView;
-
-.field private final f7d6c7318nnrIUjVy:Lcom/tpcstld/twozerogame/MainView;
+.field private final f7d6c7318iackKVsx:Lcom/tpcstld/twozerogame/MainView;
 
 .field final f885f2c3d:I
 
-.field final f885f2c3dzkUUmPpm:I
+.field final f885f2c3dkpzFpyHA:I
+
+.field final f885f2c3dGHHkTQEb:I
+
+.field final f885f2c3dlJxyIWVe:I
+
+.field final f885f2c3dvDOASghV:I
 
 .field final fc634d3ac:I
 
-.field final fc634d3acAKuDibbZ:I
+.field final fc634d3acJfdQviyR:I
 
-.field final fc634d3acDvoXAkmu:I
+.field final fc634d3acTbOHOUEp:I
+
+.field final fc634d3acMMHyJYSm:I
 
 .field public fca1cd3c3:J
 
-.field public fca1cd3c3VLwDaZah:J
+.field public fca1cd3c3nJJGFcyy:J
 
-.field public fca1cd3c3CsQplMdg:J
-
-.field public fca1cd3c3uJVfAiaF:J
+.field public fca1cd3c3CWJkZEOZ:J
 
 
 # direct methods
@@ -225,7 +235,7 @@
 
 	:before_first_instruction
 
-	const-string/jumbo v0, "adb3858992c589c6964ce1d12ae2b02e"
+	const-string/jumbo v0, "fc04af06ad65883fd80b68a19a34551c"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -233,7 +243,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/MainGame;->f78388399:Ljava/lang/String;
 
-	const-string/jumbo v0, "7ad327cc01d24ada952d3a871c5bd190"
+	const-string/jumbo v0, "4649d4ce3b94c1b56d1fc43264eef562"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -262,7 +272,6 @@
     const/4 v0, 0x0
     nop
     nop
-    nop
 
     
     iput v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fe18bcf4e:I
@@ -273,22 +282,18 @@
     
     iput v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f613bda64:I
     nop
-    nop
-    nop
 
     
     iput v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f757ef8d3:I
     nop
-    nop
-    nop
 
     const/4 v0, 0x4
-    nop
-    nop
     nop
 
     
     iput v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f885f2c3d:I
+    nop
+    nop
     nop
 
     
@@ -299,15 +304,13 @@
 
     const/4 v0, 0x0
     nop
+    nop
 
     
     iput-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
 
     const-wide/16 v0, 0x0
-    nop
-    nop
     nop
 
     
@@ -324,13 +327,17 @@
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fe6bde95d:J
     nop
     nop
+    nop
 
     
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f73edf395:J
     nop
+    nop
+    nop
 
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainGame;->f51ef5995:Landroid/content/Context;
+    nop
     nop
     nop
 
@@ -345,12 +352,14 @@
 
     const/16 p1, 0x14
     nop
+    nop
+    nop
 
     int-to-double p1, p1
     nop
-    nop
 
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
+    nop
     nop
     nop
 
@@ -359,11 +368,14 @@
     move-result-wide p1
     nop
     nop
+    nop
 
     double-to-int p1, p1
     nop
 
     sput p1, Lcom/tpcstld/twozerogame/MainGame;->fe80a830c:I
+    nop
+    nop
     nop
 
     return-void
@@ -393,11 +405,14 @@
 
     if-eqz v0, :cond_1
     nop
+    nop
+    nop
 
     
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v0
+    nop
     nop
 
     const-wide v2, 0x3feccccccccccccdL    # 0.9
@@ -418,26 +433,25 @@
     goto :goto_0
     nop
     nop
-    nop
 
     :cond_0
     const/4 v0, 0x4
+    nop
     nop
 
     
     :goto_0
     new-instance v1, Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
-    nop
     nop
     nop
 
     invoke-virtual {v2}, Lcom/tpcstld/twozerogame/Grid;->randomAvailableCell()Lcom/tpcstld/twozerogame/Cell;
 
     move-result-object v2
-    nop
     nop
 
     invoke-direct {v1, v2, v0}, Lcom/tpcstld/twozerogame/Tile;-><init>(Lcom/tpcstld/twozerogame/Cell;I)V
@@ -467,9 +481,9 @@
     move-result-object v0
     nop
     nop
+    nop
 
     if-eqz v0, :cond_1
-    nop
     nop
     nop
 
@@ -478,15 +492,17 @@
 
     move-result-object v0
     nop
-    nop
 
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
     nop
+    nop
+    nop
 
     if-eqz v1, :cond_0
+    nop
     nop
     nop
 
@@ -494,18 +510,14 @@
 
     move-result-object v1
     nop
-    nop
 
     check-cast v1, Lcom/tpcstld/twozerogame/Tile;
-    nop
     nop
 
     
     invoke-direct {p0, v1}, Lcom/tpcstld/twozerogame/MainGame;->spawnTile(Lcom/tpcstld/twozerogame/Tile;)V
 
     goto :goto_0
-    nop
-    nop
     nop
 
     :cond_0
@@ -523,6 +535,8 @@
     :goto_1
     if-ge v1, v0, :cond_2
     nop
+    nop
+    nop
 
     
     invoke-direct {p0}, Lcom/tpcstld/twozerogame/MainGame;->addRandomTile()V
@@ -531,7 +545,6 @@
     nop
 
     goto :goto_1
-    nop
     nop
 
     :cond_2
@@ -563,6 +576,7 @@
     
     new-instance v0, Ljava/util/ArrayList;
     nop
+    nop
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
@@ -587,13 +601,16 @@
     move-result-object v2
     nop
     nop
+    nop
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v1, v1, 0x1
     nop
+    nop
 
     goto :goto_0
+    nop
     nop
     nop
 
@@ -610,14 +627,13 @@
     if-ne p1, v1, :cond_1
     nop
     nop
+    nop
 
     
     invoke-static {v0}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
     :cond_1
     return-object v0
-    nop
-    nop
     nop
 
 	:after_last_instruction
@@ -652,13 +668,14 @@
 
     const/4 v1, 0x0
     nop
+    nop
 
     :goto_0
     const/4 v2, 0x4
     nop
+    nop
 
     if-ge v1, v2, :cond_0
-    nop
     nop
     nop
 
@@ -666,6 +683,8 @@
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
+    nop
+    nop
     nop
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -677,6 +696,7 @@
 
     goto :goto_0
     nop
+    nop
 
     
     :cond_0
@@ -687,7 +707,6 @@
     nop
 
     const/4 v1, 0x1
-    nop
     nop
     nop
 
@@ -721,8 +740,11 @@
 
     move-result v0
     nop
+    nop
+    nop
 
     if-nez v0, :cond_0
+    nop
     nop
     nop
 
@@ -734,10 +756,8 @@
     if-nez v0, :cond_0
     nop
     nop
-    nop
 
     const/4 v0, -0x1
-    nop
     nop
 
     
@@ -768,8 +788,10 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
     nop
     nop
+    nop
 
     const/4 v1, -0x1
+    nop
     nop
 
     const/4 v2, -0x1
@@ -778,17 +800,19 @@
     const/4 v3, 0x0
     nop
     nop
-    nop
 
     const-wide/32 v4, 0x1dcd6500
+    nop
     nop
     nop
 
     const-wide/32 v6, 0xbebc200
     nop
     nop
+    nop
 
     const/4 v8, 0x0
+    nop
     nop
     nop
 
@@ -803,21 +827,16 @@
     iget-wide v2, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
     nop
     nop
-    nop
 
     cmp-long v4, v0, v2
-    nop
     nop
 
     if-ltz v4, :cond_0
     nop
     nop
-    nop
 
     
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
-    nop
-    nop
     nop
 
     
@@ -843,17 +862,18 @@
     new-instance v0, Lcom/tpcstld/twozerogame/Cell;
     nop
     nop
+    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getX()I
 
     move-result v1
     nop
-    nop
-    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getY()I
 
     move-result p1
+    nop
+    nop
     nop
 
     invoke-direct {v0, v1, p1}, Lcom/tpcstld/twozerogame/Cell;-><init>(II)V
@@ -870,16 +890,13 @@
     move-result v1
     nop
     nop
-    nop
 
     invoke-virtual {p2}, Lcom/tpcstld/twozerogame/Cell;->getX()I
 
     move-result v2
     nop
-    nop
 
     add-int/2addr v1, v2
-    nop
     nop
 
     
@@ -888,15 +905,14 @@
     move-result v2
     nop
     nop
-    nop
 
     invoke-virtual {p2}, Lcom/tpcstld/twozerogame/Cell;->getY()I
 
     move-result v3
     nop
-    nop
 
     add-int/2addr v2, v3
+    nop
     nop
     nop
 
@@ -914,9 +930,9 @@
 
     if-eqz v1, :cond_1
     nop
-    nop
 
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
+    nop
     nop
 
     invoke-virtual {v1, p1}, Lcom/tpcstld/twozerogame/Grid;->isCellAvailable(Lcom/tpcstld/twozerogame/Cell;)Z
@@ -927,15 +943,21 @@
     if-nez v1, :cond_0
     nop
     nop
+    nop
 
     goto :goto_1
+    nop
+    nop
     nop
 
     :cond_0
     move-object v0, p1
     nop
+    nop
+    nop
 
     goto :goto_0
+    nop
     nop
     nop
 
@@ -944,24 +966,22 @@
     const/4 p2, 0x2
     nop
     nop
-    nop
 
     
     new-array p2, p2, [Lcom/tpcstld/twozerogame/Cell;
+    nop
     nop
     nop
 
     const/4 v1, 0x0
     nop
     nop
-    nop
 
     aput-object v0, p2, v1
     nop
-    nop
-    nop
 
     const/4 v0, 0x1
+    nop
     nop
     nop
 
@@ -969,6 +989,7 @@
     nop
 
     return-object p2
+    nop
     nop
     nop
 
@@ -989,31 +1010,28 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f51ef5995:Landroid/content/Context;
     nop
     nop
-    nop
 
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
     nop
     nop
+    nop
 
     const/4 v1, 0x1
     nop
-    nop
 
-	const-string/jumbo v2, "adb3858992c589c6964ce1d12ae2b02e"
+	const-string/jumbo v2, "fc04af06ad65883fd80b68a19a34551c"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v2
-    nop
     nop
 
     
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
-    nop
     nop
     nop
 
@@ -1030,6 +1048,7 @@
 
     move-result-object v0
     nop
+    nop
 
     
     invoke-interface {v0, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -1044,6 +1063,8 @@
 
     :cond_0
     return v4
+    nop
+    nop
     nop
 
 	:after_last_instruction
@@ -1062,8 +1083,6 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f51ef5995:Landroid/content/Context;
     nop
-    nop
-    nop
 
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -1071,12 +1090,11 @@
     nop
     nop
 
-	const-string/jumbo v1, "7ad327cc01d24ada952d3a871c5bd190"
+	const-string/jumbo v1, "4649d4ce3b94c1b56d1fc43264eef562"
 
 	invoke-static {v1}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v1
-    nop
     nop
     nop
 
@@ -1088,7 +1106,6 @@
     invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
-    nop
     nop
 
     return-wide v0
@@ -1117,10 +1134,9 @@
     
     new-array v0, v0, [Lcom/tpcstld/twozerogame/Cell;
     nop
-    nop
-    nop
 
     new-instance v1, Lcom/tpcstld/twozerogame/Cell;
+    nop
     nop
 
     const/4 v2, -0x1
@@ -1129,7 +1145,6 @@
     nop
 
     const/4 v3, 0x0
-    nop
     nop
 
     invoke-direct {v1, v3, v2}, Lcom/tpcstld/twozerogame/Cell;-><init>(II)V
@@ -1141,6 +1156,8 @@
 
     new-instance v1, Lcom/tpcstld/twozerogame/Cell;
     nop
+    nop
+    nop
 
     const/4 v4, 0x1
     nop
@@ -1151,10 +1168,9 @@
 
     aput-object v1, v0, v4
     nop
-    nop
-    nop
 
     new-instance v1, Lcom/tpcstld/twozerogame/Cell;
+    nop
     nop
     nop
 
@@ -1173,13 +1189,14 @@
 
     const/4 v2, 0x3
     nop
-    nop
 
     aput-object v1, v0, v2
+    nop
     nop
 
     
     aget-object p1, v0, p1
+    nop
     nop
 
     return-object p1
@@ -1205,6 +1222,8 @@
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
+    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Tile;->getX()I
 
@@ -1214,33 +1233,34 @@
 
     aget-object v0, v0, v1
     nop
-    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Tile;->getY()I
 
     move-result v1
     nop
+    nop
+    nop
 
     const/4 v2, 0x0
+    nop
     nop
     nop
 
     aput-object v2, v0, v1
     nop
+    nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
-    nop
-    nop
     nop
 
     invoke-virtual {p2}, Lcom/tpcstld/twozerogame/Cell;->getX()I
 
     move-result v1
+    nop
     nop
 
     aget-object v0, v0, v1
@@ -1254,6 +1274,7 @@
     nop
 
     aput-object p1, v0, v1
+    nop
     nop
 
     
@@ -1285,22 +1306,23 @@
     move-result v0
     nop
     nop
+    nop
 
     if-nez v0, :cond_1
+    nop
     nop
 
     invoke-direct {p0}, Lcom/tpcstld/twozerogame/MainGame;->tileMatchesAvailable()Z
 
     move-result v0
     nop
-    nop
 
     if-eqz v0, :cond_0
     nop
     nop
-    nop
 
     goto :goto_0
+    nop
     nop
     nop
 
@@ -1308,9 +1330,9 @@
     const/4 v0, 0x0
     nop
     nop
-    nop
 
     goto :goto_1
+    nop
     nop
     nop
 
@@ -1323,7 +1345,6 @@
 
     :goto_1
     return v0
-    nop
     nop
 
 	:after_last_instruction
@@ -1344,14 +1365,18 @@
 
     move-result v0
     nop
+    nop
+    nop
 
     invoke-virtual {p2}, Lcom/tpcstld/twozerogame/Cell;->getX()I
 
     move-result v1
     nop
     nop
+    nop
 
     if-ne v0, v1, :cond_0
+    nop
     nop
     nop
 
@@ -1367,24 +1392,22 @@
 
     if-ne p1, p2, :cond_0
     nop
+    nop
 
     const/4 p1, 0x1
     nop
-    nop
 
     goto :goto_0
-    nop
     nop
     nop
 
     :cond_0
     const/4 p1, 0x0
     nop
-    nop
-    nop
 
     :goto_0
     return p1
+    nop
     nop
 
 	:after_last_instruction
@@ -1403,7 +1426,6 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
@@ -1415,9 +1437,9 @@
 
     const/4 v2, 0x0
     nop
-    nop
 
     const/4 v3, 0x0
+    nop
     nop
     nop
 
@@ -1435,40 +1457,32 @@
     
     array-length v5, v4
     nop
+    nop
 
     const/4 v6, 0x0
-    nop
-    nop
     nop
 
     :goto_1
     if-ge v6, v5, :cond_1
     nop
     nop
-    nop
 
     aget-object v7, v4, v6
-    nop
     nop
 
     
     iget-object v8, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
-    nop
     nop
 
     invoke-virtual {v8, v7}, Lcom/tpcstld/twozerogame/Grid;->isCellOccupied(Lcom/tpcstld/twozerogame/Cell;)Z
 
     move-result v8
     nop
-    nop
-    nop
 
     if-eqz v8, :cond_0
     nop
-    nop
 
     const/4 v8, 0x0
-    nop
     nop
     nop
 
@@ -1482,7 +1496,6 @@
     nop
 
     goto :goto_1
-    nop
     nop
 
     :cond_1
@@ -1513,27 +1526,23 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/Grid;->prepareSaveTiles()V
 
     
     iget-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
     nop
-    nop
 
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f73edf395:J
-    nop
-    nop
     nop
 
     
     iget v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fe18bcf4e:I
     nop
+    nop
+    nop
 
     iput v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f757ef8d3:I
-    nop
-    nop
     nop
 
     return-void
@@ -1554,12 +1563,12 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f51ef5995:Landroid/content/Context;
     nop
-    nop
-    nop
 
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
+    nop
+    nop
     nop
 
     
@@ -1568,16 +1577,18 @@
     move-result-object v0
     nop
     nop
+    nop
 
     
     iget-wide v1, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
     nop
 
-	const-string/jumbo v3, "7ad327cc01d24ada952d3a871c5bd190"
+	const-string/jumbo v3, "4649d4ce3b94c1b56d1fc43264eef562"
 
 	invoke-static {v3}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v3
+    nop
     nop
     nop
 
@@ -1589,19 +1600,14 @@
     
     new-instance v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;
     nop
-    nop
-    nop
 
     iget-wide v1, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
-    nop
-    nop
     nop
 
     invoke-direct {v0, v1, v2}, Lcom/tpcstld/twozerogame/snapshot/SnapshotData;-><init>(J)V
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainGame;->f51ef5995:Landroid/content/Context;
-    nop
     nop
 
     invoke-static {v1, v0}, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->saveSnapshot(Landroid/content/Context;Lcom/tpcstld/twozerogame/snapshot/SnapshotData;)V
@@ -1625,27 +1631,32 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
     nop
+    nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/Grid;->saveTiles()V
 
     const/4 v0, 0x1
     nop
+    nop
+    nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f375043c7:Z
-    nop
     nop
 
     
     iget-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f73edf395:J
     nop
     nop
+    nop
 
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fe6bde95d:J
+    nop
     nop
 
     
     iget v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f757ef8d3:I
+    nop
     nop
 
     iput v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f613bda64:I
@@ -1670,14 +1681,11 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
-    nop
 
     invoke-virtual {v0, p1}, Lcom/tpcstld/twozerogame/Grid;->insertTile(Lcom/tpcstld/twozerogame/Tile;)V
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
-    nop
     nop
     nop
 
@@ -1692,17 +1700,12 @@
 
     move-result v3
     nop
-    nop
-    nop
 
     const/4 v4, -0x1
     nop
     nop
-    nop
 
     const-wide/32 v5, 0x5f5e100
-    nop
-    nop
     nop
 
     const-wide/32 v7, 0x5f5e100
@@ -1731,14 +1734,13 @@
 
     const/4 v0, 0x0
     nop
-    nop
 
     const/4 v1, 0x0
-    nop
     nop
 
     :goto_0
     const/4 v2, 0x4
+    nop
     nop
     nop
 
@@ -1748,11 +1750,11 @@
 
     const/4 v3, 0x0
     nop
+    nop
+    nop
 
     :goto_1
     if-ge v3, v2, :cond_2
-    nop
-    nop
     nop
 
     
@@ -1761,7 +1763,6 @@
     nop
 
     new-instance v5, Lcom/tpcstld/twozerogame/Cell;
-    nop
     nop
     nop
 
@@ -1782,6 +1783,7 @@
     const/4 v5, 0x0
     nop
     nop
+    nop
 
     :goto_2
     if-ge v5, v2, :cond_1
@@ -1794,18 +1796,14 @@
     move-result-object v6
     nop
     nop
-    nop
 
     
     new-instance v7, Lcom/tpcstld/twozerogame/Cell;
-    nop
-    nop
     nop
 
     invoke-virtual {v6}, Lcom/tpcstld/twozerogame/Cell;->getX()I
 
     move-result v8
-    nop
     nop
     nop
 
@@ -1818,8 +1816,10 @@
 
     move-result v6
     nop
+    nop
 
     add-int/2addr v6, v3
+    nop
     nop
 
     invoke-direct {v7, v8, v6}, Lcom/tpcstld/twozerogame/Cell;-><init>(II)V
@@ -1835,15 +1835,17 @@
     move-result-object v6
     nop
     nop
-    nop
 
     if-eqz v6, :cond_0
+    nop
+    nop
     nop
 
     
     invoke-virtual {v6}, Lcom/tpcstld/twozerogame/Tile;->getValue()I
 
     move-result v6
+    nop
     nop
 
     invoke-virtual {v4}, Lcom/tpcstld/twozerogame/Tile;->getValue()I
@@ -1853,23 +1855,22 @@
 
     if-ne v6, v7, :cond_0
     nop
-    nop
-    nop
 
     const/4 v0, 0x1
     nop
-    nop
 
     return v0
-    nop
-    nop
     nop
 
     :cond_0
     add-int/lit8 v5, v5, 0x1
     nop
+    nop
+    nop
 
     goto :goto_2
+    nop
+    nop
     nop
 
     :cond_1
@@ -1879,20 +1880,18 @@
     goto :goto_1
     nop
     nop
+    nop
 
     :cond_2
     add-int/lit8 v1, v1, 0x1
     nop
+    nop
 
     goto :goto_0
-    nop
-    nop
     nop
 
     :cond_3
     return v0
-    nop
-    nop
     nop
 
 	:after_last_instruction
@@ -1917,20 +1916,17 @@
 
     if-nez v0, :cond_0
     nop
+    nop
 
     
     sget v0, Lcom/tpcstld/twozerogame/MainGame;->fe80a830c:I
     nop
-    nop
 
     return v0
-    nop
-    nop
     nop
 
     :cond_0
     const/16 v0, 0x800
-    nop
     nop
     nop
 
@@ -1969,16 +1965,17 @@
 
     const/4 v1, 0x3
     nop
-    nop
 
     if-eq v0, v1, :cond_0
+    nop
+    nop
     nop
 
     const/4 v0, 0x1
     nop
-    nop
 
     goto :goto_0
+    nop
     nop
     nop
 
@@ -1990,7 +1987,6 @@
 
     :goto_0
     return v0
-    nop
     nop
     nop
 
@@ -2014,8 +2010,10 @@
 
     const/4 v1, -0x1
     nop
+    nop
 
     if-ne v0, v1, :cond_0
+    nop
     nop
     nop
 
@@ -2029,10 +2027,10 @@
     const/4 v0, 0x0
     nop
     nop
-    nop
 
     :goto_0
     return v0
+    nop
     nop
     nop
 
@@ -2056,10 +2054,8 @@
     if-lez v0, :cond_0
     nop
     nop
-    nop
 
     rem-int/lit8 v0, v0, 0x2
-    nop
     nop
     nop
 
@@ -2070,13 +2066,16 @@
 
     const/4 v0, 0x1
     nop
+    nop
+    nop
 
     goto :goto_0
-    nop
     nop
 
     :cond_0
     const/4 v0, 0x0
+    nop
+    nop
     nop
 
     :goto_0
@@ -2102,22 +2101,26 @@
 
     move-result-wide v0
     nop
+    nop
+    nop
 
     iget-wide v2, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
+    nop
+    nop
     nop
 
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
     nop
+    nop
+    nop
 
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
-    nop
     nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainGame;->f51ef5995:Landroid/content/Context;
-    nop
     nop
 
     invoke-static {p1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
@@ -2139,13 +2142,11 @@
     nop
     nop
 
-	const-string/jumbo v2, "7ad327cc01d24ada952d3a871c5bd190"
+	const-string/jumbo v2, "4649d4ce3b94c1b56d1fc43264eef562"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v2
-    nop
-    nop
     nop
 
     invoke-interface {p1, v2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
@@ -2162,17 +2163,21 @@
     
     sget-object p1, Ljava/lang/System;->out:Ljava/io/PrintStream;
     nop
+    nop
 
     new-instance v0, Ljava/lang/StringBuilder;
+    nop
+    nop
     nop
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-	const-string/jumbo v1, "32f69dcd45ebad7574e6d7f06b9f4a2f0139ab6f1125e9f74395ba42c387e42a5587ac613ac2f651a0a8f75a4d433950"
+	const-string/jumbo v1, "66f90f4358d9dca5c5e637a8be82b216275f28ae00fc393c708ab56c442ff15630348efa60dae47a450310c17f99c5d1"
 
 	invoke-static {v1}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v1
+    nop
     nop
     nop
 
@@ -2181,12 +2186,14 @@
     iget-wide v1, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
     nop
     nop
+    nop
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+    nop
     nop
     nop
 
@@ -2212,6 +2219,8 @@
 
     move-result v0
     nop
+    nop
+    nop
 
     if-nez v0, :cond_0
     nop
@@ -2230,6 +2239,8 @@
 
     const/4 v0, 0x1
     nop
+    nop
+    nop
 
     goto :goto_0
     nop
@@ -2237,9 +2248,11 @@
     :cond_0
     const/4 v0, 0x0
     nop
+    nop
 
     :goto_0
     return v0
+    nop
     nop
     nop
 
@@ -2263,6 +2276,7 @@
     iget-object v1, v0, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
     nop
     nop
+    nop
 
     invoke-virtual {v1}, Lcom/tpcstld/twozerogame/AnimationGrid;->cancelAnimations()V
 
@@ -2270,7 +2284,6 @@
     invoke-virtual/range {p0 .. p0}, Lcom/tpcstld/twozerogame/MainGame;->isActive()Z
 
     move-result v1
-    nop
     nop
 
     if-nez v1, :cond_0
@@ -2296,12 +2309,12 @@
 
     move-result-object v2
     nop
-    nop
 
     
     invoke-direct {v0, v1}, Lcom/tpcstld/twozerogame/MainGame;->buildTraversalsY(Lcom/tpcstld/twozerogame/Cell;)Ljava/util/List;
 
     move-result-object v3
+    nop
     nop
 
     
@@ -2315,8 +2328,6 @@
 
     const/4 v5, 0x0
     nop
-    nop
-    nop
 
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -2328,6 +2339,7 @@
 
     if-eqz v6, :cond_7
     nop
+    nop
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2336,7 +2348,6 @@
     nop
 
     check-cast v6, Ljava/lang/Integer;
-    nop
     nop
 
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
@@ -2351,6 +2362,7 @@
     move-result-object v7
     nop
     nop
+    nop
 
     :cond_1
     :goto_1
@@ -2358,26 +2370,25 @@
 
     move-result v8
     nop
+    nop
+    nop
 
     if-eqz v8, :cond_6
-    nop
-    nop
     nop
 
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
     nop
-    nop
 
     check-cast v8, Ljava/lang/Integer;
-    nop
     nop
     nop
 
     invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
 
     move-result v8
+    nop
     nop
 
     
@@ -2392,15 +2403,15 @@
     iget-object v10, v0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
     nop
-    nop
 
     invoke-virtual {v10, v9}, Lcom/tpcstld/twozerogame/Grid;->getCellContent(Lcom/tpcstld/twozerogame/Cell;)Lcom/tpcstld/twozerogame/Tile;
 
     move-result-object v10
     nop
+    nop
+    nop
 
     const/4 v11, 0x1
-    nop
     nop
     nop
 
@@ -2413,19 +2424,21 @@
 
     move-result-object v12
     nop
-    nop
-    nop
 
     
     iget-object v13, v0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
+    nop
 
     aget-object v14, v12, v11
+    nop
     nop
 
     invoke-virtual {v13, v14}, Lcom/tpcstld/twozerogame/Grid;->getCellContent(Lcom/tpcstld/twozerogame/Cell;)Lcom/tpcstld/twozerogame/Tile;
 
     move-result-object v13
+    nop
+    nop
     nop
 
     const/4 v14, 0x2
@@ -2434,13 +2447,12 @@
 
     if-eqz v13, :cond_4
     nop
+    nop
 
     
     invoke-virtual {v13}, Lcom/tpcstld/twozerogame/Tile;->getValue()I
 
     move-result v15
-    nop
-    nop
     nop
 
     invoke-virtual {v10}, Lcom/tpcstld/twozerogame/Tile;->getValue()I
@@ -2459,8 +2471,10 @@
     move-result-object v4
     nop
     nop
+    nop
 
     if-nez v4, :cond_4
+    nop
     nop
     nop
 
@@ -2468,9 +2482,9 @@
     new-instance v4, Lcom/tpcstld/twozerogame/Tile;
     nop
     nop
+    nop
 
     aget-object v15, v12, v11
-    nop
     nop
     nop
 
@@ -2489,20 +2503,23 @@
     
     new-array v11, v14, [Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
 
     const/4 v15, 0x0
+    nop
+    nop
     nop
 
     aput-object v10, v11, v15
     nop
+    nop
+    nop
 
     const/16 v16, 0x1
     nop
-    nop
-    nop
 
     aput-object v13, v11, v16
+    nop
+    nop
     nop
 
     
@@ -2511,21 +2528,19 @@
     
     iget-object v11, v0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
-    nop
 
     invoke-virtual {v11, v4}, Lcom/tpcstld/twozerogame/Grid;->insertTile(Lcom/tpcstld/twozerogame/Tile;)V
 
     
     iget-object v11, v0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
-    nop
-    nop
 
     invoke-virtual {v11, v10}, Lcom/tpcstld/twozerogame/Grid;->removeTile(Lcom/tpcstld/twozerogame/Tile;)V
 
     
     aget-object v11, v12, v16
+    nop
+    nop
     nop
 
     invoke-virtual {v10, v11}, Lcom/tpcstld/twozerogame/Tile;->updatePosition(Lcom/tpcstld/twozerogame/Cell;)V
@@ -2541,6 +2556,8 @@
     nop
 
     aput v8, v11, v16
+    nop
+    nop
     nop
 
     
@@ -2559,24 +2576,26 @@
     move-result v19
     nop
     nop
+    nop
 
     const/16 v20, 0x0
     nop
-    nop
 
     const-wide/32 v21, 0x5f5e100
+    nop
+    nop
     nop
 
     const-wide/16 v23, 0x0
     nop
     nop
-    nop
 
     move-object/from16 v17, v8
     nop
+    nop
+    nop
 
     move-object/from16 v25, v11
-    nop
     nop
     nop
 
@@ -2598,10 +2617,9 @@
 
     move-result v27
     nop
-    nop
-    nop
 
     const/16 v28, 0x1
+    nop
     nop
 
     const-wide/32 v29, 0x5f5e100
@@ -2616,20 +2634,14 @@
 
     const/16 v33, 0x0
     nop
-    nop
-    nop
 
     move-object/from16 v25, v8
-    nop
-    nop
     nop
 
     invoke-virtual/range {v25 .. v33}, Lcom/tpcstld/twozerogame/AnimationGrid;->startAnimation(IIIJJ[I)V
 
     
     iget-wide v11, v0, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
-    nop
-    nop
     nop
 
     invoke-virtual {v4}, Lcom/tpcstld/twozerogame/Tile;->getValue()I
@@ -2641,13 +2653,11 @@
 
     int-to-long v13, v8
     nop
-    nop
 
     add-long/2addr v11, v13
     nop
 
     iput-wide v11, v0, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
-    nop
     nop
 
     
@@ -2665,8 +2675,10 @@
     move-result-wide v11
     nop
     nop
+    nop
 
     iput-wide v11, v0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
+    nop
     nop
     nop
 
@@ -2685,10 +2697,10 @@
 
     if-ltz v8, :cond_2
     nop
+    nop
 
     
     iput-wide v11, v0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
-    nop
     nop
 
     
@@ -2700,13 +2712,17 @@
 
     move-result v4
     nop
+    nop
 
     invoke-direct/range {p0 .. p0}, Lcom/tpcstld/twozerogame/MainGame;->winValue()I
 
     move-result v8
     nop
+    nop
+    nop
 
     if-lt v4, v8, :cond_3
+    nop
     nop
     nop
 
@@ -2714,8 +2730,12 @@
 
     move-result v4
     nop
+    nop
+    nop
 
     if-nez v4, :cond_3
+    nop
+    nop
     nop
 
     
@@ -2729,10 +2749,10 @@
 
     add-int/2addr v4, v8
     nop
+    nop
+    nop
 
     iput v4, v0, Lcom/tpcstld/twozerogame/MainGame;->fe18bcf4e:I
-    nop
-    nop
     nop
 
     
@@ -2740,7 +2760,6 @@
 
     :cond_3
     const/4 v4, 0x0
-    nop
     nop
     nop
 
@@ -2758,6 +2777,7 @@
     const/4 v4, 0x0
     nop
     nop
+    nop
 
     
     aget-object v11, v12, v4
@@ -2768,6 +2788,7 @@
     invoke-direct {v0, v10, v11}, Lcom/tpcstld/twozerogame/MainGame;->moveTile(Lcom/tpcstld/twozerogame/Tile;Lcom/tpcstld/twozerogame/Cell;)V
 
     const/4 v11, 0x3
+    nop
     nop
 
     
@@ -2782,6 +2803,7 @@
     const/4 v13, 0x1
     nop
     nop
+    nop
 
     aput v8, v11, v13
     nop
@@ -2789,8 +2811,6 @@
     nop
 
     aput v4, v11, v14
-    nop
-    nop
     nop
 
     
@@ -2806,11 +2826,8 @@
 
     move-result v18
     nop
-    nop
-    nop
 
     aget-object v12, v12, v4
-    nop
     nop
     nop
 
@@ -2819,10 +2836,8 @@
     move-result v19
     nop
     nop
-    nop
 
     const/16 v20, 0x0
-    nop
     nop
     nop
 
@@ -2851,13 +2866,13 @@
 
     move-result v8
     nop
-    nop
-    nop
 
     if-nez v8, :cond_1
     nop
 
     const/4 v5, 0x1
+    nop
+    nop
     nop
 
     goto/16 :goto_1
@@ -2866,9 +2881,9 @@
     :cond_5
     const/4 v4, 0x0
     nop
+    nop
 
     goto/16 :goto_1
-    nop
     nop
     nop
 
@@ -2878,8 +2893,6 @@
     nop
 
     goto/16 :goto_0
-    nop
-    nop
     nop
 
     :cond_7
@@ -2898,7 +2911,6 @@
     
     :cond_8
     iget-object v1, v0, Lcom/tpcstld/twozerogame/MainGame;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
-    nop
     nop
     nop
 
@@ -2934,12 +2946,15 @@
 
     const/4 v1, 0x4
     nop
+    nop
 
     if-nez v0, :cond_0
+    nop
     nop
 
     
     new-instance v0, Lcom/tpcstld/twozerogame/Grid;
+    nop
     nop
     nop
 
@@ -2947,8 +2962,10 @@
 
     iput-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
+    nop
 
     goto :goto_0
+    nop
     nop
     nop
 
@@ -2963,7 +2980,6 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
     nop
     nop
-    nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/Grid;->clearGrid()V
 
@@ -2972,10 +2988,13 @@
     new-instance v0, Lcom/tpcstld/twozerogame/AnimationGrid;
     nop
     nop
+    nop
 
     invoke-direct {v0, v1, v1}, Lcom/tpcstld/twozerogame/AnimationGrid;-><init>(II)V
 
     iput-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
+    nop
+    nop
     nop
 
     
@@ -2983,27 +3002,26 @@
 
     move-result-wide v0
     nop
-    nop
-    nop
 
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
-    nop
-    nop
     nop
 
     
     iget-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
     nop
     nop
-    nop
 
     iget-wide v2, p0, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
+    nop
+    nop
     nop
 
     cmp-long v4, v0, v2
     nop
+    nop
 
     if-ltz v4, :cond_1
+    nop
     nop
     nop
 
@@ -3022,13 +3040,13 @@
 
     move-result-wide v0
     nop
+    nop
+    nop
 
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
     nop
 
     const/4 v0, 0x0
-    nop
-    nop
     nop
 
     
@@ -3042,6 +3060,7 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
 
     invoke-direct {p0}, Lcom/tpcstld/twozerogame/MainGame;->firstRun()Z
 
@@ -3052,15 +3071,21 @@
     iput-boolean v1, v0, Lcom/tpcstld/twozerogame/MainView;->f6c0b58c7:Z
     nop
     nop
+    nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
+    nop
+    nop
 
     const/4 v1, 0x1
     nop
+    nop
+    nop
 
     iput-boolean v1, v0, Lcom/tpcstld/twozerogame/MainView;->f788a7315:Z
+    nop
     nop
     nop
 
@@ -3069,6 +3094,8 @@
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
+    nop
+    nop
     nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/MainView;->invalidate()V
@@ -3091,16 +3118,19 @@
     
     iget-boolean v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f375043c7:Z
     nop
+    nop
+    nop
 
     if-eqz v0, :cond_0
+    nop
     nop
 
     const/4 v0, 0x0
     nop
+    nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f375043c7:Z
-    nop
     nop
     nop
 
@@ -3124,9 +3154,9 @@
     iget-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fe6bde95d:J
     nop
     nop
-    nop
 
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
+    nop
     nop
     nop
 
@@ -3136,12 +3166,9 @@
 
     iput v0, p0, Lcom/tpcstld/twozerogame/MainGame;->fe18bcf4e:I
     nop
-    nop
-    nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
-    nop
     nop
 
     const/4 v1, 0x1
@@ -3150,6 +3177,7 @@
     nop
 
     iput-boolean v1, v0, Lcom/tpcstld/twozerogame/MainView;->f788a7315:Z
+    nop
     nop
 
     
@@ -3185,6 +3213,7 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainGame;->f7d6c7318:Lcom/tpcstld/twozerogame/MainView;
     nop
     nop
+    nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/MainView;->invalidate()V
 
@@ -3197,9 +3226,9 @@
     const/4 v1, 0x1
     nop
     nop
+    nop
 
     iput-boolean v1, v0, Lcom/tpcstld/twozerogame/MainView;->f788a7315:Z
-    nop
     nop
     nop
 

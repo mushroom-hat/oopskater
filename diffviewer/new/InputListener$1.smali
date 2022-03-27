@@ -63,6 +63,7 @@
 
     move-result-object p1
     nop
+    nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop

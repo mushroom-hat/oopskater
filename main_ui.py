@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         self.mainPanelImage = QtWidgets.QLabel(self.centralwidget)
         self.mainPanelImage.setGeometry(QtCore.QRect(0, 0, 931, 561))
         self.mainPanelImage.setText("")
-        self.mainPanelImage.setPixmap(QtGui.QPixmap("Mainpanel.png"))
+        self.mainPanelImage.setPixmap(QtGui.QPixmap("resources/UI/Mainpanel.png"))
         self.mainPanelImage.setScaledContents(True)
         self.mainPanelImage.setObjectName("mainPanelImage")
 

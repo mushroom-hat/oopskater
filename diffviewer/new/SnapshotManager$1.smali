@@ -42,6 +42,7 @@
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$1;->val$callback:Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$Callback;
     nop
+    nop
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -83,8 +84,6 @@
 
     if-nez p1, :cond_0
     nop
-    nop
-    nop
 
     return-void
 
@@ -94,15 +93,15 @@
 
     move-result-object p1
     nop
+    nop
+    nop
 
     if-eqz p1, :cond_1
-    nop
     nop
     nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$1;->val$callback:Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$Callback;
-    nop
     nop
 
     invoke-interface {v0, p1}, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$Callback;->run(Lcom/tpcstld/twozerogame/snapshot/SnapshotData;)V

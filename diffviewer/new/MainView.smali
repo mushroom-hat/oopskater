@@ -6,341 +6,305 @@
 # static fields
 .field static final f8de905b1:I = 0x5f5e100
 
-.field static final f8de905b1SYvLVPEa:I = 0x5f5e100
-
-.field static final f8de905b1VUBodese:I = 0x5f5e100
+.field static final f8de905b1rIizoiNy:I = 0x5f5e100
 
 .field private static final face62e98:F = 0.375f
 
-.field private static final face62e98LwOKfBRA:F = 0.375f
+.field private static final face62e98OUnDUvZq:F = 0.375f
 
-.field private static final face62e98MIfMTntH:F = 0.375f
+.field private static final face62e98vSEWzmuB:F = 0.375f
 
-.field private static final face62e98AxGpZLcP:F = 0.375f
+.field private static final face62e98TCHrYEXU:F = 0.375f
 
-.field private static final face62e98CRjRsvdh:F = 0.375f
+.field private static final face62e98rXqMZnWG:F = 0.375f
 
 .field private static final f253217df:F = -0.5f
 
-.field private static final f253217dfNIaxUELv:F = -0.5f
+.field private static final f253217dfRvKOYQmF:F = -0.5f
+
+.field private static final f253217dfoVVwZbrZ:F = -0.5f
+
+.field private static final f253217dftkUKAFWm:F = -0.5f
+
+.field private static final f253217dfUDtYaBAb:F = -0.5f
 
 .field private static final fe444f739:Ljava/lang/String;
 
-.field private static final fe444f739MFQoAfyJ:Ljava/lang/String;
+.field private static final fe444f739lWiQpTDm:Ljava/lang/String;
 
-.field private static final fe444f739ywaIsiVB:Ljava/lang/String;
+.field private static final fe444f739tbonQNYF:Ljava/lang/String;
 
-.field private static final fe444f739cRJfKsWy:Ljava/lang/String;
+.field private static final fe444f739IPYhBARx:Ljava/lang/String;
 
 
 # instance fields
 .field private fd229bbf3:Landroid/graphics/Bitmap;
 
-.field private fd229bbf3RrlKteVZ:Landroid/graphics/Bitmap;
+.field private fd229bbf3ZDKIQMHz:Landroid/graphics/Bitmap;
 
-.field private fd229bbf3ZztydOpK:Landroid/graphics/Bitmap;
+.field private fd229bbf3mCczuVUe:Landroid/graphics/Bitmap;
 
-.field private fd229bbf3DRmQBRUA:Landroid/graphics/Bitmap;
-
-.field private fd229bbf3ctheGNKU:Landroid/graphics/Bitmap;
+.field private fd229bbf3ADCcTEcN:Landroid/graphics/Bitmap;
 
 .field private f088cfa4d:Landroid/graphics/drawable/Drawable;
 
-.field private f088cfa4dkZkVrDcx:Landroid/graphics/drawable/Drawable;
+.field private f088cfa4dwygcSpAz:Landroid/graphics/drawable/Drawable;
 
-.field private f088cfa4dlmUmTljS:Landroid/graphics/drawable/Drawable;
+.field private f088cfa4dTyiodsoK:Landroid/graphics/drawable/Drawable;
 
 .field private final f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
 
-.field private final f1f214ddbiXmBAmPa:[Landroid/graphics/drawable/BitmapDrawable;
+.field private final f1f214ddbbYeMMbmd:[Landroid/graphics/drawable/BitmapDrawable;
 
-.field private final f1f214ddbmUprQMJz:[Landroid/graphics/drawable/BitmapDrawable;
+.field private final f1f214ddbfCWoTBrd:[Landroid/graphics/drawable/BitmapDrawable;
+
+.field private final f1f214ddbhXyFxwtR:[Landroid/graphics/drawable/BitmapDrawable;
 
 .field private f390da68c:I
 
-.field private f390da68ccrNfiPpj:I
+.field private f390da68cTsWyvNRv:I
 
-.field private f390da68cqEJICTvU:I
+.field private f390da68cfyyBYnho:I
 
-.field private f390da68cWCiBZvvW:I
+.field private f390da68cmwYNshut:I
 
 .field private f9f9646af:F
 
-.field private f9f9646afBlfLmGzG:F
-
-.field private f9f9646afkCbYqmbv:F
-
-.field private f9f9646afdBdNOUyO:F
+.field private f9f9646afMZYsuUFB:F
 
 .field private f395ca551:I
 
-.field private f395ca551IFlJQZBP:I
-
-.field private f395ca551LnCSrLca:I
-
-.field private f395ca551IJpyaBMc:I
-
-.field private f395ca551uIhrHVBR:I
+.field private f395ca551ldftOiNQ:I
 
 .field private f6c6980e0:F
 
-.field private f6c6980e0AATEsKCX:F
-
-.field private f6c6980e0pzmWnICZ:F
-
-.field private f6c6980e0ZeUxoEaa:F
+.field private f6c6980e0wRahzztJ:F
 
 .field public fa8070ffd:Z
 
-.field public fa8070ffdkdcNKAOW:Z
+.field public fa8070ffdRfxzywUL:Z
 
-.field public fa8070ffdgSMJekQy:Z
-
-.field public fa8070ffdWVtlRmuw:Z
-
-.field public fa8070ffdZzOmNYOg:Z
+.field public fa8070ffddbUhqNpx:Z
 
 .field private f129ebab2:I
 
-.field private f129ebab2uMOVbkcB:I
+.field private f129ebab2nLYTLuBN:I
+
+.field private f129ebab2AMnkMLzl:I
+
+.field private f129ebab2GNZnaGsk:I
 
 .field public fb0efee4b:I
 
-.field public fb0efee4bvBhulcQR:I
+.field public fb0efee4bQvVOJRxR:I
 
-.field public fb0efee4bBDbzmTbd:I
+.field public fb0efee4bTqHmMaRb:I
 
-.field public fb0efee4bnxHidVjR:I
+.field public fb0efee4buqYGVtrT:I
 
 .field public fea34008c:I
 
-.field public fea34008cXEvnWTiv:I
+.field public fea34008cyXHcFgDF:I
 
-.field public fea34008cbBhbwsIN:I
+.field public fea34008cIDpXTgCU:I
 
-.field public fea34008cRpYQjXaa:I
-
-.field public fea34008cFnVCvJLB:I
+.field public fea34008cIPfAvQro:I
 
 .field private f9727fcbe:Landroid/graphics/drawable/Drawable;
 
-.field private f9727fcbennkwxCJl:Landroid/graphics/drawable/Drawable;
+.field private f9727fcbeRnJyfPrZ:Landroid/graphics/drawable/Drawable;
 
-.field private f9727fcbeCbzmuXPg:Landroid/graphics/drawable/Drawable;
-
-.field private f9727fcbeByfyoxNJ:Landroid/graphics/drawable/Drawable;
-
-.field private f9727fcbeHctzGgwi:Landroid/graphics/drawable/Drawable;
+.field private f9727fcbevDIsxALg:Landroid/graphics/drawable/Drawable;
 
 .field public final fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
 
-.field public final fc8d46d34TABHaQHP:Lcom/tpcstld/twozerogame/MainGame;
+.field public final fc8d46d34aStwgtfG:Lcom/tpcstld/twozerogame/MainGame;
 
-.field public final fc8d46d34tzPDjcHo:Lcom/tpcstld/twozerogame/MainGame;
+.field public final fc8d46d34SWuaBttX:Lcom/tpcstld/twozerogame/MainGame;
 
-.field public final fc8d46d34iyLijZqE:Lcom/tpcstld/twozerogame/MainGame;
+.field public final fc8d46d34KyGlpsMO:Lcom/tpcstld/twozerogame/MainGame;
 
-.field public final fc8d46d34aJvylFsM:Lcom/tpcstld/twozerogame/MainGame;
+.field public final fc8d46d34aODxhvTZ:Lcom/tpcstld/twozerogame/MainGame;
 
 .field private fa0fc2f4a:F
 
-.field private fa0fc2f4aYhtTxNyW:F
+.field private fa0fc2f4aVKrckAua:F
 
-.field private fa0fc2f4amNJmPLuM:F
+.field private fa0fc2f4aQGlsXoDh:F
 
 .field private f0e5a0b79:I
 
-.field private f0e5a0b79yiLgKeiH:I
+.field private f0e5a0b79kTfQCbPO:I
 
-.field private f0e5a0b79aoYspGZL:I
+.field private f0e5a0b79LNpLZqNY:I
 
 .field public fc70383a7:Z
 
-.field public fc70383a7VjOqclRN:Z
+.field public fc70383a7TcypHkUI:Z
 
-.field public fc70383a7lHXUdtaV:Z
-
-.field public fc70383a7ZJNsbqvU:Z
+.field public fc70383a7LASZDqpZ:Z
 
 .field private f58cf82c4:F
 
-.field private f58cf82c4idkxTiyi:F
+.field private f58cf82c4EhFLopAo:F
 
-.field private f58cf82c4gopMtviu:F
+.field private f58cf82c4jnOYrwuf:F
 
-.field private f58cf82c4UzDLrVTe:F
-
-.field private f58cf82c4PJfAcgKA:F
+.field private f58cf82c4avhTOUhA:F
 
 .field private f0fc1a62e:I
 
-.field private f0fc1a62edotCMDzk:I
+.field private f0fc1a62egbuVESAk:I
 
-.field private f0fc1a62ezjqxfKjL:I
+.field private f0fc1a62emUreODGB:I
 
-.field private f0fc1a62eiIFVmHcP:I
+.field private f0fc1a62eLKlIyprc:I
+
+.field private f0fc1a62efJjOVeUo:I
 
 .field public ff5e10c45:I
 
-.field public ff5e10c45FMoZvFCT:I
+.field public ff5e10c45WVSVejzN:I
 
-.field public ff5e10c45qRQtYXry:I
+.field public ff5e10c45uSCwxepp:I
 
-.field public ff5e10c45xYGBHgsP:I
-
-.field public ff5e10c45QvgWLnEe:I
+.field public ff5e10c45nUePlEVP:I
 
 .field private fe2774d90:F
 
-.field private fe2774d90FioKxjoF:F
-
-.field private fe2774d90avYooBHg:F
-
-.field private fe2774d90HlKNBglR:F
-
-.field private fe2774d90jHVviAAi:F
+.field private fe2774d90HOEyPGes:F
 
 .field private f139ce471:J
 
-.field private f139ce471sXGGukNf:J
-
-.field private f139ce471xadsXGBd:J
-
-.field private f139ce471peSHnzYp:J
+.field private f139ce471giijSLOg:J
 
 .field private f8ae27d4b:Landroid/graphics/drawable/Drawable;
 
-.field private f8ae27d4boXyUkYxs:Landroid/graphics/drawable/Drawable;
-
-.field private f8ae27d4bRJGGCABH:Landroid/graphics/drawable/Drawable;
-
-.field private f8ae27d4bMmJNznJo:Landroid/graphics/drawable/Drawable;
+.field private f8ae27d4bqDNEOprz:Landroid/graphics/drawable/Drawable;
 
 .field private f6ff4ad39:Landroid/graphics/drawable/BitmapDrawable;
 
-.field private f6ff4ad39JdpIvuDu:Landroid/graphics/drawable/BitmapDrawable;
+.field private f6ff4ad39nxCaBWjp:Landroid/graphics/drawable/BitmapDrawable;
+
+.field private f6ff4ad39jGLagMhe:Landroid/graphics/drawable/BitmapDrawable;
+
+.field private f6ff4ad39NHeTnxpb:Landroid/graphics/drawable/BitmapDrawable;
 
 .field public final fd62a7ab0:I
 
-.field public final fd62a7ab0SkMzsgco:I
-
-.field public final fd62a7ab0nSssHeXC:I
+.field public final fd62a7ab0mdgCNHaU:I
 
 .field private final fc1940aee:Landroid/graphics/Paint;
 
-.field private final fc1940aeeYjhyVPSY:Landroid/graphics/Paint;
-
-.field private final fc1940aeeJyPMLdpj:Landroid/graphics/Paint;
-
-.field private final fc1940aeeEgVhAjPI:Landroid/graphics/Paint;
-
-.field private final fc1940aeezbRyVeYl:Landroid/graphics/Paint;
+.field private final fc1940aeeZZmxBlCN:Landroid/graphics/Paint;
 
 .field f788a7315:Z
 
-.field f788a7315ulkptuSV:Z
+.field f788a7315dSbySuDw:Z
+
+.field f788a7315PtoCfvtA:Z
 
 .field public f6e727e21:I
 
-.field public f6e727e21faIBvvmg:I
+.field public f6e727e21ULvXLhBy:I
+
+.field public f6e727e21LeoKxazp:I
+
+.field public f6e727e21XTBfMCIB:I
 
 .field public fb1f2b9f1:I
 
-.field public fb1f2b9f1IhWjvJCH:I
+.field public fb1f2b9f1HeYVaFOT:I
 
-.field public fb1f2b9f1RQKkoDuw:I
+.field public fb1f2b9f1cgEFQspA:I
 
-.field public fb1f2b9f1axuTCXgP:I
+.field public fb1f2b9f1capMxCXb:I
+
+.field public fb1f2b9f1whLEwXnu:I
 
 .field private f2be2379f:I
 
-.field private f2be2379fDIHhFLKa:I
-
-.field private f2be2379fVlWRaYXj:I
-
-.field private f2be2379fRetvUUNp:I
-
-.field private f2be2379fgrdWLVop:I
+.field private f2be2379fqladVcoj:I
 
 .field public f8e32e5cf:I
 
-.field public f8e32e5cfOcOxyiIY:I
-
-.field public f8e32e5cfsGqtPVbb:I
+.field public f8e32e5cfDwXmQDQM:I
 
 .field f6c0b58c7:Z
 
-.field f6c0b58c7xMgDegtr:Z
+.field f6c0b58c7JEaqGJoz:Z
 
-.field f6c0b58c7fvIlZGXk:Z
+.field f6c0b58c7PvQBbUZz:Z
+
+.field f6c0b58c7VgiLsyDo:Z
+
+.field f6c0b58c7ZbRbVFiM:Z
 
 .field public f01412ace:I
 
-.field public f01412acexMUwPEik:I
+.field public f01412aceFDzkaWXZ:I
 
-.field public f01412acesaMdzphH:I
+.field public f01412acefyMUbfot:I
 
-.field public f01412aceqdEWWoPC:I
+.field public f01412acegSAmwStM:I
 
 .field public fe51824ac:I
 
-.field public fe51824acedJWwOmC:I
+.field public fe51824acsPAHcFVb:I
 
-.field public fe51824acquudpFyK:I
+.field public fe51824acrVgEVeww:I
+
+.field public fe51824aczLlMVIsK:I
 
 .field private f51512227:I
 
-.field private f51512227GqhbcdnT:I
+.field private f51512227HOKLkggv:I
+
+.field private f51512227RXielTfE:I
+
+.field private f51512227SxclRnbr:I
+
+.field private f51512227wNXFrGHV:I
 
 .field private fbb289968:F
 
-.field private fbb289968XAPiZPVx:F
-
-.field private fbb289968eHYIsTyE:F
-
-.field private fbb289968RyrZVaVV:F
-
-.field private fbb289968oYfqxBSx:F
+.field private fbb289968QKMFJJLo:F
 
 .field private fed8b8490:I
 
-.field private fed8b8490haOXNfxJ:I
+.field private fed8b8490fnxgHExr:I
 
-.field private fed8b8490CxrSJINF:I
+.field private fed8b8490HbshNWJN:I
+
+.field private fed8b8490ByXmxeGC:I
 
 .field private fa6c5774a:F
 
-.field private fa6c5774admZrgTts:F
+.field private fa6c5774arxQrdNja:F
+
+.field private fa6c5774ajkasfxKP:F
 
 .field private fb30db828:I
 
-.field private fb30db828ZUpoIlzN:I
+.field private fb30db828BorGtzUd:I
 
-.field private fb30db828DhwtTNun:I
+.field private fb30db828saAuAFoJ:I
 
 .field private f90966b53:I
 
-.field private f90966b53LmHeYXLW:I
-
-.field private f90966b53DXRDeEaM:I
-
-.field private f90966b53ifmfavVK:I
+.field private f90966b53pClXSPdF:I
 
 .field private ffa830e46:Landroid/graphics/drawable/BitmapDrawable;
 
-.field private ffa830e46aOOSjyuO:Landroid/graphics/drawable/BitmapDrawable;
+.field private ffa830e46HAwtqdEC:Landroid/graphics/drawable/BitmapDrawable;
 
-.field private ffa830e46jWGYPDqN:Landroid/graphics/drawable/BitmapDrawable;
-
-.field private ffa830e46EgCsnWiS:Landroid/graphics/drawable/BitmapDrawable;
-
-.field private ffa830e46wdTUlsqm:Landroid/graphics/drawable/BitmapDrawable;
+.field private ffa830e46uYlaHUTi:Landroid/graphics/drawable/BitmapDrawable;
 
 .field private f8b85c6dc:Landroid/graphics/drawable/BitmapDrawable;
 
-.field private f8b85c6dcMCTolEaO:Landroid/graphics/drawable/BitmapDrawable;
+.field private f8b85c6dcGeHnhgSm:Landroid/graphics/drawable/BitmapDrawable;
 
-.field private f8b85c6dcRRUhStsG:Landroid/graphics/drawable/BitmapDrawable;
+.field private f8b85c6dcVZFqTRRi:Landroid/graphics/drawable/BitmapDrawable;
 
 
 # direct methods
@@ -351,7 +315,7 @@
 
 	:before_first_instruction
 
-	const-string/jumbo v0, "e30560f908736c9c008b965e703c0c8e"
+	const-string/jumbo v0, "ba72e2f394150f091838133f45dee6d7"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -383,15 +347,16 @@
     
     iput v0, p0, Lcom/tpcstld/twozerogame/MainView;->fd62a7ab0:I
     nop
-    nop
-    nop
 
     
     new-array v0, v0, [Landroid/graphics/drawable/BitmapDrawable;
     nop
     nop
+    nop
 
     iput-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
+    nop
+    nop
     nop
 
     
@@ -403,15 +368,12 @@
     iput-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
-    nop
 
     const/4 v0, 0x0
     nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc70383a7:Z
-    nop
-    nop
     nop
 
     
@@ -435,17 +397,20 @@
 
     move-result-wide v2
     nop
+    nop
+    nop
 
     iput-wide v2, p0, Lcom/tpcstld/twozerogame/MainView;->f139ce471:J
+    nop
+    nop
     nop
 
     
     iput v0, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
-    nop
-    nop
 
     const/4 v2, 0x0
+    nop
     nop
     nop
 
@@ -456,10 +421,10 @@
     
     iput v2, p0, Lcom/tpcstld/twozerogame/MainView;->f6c6980e0:F
     nop
+    nop
 
     
     iput v0, p0, Lcom/tpcstld/twozerogame/MainView;->f0e5a0b79:I
-    nop
     nop
 
     const/4 v0, 0x0
@@ -469,8 +434,6 @@
 
     
     iput-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fd229bbf3:Landroid/graphics/Bitmap;
-    nop
-    nop
     nop
 
     
@@ -482,6 +445,7 @@
 
     
     new-instance v2, Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
 
     invoke-direct {v2, p1, p0}, Lcom/tpcstld/twozerogame/MainGame;-><init>(Landroid/content/Context;Lcom/tpcstld/twozerogame/MainView;)V
@@ -502,6 +466,7 @@
     move-result-object p1
     nop
     nop
+    nop
 
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->f088cfa4d:Landroid/graphics/drawable/Drawable;
     nop
@@ -511,7 +476,6 @@
     
     sget p1, Lcom/tpcstld/twozerogame/base/R$drawable;->fd00140a1:I
     nop
-    nop
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -519,6 +483,7 @@
     nop
 
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->f8ae27d4b:Landroid/graphics/drawable/Drawable;
+    nop
     nop
 
     
@@ -529,19 +494,23 @@
 
     move-result-object p1
     nop
-    nop
 
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->f9727fcbe:Landroid/graphics/drawable/Drawable;
+    nop
+    nop
     nop
 
     
     sget p1, Lcom/tpcstld/twozerogame/base/R$color;->fd229bbf3:I
     nop
     nop
+    nop
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
+    nop
+    nop
     nop
 
     invoke-virtual {p0, p1}, Lcom/tpcstld/twozerogame/MainView;->setBackgroundColor(I)V
@@ -551,8 +520,9 @@
 
     move-result-object p1
     nop
+    nop
 
-	const-string/jumbo v0, "d7ad3fc23aab1d58876565a6ce2ecf678551c0978ab966911d12596cf321a7d5"
+	const-string/jumbo v0, "c55fc1c42e926974e26bb61a05432828c2adc9ec2299a21034301746e946e114"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -575,15 +545,12 @@
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
-    nop
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
-    nop
-    nop
     nop
 
     :catch_0
@@ -594,12 +561,11 @@
     sget-object v0, Lcom/tpcstld/twozerogame/MainView;->fe444f739:Ljava/lang/String;
     nop
 
-	const-string/jumbo v1, "184848a933cd0c515b43d5fea8bc01443d75c4e47db01fb40d2ffb48e091e282"
+	const-string/jumbo v1, "9189b3388c54ec55bc25481137212b3353a287f03b744f2f844536883e60c15b"
 
 	invoke-static {v1}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v1
-    nop
     nop
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -608,6 +574,7 @@
     :goto_0
     new-instance p1, Lcom/tpcstld/twozerogame/InputListener;
     nop
+    nop
 
     invoke-direct {p1, p0}, Lcom/tpcstld/twozerogame/InputListener;-><init>(Lcom/tpcstld/twozerogame/MainView;)V
 
@@ -615,7 +582,6 @@
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/MainGame;->newGame()V
@@ -654,11 +620,8 @@
 
     move-result v1
     nop
-    nop
-    nop
 
     add-float/2addr v0, v1
-    nop
     nop
     nop
 
@@ -672,10 +635,9 @@
 
     float-to-int v0, v0
     nop
-    nop
-    nop
 
     return v0
+    nop
     nop
     nop
 
@@ -706,8 +668,6 @@
 
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fd229bbf3:Landroid/graphics/Bitmap;
     nop
-    nop
-    nop
 
     
     new-instance p1, Landroid/graphics/Canvas;
@@ -722,7 +682,6 @@
     invoke-direct {p0, p1}, Lcom/tpcstld/twozerogame/MainView;->drawHeader(Landroid/graphics/Canvas;)V
 
     const/4 p2, 0x0
-    nop
     nop
     nop
 
@@ -770,6 +729,7 @@
 
     move-result-object v0
     nop
+    nop
 
     
     invoke-direct {p0}, Lcom/tpcstld/twozerogame/MainView;->getCellRectangleIds()[I
@@ -777,29 +737,32 @@
     move-result-object v1
     nop
     nop
+    nop
 
     
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
+    nop
 
     sget-object v3, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
-    nop
-    nop
     nop
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     const/4 v2, 0x1
     nop
-    nop
-    nop
 
     
     :goto_0
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
     nop
+    nop
+    nop
 
     array-length v3, v3
+    nop
+    nop
     nop
 
     if-ge v2, v3, :cond_0
@@ -808,9 +771,9 @@
     const-wide/high16 v3, 0x4000000000000000L    # 2.0
     nop
     nop
-    nop
 
     int-to-double v5, v2
+    nop
     nop
     nop
 
@@ -820,6 +783,7 @@
     move-result-wide v3
     nop
     nop
+    nop
 
     double-to-int v3, v3
     nop
@@ -827,6 +791,7 @@
 
     
     iget-object v4, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
+    nop
     nop
     nop
 
@@ -843,6 +808,8 @@
 
     iget v5, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
+    nop
+    nop
 
     int-to-float v6, v5
     nop
@@ -850,8 +817,11 @@
 
     mul-float v4, v4, v6
     nop
+    nop
+    nop
 
     const v6, 0x3f666666    # 0.9f
+    nop
     nop
     nop
 
@@ -861,10 +831,8 @@
 
     int-to-float v5, v5
     nop
-    nop
 
     mul-float v5, v5, v6
-    nop
     nop
     nop
 
@@ -882,8 +850,6 @@
 
     move-result v6
     nop
-    nop
-    nop
 
     invoke-static {v5, v6}, Ljava/lang/Math;->max(FF)F
 
@@ -897,6 +863,7 @@
 
     
     iget-object v5, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
+    nop
     nop
 
     invoke-virtual {v5, v4}, Landroid/graphics/Paint;->setTextSize(F)V
@@ -912,11 +879,11 @@
 
     move-result-object v4
     nop
-    nop
-    nop
 
     
     new-instance v12, Landroid/graphics/Canvas;
+    nop
+    nop
     nop
 
     invoke-direct {v12, v4}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
@@ -924,16 +891,16 @@
     
     aget v5, v1, v2
     nop
-    nop
-    nop
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
     nop
     nop
+    nop
 
     const/4 v8, 0x0
+    nop
     nop
     nop
 
@@ -942,17 +909,18 @@
 
     iget v11, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
-    nop
 
     move-object v5, p0
+    nop
+    nop
     nop
 
     move-object v6, v12
     nop
-    nop
-    nop
 
     move v10, v11
+    nop
+    nop
     nop
 
     invoke-direct/range {v5 .. v11}, Lcom/tpcstld/twozerogame/MainView;->drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;IIII)V
@@ -965,6 +933,7 @@
     nop
 
     new-instance v5, Landroid/graphics/drawable/BitmapDrawable;
+    nop
     nop
 
     invoke-direct {v5, v0, v4}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
@@ -1000,9 +969,9 @@
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
     nop
     nop
-    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
+    nop
     nop
 
     sub-int v7, v0, v1
@@ -1014,10 +983,9 @@
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
     nop
     nop
+    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
-    nop
-    nop
     nop
 
     sub-int v8, v0, v1
@@ -1027,20 +995,17 @@
     
     div-int/lit8 v0, v7, 0x2
     nop
-    nop
-    nop
 
     
     div-int/lit8 v1, v8, 0x2
     nop
-    nop
-    nop
 
     const/16 v2, 0x7f
     nop
-    nop
 
     const/16 v9, 0xff
+    nop
+    nop
     nop
 
     if-eqz p2, :cond_1
@@ -1049,27 +1014,30 @@
     
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->f8ae27d4b:Landroid/graphics/drawable/Drawable;
     nop
+    nop
 
     invoke-virtual {p2, v2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     
     iget-object v4, p0, Lcom/tpcstld/twozerogame/MainView;->f8ae27d4b:Landroid/graphics/drawable/Drawable;
     nop
+    nop
+    nop
 
     const/4 v5, 0x0
-    nop
     nop
 
     const/4 v6, 0x0
     nop
     nop
+    nop
 
     move-object v2, p0
     nop
+    nop
+    nop
 
     move-object v3, p1
-    nop
-    nop
     nop
 
     invoke-direct/range {v2 .. v8}, Lcom/tpcstld/twozerogame/MainView;->drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;IIII)V
@@ -1077,11 +1045,14 @@
     
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->f8ae27d4b:Landroid/graphics/drawable/Drawable;
     nop
+    nop
+    nop
 
     invoke-virtual {p2, v9}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
+    nop
     nop
 
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
@@ -1092,8 +1063,6 @@
     nop
 
     sget v3, Lcom/tpcstld/twozerogame/base/R$color;->fe6cfd41e:I
-    nop
-    nop
     nop
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
@@ -1114,8 +1083,10 @@
     
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->fa0fc2f4a:F
+    nop
     nop
     nop
 
@@ -1124,8 +1095,11 @@
     
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
+    nop
 
     sget-object v2, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
+    nop
     nop
     nop
 
@@ -1141,11 +1115,14 @@
 
     sub-int/2addr v1, p2
     nop
+    nop
+    nop
 
     
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+    nop
     nop
     nop
 
@@ -1156,18 +1133,19 @@
 
     move-result-object p2
     nop
+    nop
 
     int-to-float v0, v0
+    nop
     nop
     nop
 
     int-to-float v2, v1
     nop
     nop
+    nop
 
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
-    nop
     nop
 
     invoke-virtual {p1, p2, v0, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
@@ -1176,17 +1154,14 @@
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
-    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
-    nop
     nop
     nop
 
     invoke-virtual {p2, v2}, Landroid/graphics/Paint;->setTextSize(F)V
 
     if-eqz p3, :cond_0
-    nop
     nop
 
     
@@ -1198,14 +1173,17 @@
 
     sget p3, Lcom/tpcstld/twozerogame/base/R$string;->fd9143bf2:I
     nop
+    nop
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p2
     nop
     nop
+    nop
 
     goto :goto_0
+    nop
     nop
     nop
 
@@ -1219,6 +1197,7 @@
 
     sget p3, Lcom/tpcstld/twozerogame/base/R$string;->ffcc987d5:I
     nop
+    nop
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1229,7 +1208,6 @@
     :goto_0
     iget p3, p0, Lcom/tpcstld/twozerogame/MainView;->f51512227:I
     nop
-    nop
 
     mul-int/lit8 p3, p3, 0x2
     nop
@@ -1237,8 +1215,6 @@
     nop
 
     add-int/2addr v1, p3
-    nop
-    nop
     nop
 
     invoke-direct {p0}, Lcom/tpcstld/twozerogame/MainView;->centerText()I
@@ -1249,13 +1225,14 @@
 
     mul-int/lit8 p3, p3, 0x2
     nop
-    nop
 
     sub-int/2addr v1, p3
     nop
     nop
+    nop
 
     int-to-float p3, v1
+    nop
     nop
     nop
 
@@ -1268,11 +1245,11 @@
     goto :goto_1
     nop
     nop
+    nop
 
     
     :cond_1
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->f9727fcbe:Landroid/graphics/drawable/Drawable;
-    nop
     nop
     nop
 
@@ -1292,7 +1269,6 @@
     const/4 v6, 0x0
     nop
     nop
-    nop
 
     move-object v2, p0
     nop
@@ -1307,7 +1283,6 @@
     
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->f9727fcbe:Landroid/graphics/drawable/Drawable;
     nop
-    nop
 
     invoke-virtual {p2, v9}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
@@ -1321,10 +1296,8 @@
     move-result-object p3
     nop
     nop
-    nop
 
     sget v2, Lcom/tpcstld/twozerogame/base/R$color;->f20aadc63:I
-    nop
     nop
 
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getColor(I)I
@@ -1338,17 +1311,15 @@
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
-    nop
 
     invoke-virtual {p2, v9}, Landroid/graphics/Paint;->setAlpha(I)V
 
     
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
-    nop
-    nop
 
     iget p3, p0, Lcom/tpcstld/twozerogame/MainView;->fa0fc2f4a:F
+    nop
     nop
 
     invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setTextSize(F)V
@@ -1357,10 +1328,8 @@
     iget-object p2, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
-    nop
 
     sget-object p3, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
-    nop
     nop
 
     invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
@@ -1374,13 +1343,17 @@
     sget p3, Lcom/tpcstld/twozerogame/base/R$string;->ff8af61ed:I
     nop
     nop
+    nop
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p2
     nop
+    nop
 
     int-to-float p3, v0
+    nop
+    nop
     nop
 
     invoke-direct {p0}, Lcom/tpcstld/twozerogame/MainView;->centerText()I
@@ -1388,9 +1361,9 @@
     move-result v0
     nop
     nop
+    nop
 
     sub-int/2addr v1, v0
-    nop
     nop
 
     int-to-float v0, v1
@@ -1398,8 +1371,6 @@
     nop
 
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
-    nop
     nop
 
     invoke-virtual {p1, p2, p3, v0, v1}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
@@ -1431,13 +1402,15 @@
     
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
     nop
+    nop
+    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
     nop
+    nop
+    nop
 
     sub-int/2addr v1, v2
-    nop
-    nop
     nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
@@ -1445,24 +1418,17 @@
 
     iget v3, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
     nop
-    nop
-    nop
 
     sub-int/2addr v2, v3
-    nop
     nop
     nop
 
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
     nop
-    nop
-    nop
 
     invoke-static {v1, v2, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v1
-    nop
-    nop
     nop
 
     
@@ -1473,7 +1439,6 @@
     invoke-direct {v2, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     const/4 v3, 0x1
-    nop
     nop
     nop
 
@@ -1489,6 +1454,7 @@
 
     iput-object v2, p0, Lcom/tpcstld/twozerogame/MainView;->ffa830e46:Landroid/graphics/drawable/BitmapDrawable;
     nop
+    nop
 
     
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
@@ -1502,6 +1468,7 @@
 
     sub-int/2addr v1, v2
     nop
+    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
     nop
@@ -1509,20 +1476,21 @@
     iget v4, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
     nop
     nop
-    nop
 
     sub-int/2addr v2, v4
+    nop
     nop
     nop
 
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
     nop
     nop
-    nop
 
     invoke-static {v1, v2, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v1
+    nop
+    nop
     nop
 
     
@@ -1549,32 +1517,31 @@
 
     iput-object v2, p0, Lcom/tpcstld/twozerogame/MainView;->f8b85c6dc:Landroid/graphics/drawable/BitmapDrawable;
     nop
+    nop
+    nop
 
     
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
-    nop
     nop
     nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
     nop
     nop
-    nop
 
     sub-int/2addr v1, v2
+    nop
+    nop
     nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
     nop
+    nop
 
     iget v3, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
     nop
-    nop
-    nop
 
     sub-int/2addr v2, v3
-    nop
-    nop
     nop
 
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
@@ -1583,7 +1550,6 @@
     invoke-static {v1, v2, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v1
-    nop
     nop
     nop
 
@@ -1632,13 +1598,14 @@
     iget v3, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
     nop
     nop
-    nop
 
     iget v4, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
     nop
     nop
+    nop
 
     iget v5, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
+    nop
     nop
     nop
 
@@ -1650,10 +1617,9 @@
     move-object v0, p0
     nop
     nop
+    nop
 
     move-object v1, p1
-    nop
-    nop
     nop
 
     invoke-direct/range {v0 .. v6}, Lcom/tpcstld/twozerogame/MainView;->drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;IIII)V
@@ -1678,11 +1644,9 @@
 
     move-result-object v0
     nop
-    nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->fd71044f5:I
-    nop
     nop
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1690,17 +1654,21 @@
     move-result-object v0
     nop
     nop
-    nop
 
     const/4 v1, 0x0
     nop
+    nop
+    nop
 
     const/4 v9, 0x0
+    nop
     nop
 
     
     :goto_0
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
+    nop
     nop
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1708,13 +1676,13 @@
     const/4 v10, 0x4
     nop
     nop
+    nop
 
     if-ge v9, v10, :cond_1
     nop
-    nop
-    nop
 
     const/4 v11, 0x0
+    nop
     nop
 
     
@@ -1722,17 +1690,15 @@
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
+    nop
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     if-ge v11, v10, :cond_0
     nop
-    nop
 
     
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
-    nop
-    nop
     nop
 
     iget v3, p0, Lcom/tpcstld/twozerogame/MainView;->f0e5a0b79:I
@@ -1745,8 +1711,6 @@
 
     iget v4, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
-    nop
-    nop
 
     add-int v5, v4, v3
     nop
@@ -1755,13 +1719,12 @@
 
     mul-int v5, v5, v9
     nop
+    nop
 
     add-int/2addr v5, v2
     nop
-    nop
 
     add-int v7, v5, v4
-    nop
     nop
 
     
@@ -1770,14 +1733,12 @@
 
     add-int/2addr v2, v3
     nop
-    nop
 
     add-int/2addr v3, v4
     nop
+    nop
 
     mul-int v3, v3, v11
-    nop
-    nop
     nop
 
     add-int v6, v2, v3
@@ -1790,8 +1751,6 @@
     nop
 
     move-object v2, p0
-    nop
-    nop
     nop
 
     move-object v3, p1
@@ -1812,12 +1771,15 @@
 
     goto :goto_1
     nop
+    nop
+    nop
 
     :cond_0
     add-int/lit8 v9, v9, 0x1
     nop
 
     goto :goto_0
+    nop
     nop
     nop
 
@@ -1842,6 +1804,7 @@
 
     move-result v0
     nop
+    nop
 
     const/16 v1, 0x8
     nop
@@ -1849,7 +1812,6 @@
     nop
 
     if-lt p2, v1, :cond_0
-    nop
     nop
 
     
@@ -1865,7 +1827,6 @@
 
     sget v3, Lcom/tpcstld/twozerogame/base/R$color;->fe6cfd41e:I
     nop
-    nop
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1875,7 +1836,6 @@
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_0
-    nop
     nop
 
     
@@ -1911,6 +1871,8 @@
 
     const-string v2, ""
     nop
+    nop
+    nop
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1919,8 +1881,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
-    nop
-    nop
     nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
@@ -1937,12 +1897,12 @@
 
     div-int/lit8 v1, v1, 0x2
     nop
-    nop
 
     sub-int/2addr v1, v0
     nop
 
     int-to-float v0, v1
+    nop
     nop
     nop
 
@@ -1969,6 +1929,7 @@
     move-object/from16 v0, p0
     nop
     nop
+    nop
 
     move-object/from16 v1, p1
     nop
@@ -1976,9 +1937,9 @@
     
     iget-object v2, v0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
 
     iget v3, v0, Lcom/tpcstld/twozerogame/MainView;->fbb289968:F
-    nop
     nop
     nop
 
@@ -1986,8 +1947,6 @@
 
     
     iget-object v2, v0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
-    nop
     nop
 
     sget-object v3, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
@@ -1997,6 +1956,7 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     const/4 v3, 0x0
+    nop
     nop
 
     
@@ -2014,11 +1974,8 @@
 
     if-ge v3, v4, :cond_a
     nop
-    nop
 
     const/4 v5, 0x0
-    nop
-    nop
     nop
 
     
@@ -2030,7 +1987,6 @@
 
     if-ge v5, v4, :cond_9
     nop
-    nop
 
     
     iget v6, v0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
@@ -2039,18 +1995,18 @@
 
     iget v7, v0, Lcom/tpcstld/twozerogame/MainView;->f0e5a0b79:I
     nop
-    nop
-    nop
 
     add-int/2addr v6, v7
-    nop
     nop
     nop
 
     iget v8, v0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
+    nop
+    nop
 
     add-int v9, v8, v7
+    nop
     nop
 
     mul-int v9, v9, v3
@@ -2064,22 +2020,21 @@
 
     add-int v9, v6, v8
     nop
-    nop
 
     
     iget v10, v0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
-    nop
     nop
 
     add-int/2addr v10, v7
     nop
     nop
+    nop
 
     add-int/2addr v7, v8
     nop
+    nop
 
     mul-int v7, v7, v5
-    nop
     nop
 
     add-int/2addr v10, v7
@@ -2088,22 +2043,24 @@
     add-int/2addr v8, v10
     nop
     nop
-    nop
 
     
     iget-object v7, v0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
+    nop
+    nop
 
     iget-object v7, v7, Lcom/tpcstld/twozerogame/MainGame;->fff4a0084:Lcom/tpcstld/twozerogame/Grid;
-    nop
     nop
 
     invoke-virtual {v7, v3, v5}, Lcom/tpcstld/twozerogame/Grid;->getCellContent(II)Lcom/tpcstld/twozerogame/Tile;
 
     move-result-object v7
     nop
+    nop
 
     if-eqz v7, :cond_7
+    nop
     nop
 
     
@@ -2118,22 +2075,21 @@
 
     move-result v11
     nop
-    nop
-    nop
 
     
     iget-object v12, v0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
     nop
 
     iget-object v12, v12, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
     nop
     nop
+    nop
 
     invoke-virtual {v12, v3, v5}, Lcom/tpcstld/twozerogame/AnimationGrid;->getAnimationCell(II)Ljava/util/ArrayList;
 
     move-result-object v12
-    nop
     nop
     nop
 
@@ -2149,16 +2105,12 @@
 
     sub-int/2addr v13, v14
     nop
-    nop
-    nop
 
     const/4 v15, 0x0
-    nop
     nop
 
     :goto_2
     if-ltz v13, :cond_6
-    nop
     nop
     nop
 
@@ -2167,14 +2119,12 @@
 
     move-result-object v16
     nop
-    nop
-    nop
 
     move-object/from16 v4, v16
     nop
-    nop
 
     check-cast v4, Lcom/tpcstld/twozerogame/AnimationCell;
+    nop
     nop
 
     
@@ -2182,13 +2132,15 @@
 
     move-result v2
     nop
+    nop
+    nop
 
     const/4 v14, -0x1
     nop
     nop
+    nop
 
     if-ne v2, v14, :cond_0
-    nop
     nop
 
     const/4 v15, 0x1
@@ -2210,13 +2162,14 @@
     move/from16 v19, v3
     nop
     nop
+    nop
 
     move/from16 v20, v5
     nop
     nop
+    nop
 
     move-object/from16 v23, v7
-    nop
     nop
 
     move/from16 v24, v11
@@ -2226,16 +2179,11 @@
 
     move-object/from16 v25, v12
     nop
-    nop
-    nop
 
     const/16 v16, 0x0
     nop
-    nop
 
     const/16 v17, 0x1
-    nop
-    nop
     nop
 
     goto/16 :goto_6
@@ -2252,8 +2200,6 @@
 
     const/4 v15, 0x2
     nop
-    nop
-    nop
 
     if-ne v2, v14, :cond_3
     nop
@@ -2268,24 +2214,18 @@
 
     move-result-wide v2
     nop
-    nop
 
     double-to-float v2, v2
-    nop
     nop
 
     
     iget-object v3, v0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
-    nop
-    nop
 
     iget v4, v0, Lcom/tpcstld/twozerogame/MainView;->fbb289968:F
     nop
-    nop
 
     mul-float v4, v4, v2
-    nop
     nop
     nop
 
@@ -2294,19 +2234,16 @@
     
     iget v3, v0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
-    nop
-    nop
 
     div-int/2addr v3, v15
+    nop
     nop
     nop
 
     int-to-float v3, v3
     nop
-    nop
 
     const/high16 v4, 0x3f800000    # 1.0f
-    nop
     nop
 
     sub-float v15, v4, v2
@@ -2318,9 +2255,9 @@
     
     iget-object v2, v0, Lcom/tpcstld/twozerogame/MainView;->f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
     nop
+    nop
 
     aget-object v2, v2, v11
-    nop
     nop
     nop
 
@@ -2330,19 +2267,14 @@
     add-float/2addr v4, v3
     nop
     nop
-    nop
 
     float-to-int v4, v4
-    nop
     nop
 
     int-to-float v15, v10
     nop
-    nop
-    nop
 
     add-float/2addr v15, v3
-    nop
     nop
     nop
 
@@ -2351,11 +2283,14 @@
 
     move/from16 v19, v14
     nop
+    nop
 
     int-to-float v14, v9
     nop
+    nop
 
     sub-float/2addr v14, v3
+    nop
     nop
 
     float-to-int v14, v14
@@ -2365,15 +2300,20 @@
 
     move/from16 v20, v5
     nop
+    nop
+    nop
 
     int-to-float v5, v8
+    nop
     nop
     nop
 
     sub-float/2addr v5, v3
     nop
+    nop
 
     float-to-int v3, v5
+    nop
     nop
     nop
 
@@ -2386,6 +2326,7 @@
 
     aget-object v2, v2, v11
     nop
+    nop
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -2393,10 +2334,10 @@
     :goto_3
     move-object/from16 v23, v7
     nop
+    nop
+    nop
 
     move/from16 v24, v11
-    nop
-    nop
     nop
 
     move-object/from16 v25, v12
@@ -2405,14 +2346,11 @@
 
     const/16 v16, 0x0
     nop
-    nop
-    nop
 
     const/16 v17, 0x1
     nop
 
     goto/16 :goto_5
-    nop
     nop
 
     :cond_3
@@ -2432,18 +2370,16 @@
     move-result v2
     nop
     nop
-    nop
 
     const-wide/high16 v21, 0x3ff0000000000000L    # 1.0
-    nop
     nop
     nop
 
     const/4 v3, 0x1
     nop
-    nop
 
     if-ne v2, v3, :cond_4
+    nop
     nop
 
     
@@ -2451,14 +2387,13 @@
 
     move-result-wide v2
     nop
+    nop
+    nop
 
     const-wide/high16 v4, 0x3fd8000000000000L    # 0.375
     nop
-    nop
-    nop
 
     mul-double v4, v4, v2
-    nop
     nop
 
     add-double v4, v4, v21
@@ -2475,8 +2410,11 @@
 
     mul-double v21, v21, v2
     nop
+    nop
 
     const-wide/high16 v2, 0x4000000000000000L    # 2.0
+    nop
+    nop
     nop
 
     div-double v21, v21, v2
@@ -2484,8 +2422,12 @@
 
     add-double v4, v4, v21
     nop
+    nop
+    nop
 
     double-to-float v2, v4
+    nop
+    nop
     nop
 
     
@@ -2495,8 +2437,11 @@
 
     iget v4, v0, Lcom/tpcstld/twozerogame/MainView;->fbb289968:F
     nop
+    nop
 
     mul-float v4, v4, v2
+    nop
+    nop
     nop
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setTextSize(F)V
@@ -2504,10 +2449,10 @@
     
     iget v3, v0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
+    nop
+    nop
 
     div-int/2addr v3, v15
-    nop
-    nop
     nop
 
     int-to-float v3, v3
@@ -2517,20 +2462,24 @@
     const/high16 v4, 0x3f800000    # 1.0f
     nop
     nop
-    nop
 
     sub-float v15, v4, v2
     nop
+    nop
 
     mul-float v3, v3, v15
+    nop
     nop
     nop
 
     
     iget-object v2, v0, Lcom/tpcstld/twozerogame/MainView;->f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
     nop
+    nop
+    nop
 
     aget-object v2, v2, v11
+    nop
     nop
 
     int-to-float v4, v6
@@ -2543,24 +2492,27 @@
 
     float-to-int v4, v4
     nop
-    nop
 
     int-to-float v5, v10
+    nop
+    nop
     nop
 
     add-float/2addr v5, v3
     nop
+    nop
 
     float-to-int v5, v5
+    nop
     nop
     nop
 
     int-to-float v14, v9
     nop
     nop
+    nop
 
     sub-float/2addr v14, v3
-    nop
     nop
     nop
 
@@ -2570,14 +2522,14 @@
 
     int-to-float v15, v8
     nop
-    nop
-    nop
 
     sub-float/2addr v15, v3
     nop
     nop
+    nop
 
     float-to-int v3, v15
+    nop
     nop
     nop
 
@@ -2585,8 +2537,6 @@
 
     
     iget-object v2, v0, Lcom/tpcstld/twozerogame/MainView;->f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
-    nop
-    nop
     nop
 
     aget-object v2, v2, v11
@@ -2596,6 +2546,8 @@
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_3
+    nop
+    nop
     nop
 
     
@@ -2615,8 +2567,6 @@
 
     move-result-wide v2
     nop
-    nop
-    nop
 
     
     invoke-virtual {v12}, Ljava/util/ArrayList;->size()I
@@ -2624,13 +2574,12 @@
     move-result v5
     nop
     nop
+    nop
 
     if-lt v5, v15, :cond_5
     nop
 
     add-int/lit8 v5, v11, -0x1
-    nop
-    nop
     nop
 
     goto :goto_4
@@ -2641,16 +2590,21 @@
     :cond_5
     move v5, v11
     nop
+    nop
+    nop
 
     
     :goto_4
     iget-object v14, v4, Lcom/tpcstld/twozerogame/AnimationCell;->f27353006:[I
     nop
+    nop
 
     const/16 v16, 0x0
     nop
+    nop
 
     aget v14, v14, v16
+    nop
     nop
     nop
 
@@ -2660,6 +2614,7 @@
     nop
 
     const/16 v17, 0x1
+    nop
     nop
 
     aget v4, v4, v17
@@ -2673,7 +2628,6 @@
     move-result v15
     nop
     nop
-    nop
 
     
     invoke-virtual {v7}, Lcom/tpcstld/twozerogame/Tile;->getY()I
@@ -2684,7 +2638,6 @@
     nop
 
     sub-int/2addr v15, v14
-    nop
     nop
 
     
@@ -2699,14 +2652,12 @@
 
     iget v7, v0, Lcom/tpcstld/twozerogame/MainView;->f0e5a0b79:I
     nop
+    nop
 
     add-int v24, v14, v7
     nop
-    nop
 
     mul-int v15, v15, v24
-    nop
-    nop
     nop
 
     move/from16 v24, v11
@@ -2716,8 +2667,10 @@
     move-object/from16 v25, v12
     nop
     nop
+    nop
 
     int-to-double v11, v15
+    nop
     nop
 
     sub-double v2, v2, v21
@@ -2726,6 +2679,7 @@
     invoke-static {v11, v12}, Ljava/lang/Double;->isNaN(D)Z
 
     mul-double v11, v11, v2
+    nop
     nop
 
     mul-double v11, v11, v21
@@ -2739,7 +2693,6 @@
     sub-int v18, v18, v4
     nop
     nop
-    nop
 
     add-int/2addr v14, v7
     nop
@@ -2750,21 +2703,19 @@
 
     int-to-double v14, v4
     nop
-    nop
 
     
     invoke-static {v14, v15}, Ljava/lang/Double;->isNaN(D)Z
 
     mul-double v14, v14, v2
     nop
-    nop
-    nop
 
     mul-double v14, v14, v21
     nop
-    nop
 
     double-to-int v2, v14
+    nop
+    nop
     nop
 
     
@@ -2774,30 +2725,28 @@
 
     aget-object v3, v3, v5
     nop
+    nop
 
     add-int v4, v6, v11
+    nop
     nop
     nop
 
     add-int v7, v10, v2
     nop
     nop
-    nop
 
     add-int/2addr v11, v9
     nop
     nop
-    nop
 
     add-int/2addr v2, v8
-    nop
     nop
 
     invoke-virtual {v3, v4, v7, v11, v2}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
     
     iget-object v2, v0, Lcom/tpcstld/twozerogame/MainView;->f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
-    nop
     nop
 
     aget-object v2, v2, v5
@@ -2817,8 +2766,6 @@
     nop
 
     move/from16 v3, v19
-    nop
-    nop
     nop
 
     move/from16 v5, v20
@@ -2840,7 +2787,6 @@
     const/4 v4, 0x4
     nop
     nop
-    nop
 
     const/4 v14, 0x1
     nop
@@ -2857,6 +2803,7 @@
 
     move/from16 v20, v5
     nop
+    nop
 
     move/from16 v24, v11
     nop
@@ -2865,18 +2812,19 @@
 
     const/16 v16, 0x0
     nop
+    nop
+    nop
 
     if-nez v15, :cond_8
-    nop
-    nop
     nop
 
     
     iget-object v2, v0, Lcom/tpcstld/twozerogame/MainView;->f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
     nop
+    nop
+    nop
 
     aget-object v2, v2, v24
-    nop
     nop
 
     invoke-virtual {v2, v6, v10, v9, v8}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
@@ -2885,8 +2833,10 @@
     iget-object v2, v0, Lcom/tpcstld/twozerogame/MainView;->f1f214ddb:[Landroid/graphics/drawable/BitmapDrawable;
     nop
     nop
+    nop
 
     aget-object v2, v2, v24
+    nop
     nop
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
@@ -2896,6 +2846,7 @@
 
     :cond_7
     move/from16 v19, v3
+    nop
     nop
 
     move/from16 v20, v5
@@ -2908,6 +2859,8 @@
     :cond_8
     :goto_7
     add-int/lit8 v5, v20, 0x1
+    nop
+    nop
     nop
 
     move/from16 v3, v19
@@ -2926,8 +2879,6 @@
     :cond_9
     move/from16 v19, v3
     nop
-    nop
-    nop
 
     const/16 v16, 0x0
     nop
@@ -2937,8 +2888,6 @@
     nop
 
     goto/16 :goto_0
-    nop
-    nop
     nop
 
     :cond_a
@@ -2981,7 +2930,6 @@
     const/4 v0, 0x0
     nop
     nop
-    nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/MainView;->fa8070ffd:Z
@@ -2991,11 +2939,8 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
-    nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
-    nop
     nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/AnimationGrid;->f28d74d2b:Ljava/util/ArrayList;
@@ -3007,8 +2952,11 @@
 
     move-result-object v0
     nop
+    nop
+    nop
 
     const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
+    nop
     nop
 
     :cond_0
@@ -3017,10 +2965,8 @@
 
     move-result v3
     nop
-    nop
 
     if-eqz v3, :cond_1
-    nop
     nop
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -3030,15 +2976,16 @@
 
     check-cast v3, Lcom/tpcstld/twozerogame/AnimationCell;
     nop
+    nop
 
     
     invoke-virtual {v3}, Lcom/tpcstld/twozerogame/AnimationCell;->getAnimationType()I
 
     move-result v4
     nop
+    nop
 
     if-nez v4, :cond_0
-    nop
     nop
 
     
@@ -3058,6 +3005,7 @@
     const/4 v0, 0x0
     nop
     nop
+    nop
 
     
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -3072,26 +3020,30 @@
 
     if-eqz v3, :cond_3
     nop
+    nop
+    nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/MainGame;->canContinue()Z
 
     move-result v0
     nop
+    nop
 
     if-eqz v0, :cond_2
+    nop
     nop
 
     const/4 v0, 0x1
     nop
-    nop
-    nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/MainView;->fa8070ffd:Z
+    nop
     nop
 
     
@@ -3113,6 +3065,7 @@
     goto :goto_1
     nop
     nop
+    nop
 
     
     :cond_3
@@ -3126,8 +3079,10 @@
     move-result v3
     nop
     nop
+    nop
 
     if-eqz v3, :cond_4
+    nop
     nop
     nop
 
@@ -3147,13 +3102,15 @@
 
     iget v4, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
     nop
+    nop
 
     iget v5, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
     nop
     nop
-    nop
 
     iget v6, p0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
+    nop
+    nop
     nop
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
@@ -3165,11 +3122,8 @@
     mul-double v1, v1, v3
     nop
     nop
-    nop
 
     double-to-int v1, v1
-    nop
-    nop
     nop
 
     
@@ -3197,9 +3151,9 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
 
     sget-object v1, Landroid/graphics/Paint$Align;->LEFT:Landroid/graphics/Paint$Align;
-    nop
     nop
     nop
 
@@ -3208,18 +3162,14 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
-    nop
-    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
-    nop
     nop
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
     nop
 
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
@@ -3233,6 +3183,8 @@
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
+    nop
+    nop
     nop
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
@@ -3248,22 +3200,25 @@
     sget v1, Lcom/tpcstld/twozerogame/base/R$string;->fe150616b:I
     nop
     nop
-    nop
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
     nop
+    nop
+    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
+    nop
+    nop
     nop
 
     int-to-float v1, v1
     nop
     nop
+    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
-    nop
     nop
 
     invoke-direct {p0}, Lcom/tpcstld/twozerogame/MainView;->centerText()I
@@ -3279,11 +3234,15 @@
     sub-int/2addr v2, v3
     nop
     nop
+    nop
 
     int-to-float v2, v2
     nop
+    nop
+    nop
 
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
+    nop
     nop
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
@@ -3307,10 +3266,8 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
-    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f58cf82c4:F
-    nop
     nop
     nop
 
@@ -3319,15 +3276,16 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
 
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
     nop
-    nop
-    nop
 
     sget v2, Lcom/tpcstld/twozerogame/base/R$color;->f20aadc63:I
+    nop
+    nop
     nop
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
@@ -3335,12 +3293,12 @@
     move-result v1
     nop
     nop
+    nop
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
     nop
 
     sget-object v1, Landroid/graphics/Paint$Align;->LEFT:Landroid/graphics/Paint$Align;
@@ -3357,10 +3315,10 @@
 
     mul-int/lit8 v0, v0, 0x2
     nop
+    nop
 
     
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f2be2379f:I
-    nop
     nop
 
     sub-int/2addr v1, v0
@@ -3384,14 +3342,19 @@
     move-result-object v0
     nop
     nop
+    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
+    nop
+    nop
     nop
 
     int-to-float v2, v2
     nop
+    nop
 
     int-to-float v1, v1
+    nop
     nop
     nop
 
@@ -3420,9 +3383,10 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
+    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->fe2774d90:F
-    nop
     nop
     nop
 
@@ -3430,8 +3394,6 @@
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
-    nop
     nop
 
     sget-object v1, Landroid/graphics/Paint$Align;->LEFT:Landroid/graphics/Paint$Align;
@@ -3445,8 +3407,6 @@
     invoke-direct {p0}, Lcom/tpcstld/twozerogame/MainView;->centerText()I
 
     move-result v0
-    nop
-    nop
     nop
 
     mul-int/lit8 v0, v0, 0x2
@@ -3472,13 +3432,14 @@
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
     nop
     nop
+    nop
 
     int-to-float v2, v2
     nop
     nop
+    nop
 
     iget v3, p0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
-    nop
     nop
 
     sub-int/2addr v3, v0
@@ -3488,17 +3449,15 @@
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->f51512227:I
     nop
     nop
-    nop
 
     add-int/2addr v3, v0
-    nop
     nop
 
     int-to-float v0, v3
     nop
-    nop
 
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
+    nop
     nop
 
     invoke-virtual {p1, v1, v2, v0, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
@@ -3520,17 +3479,14 @@
 
     if-eqz p2, :cond_0
     nop
-    nop
-    nop
 
     
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainView;->f8ae27d4b:Landroid/graphics/drawable/Drawable;
     nop
     nop
+    nop
 
     iget v3, p0, Lcom/tpcstld/twozerogame/MainView;->f6e727e21:I
-    nop
-    nop
     nop
 
     iget v4, p0, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
@@ -3539,28 +3495,27 @@
 
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
     nop
+    nop
 
     add-int v5, v3, v0
-    nop
-    nop
     nop
 
     add-int v6, v4, v0
     nop
-    nop
 
     move-object v0, p0
     nop
+    nop
+    nop
 
     move-object v1, p1
+    nop
     nop
     nop
 
     invoke-direct/range {v0 .. v6}, Lcom/tpcstld/twozerogame/MainView;->drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;IIII)V
 
     goto :goto_0
-    nop
-    nop
     nop
 
     
@@ -3578,9 +3533,10 @@
 
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
     nop
-    nop
 
     add-int v5, v3, v0
+    nop
+    nop
     nop
 
     add-int v6, v4, v0
@@ -3591,9 +3547,9 @@
     move-object v0, p0
     nop
     nop
+    nop
 
     move-object v1, p1
-    nop
     nop
     nop
 
@@ -3605,7 +3561,6 @@
 
     move-result-object v0
     nop
-    nop
 
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->f93bd03e7:I
     nop
@@ -3616,11 +3571,8 @@
 
     move-result-object v2
     nop
-    nop
-    nop
 
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->f6e727e21:I
-    nop
     nop
     nop
 
@@ -3633,8 +3585,6 @@
 
     iget v4, p0, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
     nop
-    nop
-    nop
 
     add-int v5, v4, v1
     nop
@@ -3643,10 +3593,8 @@
 
     iget v6, p0, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
     nop
-    nop
 
     add-int/2addr v0, v6
-    nop
     nop
 
     sub-int v7, v0, v1
@@ -3655,6 +3603,8 @@
     nop
 
     add-int/2addr v4, v6
+    nop
+    nop
     nop
 
     sub-int v6, v4, v1
@@ -3667,13 +3617,13 @@
 
     move-object v1, p1
     nop
+    nop
+    nop
 
     move v4, v5
     nop
 
     move v5, v7
-    nop
-    nop
     nop
 
     
@@ -3698,6 +3648,7 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
+    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
     nop
@@ -3709,8 +3660,11 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
+    nop
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
+    nop
     nop
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
@@ -3721,11 +3675,12 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
     nop
+    nop
+    nop
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, ""
-    nop
     nop
     nop
 
@@ -3733,10 +3688,8 @@
 
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
 
     iget-wide v3, v3, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
-    nop
     nop
 
     invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
@@ -3746,21 +3699,20 @@
     move-result-object v1
     nop
     nop
-    nop
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result v0
     nop
+    nop
 
     float-to-int v0, v0
+    nop
     nop
     nop
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
-    nop
     nop
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3772,7 +3724,6 @@
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
 
     iget-wide v4, v2, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
     nop
@@ -3783,6 +3734,7 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
+    nop
     nop
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
@@ -3808,7 +3760,6 @@
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f51512227:I
     nop
     nop
-    nop
 
     mul-int/lit8 v2, v2, 0x2
     nop
@@ -3821,12 +3772,11 @@
     
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f90966b53:I
     nop
-    nop
-    nop
 
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
+    nop
     nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f51512227:I
@@ -3836,9 +3786,9 @@
     mul-int/lit8 v3, v2, 0x2
     nop
     nop
+    nop
 
     add-int/2addr v1, v3
-    nop
     nop
 
     
@@ -3854,28 +3804,30 @@
     
     iget v5, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
     nop
-    nop
-    nop
 
     sub-int v0, v5, v0
+    nop
+    nop
     nop
 
     sub-int v2, v0, v2
     nop
+    nop
+    nop
 
     sub-int v1, v2, v1
-    nop
     nop
 
     
     iget-object v6, p0, Lcom/tpcstld/twozerogame/MainView;->f088cfa4d:Landroid/graphics/drawable/Drawable;
     nop
+    nop
 
     iget v7, p0, Lcom/tpcstld/twozerogame/MainView;->f2be2379f:I
     nop
+    nop
 
     iget v8, p0, Lcom/tpcstld/twozerogame/MainView;->f129ebab2:I
-    nop
     nop
     nop
 
@@ -3884,6 +3836,7 @@
     
     iget-object v5, p0, Lcom/tpcstld/twozerogame/MainView;->f088cfa4d:Landroid/graphics/drawable/Drawable;
     nop
+    nop
 
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -3891,8 +3844,10 @@
     iget-object v5, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
+    nop
 
     iget v6, p0, Lcom/tpcstld/twozerogame/MainView;->fa6c5774a:F
+    nop
     nop
 
     invoke-virtual {v5, v6}, Landroid/graphics/Paint;->setTextSize(F)V
@@ -3900,12 +3855,12 @@
     
     iget-object v5, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
+    nop
 
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
-    nop
-    nop
     nop
 
     sget v7, Lcom/tpcstld/twozerogame/base/R$color;->f655c8bbb:I
@@ -3924,8 +3879,11 @@
     move-result-object v5
     nop
     nop
+    nop
 
     sget v6, Lcom/tpcstld/twozerogame/base/R$string;->f084c0eba:I
+    nop
+    nop
     nop
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -3936,21 +3894,22 @@
 
     add-int/2addr v0, v3
     nop
-    nop
 
     int-to-float v0, v0
+    nop
     nop
 
     iget v3, p0, Lcom/tpcstld/twozerogame/MainView;->fed8b8490:I
     nop
     nop
+    nop
 
     int-to-float v3, v3
     nop
-    nop
-    nop
 
     iget-object v6, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
+    nop
+    nop
     nop
 
     invoke-virtual {p1, v5, v0, v3, v6}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
@@ -3958,9 +3917,9 @@
     
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
-    nop
 
     iget v5, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
+    nop
     nop
 
     invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setTextSize(F)V
@@ -3969,10 +3928,12 @@
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
+    nop
 
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+    nop
     nop
     nop
 
@@ -3985,14 +3946,18 @@
 
     move-result v5
     nop
+    nop
+    nop
 
     invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setColor(I)V
 
     
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
+    nop
 
     iget-wide v5, v3, Lcom/tpcstld/twozerogame/MainGame;->fb1e0e9e7:J
+    nop
     nop
     nop
 
@@ -4003,6 +3968,8 @@
     nop
 
     iget v5, p0, Lcom/tpcstld/twozerogame/MainView;->f390da68c:I
+    nop
+    nop
     nop
 
     int-to-float v5, v5
@@ -4036,17 +4003,15 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->f088cfa4d:Landroid/graphics/drawable/Drawable;
     nop
-    nop
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
-    nop
-    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->fa6c5774a:F
+    nop
     nop
     nop
 
@@ -4055,13 +4020,19 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
+    nop
 
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
     nop
+    nop
+    nop
 
     sget v3, Lcom/tpcstld/twozerogame/base/R$color;->f655c8bbb:I
+    nop
+    nop
     nop
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
@@ -4077,6 +4048,8 @@
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+    nop
+    nop
     nop
 
     sget v2, Lcom/tpcstld/twozerogame/base/R$string;->fca1cd3c3:I
@@ -4089,27 +4062,24 @@
     move-result-object v0
     nop
     nop
+    nop
 
     add-int/2addr v1, v4
     nop
-    nop
-    nop
 
     int-to-float v1, v1
+    nop
     nop
     nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->fed8b8490:I
     nop
     nop
-    nop
 
     int-to-float v2, v2
     nop
-    nop
 
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
     nop
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
@@ -4117,15 +4087,17 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
+    nop
+    nop
     nop
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setTextSize(F)V
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
-    nop
     nop
 
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
@@ -4137,10 +4109,12 @@
 
     sget v3, Lcom/tpcstld/twozerogame/base/R$color;->fe6cfd41e:I
     nop
+    nop
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
+    nop
     nop
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
@@ -4148,9 +4122,9 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
+    nop
 
     iget-wide v2, v0, Lcom/tpcstld/twozerogame/MainGame;->fca1cd3c3:J
-    nop
     nop
     nop
 
@@ -4159,13 +4133,14 @@
     move-result-object v0
     nop
     nop
+    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f390da68c:I
     nop
+    nop
+    nop
 
     int-to-float v2, v2
-    nop
-    nop
     nop
 
     iget-object v3, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
@@ -4204,7 +4179,6 @@
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
     nop
     nop
-    nop
 
     add-int v5, v3, v0
     nop
@@ -4216,6 +4190,7 @@
     nop
 
     move-object v0, p0
+    nop
     nop
     nop
 
@@ -4230,6 +4205,7 @@
 
     move-result-object v0
     nop
+    nop
 
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->fffc76121:I
     nop
@@ -4243,25 +4219,23 @@
 
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->fb1f2b9f1:I
     nop
+    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f0fc1a62e:I
     nop
 
     add-int v5, v0, v1
     nop
-    nop
-    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
+    nop
+    nop
     nop
 
     add-int v6, v2, v1
     nop
-    nop
-    nop
 
     iget v3, p0, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
-    nop
     nop
     nop
 
@@ -4271,23 +4245,19 @@
 
     sub-int v7, v0, v1
     nop
-    nop
 
     add-int/2addr v2, v3
-    nop
-    nop
     nop
 
     sub-int v8, v2, v1
     nop
     nop
-    nop
 
     move-object v2, p0
     nop
+    nop
 
     move-object v3, p1
-    nop
     nop
 
     
@@ -4316,26 +4286,20 @@
     new-array v0, v0, [I
     nop
     nop
-    nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->fd71044f5:I
     nop
-    nop
 
     const/4 v2, 0x0
-    nop
-    nop
     nop
 
     aput v1, v0, v2
     nop
     nop
-    nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->f1d193ee6:I
-    nop
     nop
     nop
 
@@ -4346,12 +4310,16 @@
 
     aput v1, v0, v2
     nop
+    nop
+    nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->f70e2ea25:I
     nop
+    nop
 
     const/4 v2, 0x2
+    nop
     nop
     nop
 
@@ -4368,13 +4336,15 @@
     const/4 v2, 0x3
     nop
     nop
-    nop
 
     aput v1, v0, v2
+    nop
+    nop
     nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->f276cc207:I
+    nop
     nop
 
     const/4 v2, 0x4
@@ -4382,29 +4352,33 @@
 
     aput v1, v0, v2
     nop
+    nop
+    nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->f5662fe69:I
     nop
+    nop
+    nop
 
     const/4 v2, 0x5
     nop
-    nop
-    nop
 
     aput v1, v0, v2
-    nop
-    nop
     nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->f6c3bee81:I
     nop
+    nop
 
     const/4 v2, 0x6
     nop
+    nop
 
     aput v1, v0, v2
+    nop
+    nop
     nop
 
     
@@ -4418,15 +4392,14 @@
 
     aput v1, v0, v2
     nop
-    nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->f46d0ca5c:I
     nop
-    nop
-    nop
 
     const/16 v2, 0x8
+    nop
+    nop
     nop
 
     aput v1, v0, v2
@@ -4436,26 +4409,26 @@
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->fd7410cc7:I
     nop
+    nop
 
     const/16 v2, 0x9
     nop
+    nop
 
     aput v1, v0, v2
-    nop
     nop
 
     
     sget v1, Lcom/tpcstld/twozerogame/base/R$drawable;->f2e689537:I
     nop
+    nop
+    nop
 
     const/16 v2, 0xa
     nop
     nop
-    nop
 
     aput v1, v0, v2
-    nop
-    nop
     nop
 
     
@@ -4467,9 +4440,9 @@
     const/16 v2, 0xb
     nop
     nop
+    nop
 
     aput v1, v0, v2
-    nop
     nop
 
     const/16 v1, 0xc
@@ -4482,7 +4455,6 @@
     array-length v2, v0
     nop
     nop
-    nop
 
     if-ge v1, v2, :cond_0
     nop
@@ -4491,8 +4463,6 @@
     
     sget v2, Lcom/tpcstld/twozerogame/base/R$drawable;->fdb5ab26b:I
     nop
-    nop
-    nop
 
     aput v2, v0, v1
     nop
@@ -4500,12 +4470,15 @@
 
     add-int/lit8 v1, v1, 0x1
     nop
+    nop
 
     goto :goto_0
+    nop
     nop
 
     :cond_0
     return-object v0
+    nop
     nop
     nop
 
@@ -4526,12 +4499,10 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
-    nop
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     div-int/lit8 v0, p1, 0x5
-    nop
     nop
 
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
@@ -4549,22 +4520,25 @@
 
     move-result v0
     nop
-    nop
-    nop
 
     iput v0, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
+    nop
     nop
     nop
 
     
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
+    nop
+    nop
 
     div-int/lit8 v1, v0, 0x7
     nop
     nop
+    nop
 
     iput v1, p0, Lcom/tpcstld/twozerogame/MainView;->f0e5a0b79:I
+    nop
     nop
     nop
 
@@ -4572,15 +4546,16 @@
     div-int/lit8 p1, p1, 0x2
     nop
     nop
+    nop
 
     
     div-int/lit8 p2, p2, 0x2
     nop
-    nop
-    nop
 
     
     div-int/lit8 v1, v0, 0x2
+    nop
+    nop
     nop
 
     add-int/2addr p2, v1
@@ -4591,9 +4566,9 @@
     
     div-int/lit8 v0, v0, 0x2
     nop
+    nop
 
     iput v0, p0, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
-    nop
     nop
 
     
@@ -4605,6 +4580,7 @@
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
     nop
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -4612,26 +4588,24 @@
     int-to-double v0, p1
     nop
     nop
-    nop
 
     
     iget p1, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
-    nop
-    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->f0e5a0b79:I
+    nop
+    nop
     nop
 
     add-int v3, p1, v2
     nop
-    nop
 
     int-to-double v3, v3
     nop
-    nop
 
     const-wide/high16 v5, 0x4000000000000000L    # 2.0
+    nop
     nop
     nop
 
@@ -4644,7 +4618,6 @@
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     sub-double v3, v0, v3
-    nop
     nop
     nop
 
@@ -4660,6 +4633,8 @@
 
     sub-double/2addr v3, v7
     nop
+    nop
+    nop
 
     double-to-int v3, v3
     nop
@@ -4670,6 +4645,8 @@
     nop
 
     add-int v3, p1, v2
+    nop
+    nop
     nop
 
     int-to-double v3, v3
@@ -4689,8 +4666,10 @@
 
     add-double/2addr v0, v3
     nop
+    nop
 
     div-int/lit8 v3, v2, 0x2
+    nop
     nop
 
     int-to-double v3, v3
@@ -4700,7 +4679,6 @@
 
     add-double/2addr v0, v3
     nop
-    nop
 
     double-to-int v0, v0
     nop
@@ -4708,16 +4686,15 @@
 
     iput v0, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
     nop
+    nop
 
     int-to-double v0, p2
-    nop
     nop
 
     add-int p2, p1, v2
     nop
 
     int-to-double v3, p2
-    nop
     nop
 
     
@@ -4731,13 +4708,12 @@
 
     sub-double v3, v0, v3
     nop
+    nop
 
     div-int/lit8 p2, v2, 0x2
     nop
 
     int-to-double v7, p2
-    nop
-    nop
     nop
 
     invoke-static {v7, v8}, Ljava/lang/Double;->isNaN(D)Z
@@ -4747,6 +4723,7 @@
     nop
 
     double-to-int p2, v3
+    nop
     nop
 
     iput p2, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
@@ -4758,8 +4735,6 @@
     nop
 
     int-to-double v3, p2
-    nop
-    nop
     nop
 
     
@@ -4777,8 +4752,10 @@
 
     div-int/lit8 v2, v2, 0x2
     nop
+    nop
 
     int-to-double v2, v2
+    nop
     nop
     nop
 
@@ -4787,19 +4764,18 @@
     add-double/2addr v0, v2
     nop
     nop
-    nop
 
     double-to-int p2, v0
+    nop
     nop
 
     iput p2, p0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
     nop
     nop
+    nop
 
     
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
-    nop
-    nop
     nop
 
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
@@ -4809,7 +4785,6 @@
 
     sub-int/2addr p2, v0
     nop
-    nop
 
     int-to-float p2, p2
     nop
@@ -4818,8 +4793,11 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
 
     int-to-float p1, p1
+    nop
+    nop
     nop
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setTextSize(F)V
@@ -4838,22 +4816,22 @@
 
     int-to-float p1, p1
     nop
-    nop
 
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
 
-	const-string/jumbo v2, "bf5eeed0a6080afbeb415192a74edf7f"
+	const-string/jumbo v2, "e052e74ccb385417f5a35350c3637290"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v2
     nop
+    nop
+    nop
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result v1
-    nop
     nop
 
     invoke-static {p1, v1}, Ljava/lang/Math;->max(FF)F
@@ -4865,20 +4843,18 @@
 
     div-float/2addr v0, p1
     nop
+    nop
+    nop
 
     iput v0, p0, Lcom/tpcstld/twozerogame/MainView;->fbb289968:F
-    nop
     nop
     nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
-    nop
-    nop
 
     sget-object v0, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
-    nop
     nop
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
@@ -4903,10 +4879,8 @@
 
     move-result-object v1
     nop
-    nop
 
     sget v2, Lcom/tpcstld/twozerogame/base/R$string;->fcbde2df6:I
-    nop
     nop
     nop
 
@@ -4915,13 +4889,10 @@
     move-result-object v1
     nop
     nop
-    nop
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result p1
-    nop
-    nop
     nop
 
     div-float p1, p2, p1
@@ -4929,8 +4900,10 @@
 
     mul-float p1, p1, v0
     nop
+    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->fbb289968:F
+    nop
     nop
     nop
 
@@ -4938,7 +4911,6 @@
     nop
 
     div-float/2addr v1, v2
-    nop
     nop
     nop
 
@@ -4955,6 +4927,8 @@
     
     iget p1, p0, Lcom/tpcstld/twozerogame/MainView;->f0e5a0b79:I
     nop
+    nop
+    nop
 
     mul-int/lit8 p1, p1, 0x2
     nop
@@ -4962,10 +4936,10 @@
 
     int-to-float p1, p1
     nop
+    nop
+    nop
 
     sub-float p1, p2, p1
-    nop
-    nop
     nop
 
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
@@ -4977,10 +4951,8 @@
     move-result-object v2
     nop
     nop
-    nop
 
     sget v3, Lcom/tpcstld/twozerogame/base/R$string;->ff8af61ed:I
-    nop
     nop
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -4995,6 +4967,8 @@
 
     div-float/2addr p1, v1
     nop
+    nop
+    nop
 
     mul-float p1, p1, v0
     nop
@@ -5007,8 +4981,6 @@
 
     const/high16 v2, 0x40000000    # 2.0f
     nop
-    nop
-    nop
 
     mul-float v1, v1, v2
     nop
@@ -5019,8 +4991,11 @@
 
     move-result p1
     nop
+    nop
+    nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->f0e5a0b79:I
+    nop
     nop
     nop
 
@@ -5030,10 +5005,9 @@
 
     int-to-float v1, v1
     nop
+    nop
 
     sub-float/2addr p2, v1
-    nop
-    nop
     nop
 
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
@@ -5055,17 +5029,14 @@
 
     move-result-object v3
     nop
-    nop
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result v1
     nop
     nop
-    nop
 
     div-float/2addr p2, v1
-    nop
     nop
     nop
 
@@ -5078,6 +5049,7 @@
     move-result p1
     nop
     nop
+    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/MainView;->fa0fc2f4a:F
     nop
@@ -5086,15 +5058,12 @@
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
     nop
-    nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
     nop
-    nop
 
     int-to-float p2, p2
-    nop
     nop
     nop
 
@@ -5103,19 +5072,17 @@
     
     iget p1, p0, Lcom/tpcstld/twozerogame/MainView;->fbb289968:F
     nop
-    nop
-    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/MainView;->f6c6980e0:F
+    nop
     nop
     nop
 
     const/high16 p2, 0x40400000    # 3.0f
     nop
+    nop
 
     div-float v0, p1, p2
-    nop
-    nop
     nop
 
     
@@ -5125,8 +5092,6 @@
     nop
 
     float-to-double v0, p1
-    nop
-    nop
     nop
 
     const-wide/high16 v3, 0x3ff8000000000000L    # 1.5
@@ -5144,16 +5109,20 @@
     double-to-int v0, v0
     nop
     nop
-    nop
 
     int-to-float v0, v0
+    nop
     nop
     nop
 
     iput v0, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
     nop
+    nop
+    nop
 
     mul-float v0, p1, v2
+    nop
+    nop
     nop
 
     
@@ -5164,10 +5133,8 @@
     div-float p2, p1, p2
     nop
     nop
-    nop
 
     float-to-int p2, p2
-    nop
     nop
     nop
 
@@ -5175,8 +5142,11 @@
     iput p2, p0, Lcom/tpcstld/twozerogame/MainView;->f51512227:I
     nop
     nop
+    nop
 
     const/high16 p2, 0x40a00000    # 5.0f
+    nop
+    nop
     nop
 
     div-float/2addr p1, p2
@@ -5185,10 +5155,11 @@
     float-to-int p1, p1
     nop
     nop
-    nop
 
     
     iput p1, p0, Lcom/tpcstld/twozerogame/MainView;->f0fc1a62e:I
+    nop
+    nop
     nop
 
     
@@ -5197,6 +5168,7 @@
     nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->fa6c5774a:F
+    nop
     nop
     nop
 
@@ -5212,15 +5184,18 @@
     
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
     nop
+    nop
+    nop
 
     int-to-double v0, p2
-    nop
     nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f395ca551:I
     nop
+    nop
 
     int-to-double v5, p2
+    nop
     nop
     nop
 
@@ -5229,11 +5204,12 @@
     mul-double v5, v5, v3
     nop
     nop
-    nop
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     sub-double/2addr v0, v5
+    nop
+    nop
     nop
 
     double-to-int p2, v0
@@ -5247,20 +5223,22 @@
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f2be2379f:I
     nop
     nop
+    nop
 
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->f51512227:I
     nop
     nop
+    nop
 
     add-int/2addr p2, v0
+    nop
+    nop
     nop
 
     int-to-float p2, p2
     nop
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->fa6c5774a:F
-    nop
-    nop
     nop
 
     div-float v3, v1, v2
@@ -5271,8 +5249,10 @@
     add-float/2addr p2, v3
     nop
     nop
+    nop
 
     int-to-float p1, p1
+    nop
     nop
 
     sub-float/2addr p2, p1
@@ -5295,11 +5275,16 @@
     add-int/2addr p1, v0
     nop
     nop
+    nop
 
     int-to-float p1, p1
     nop
+    nop
+    nop
 
     div-float/2addr v1, v2
+    nop
+    nop
     nop
 
     add-float/2addr p1, v1
@@ -5309,15 +5294,14 @@
 
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
     nop
+    nop
+    nop
 
     div-float/2addr p2, v2
     nop
     nop
-    nop
 
     add-float/2addr p1, p2
-    nop
-    nop
     nop
 
     float-to-int p1, p1
@@ -5326,7 +5310,6 @@
     iput p1, p0, Lcom/tpcstld/twozerogame/MainView;->f390da68c:I
     nop
     nop
-    nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
@@ -5338,38 +5321,41 @@
 
     move-result-object p2
     nop
+    nop
+    nop
 
     sget v0, Lcom/tpcstld/twozerogame/base/R$string;->f084c0eba:I
+    nop
     nop
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p2
     nop
-    nop
-    nop
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result p1
     nop
-    nop
-    nop
 
     float-to-int p1, p1
     nop
+    nop
+    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/MainView;->fb30db828:I
+    nop
+    nop
     nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
+    nop
 
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
-    nop
     nop
     nop
 
@@ -5388,11 +5374,17 @@
 
     move-result p1
     nop
+    nop
+    nop
 
     float-to-int p1, p1
     nop
+    nop
+    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/MainView;->f90966b53:I
+    nop
+    nop
     nop
 
     
@@ -5400,7 +5392,6 @@
     nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
-    nop
     nop
     nop
 
@@ -5411,31 +5402,22 @@
 
     move-result p1
     nop
-    nop
-    nop
 
     
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f390da68c:I
     nop
-    nop
 
     add-int/2addr p2, p1
     nop
-    nop
-    nop
 
     int-to-float p1, p2
-    nop
-    nop
     nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f9f9646af:F
     nop
     nop
-    nop
 
     div-float/2addr p2, v2
-    nop
     nop
 
     add-float/2addr p1, p2
@@ -5450,8 +5432,11 @@
 
     int-to-float p2, p2
     nop
+    nop
+    nop
 
     add-float/2addr p1, p2
+    nop
     nop
     nop
 
@@ -5465,6 +5450,7 @@
     
     iget p1, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
     nop
+    nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f129ebab2:I
     nop
@@ -5472,6 +5458,8 @@
     nop
 
     add-int/2addr p1, p2
+    nop
+    nop
     nop
 
     div-int/lit8 p1, p1, 0x2
@@ -5481,19 +5469,16 @@
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->ff5e10c45:I
     nop
     nop
+    nop
 
     div-int/lit8 v0, p2, 0x2
-    nop
     nop
     nop
 
     sub-int/2addr p1, v0
     nop
-    nop
-    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/MainView;->f8e32e5cf:I
-    nop
     nop
     nop
 
@@ -5505,14 +5490,13 @@
 
     sub-int/2addr p1, p2
     nop
-    nop
 
     iput p1, p0, Lcom/tpcstld/twozerogame/MainView;->f6e727e21:I
+    nop
     nop
 
     
     iget p1, p0, Lcom/tpcstld/twozerogame/MainView;->f6e727e21:I
-    nop
     nop
     nop
 
@@ -5523,13 +5507,13 @@
     div-int/lit8 p2, p2, 0x2
     nop
     nop
+    nop
 
     sub-int/2addr p1, p2
     nop
     nop
 
     iget p2, p0, Lcom/tpcstld/twozerogame/MainView;->f0fc1a62e:I
-    nop
     nop
     nop
 
@@ -5562,13 +5546,12 @@
 
     if-lez p0, :cond_0
     nop
-    nop
-    nop
 
     
     invoke-static {p0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
 
     move-result p0
+    nop
     nop
     nop
 
@@ -5579,17 +5562,16 @@
     return p0
     nop
     nop
-    nop
 
     
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
     nop
+    nop
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p0
-    nop
     nop
 
 	:after_last_instruction
@@ -5611,17 +5593,13 @@
     move-result-wide v0
     nop
     nop
-    nop
 
     
     iget-object v2, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
-    nop
 
     iget-object v2, v2, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
-    nop
-    nop
     nop
 
     iget-wide v3, p0, Lcom/tpcstld/twozerogame/MainView;->f139ce471:J
@@ -5629,11 +5607,13 @@
 
     sub-long v3, v0, v3
     nop
+    nop
 
     invoke-virtual {v2, v3, v4}, Lcom/tpcstld/twozerogame/AnimationGrid;->tickAll(J)V
 
     
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainView;->f139ce471:J
+    nop
     nop
 
     return-void
@@ -5657,6 +5637,7 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fd229bbf3:Landroid/graphics/Bitmap;
     nop
     nop
+    nop
 
     iget-object v1, p0, Lcom/tpcstld/twozerogame/MainView;->fc1940aee:Landroid/graphics/Paint;
     nop
@@ -5664,6 +5645,7 @@
     nop
 
     const/4 v2, 0x0
+    nop
     nop
 
     invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
@@ -5674,22 +5656,23 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
-    nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/MainGame;->isActive()Z
 
     move-result v0
     nop
+    nop
 
     if-nez v0, :cond_0
+    nop
+    nop
     nop
 
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
+    nop
     nop
     nop
 
@@ -5698,13 +5681,12 @@
     move-result v0
     nop
     nop
+    nop
 
     if-nez v0, :cond_0
     nop
-    nop
 
     const/4 v0, 0x1
-    nop
     nop
     nop
 
@@ -5718,10 +5700,13 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
+    nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/MainGame;->isActive()Z
 
     move-result v0
+    nop
+    nop
     nop
 
     if-nez v0, :cond_1
@@ -5735,14 +5720,15 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
+    nop
 
     invoke-virtual {v0}, Lcom/tpcstld/twozerogame/MainGame;->canContinue()Z
 
     move-result v0
     nop
+    nop
 
     if-nez v0, :cond_2
-    nop
     nop
     nop
 
@@ -5753,10 +5739,8 @@
     :cond_2
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
-    nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainGame;->f2bae8e82:Lcom/tpcstld/twozerogame/AnimationGrid;
-    nop
     nop
     nop
 
@@ -5764,14 +5748,15 @@
 
     move-result p1
     nop
+    nop
+    nop
 
     if-eqz p1, :cond_3
-    nop
-    nop
     nop
 
     
     iget p1, p0, Lcom/tpcstld/twozerogame/MainView;->f01412ace:I
+    nop
     nop
 
     iget v0, p0, Lcom/tpcstld/twozerogame/MainView;->fe51824ac:I
@@ -5779,8 +5764,10 @@
 
     iget v1, p0, Lcom/tpcstld/twozerogame/MainView;->fb0efee4b:I
     nop
+    nop
 
     iget v2, p0, Lcom/tpcstld/twozerogame/MainView;->fea34008c:I
+    nop
     nop
 
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/tpcstld/twozerogame/MainView;->invalidate(IIII)V
@@ -5798,32 +5785,29 @@
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
     nop
     nop
-    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/MainGame;->isActive()Z
 
     move-result p1
     nop
     nop
-    nop
 
     if-nez p1, :cond_4
-    nop
     nop
     nop
 
     iget-boolean p1, p0, Lcom/tpcstld/twozerogame/MainView;->f788a7315:Z
     nop
-    nop
 
     if-eqz p1, :cond_4
+    nop
+    nop
     nop
 
     
     invoke-virtual {p0}, Lcom/tpcstld/twozerogame/MainView;->invalidate()V
 
     const/4 p1, 0x0
-    nop
     nop
     nop
 
@@ -5885,10 +5869,9 @@
     move-result-wide v0
     nop
     nop
+    nop
 
     iput-wide v0, p0, Lcom/tpcstld/twozerogame/MainView;->f139ce471:J
-    nop
-    nop
     nop
 
     return-void

@@ -16,7 +16,7 @@ import subprocess
 import sys
 
 # TO-DO
-# get apk name, check for existing folders after recompiling, catch errors by java apktool
+# get apk name, check for existing folders after recompiling, catch errors by JAVA apktool
 
 OUTPUT_FOLDER_PATH = ""  # the absolute path of folder where all decompiled files and recompiled APK will be stored at
 TARGET_FOLDER_PATH = ""
@@ -31,8 +31,8 @@ def decompile_apk(filepath):
     try:
         print("Filepath :",filepath)
         APPLICATION_NAME = (str(filepath.split("\\")[-1])).split(".")[0]
-        print("===== DECOMPILING FROM APK =====")
-        os.system("java -jar apktool.jar d \"{}\"".format(filepath))
+        print("\n===== DECOMPILING FROM APK =====")
+        os.system("JAVA -jar resources/APK/apktool.jar d \"{}\"".format(filepath))
         decompiled_directory = filepath.split(".")[0]
         decompiled_directory = decompiled_directory.split('\\')
         decompiled_directory = '\\'.join([x for x in decompiled_directory if x != 'assets'])
@@ -43,7 +43,7 @@ def decompile_apk(filepath):
         print(e)
 
 
-# recompile a directory of java/kotlin source codes OR smali files into an apk
+# recompile a directory of JAVA/kotlin source codes OR smali files into an apk
 # MUST SUPPLY FOLDER_PATH (containing obfuscated code)
 def recompile():
     global UI_THREAD
@@ -51,12 +51,13 @@ def recompile():
     if TARGET_FOLDER_PATH != "":
         try:
             print("===== COMPILING BACK TO APK =====")
-            os.system("java -jar apktool.jar b \"{}\"".format(TARGET_FOLDER_PATH))
+            os.system("JAVA -jar resources/APK/apktool.jar b \"{}\"".format(TARGET_FOLDER_PATH))
             print("APK successfully recompiled to {}\\dist\\".format(TARGET_FOLDER_PATH))
             # print("===== GENERATING APK KEY =====")
-            # os.system("keytool -genkey -v -keystore signing.keystore -keyalg RSA -keysize 2048 -validity 10000")
-            print("===== SIGNING APK w key =====")
-            os.system("build-tools\\32.0.0\\apksigner.bat sign --ks signing.keystore --ks-pass pass:123123 " + APPLICATION_NAME  + "\\dist\\" + APPLICATION_NAME + ".apk")
+            # os.system("keytool -genkey -v -keystore igning.keystore -keyalg RSA -keysize 2048 -validity 10000")
+            print("\n===== SIGNING APK w key =====")
+            os.system("build-tools\\32.0.0\\apksigner.bat sign --ks resources/APK/signing.keystore --ks-pass pass:123123 " + APPLICATION_NAME  + "\\dist\\" + APPLICATION_NAME + ".apk")
+            print("Signed :)")
 
 
 
@@ -66,7 +67,7 @@ def recompile():
         print("Something went wrong")
 
 
-# enumerate directories for java/kotlin source code or smali files, returns a list of relevant files
+# enumerate directories for JAVA/kotlin source code or smali files, returns a list of relevant files
 def enumerate_directories(folderpath):
     global UI_THREAD
     UI_THREAD.emit("Enumerating Directory")
@@ -77,8 +78,8 @@ def enumerate_directories(folderpath):
     for root, directories, files in os.walk(folderpath):
         for file in files:
 
-            # check file using their extensions for smali/java/kotlin files
-            if file.lower().endswith('.java'):
+            # check file using their extensions for smali/JAVA/kotlin files
+            if file.lower().endswith('.JAVA'):
                 list_of_java_files.append(os.path.join(root, file))
 
             if file.endswith('.kt'):
