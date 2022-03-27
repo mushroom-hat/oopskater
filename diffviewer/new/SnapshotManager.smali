@@ -14,33 +14,29 @@
 # static fields
 .field private static final f46d1ca4b:Ljava/lang/String;
 
-.field private static final f46d1ca4bXhFnBiBd:Ljava/lang/String;
+.field private static final f46d1ca4bSkpyvZAp:Ljava/lang/String;
+
+.field private static final f46d1ca4bftIyyMyx:Ljava/lang/String;
+
+.field private static final f46d1ca4bNjMfbEOx:Ljava/lang/String;
 
 .field private static final f4fa9034e:Ljava/lang/String;
 
-.field private static final f4fa9034ezShwZyiv:Ljava/lang/String;
+.field private static final f4fa9034eoOZjZOFg:Ljava/lang/String;
 
-.field private static final f4fa9034eSpmFBfyv:Ljava/lang/String;
+.field private static final f4fa9034etpYviVDA:Ljava/lang/String;
+
+.field private static final f4fa9034eoViGWOkx:Ljava/lang/String;
 
 .field private static f3beb8fce:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
 
-.field private static f3beb8fceFGkrBnHU:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
+.field private static f3beb8fceAGwAUXlL:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
 
-.field private static f3beb8fcexiWpemtS:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
-
-.field private static f3beb8fceMbBnkjOM:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
-
-.field private static f3beb8fceaCoAIarb:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
+.field private static f3beb8fceLDkVQgXZ:Lcom/tpcstld/twozerogame/snapshot/SnapshotData; = null
 
 .field private static f5c1197fb:Z = false
 
-.field private static f5c1197fbBRXOcOQI:Z = false
-
-.field private static f5c1197fbCWUUxarT:Z = false
-
-.field private static f5c1197fbPiufjFvD:Z = false
-
-.field private static f5c1197fbfApRrKrR:Z = false
+.field private static f5c1197fbrNITViDQ:Z = false
 
 
 # direct methods
@@ -51,7 +47,7 @@
 
 	:before_first_instruction
 
-	const-string/jumbo v0, "ce68e60c6d82430ff0d77b958282a96084755480948aea68136bbe27c6b9795d"
+	const-string/jumbo v0, "a50875bdd27b624f11dd44ae043d4e229ebddae4bf41eb9735e8189326416845"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -59,7 +55,7 @@
 
 	sput-object v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->f46d1ca4b:Ljava/lang/String;
 
-	const-string/jumbo v0, "d3b66e2af2fc8cb92ef043ad3b8501bb"
+	const-string/jumbo v0, "d7d8158782f01de0235195a224b3b687"
 
 	invoke-static {v0}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -110,7 +106,6 @@
 
     return-object p0
     nop
-    nop
 
 	:after_last_instruction
 
@@ -127,6 +122,7 @@
 
     
     sput-boolean p0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->f5c1197fb:Z
+    nop
     nop
     nop
 
@@ -153,7 +149,6 @@
     nop
 
     return-object v0
-    nop
     nop
 
 	:after_last_instruction
@@ -185,17 +180,17 @@
     move-result v0
     nop
     nop
+    nop
 
     const/4 v1, 0x0
-    nop
     nop
     nop
 
     if-nez v0, :cond_0
     nop
+    nop
 
     return-object v1
-    nop
     nop
 
     
@@ -209,8 +204,11 @@
 
     if-nez v0, :cond_1
     nop
+    nop
+    nop
 
     return-object v1
+    nop
     nop
 
     
@@ -222,22 +220,17 @@
 
     check-cast p0, Lcom/google/android/gms/games/SnapshotsClient$DataOrConflict;
     nop
-    nop
-    nop
 
     invoke-virtual {p0}, Lcom/google/android/gms/games/SnapshotsClient$DataOrConflict;->getData()Ljava/lang/Object;
 
     move-result-object p0
     nop
-    nop
-    nop
 
     check-cast p0, Lcom/google/android/gms/games/snapshot/Snapshot;
     nop
+    nop
 
     return-object p0
-    nop
-    nop
     nop
 
 	:after_last_instruction
@@ -258,8 +251,6 @@
 
     move-result-object v0
     nop
-    nop
-    nop
 
     if-eqz v0, :cond_0
     nop
@@ -269,19 +260,23 @@
 
     move-result-object p0
     nop
+    nop
+    nop
 
     const/4 v0, 0x1
+    nop
     nop
     nop
 
     const/4 v1, 0x4
     nop
 
-	const-string/jumbo v2, "d3b66e2af2fc8cb92ef043ad3b8501bb"
+	const-string/jumbo v2, "d7d8158782f01de0235195a224b3b687"
 
 	invoke-static {v2}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
 	move-result-object v2
+    nop
     nop
     nop
 
@@ -292,6 +287,8 @@
     nop
 
     new-instance v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$1;
+    nop
+    nop
     nop
 
     invoke-direct {v0, p1}, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$1;-><init>(Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$Callback;)V
@@ -333,7 +330,6 @@
     move-result-object p1
     nop
     nop
-    nop
 
     if-eqz p1, :cond_1
     nop
@@ -345,7 +341,6 @@
     nop
 
     if-eqz v0, :cond_0
-    nop
     nop
 
     return-void
@@ -360,6 +355,7 @@
     sput-boolean v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager;->f5c1197fb:Z
     nop
     nop
+    nop
 
     
     invoke-static {p0, p1}, Lcom/google/android/gms/games/Games;->getSnapshotsClient(Landroid/content/Context;Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)Lcom/google/android/gms/games/SnapshotsClient;
@@ -367,11 +363,14 @@
     move-result-object p0
     nop
     nop
+    nop
 
     const/4 p1, 0x4
     nop
+    nop
+    nop
 
-	const-string/jumbo v1, "d3b66e2af2fc8cb92ef043ad3b8501bb"
+	const-string/jumbo v1, "d7d8158782f01de0235195a224b3b687"
 
 	invoke-static {v1}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -382,8 +381,6 @@
     invoke-interface {p0, v1, v0, p1}, Lcom/google/android/gms/games/SnapshotsClient;->open(Ljava/lang/String;ZI)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1
-    nop
-    nop
     nop
 
     new-instance v0, Lcom/tpcstld/twozerogame/snapshot/SnapshotManager$2;

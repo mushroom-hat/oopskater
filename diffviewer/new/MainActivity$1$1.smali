@@ -62,7 +62,6 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity$1$1;->this$1:Lcom/tpcstld/twozerogame/MainActivity$1;
     nop
     nop
-    nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
     nop
@@ -73,8 +72,11 @@
 
     move-result-object v0
     nop
+    nop
 
     iget-object v0, v0, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
+    nop
+    nop
     nop
 
     invoke-virtual {v0, p1}, Lcom/tpcstld/twozerogame/MainGame;->handleSnapshot(Lcom/tpcstld/twozerogame/snapshot/SnapshotData;)V

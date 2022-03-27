@@ -6,29 +6,23 @@
 # instance fields
 .field private final ff4547fa3:[[Lcom/tpcstld/twozerogame/Tile;
 
-.field private final ff4547fa3bMHGPlYd:[[Lcom/tpcstld/twozerogame/Tile;
+.field private final ff4547fa3EeFeLPnZ:[[Lcom/tpcstld/twozerogame/Tile;
 
-.field private final ff4547fa3dicpDCve:[[Lcom/tpcstld/twozerogame/Tile;
-
-.field private final ff4547fa3iiMFHobW:[[Lcom/tpcstld/twozerogame/Tile;
-
-.field private final ff4547fa3AWyoSiZb:[[Lcom/tpcstld/twozerogame/Tile;
+.field private final ff4547fa3DMcNOvIc:[[Lcom/tpcstld/twozerogame/Tile;
 
 .field public final f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
 
-.field public final f06e3d36fLAyAVosl:[[Lcom/tpcstld/twozerogame/Tile;
-
-.field public final f06e3d36fxTqdupBx:[[Lcom/tpcstld/twozerogame/Tile;
-
-.field public final f06e3d36fGpwmwArX:[[Lcom/tpcstld/twozerogame/Tile;
-
-.field public final f06e3d36fFztulHXZ:[[Lcom/tpcstld/twozerogame/Tile;
+.field public final f06e3d36fHhMbEVUV:[[Lcom/tpcstld/twozerogame/Tile;
 
 .field public final f56bdbb6e:[[Lcom/tpcstld/twozerogame/Tile;
 
-.field public final f56bdbb6eQPsgWClv:[[Lcom/tpcstld/twozerogame/Tile;
+.field public final f56bdbb6ekOFnODEJ:[[Lcom/tpcstld/twozerogame/Tile;
 
-.field public final f56bdbb6exDEYqmFw:[[Lcom/tpcstld/twozerogame/Tile;
+.field public final f56bdbb6ewYGuBsBs:[[Lcom/tpcstld/twozerogame/Tile;
+
+.field public final f56bdbb6eTZgqdWZL:[[Lcom/tpcstld/twozerogame/Tile;
+
+.field public final f56bdbb6eLlmGJrZq:[[Lcom/tpcstld/twozerogame/Tile;
 
 
 # direct methods
@@ -49,14 +43,16 @@
 
     move-result-object v0
     nop
-    nop
 
     const-class v1, Lcom/tpcstld/twozerogame/Tile;
+    nop
+    nop
     nop
 
     invoke-static {v1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
     move-result-object v0
+    nop
     nop
 
     check-cast v0, [[Lcom/tpcstld/twozerogame/Tile;
@@ -64,11 +60,11 @@
 
     iput-object v0, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
-    nop
 
     
     filled-new-array {p1, p2}, [I
+    nop
+    nop
     nop
 
     move-result-object v0
@@ -78,6 +74,8 @@
 
     const-class v1, Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
+    nop
 
     invoke-static {v1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
@@ -86,6 +84,7 @@
     nop
 
     check-cast v0, [[Lcom/tpcstld/twozerogame/Tile;
+    nop
     nop
     nop
 
@@ -97,11 +96,16 @@
     filled-new-array {p1, p2}, [I
     nop
     nop
+    nop
 
     move-result-object p1
     nop
+    nop
+    nop
 
     const-class p2, Lcom/tpcstld/twozerogame/Tile;
+    nop
+    nop
     nop
 
     invoke-static {p2, p1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
@@ -112,9 +116,9 @@
     check-cast p1, [[Lcom/tpcstld/twozerogame/Tile;
     nop
     nop
-    nop
 
     iput-object p1, p0, Lcom/tpcstld/twozerogame/Grid;->ff4547fa3:[[Lcom/tpcstld/twozerogame/Tile;
+    nop
     nop
 
     
@@ -144,11 +148,12 @@
 
     const/4 v1, 0x0
     nop
+    nop
+    nop
 
     
     :goto_0
     iget-object v2, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
-    nop
     nop
     nop
 
@@ -157,6 +162,7 @@
     nop
 
     if-ge v1, v2, :cond_1
+    nop
     nop
 
     const/4 v2, 0x0
@@ -167,13 +173,15 @@
     :goto_1
     iget-object v3, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
 
     aget-object v3, v3, v0
     nop
     nop
+    nop
 
     array-length v3, v3
+    nop
+    nop
     nop
 
     if-ge v2, v3, :cond_0
@@ -186,8 +194,6 @@
     nop
 
     aget-object v3, v3, v1
-    nop
-    nop
     nop
 
     const/4 v4, 0x0
@@ -209,10 +215,9 @@
     :cond_0
     add-int/lit8 v1, v1, 0x1
     nop
-    nop
-    nop
 
     goto :goto_0
+    nop
     nop
 
     :cond_1
@@ -242,31 +247,26 @@
     
     new-instance v0, Ljava/util/ArrayList;
     nop
-    nop
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
     nop
-    nop
-    nop
 
     const/4 v2, 0x0
+    nop
+    nop
     nop
 
     
     :goto_0
     iget-object v3, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
 
     array-length v3, v3
     nop
-    nop
-    nop
 
     if-ge v2, v3, :cond_2
-    nop
     nop
     nop
 
@@ -287,8 +287,6 @@
 
     array-length v5, v5
     nop
-    nop
-    nop
 
     if-ge v3, v5, :cond_1
     nop
@@ -296,13 +294,15 @@
     
     aget-object v4, v4, v2
     nop
-    nop
-    nop
 
     aget-object v4, v4, v3
     nop
+    nop
+    nop
 
     if-nez v4, :cond_0
+    nop
+    nop
     nop
 
     
@@ -319,11 +319,11 @@
 
     goto :goto_1
     nop
+    nop
+    nop
 
     :cond_1
     add-int/lit8 v2, v2, 0x1
-    nop
-    nop
     nop
 
     goto :goto_0
@@ -333,6 +333,7 @@
 
     :cond_2
     return-object v0
+    nop
     nop
 
 	:after_last_instruction
@@ -351,6 +352,7 @@
     const/4 v0, 0x0
     nop
     nop
+    nop
 
     if-ltz p1, :cond_0
     nop
@@ -358,6 +360,7 @@
 
     
     iget-object v1, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
+    nop
     nop
 
     array-length v2, v1
@@ -367,16 +370,20 @@
     if-ge p1, v2, :cond_0
     nop
     nop
-    nop
 
     if-ltz p2, :cond_0
+    nop
+    nop
     nop
 
     aget-object p1, v1, v0
     nop
     nop
+    nop
 
     array-length p1, p1
+    nop
+    nop
     nop
 
     if-ge p2, p1, :cond_0
@@ -386,10 +393,10 @@
 
     const/4 v0, 0x1
     nop
+    nop
 
     :cond_0
     return v0
-    nop
     nop
 
 	:after_last_instruction
@@ -409,16 +416,16 @@
 
     const/4 v0, 0x0
     nop
+    nop
+    nop
 
     const/4 v1, 0x0
-    nop
     nop
     nop
 
     
     :goto_0
     iget-object v2, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
-    nop
     nop
     nop
 
@@ -428,30 +435,22 @@
     if-ge v1, v2, :cond_1
     nop
     nop
-    nop
 
     const/4 v2, 0x0
-    nop
     nop
 
     
     :goto_1
     iget-object v3, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
-    nop
 
     aget-object v4, v3, v0
-    nop
-    nop
     nop
 
     array-length v4, v4
     nop
-    nop
 
     if-ge v2, v4, :cond_0
-    nop
     nop
 
     
@@ -465,15 +464,11 @@
 
     aput-object v4, v3, v2
     nop
-    nop
 
     add-int/lit8 v2, v2, 0x1
     nop
-    nop
-    nop
 
     goto :goto_1
-    nop
     nop
     nop
 
@@ -484,8 +479,6 @@
     nop
 
     goto :goto_0
-    nop
-    nop
     nop
 
     :cond_1
@@ -509,9 +502,9 @@
 
     move-result v0
     nop
+    nop
 
     if-eqz v0, :cond_0
-    nop
     nop
     nop
 
@@ -530,7 +523,6 @@
     nop
 
     return-object p1
-    nop
     nop
 
     :cond_0
@@ -569,16 +561,15 @@
     if-eqz v0, :cond_0
     nop
     nop
-    nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
+    nop
     nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getX()I
 
     move-result v1
-    nop
     nop
     nop
 
@@ -591,9 +582,10 @@
 
     move-result p1
     nop
+    nop
+    nop
 
     aget-object p1, v0, p1
-    nop
     nop
     nop
 
@@ -604,9 +596,10 @@
     :cond_0
     const/4 p1, 0x0
     nop
+    nop
+    nop
 
     return-object p1
-    nop
     nop
 
 	:after_last_instruction
@@ -632,9 +625,9 @@
     move-result v1
     nop
     nop
-    nop
 
     aget-object v0, v0, v1
+    nop
     nop
     nop
 
@@ -642,10 +635,8 @@
 
     move-result v1
     nop
-    nop
 
     aput-object p1, v0, v1
-    nop
     nop
 
     return-void
@@ -669,14 +660,13 @@
     move-result p1
     nop
     nop
-    nop
 
     xor-int/lit8 p1, p1, 0x1
     nop
-    nop
-    nop
 
     return p1
+    nop
+    nop
     nop
 
 	:after_last_instruction
@@ -697,29 +687,25 @@
 
     move-result-object p1
     nop
-    nop
 
     if-eqz p1, :cond_0
-    nop
     nop
 
     const/4 p1, 0x1
     nop
     nop
+    nop
 
     goto :goto_0
-    nop
-    nop
     nop
 
     :cond_0
     const/4 p1, 0x0
     nop
-    nop
-    nop
 
     :goto_0
     return p1
+    nop
     nop
     nop
 
@@ -742,7 +728,6 @@
     move-result v0
     nop
     nop
-    nop
 
     const/4 v1, 0x0
     nop
@@ -751,16 +736,15 @@
 
     if-ltz v0, :cond_0
     nop
-    nop
-    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getX()I
 
     move-result v0
     nop
+    nop
+    nop
 
     iget-object v2, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
-    nop
     nop
 
     array-length v2, v2
@@ -769,18 +753,14 @@
     if-ge v0, v2, :cond_0
     nop
     nop
-    nop
 
     
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getY()I
 
     move-result v0
     nop
-    nop
-    nop
 
     if-ltz v0, :cond_0
-    nop
     nop
     nop
 
@@ -789,14 +769,12 @@
     move-result p1
     nop
     nop
-    nop
 
     iget-object v0, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
-    nop
 
     aget-object v0, v0, v1
+    nop
     nop
 
     array-length v0, v0
@@ -804,8 +782,6 @@
     nop
 
     if-ge p1, v0, :cond_0
-    nop
-    nop
     nop
 
     const/4 v1, 0x1
@@ -815,7 +791,6 @@
 
     :cond_0
     return v1
-    nop
     nop
 
 	:after_last_instruction
@@ -851,14 +826,14 @@
 
     if-lt v0, v1, :cond_0
     nop
+    nop
 
     goto :goto_0
+    nop
     nop
 
     :cond_0
     const/4 v1, 0x0
-    nop
-    nop
     nop
 
     :goto_0
@@ -881,12 +856,8 @@
 
     const/4 v0, 0x0
     nop
-    nop
-    nop
 
     const/4 v1, 0x0
-    nop
-    nop
     nop
 
     
@@ -899,15 +870,15 @@
 
     if-ge v1, v2, :cond_2
     nop
-    nop
 
     const/4 v2, 0x0
-    nop
     nop
 
     
     :goto_1
     iget-object v3, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
+    nop
+    nop
     nop
 
     aget-object v4, v3, v0
@@ -917,48 +888,39 @@
 
     array-length v4, v4
     nop
+    nop
 
     if-ge v2, v4, :cond_1
+    nop
     nop
 
     
     aget-object v4, v3, v1
     nop
-    nop
-    nop
 
     aget-object v4, v4, v2
     nop
-    nop
-    nop
 
     if-nez v4, :cond_0
-    nop
     nop
     nop
 
     
     iget-object v3, p0, Lcom/tpcstld/twozerogame/Grid;->ff4547fa3:[[Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
 
     aget-object v3, v3, v1
+    nop
     nop
     nop
 
     const/4 v4, 0x0
     nop
-    nop
-    nop
 
     aput-object v4, v3, v2
     nop
-    nop
-    nop
 
     goto :goto_2
-    nop
-    nop
     nop
 
     
@@ -966,19 +928,24 @@
     iget-object v4, p0, Lcom/tpcstld/twozerogame/Grid;->ff4547fa3:[[Lcom/tpcstld/twozerogame/Tile;
     nop
     nop
-    nop
 
     aget-object v4, v4, v1
     nop
+    nop
+    nop
 
     new-instance v5, Lcom/tpcstld/twozerogame/Tile;
+    nop
+    nop
     nop
 
     aget-object v3, v3, v1
     nop
     nop
+    nop
 
     aget-object v3, v3, v2
+    nop
     nop
     nop
 
@@ -993,23 +960,22 @@
 
     aput-object v5, v4, v2
     nop
+    nop
+    nop
 
     :goto_2
     add-int/lit8 v2, v2, 0x1
     nop
-    nop
-    nop
 
     goto :goto_1
-    nop
     nop
 
     :cond_1
     add-int/lit8 v1, v1, 0x1
     nop
-    nop
 
     goto :goto_0
+    nop
     nop
     nop
 
@@ -1035,6 +1001,7 @@
     move-result-object v0
     nop
     nop
+    nop
 
     
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1047,10 +1014,8 @@
     const/4 v2, 0x1
     nop
     nop
-    nop
 
     if-lt v1, v2, :cond_0
-    nop
     nop
     nop
 
@@ -1064,6 +1029,8 @@
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v3
+    nop
+    nop
     nop
 
     int-to-double v3, v3
@@ -1080,6 +1047,8 @@
 
     move-result-wide v1
     nop
+    nop
+    nop
 
     double-to-int v1, v1
     nop
@@ -1094,21 +1063,16 @@
 
     check-cast v0, Lcom/tpcstld/twozerogame/Cell;
     nop
-    nop
 
     return-object v0
-    nop
     nop
 
     :cond_0
     const/4 v0, 0x0
     nop
     nop
-    nop
 
     return-object v0
-    nop
-    nop
     nop
 
 	:after_last_instruction
@@ -1128,7 +1092,6 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
     nop
-    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Tile;->getX()I
 
@@ -1138,15 +1101,14 @@
     aget-object v0, v0, v1
     nop
     nop
+    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Tile;->getY()I
 
     move-result p1
     nop
-    nop
 
     const/4 v1, 0x0
-    nop
     nop
     nop
 
@@ -1171,7 +1133,6 @@
     const/4 v0, 0x0
     nop
     nop
-    nop
 
     const/4 v1, 0x0
     nop
@@ -1187,23 +1148,23 @@
     array-length v2, v2
     nop
     nop
-    nop
 
     if-ge v1, v2, :cond_2
     nop
-    nop
-    nop
 
     const/4 v2, 0x0
-    nop
     nop
 
     
     :goto_1
     iget-object v3, p0, Lcom/tpcstld/twozerogame/Grid;->f56bdbb6e:[[Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
+    nop
 
     aget-object v4, v3, v0
+    nop
+    nop
     nop
 
     array-length v4, v4
@@ -1213,30 +1174,24 @@
 
     if-ge v2, v4, :cond_1
     nop
-    nop
 
     
     aget-object v4, v3, v1
-    nop
-    nop
     nop
 
     aget-object v4, v4, v2
     nop
     nop
+    nop
 
     if-nez v4, :cond_0
-    nop
     nop
 
     
     iget-object v3, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
-    nop
 
     aget-object v3, v3, v1
-    nop
     nop
     nop
 
@@ -1256,6 +1211,8 @@
     :cond_0
     iget-object v4, p0, Lcom/tpcstld/twozerogame/Grid;->f06e3d36f:[[Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
+    nop
 
     aget-object v4, v4, v1
     nop
@@ -1265,6 +1222,7 @@
     nop
 
     aget-object v3, v3, v1
+    nop
     nop
     nop
 
@@ -1277,17 +1235,18 @@
 
     move-result v3
     nop
-    nop
-    nop
 
     invoke-direct {v5, v1, v2, v3}, Lcom/tpcstld/twozerogame/Tile;-><init>(III)V
 
     aput-object v5, v4, v2
     nop
     nop
+    nop
 
     :goto_2
     add-int/lit8 v2, v2, 0x1
+    nop
+    nop
     nop
 
     goto :goto_1
@@ -1302,7 +1261,6 @@
     nop
 
     goto :goto_0
-    nop
     nop
     nop
 
@@ -1324,7 +1282,6 @@
 
     const/4 v0, 0x0
     nop
-    nop
 
     const/4 v1, 0x0
     nop
@@ -1334,14 +1291,12 @@
     iget-object v2, p0, Lcom/tpcstld/twozerogame/Grid;->ff4547fa3:[[Lcom/tpcstld/twozerogame/Tile;
     nop
     nop
+    nop
 
     array-length v2, v2
     nop
-    nop
 
     if-ge v1, v2, :cond_2
-    nop
-    nop
     nop
 
     const/4 v2, 0x0
@@ -1350,7 +1305,6 @@
     
     :goto_1
     iget-object v3, p0, Lcom/tpcstld/twozerogame/Grid;->ff4547fa3:[[Lcom/tpcstld/twozerogame/Tile;
-    nop
     nop
     nop
 
@@ -1362,19 +1316,18 @@
 
     if-ge v2, v4, :cond_1
     nop
-    nop
-    nop
 
     
     aget-object v4, v3, v1
     nop
     nop
+    nop
 
     aget-object v4, v4, v2
     nop
-    nop
 
     if-nez v4, :cond_0
+    nop
     nop
     nop
 
@@ -1387,17 +1340,18 @@
     aget-object v3, v3, v1
     nop
     nop
-    nop
 
     const/4 v4, 0x0
-    nop
     nop
     nop
 
     aput-object v4, v3, v2
     nop
+    nop
 
     goto :goto_2
+    nop
+    nop
     nop
 
     
@@ -1410,23 +1364,22 @@
     aget-object v4, v4, v1
     nop
     nop
-    nop
 
     new-instance v5, Lcom/tpcstld/twozerogame/Tile;
-    nop
-    nop
     nop
 
     aget-object v3, v3, v1
     nop
-    nop
 
     aget-object v3, v3, v2
+    nop
+    nop
     nop
 
     invoke-virtual {v3}, Lcom/tpcstld/twozerogame/Tile;->getValue()I
 
     move-result v3
+    nop
     nop
     nop
 
@@ -1443,12 +1396,9 @@
     goto :goto_1
     nop
     nop
-    nop
 
     :cond_1
     add-int/lit8 v1, v1, 0x1
-    nop
-    nop
     nop
 
     goto :goto_0

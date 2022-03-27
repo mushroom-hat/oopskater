@@ -32,6 +32,7 @@
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/InputListener$1;->this$0:Lcom/tpcstld/twozerogame/InputListener;
     nop
+    nop
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,6 +56,8 @@
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/InputListener$1;->this$0:Lcom/tpcstld/twozerogame/InputListener;
     nop
+    nop
+    nop
 
     invoke-static {p1}, Lcom/tpcstld/twozerogame/InputListener;->access$000(Lcom/tpcstld/twozerogame/InputListener;)Lcom/tpcstld/twozerogame/MainView;
 
@@ -62,7 +65,6 @@
     nop
 
     iget-object p1, p1, Lcom/tpcstld/twozerogame/MainView;->fc8d46d34:Lcom/tpcstld/twozerogame/MainGame;
-    nop
     nop
     nop
 

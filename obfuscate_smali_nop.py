@@ -6,7 +6,9 @@ from shutil import move
 from urllib3.connectionpool import xrange
 
 
-def get_text_file(file_name):  # Get a text from a file
+
+def get_text_file(file_name):
+    """ This function will get a text from the file given. """
     try:
         with open(file_name) as file_list:
             return file_list.read()
@@ -14,25 +16,29 @@ def get_text_file(file_name):  # Get a text from a file
         raise e.LoadFileException(str(e) + '\nUnable to load ' + file_name)
 
 
-def get_text_as_list(file_name):  # Get a text file as line-per-line list
+def get_text_as_list(file_name):
+    """ Get a text file as line-per-line list """
     return get_text_file(file_name).splitlines()
 
 
-def get_valid_op_code():  # Get the valid opcode list
-    return get_text_as_list('resources/nopValidOpCode.txt')
+def get_valid_op_code():
+    return get_text_as_list('resources/NOPValidOpCode.txt')
 
-def random_nop_interval():  # Randomize the number of nop(s)
+
+def random_nop_interval():
+    """ Generate a random number of nop statements """
     return random.sample(xrange(3), 1)[0] + 1
 
-VALID_OP_CODE = get_valid_op_code()
 
 def add_nop_in_method(smali_file):
     """Add multiple nop sequence of random length (1-3) between two nop-valid instruction"""
     count = 0
     overwrite_flag = False
+    valid_nop_code = get_valid_op_code()
 
     try:
-        """Generate new temp file to be accessed, due to multithreaded. It might access the same file name, therefore causing an error"""
+        """Generate new temp file to be accessed, due to multithreaded.
+         It might access the same file name, therefore causing an error"""
         file_name_item = str(smali_file).split("\\")
         file_name = file_name_item.pop()
         file_name = "new_" + file_name
@@ -47,8 +53,8 @@ def add_nop_in_method(smali_file):
                     line_op_code = re.search(r'^([ ]*)(?P<opCode>([^ ]+)) ', smali_line)
                     if line_op_code is not None:
                         op_code = line_op_code.group('opCode')
-                        if op_code in VALID_OP_CODE:
-                            nop_count = random_nop_interval()  # Randomize the number of nop(s)
+                        if op_code in valid_nop_code:
+                            nop_count = random_nop_interval()
                             out_file.write('    nop\n' * nop_count)
                             overwrite_flag = True
                     count += 1

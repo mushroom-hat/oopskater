@@ -17,17 +17,13 @@
 # static fields
 .field public static final f8660544d:I = 0x7f040000
 
-.field public static final f8660544dPyblHQpn:I = 0x7f040000
+.field public static final f8660544dqnroqLyQ:I = 0x7f040000
 
-.field public static final f8660544dyHwNJAKY:I = 0x7f040000
+.field public static final f8660544dMAnGsXWh:I = 0x7f040000
 
 .field public static final f6ee85f72:I = 0x7f040001
 
-.field public static final f6ee85f72FaMuJFzK:I = 0x7f040001
-
-.field public static final f6ee85f72DoGVOUVs:I = 0x7f040001
-
-.field public static final f6ee85f72DIPgWICd:I = 0x7f040001
+.field public static final f6ee85f72QsQxTVVG:I = 0x7f040001
 
 
 # direct methods

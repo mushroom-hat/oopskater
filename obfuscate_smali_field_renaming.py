@@ -1,23 +1,23 @@
 import util
+import common_regex_pattern
 
 
 def rename_field(field_name):
+    """ This function will rename the field name given."""
     field_md5 = util.get_string_md5(field_name)
     return "f{0}".format(field_md5.lower()[:8])
 
 
 def get_class_names(smali_files):
+    """ THis function will take in a list of smali files and return the classes found. """
     class_names = set()
     for smali_file in smali_files:
         with open(smali_file, "r", encoding="utf-8") as current_file:
             for line in current_file:
-                class_match = util.CLASS_PATTEN.match(line)
+                class_match = common_regex_pattern.CLASS_PATTEN.match(line)
                 if class_match:
-                    # This is probably a SDK class, but we have its declaration so
-                    # we can change the fields inside it.
                     if class_match.group("class_name").startswith(("Landroid", "Ljava")):
                         class_names.add(class_match.group("class_name"))
-                    # There is only one class declaration per file.
                     break
     return class_names
 
@@ -25,7 +25,7 @@ def get_class_names(smali_files):
 def rename_field_declarations(smali_files):
     renamed_fields = set()
 
-    # Search for field definitions that can be renamed.
+    """ This will loop through all the smali files to find field definitions that can be renamed. """
     for smali_file in util.show_list_progress(smali_files, interactive=False,
                                               description="Renaming field declarations"):
         with util.inplace_edit_file(smali_file) as (in_file, out_file):
@@ -34,22 +34,21 @@ def rename_field_declarations(smali_files):
                 ignore = False
 
                 if not class_name:
-                    class_match = util.CLASS_PATTEN.match(line)
+                    class_match = common_regex_pattern.CLASS_PATTEN.match(line)
                     if class_match:
                         class_name = class_match.group("class_name")
 
-                # Field declared in class.
-                field_match = util.FIELD_PATTERN.match(line)
-
+                """Finding the field declaration in class."""
+                field_match = common_regex_pattern.FIELD_PATTERN.match(line)
                 if class_name.startswith(tuple([])):
                     ignore = True
 
                 if field_match:
                     field_name = field_match.group("field_name")
-                    # Avoid sub-fields and user defined packages.
+                    """Check if subfields and user defined packages is found, we want to avoid it."""
                     if not ignore and "$" not in field_name:
-                        # Rename field declaration (usages of this field will be
-                        # renamed later) and add some random fields.
+
+                        """Renaming field declaration and add some random fields."""
                         line = line.replace(
                             "{0}:".format(field_name),
                             "{0}:".format(rename_field(field_name)),
@@ -58,12 +57,7 @@ def rename_field_declarations(smali_files):
 
                         for _ in range(util.get_random_int(1, 4)):
                             out_file.write("\n")
-                            out_file.write(
-                                line.replace(
-                                    ":",
-                                    "{0}:".format(util.get_random_string(8)),
-                                )
-                            )
+                            out_file.write(line.replace(":", "{0}:".format(util.get_random_string(8)),))
 
                         field = "{field_name}:{field_type}".format(
                             field_name=field_match.group("field_name"),
@@ -82,8 +76,8 @@ def rename_field_references(fields_to_rename, smali_files, sdk_classes):
     for smali_file in util.show_list_progress(smali_files, interactive=False, description="Renaming references"):
         with util.inplace_edit_file(smali_file) as (in_file, out_file):
             for line in in_file:
-                # Field usage.
-                field_usage_match = util.FIELD_USAGE_PATTEN.match(line)
+                """ Finding field usage"""
+                field_usage_match = common_regex_pattern.FIELD_USAGE_PATTEN.match(line)
                 if field_usage_match:
                     field = "{field_name}:{field_type}".format(
                         field_name=field_usage_match.group("field_name"),
@@ -95,7 +89,7 @@ def rename_field_references(fields_to_rename, smali_files, sdk_classes):
                             not class_name.startswith(("Landroid", "Ljava"))
                             or class_name in sdk_classes
                     ):
-                        # Rename field usage.
+                        """ Renaming field usage """
                         count += 1
                         out_file.write(
                             line.replace("{0}:".format(field_name), "{0}:".format(rename_field(field_name)))

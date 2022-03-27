@@ -6,11 +6,21 @@
 # instance fields
 .field private f11680695:I
 
-.field private f11680695UQOnNaZr:I
+.field private f11680695eRkxPmID:I
+
+.field private f11680695DpdqkRyf:I
+
+.field private f11680695ctiPIrxo:I
 
 .field private final f06e3d36f:[[Ljava/util/ArrayList;
 
-.field private final f06e3d36fSbzRWexr:[[Ljava/util/ArrayList;
+.field private final f06e3d36fyJCgXLHB:[[Ljava/util/ArrayList;
+
+.field private final f06e3d36fiRKOxjpK:[[Ljava/util/ArrayList;
+
+.field private final f06e3d36fPqqhTRgx:[[Ljava/util/ArrayList;
+
+.field private final f06e3d36fKUmCSvZs:[[Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[[",
@@ -23,9 +33,9 @@
 
 .field public final f28d74d2b:Ljava/util/ArrayList;
 
-.field public final f28d74d2buMVLEHQD:Ljava/util/ArrayList;
+.field public final f28d74d2bNOvEPOZW:Ljava/util/ArrayList;
 
-.field public final f28d74d2bqvNHbxcU:Ljava/util/ArrayList;
+.field public final f28d74d2bSeomSWdn:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -37,9 +47,9 @@
 
 .field private fcde09297:Z
 
-.field private fcde09297qiPmZTJh:Z
+.field private fcde09297bvnvfCQD:Z
 
-.field private fcde09297uLApKJTY:Z
+.field private fcde09297iIgkvBEZ:Z
 
 
 # direct methods
@@ -56,34 +66,28 @@
     
     new-instance v0, Ljava/util/ArrayList;
     nop
-    nop
-    nop
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f28d74d2b:Ljava/util/ArrayList;
     nop
+    nop
+    nop
 
     const/4 v0, 0x0
-    nop
-    nop
     nop
 
     
     iput v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f11680695:I
-    nop
     nop
 
     
     iput-boolean v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->fcde09297:Z
     nop
     nop
-    nop
 
     
     filled-new-array {p1, p2}, [I
-    nop
-    nop
     nop
 
     move-result-object v1
@@ -93,18 +97,20 @@
 
     const-class v2, Ljava/util/ArrayList;
     nop
+    nop
 
     invoke-static {v2, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
     move-result-object v1
     nop
+    nop
+    nop
 
     check-cast v1, [[Ljava/util/ArrayList;
     nop
-    nop
-    nop
 
     iput-object v1, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f06e3d36f:[[Ljava/util/ArrayList;
+    nop
     nop
     nop
 
@@ -116,6 +122,7 @@
     if-ge v1, p1, :cond_1
     nop
     nop
+    nop
 
     const/4 v2, 0x0
     nop
@@ -124,27 +131,24 @@
     :goto_1
     if-ge v2, p2, :cond_0
     nop
-    nop
 
     
     iget-object v3, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f06e3d36f:[[Ljava/util/ArrayList;
+    nop
     nop
     nop
 
     aget-object v3, v3, v1
     nop
     nop
-    nop
 
     new-instance v4, Ljava/util/ArrayList;
-    nop
     nop
     nop
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     aput-object v4, v3, v2
-    nop
     nop
     nop
 
@@ -159,10 +163,10 @@
     :cond_0
     add-int/lit8 v1, v1, 0x1
     nop
+    nop
+    nop
 
     goto :goto_0
-    nop
-    nop
     nop
 
     :cond_1
@@ -174,7 +178,7 @@
 
 .end method
 
-.method private cancelAnimation(Lcom/tpcstld/twozerogame/AnimationCell;FLjava/lang/String;SC)V
+.method private cancelAnimation(Lcom/tpcstld/twozerogame/AnimationCell;CIBZ)V
     .locals 0
 
     const/16 p0, 0x2a
@@ -190,7 +194,7 @@
     return-void
 .end method
 
-.method private cancelAnimation(Lcom/tpcstld/twozerogame/AnimationCell;Ljava/lang/String;SFC)V
+.method private cancelAnimation(Lcom/tpcstld/twozerogame/AnimationCell;CIZB)V
     .locals 0
 
     const/16 p0, 0x2a
@@ -206,7 +210,7 @@
     return-void
 .end method
 
-.method private cancelAnimation(Lcom/tpcstld/twozerogame/AnimationCell;CFLjava/lang/String;S)V
+.method private cancelAnimation(Lcom/tpcstld/twozerogame/AnimationCell;ZCIB)V
     .locals 0
 
     const/16 p0, 0x2a
@@ -235,7 +239,6 @@
     move-result v0
     nop
     nop
-    nop
 
     const/4 v1, -0x1
     nop
@@ -250,16 +253,12 @@
     move-result v0
     nop
     nop
-    nop
 
     if-ne v0, v1, :cond_0
-    nop
-    nop
     nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f28d74d2b:Ljava/util/ArrayList;
-    nop
     nop
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -282,14 +281,16 @@
     aget-object v0, v0, v1
     nop
     nop
+    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/AnimationCell;->getY()I
 
     move-result v1
     nop
+    nop
+    nop
 
     aget-object v0, v0, v1
-    nop
     nop
     nop
 
@@ -317,14 +318,13 @@
     iget-object v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f06e3d36f:[[Ljava/util/ArrayList;
     nop
     nop
+    nop
 
     array-length v1, v0
     nop
     nop
-    nop
 
     const/4 v2, 0x0
-    nop
     nop
 
     const/4 v3, 0x0
@@ -335,7 +335,6 @@
     :goto_0
     if-ge v3, v1, :cond_1
     nop
-    nop
 
     aget-object v4, v0, v3
     nop
@@ -345,11 +344,8 @@
     
     array-length v5, v4
     nop
-    nop
-    nop
 
     const/4 v6, 0x0
-    nop
     nop
 
     :goto_1
@@ -358,6 +354,8 @@
     nop
 
     aget-object v7, v4, v6
+    nop
+    nop
     nop
 
     
@@ -374,20 +372,23 @@
     add-int/lit8 v3, v3, 0x1
     nop
     nop
+    nop
 
     goto :goto_0
+    nop
     nop
 
     
     :cond_1
     iget-object v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f28d74d2b:Ljava/util/ArrayList;
     nop
+    nop
+    nop
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     
     iput v2, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f11680695:I
-    nop
     nop
 
     return-void
@@ -416,10 +417,9 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f06e3d36f:[[Ljava/util/ArrayList;
     nop
+    nop
 
     aget-object p1, v0, p1
-    nop
-    nop
     nop
 
     aget-object p1, p1, p2
@@ -428,8 +428,6 @@
     nop
 
     return-object p1
-    nop
-    nop
     nop
 
 	:after_last_instruction
@@ -448,8 +446,11 @@
     
     iget v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f11680695:I
     nop
+    nop
+    nop
 
     const/4 v1, 0x1
+    nop
     nop
 
     if-eqz v0, :cond_0
@@ -459,13 +460,17 @@
     
     iput-boolean v1, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->fcde09297:Z
     nop
+    nop
 
     return v1
+    nop
+    nop
     nop
 
     
     :cond_0
     iget-boolean v0, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->fcde09297:Z
+    nop
     nop
 
     const/4 v2, 0x0
@@ -474,18 +479,19 @@
 
     if-eqz v0, :cond_1
     nop
+    nop
 
     
     iput-boolean v2, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->fcde09297:Z
     nop
-    nop
-    nop
 
     return v1
+    nop
     nop
 
     :cond_1
     return v2
+    nop
     nop
     nop
 
@@ -505,6 +511,7 @@
     move-object v0, p0
     nop
     nop
+    nop
 
     move v10, p1
     nop
@@ -512,11 +519,9 @@
 
     move v11, p2
     nop
-    nop
 
     
     new-instance v12, Lcom/tpcstld/twozerogame/AnimationCell;
-    nop
     nop
 
     move-object v1, v12
@@ -526,16 +531,21 @@
 
     move v2, p1
     nop
+    nop
 
     move v3, p2
+    nop
     nop
     nop
 
     move/from16 v4, p3
     nop
     nop
+    nop
 
     move-wide/from16 v5, p4
+    nop
+    nop
     nop
 
     move-wide/from16 v7, p6
@@ -554,17 +564,22 @@
 
     if-ne v10, v1, :cond_0
     nop
+    nop
 
     if-ne v11, v1, :cond_0
+    nop
     nop
 
     
     iget-object v1, v0, Lcom/tpcstld/twozerogame/AnimationGrid;->f28d74d2b:Ljava/util/ArrayList;
     nop
+    nop
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
+    nop
+    nop
     nop
 
     
@@ -572,12 +587,16 @@
     iget-object v1, v0, Lcom/tpcstld/twozerogame/AnimationGrid;->f06e3d36f:[[Ljava/util/ArrayList;
     nop
     nop
+    nop
 
     aget-object v1, v1, v10
     nop
     nop
+    nop
 
     aget-object v1, v1, v11
+    nop
+    nop
     nop
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -590,11 +609,8 @@
     add-int/lit8 v1, v1, 0x1
     nop
     nop
-    nop
 
     iput v1, v0, Lcom/tpcstld/twozerogame/AnimationGrid;->f11680695:I
-    nop
-    nop
     nop
 
     return-void
@@ -628,8 +644,6 @@
 
     move-result-object v1
     nop
-    nop
-    nop
 
     :cond_0
     :goto_0
@@ -641,12 +655,11 @@
 
     if-eqz v2, :cond_1
     nop
+    nop
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
-    nop
-    nop
     nop
 
     check-cast v2, Lcom/tpcstld/twozerogame/AnimationCell;
@@ -667,6 +680,7 @@
 
     if-eqz v3, :cond_0
     nop
+    nop
 
     
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -675,24 +689,22 @@
     iget v2, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f11680695:I
     nop
     nop
+    nop
 
     add-int/lit8 v2, v2, -0x1
-    nop
     nop
     nop
 
     iput v2, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f11680695:I
     nop
-    nop
-    nop
 
     goto :goto_0
+    nop
     nop
 
     
     :cond_1
     iget-object v1, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f06e3d36f:[[Ljava/util/ArrayList;
-    nop
     nop
     nop
 
@@ -702,6 +714,8 @@
     nop
 
     const/4 v3, 0x0
+    nop
+    nop
     nop
 
     const/4 v4, 0x0
@@ -724,7 +738,6 @@
     const/4 v7, 0x0
     nop
     nop
-    nop
 
     :goto_2
     if-ge v7, v6, :cond_4
@@ -733,12 +746,13 @@
 
     aget-object v8, v5, v7
     nop
+    nop
+    nop
 
     
     invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
-    nop
     nop
     nop
 
@@ -748,15 +762,14 @@
 
     move-result v9
     nop
-    nop
 
     if-eqz v9, :cond_3
+    nop
     nop
 
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v9
-    nop
     nop
 
     check-cast v9, Lcom/tpcstld/twozerogame/AnimationCell;
@@ -772,8 +785,6 @@
 
     move-result v10
     nop
-    nop
-    nop
 
     if-eqz v10, :cond_2
     nop
@@ -786,7 +797,6 @@
     
     iget v9, p0, Lcom/tpcstld/twozerogame/AnimationGrid;->f11680695:I
     nop
-    nop
 
     add-int/lit8 v9, v9, -0x1
     nop
@@ -797,13 +807,13 @@
 
     goto :goto_3
     nop
+    nop
 
     :cond_3
     add-int/lit8 v7, v7, 0x1
     nop
 
     goto :goto_2
-    nop
     nop
 
     :cond_4
@@ -814,6 +824,7 @@
     goto :goto_1
     nop
     nop
+    nop
 
     
     :cond_5
@@ -821,12 +832,12 @@
 
     move-result-object p1
     nop
+    nop
 
     :goto_4
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p2
-    nop
     nop
     nop
 
@@ -839,16 +850,16 @@
     move-result-object p2
     nop
     nop
-    nop
 
     check-cast p2, Lcom/tpcstld/twozerogame/AnimationCell;
-    nop
     nop
 
     
     invoke-direct {p0, p2}, Lcom/tpcstld/twozerogame/AnimationGrid;->cancelAnimation(Lcom/tpcstld/twozerogame/AnimationCell;)V
 
     goto :goto_4
+    nop
+    nop
     nop
 
     :cond_6

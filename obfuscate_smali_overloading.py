@@ -1,6 +1,7 @@
 import random
 
 import util
+import common_regex_pattern
 
 PARAM_TYPES = ["Ljava/lang/String;", "Z", "B", "S", "C", "I", "F"]
 
@@ -19,7 +20,7 @@ def add_method_overloads_to_file(smali_file, overloaded_method_body, class_names
                 continue
 
             if not class_name:
-                class_match = util.CLASS_PATTEN.match(line)
+                class_match = common_regex_pattern.CLASS_PATTEN.match(line)
                 # If this is an enum class, skip it.
                 if " enum " in line:
                     skip_remaining_lines = True
@@ -42,7 +43,7 @@ def add_method_overloads_to_file(smali_file, overloaded_method_body, class_names
                 continue
 
             # Method declared in class.
-            method_match = util.METHOD_PATTEN.match(line)
+            method_match = common_regex_pattern.METHOD_PATTEN.match(line)
 
             # Avoid constructors, native and abstract methods.
             if (

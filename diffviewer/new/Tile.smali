@@ -6,11 +6,13 @@
 # instance fields
 .field private f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
 
-.field private f0946e2a7eVoNpgel:[Lcom/tpcstld/twozerogame/Tile;
+.field private f0946e2a7lJmjUaCD:[Lcom/tpcstld/twozerogame/Tile;
 
 .field private final f2063c160:I
 
-.field private final f2063c160UqZVeeUT:I
+.field private final f2063c160ihJMjFfk:I
+
+.field private final f2063c160frtnEban:I
 
 
 # direct methods
@@ -31,7 +33,6 @@
 
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/Tile;->f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
-    nop
     nop
 
     
@@ -60,7 +61,6 @@
     move-result v0
     nop
     nop
-    nop
 
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getY()I
 
@@ -73,14 +73,15 @@
 
     const/4 p1, 0x0
     nop
+    nop
 
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/Tile;->f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
     nop
-    nop
 
     
     iput p2, p0, Lcom/tpcstld/twozerogame/Tile;->f2063c160:I
+    nop
     nop
 
     return-void
@@ -103,9 +104,10 @@
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/Tile;->f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
     nop
+    nop
+    nop
 
     return-object v0
-    nop
     nop
 
 	:after_last_instruction
@@ -124,11 +126,8 @@
     
     iget v0, p0, Lcom/tpcstld/twozerogame/Tile;->f2063c160:I
     nop
-    nop
-    nop
 
     return v0
-    nop
     nop
     nop
 
@@ -147,7 +146,6 @@
 
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/Tile;->f0946e2a7:[Lcom/tpcstld/twozerogame/Tile;
-    nop
     nop
 
     return-void
@@ -169,6 +167,7 @@
     invoke-virtual {p1}, Lcom/tpcstld/twozerogame/Cell;->getX()I
 
     move-result v0
+    nop
     nop
 
     invoke-virtual {p0, v0}, Lcom/tpcstld/twozerogame/Tile;->setX(I)V

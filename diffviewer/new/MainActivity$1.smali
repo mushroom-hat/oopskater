@@ -45,9 +45,10 @@
     
     iput-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
     nop
+    nop
+    nop
 
     iput-boolean p2, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->val$noLoginPrompt:Z
-    nop
     nop
     nop
 
@@ -93,6 +94,7 @@
     move-result v0
     nop
     nop
+    nop
 
     if-nez v0, :cond_0
     nop
@@ -107,24 +109,22 @@
 
     move-result p1
     nop
-    nop
 
     if-nez p1, :cond_2
+    nop
     nop
 
     iget-boolean p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->val$noLoginPrompt:Z
     nop
     nop
+    nop
 
     if-nez p1, :cond_2
-    nop
     nop
     nop
 
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
-    nop
     nop
 
     const/4 v0, 0x1
@@ -136,8 +136,6 @@
     
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
     nop
-    nop
-    nop
 
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->val$signInClient:Lcom/google/android/gms/auth/api/signin/GoogleSignInClient;
     nop
@@ -146,22 +144,26 @@
 
     move-result-object v0
     nop
-    nop
 
     const/16 v1, 0x2329
+    nop
+    nop
     nop
 
     invoke-virtual {p1, v0, v1}, Lcom/tpcstld/twozerogame/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
     nop
+    nop
 
     
     :cond_0
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
     nop
+    nop
+    nop
 
-	const-string/jumbo v1, "e300eac7d42de9bba151e63ec4095fccba0a0651b2eb8c13ebae20393fead57db307c580d33034d765c89412c1af6047"
+	const-string/jumbo v1, "124010f92fab0c7309b2cc80096d280580e4bfe79a74ac1f44bc85f81277a33423d09c7525f1d1c78c590c497b305602"
 
 	invoke-static {v1}, Lcom/decryptstringmanager/DecryptString;->decryptString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -175,7 +177,6 @@
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object v0
-    nop
     nop
 
     if-eqz v0, :cond_1
@@ -198,11 +199,9 @@
 
     move-result-object p1
     nop
-    nop
 
     
     iget-object v0, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
     nop
 
     invoke-static {v0}, Lcom/tpcstld/twozerogame/MainActivity;->access$100(Lcom/tpcstld/twozerogame/MainActivity;)Lcom/tpcstld/twozerogame/MainView;
@@ -215,7 +214,6 @@
     
     :cond_1
     iget-object p1, p0, Lcom/tpcstld/twozerogame/MainActivity$1;->this$0:Lcom/tpcstld/twozerogame/MainActivity;
-    nop
     nop
 
     new-instance v0, Lcom/tpcstld/twozerogame/MainActivity$1$1;

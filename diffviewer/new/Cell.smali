@@ -6,19 +6,21 @@
 # instance fields
 .field private f9dd4e461:I
 
-.field private f9dd4e461bzIjognY:I
+.field private f9dd4e461hlykNhIE:I
 
-.field private f9dd4e461ZTGzwLCV:I
+.field private f9dd4e461IyChmRZG:I
 
-.field private f9dd4e461WbvcPdws:I
+.field private f9dd4e461JIRAAgCH:I
 
-.field private f9dd4e461hRDKmMiz:I
+.field private f9dd4e461LVBadgNb:I
 
 .field private f41529076:I
 
-.field private f41529076rORahVky:I
+.field private f41529076rYirrMou:I
 
-.field private f41529076uhInFEmr:I
+.field private f41529076ObiqXvCs:I
+
+.field private f41529076aXBDrQXU:I
 
 
 # direct methods
@@ -35,10 +37,10 @@
     
     iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->f9dd4e461:I
     nop
+    nop
 
     
     iput p2, p0, Lcom/tpcstld/twozerogame/Cell;->f41529076:I
-    nop
     nop
 
     return-void
@@ -61,9 +63,9 @@
     
     iget v0, p0, Lcom/tpcstld/twozerogame/Cell;->f9dd4e461:I
     nop
+    nop
 
     return v0
-    nop
     nop
     nop
 
@@ -83,9 +85,9 @@
     
     iget v0, p0, Lcom/tpcstld/twozerogame/Cell;->f41529076:I
     nop
-    nop
 
     return v0
+    nop
     nop
     nop
 
@@ -105,8 +107,6 @@
     
     iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->f9dd4e461:I
     nop
-    nop
-    nop
 
     return-void
 
@@ -125,6 +125,8 @@
 
     
     iput p1, p0, Lcom/tpcstld/twozerogame/Cell;->f41529076:I
+    nop
+    nop
     nop
 
     return-void

@@ -31,7 +31,7 @@ def get_text_from_file(file_name: str) -> str:
 def get_decrypt_string_smali_code(encryption_secret: str) -> str:
     text = get_text_from_file(
         os.path.join(
-            os.path.dirname(__file__), "resources", "smali", "DecryptString.smali"
+            os.path.dirname(__file__), "resources", "DecryptString.smali"
         )
     )
     return replace_default_secret_key(text, encryption_secret)

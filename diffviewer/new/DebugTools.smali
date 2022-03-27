@@ -6,21 +6,25 @@
 # static fields
 .field private static final f973f317d:Z = false
 
-.field private static final f973f317dUgTrDuQy:Z = false
+.field private static final f973f317dgPhLZMPT:Z = false
+
+.field private static final f973f317dcPJccGRK:Z = false
+
+.field private static final f973f317dZFYYSAoH:Z = false
 
 .field private static final fda0e57d8:[[I
 
-.field private static final fda0e57d8uCPlcSxs:[[I
-
-.field private static final fda0e57d8dDPcMzAy:[[I
+.field private static final fda0e57d8YaeJCzch:[[I
 
 .field private static final f01bfe9db:J = 0x2697dcL
 
-.field private static final f01bfe9dbOMfuIICZ:J = 0x2697dcL
+.field private static final f01bfe9dbOoyyNXqu:J = 0x2697dcL
 
-.field private static final f01bfe9dbjMZaFEuE:J = 0x2697dcL
+.field private static final f01bfe9dbIGlZSVTA:J = 0x2697dcL
 
-.field private static final f01bfe9dbtWYEMfFN:J = 0x2697dcL
+.field private static final f01bfe9dbHTqzfXfB:J = 0x2697dcL
+
+.field private static final f01bfe9dbDuawBFVD:J = 0x2697dcL
 
 
 # direct methods
@@ -33,11 +37,10 @@
 
     const/4 v0, 0x4
     nop
-    nop
-    nop
 
     
     new-array v1, v0, [[I
+    nop
     nop
 
     new-array v2, v0, [I
@@ -47,17 +50,23 @@
 
     const/4 v3, 0x0
     nop
+    nop
+    nop
 
     aput-object v2, v1, v3
+    nop
     nop
     nop
 
     new-array v2, v0, [I
     nop
+    nop
+    nop
 
     fill-array-data v2, :array_1
 
     const/4 v3, 0x1
+    nop
     nop
     nop
 
@@ -77,11 +86,8 @@
     aput-object v2, v1, v3
     nop
     nop
-    nop
 
     new-array v0, v0, [I
-    nop
-    nop
     nop
 
     fill-array-data v0, :array_3
@@ -89,11 +95,15 @@
     const/4 v2, 0x3
     nop
     nop
+    nop
 
     aput-object v0, v1, v2
     nop
+    nop
 
     sput-object v1, Lcom/tpcstld/twozerogame/DebugTools;->fda0e57d8:[[I
+    nop
+    nop
     nop
 
     return-void
@@ -175,8 +185,11 @@
     const/4 v0, 0x0
     nop
     nop
+    nop
 
     return-object v0
+    nop
+    nop
     nop
 
 	:after_last_instruction
@@ -193,6 +206,7 @@
 	:before_first_instruction
 
     const-wide/16 v0, 0x0
+    nop
     nop
     nop
 
