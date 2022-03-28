@@ -21,7 +21,7 @@ def add_goto_algorithm(smali_file):
 
                 elif editing_method and common_regex_pattern.LOCALS_PATTERN.match(line):
                     out_file.write(line)
-                    out_file.write("\n\tgoto/32 :after_last_instruction\n\n")
+                    out_file.write("\n\tgoto/16 :after_last_instruction\n\n")
                     out_file.write("\t:before_first_instruction\n")
 
                 elif line.startswith(".end method") and editing_method:
@@ -31,7 +31,7 @@ def add_goto_algorithm(smali_file):
                     the subsequent "goto" will not be called again after the method is completed. """
 
                     out_file.write("\n\t:after_last_instruction\n\n")
-                    out_file.write("\tgoto/32 :before_first_instruction\n\n")
+                    out_file.write("\tgoto/16 :before_first_instruction\n\n")
                     out_file.write(line)
                     editing_method = False
 
