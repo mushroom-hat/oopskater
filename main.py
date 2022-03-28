@@ -35,7 +35,7 @@ def decompile_apk(filepath):
         os.system("JAVA -jar resources/APK/apktool.jar d \"{}\"".format(filepath))
         decompiled_directory = filepath.split(".")[0]
         decompiled_directory = decompiled_directory.split('\\')
-        decompiled_directory = '\\'.join([x for x in decompiled_directory if x != 'assets'])
+        decompiled_directory = '\\'.join([x for x in decompiled_directory if x != 'assets' and x != ''])
         print("File Directory :",decompiled_directory)
         print("APK successfully decompiled to {}".format(decompiled_directory))
         return decompiled_directory
@@ -109,7 +109,7 @@ def obfuscate_smali_file(dir):
     # # Getting all smali fies in the directory
     global APPLICATION_NAME
     android_internal_files = ['\\androidx', '\\android','\\kotlin', '\\google', '\\org', '\\us\\', '\\de\\', '\\sqldelight\\'
-                              ,'\\markdown\\']
+                              ,'\\markdown\\', '\\unity3d\\', '\\sdk\\']
     print("Looping Folder Directory to look for smali files.....")
     try:
         list_of_smali_files = find_smali_files(dir)
@@ -123,7 +123,8 @@ def obfuscate_smali_file(dir):
         print("Something went wrong finding smali files.")
 
     obfuscate_smali_files.backup_files(list_of_cleaned_smali_files)
-    obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME)
+    obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME,
+                                    UI_THREAD)
     obfuscate_smali_files.generate_new_files(list_of_cleaned_smali_files)
 
 

@@ -26,7 +26,7 @@ def get_valid_op_code():
 
 def random_nop_interval():
     """ Generate a random number of nop statements """
-    return random.sample(xrange(3), 1)[0] + 1
+    return random.sample(xrange(1), 1)[0] + 1
 
 
 def add_nop_algorithm(smali_file):
@@ -54,7 +54,7 @@ def add_nop_algorithm(smali_file):
                         op_code = line_op_code.group('opCode')
                         if op_code in valid_nop_code:
                             nop_count = random_nop_interval()
-                            out_file.write('    nop\n' * nop_count)
+                            out_file.write('\nnop\n' * nop_count)
                             overwrite_flag = True
                     count += 1
                 except:
