@@ -1,7 +1,7 @@
 import re
 
 
-def debugRemoval(file):
+def add_debug_algorithm(file):
     try:
         pattern = r'.line [0-9]*'
         with open(file, "r+", encoding="utf-8") as in_file:

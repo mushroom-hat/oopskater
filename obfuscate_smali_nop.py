@@ -6,7 +6,6 @@ from shutil import move
 from urllib3.connectionpool import xrange
 
 
-
 def get_text_file(file_name):
     """ This function will get a text from the file given. """
     try:
@@ -30,14 +29,14 @@ def random_nop_interval():
     return random.sample(xrange(3), 1)[0] + 1
 
 
-def add_nop_in_method(smali_file):
+def add_nop_algorithm(smali_file):
     """Add multiple nop sequence of random length (1-3) between two nop-valid instruction"""
     count = 0
     overwrite_flag = False
     valid_nop_code = get_valid_op_code()
 
     try:
-        """Generate new temp file to be accessed, due to multithreaded.
+        """Generate new temp file to be accessed, due to multithreading.
          It might access the same file name, therefore causing an error"""
         file_name_item = str(smali_file).split("\\")
         file_name = file_name_item.pop()

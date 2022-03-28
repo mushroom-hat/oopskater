@@ -3,7 +3,7 @@ import common_regex_pattern
 
 
 def rename_field(field_name):
-    """ This function will rename the field name given."""
+    """ This function will add_renaming_field_algorithm the field name given."""
     field_md5 = util.get_string_md5(field_name)
     return "f{0}".format(field_md5.lower()[:8])
 
@@ -26,9 +26,8 @@ def rename_field_declarations(smali_files):
     renamed_fields = set()
 
     """ This will loop through all the smali files to find field definitions that can be renamed. """
-    for smali_file in util.show_list_progress(smali_files, interactive=False,
-                                              description="Renaming field declarations"):
-        with util.inplace_edit_file(smali_file) as (in_file, out_file):
+    for smali_file in smali_files:
+        with util.edit_file_content(smali_file) as (in_file, out_file):
             class_name = None
             for line in in_file:
                 ignore = False
@@ -73,8 +72,8 @@ def rename_field_declarations(smali_files):
 
 def rename_field_references(fields_to_rename, smali_files, sdk_classes):
     count = 0
-    for smali_file in util.show_list_progress(smali_files, interactive=False, description="Renaming references"):
-        with util.inplace_edit_file(smali_file) as (in_file, out_file):
+    for smali_file in smali_files:
+        with util.edit_file_content(smali_file) as (in_file, out_file):
             for line in in_file:
                 """ Finding field usage"""
                 field_usage_match = common_regex_pattern.FIELD_USAGE_PATTEN.match(line)
@@ -101,7 +100,7 @@ def rename_field_references(fields_to_rename, smali_files, sdk_classes):
     return count
 
 
-def rename(smali_files):
+def add_renaming_field_algorithm(smali_files):
     try:
         sdk_class_declarations = get_class_names(smali_files)
         renamed_field_declarations = rename_field_declarations(smali_files)

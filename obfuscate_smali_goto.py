@@ -1,9 +1,10 @@
 import common_regex_pattern
 import util
 
-def add_goto(smali_file):
+
+def add_goto_algorithm(smali_file):
     try:
-        with util.inplace_edit_file(smali_file) as (in_file, out_file):
+        with util.edit_file_content(smali_file) as (in_file, out_file):
             editing_method = False
             for line in in_file:
                 """ Put a "goto" to the label at the finish of the method and 

@@ -12,7 +12,7 @@ METHODS_WITH_REFLECTION = 0
 CLASS_NAME_TO_SMALI_FILE: dict = {}
 
 
-def class_is_public_and_declared_in_smali(class_name):
+def is_public_and_declared_class(class_name):
     global ANDROID_CLASS_NAMES
     global OBFUSCATOR_INSTRUCTION_LENGTH
     global OBFUSCATOR_INSTRUCTION_LIMIT
@@ -34,14 +34,14 @@ def class_is_public_and_declared_in_smali(class_name):
                     return False
 
 
-def method_is_all_public(class_name, method_signature, param_string):
+def is_public_method(class_name, method_signature, param_string):
     global ANDROID_CLASS_NAMES
     global OBFUSCATOR_INSTRUCTION_LENGTH
     global OBFUSCATOR_INSTRUCTION_LIMIT
     global PRIMITIVE_TYPES
     global METHODS_WITH_REFLECTION
     global CLASS_NAME_TO_SMALI_FILE
-    if not class_is_public_and_declared_in_smali(class_name):
+    if not is_public_and_declared_class(class_name):
         return False
 
     smali_file = CLASS_NAME_TO_SMALI_FILE[class_name]
@@ -60,18 +60,19 @@ def method_is_all_public(class_name, method_signature, param_string):
                     )
                     if signature == method_signature:
                         """Check if all its parameters are public."""
-                        for param in split_method_params(param_string):
+                        for param in split_params(param_string):
                             # System classes that are public.
                             if param in PRIMITIVE_TYPES or param in ANDROID_CLASS_NAMES:
                                 continue
-                            """Check if the class of these parameters is not public or is not present in the smali files"""
-                            if not class_is_public_and_declared_in_smali(param):
+                            """Check if the class of these parameters is not public or is not present in the smali 
+                            files """
+                            if not is_public_and_declared_class(param):
                                 return False
                         return True
     return False
 
 
-def split_method_params(param_string):
+def split_params(param_string):
     global ANDROID_CLASS_NAMES
     global OBFUSCATOR_INSTRUCTION_LENGTH
     global OBFUSCATOR_INSTRUCTION_LIMIT
@@ -97,7 +98,7 @@ def split_method_params(param_string):
                         """Add the type array to the list and continue with the rest of the string."""
                         params.append(possible_class[: string_position + 1])
                         params.extend(
-                            split_method_params(
+                            split_params(
                                 possible_class[string_position + 1:]
                             )
                         )
@@ -105,11 +106,11 @@ def split_method_params(param_string):
             elif possible_class[0] in PRIMITIVE_TYPES:
                 """The primitive type, as well as additional optional parameters"""
                 params.append(possible_class[0])
-                params.extend(split_method_params(possible_class[1:]))
+                params.extend(split_params(possible_class[1:]))
     return params
 
 
-def count_needed_registers(params):
+def needed_registers_count(params):
     global ANDROID_CLASS_NAMES
     global OBFUSCATOR_INSTRUCTION_LENGTH
     global OBFUSCATOR_INSTRUCTION_LIMIT
@@ -132,7 +133,7 @@ def add_smali_reflection_code(class_name, method_name, param_string):
     global PRIMITIVE_TYPES
     global METHODS_WITH_REFLECTION
     global CLASS_NAME_TO_SMALI_FILE
-    params = split_method_params(param_string)
+    params = split_params(param_string)
 
     smali_code = "\n\tconst/4 v1, {param_num:#x}\n\n".format(param_num=len(params))
     OBFUSCATOR_INSTRUCTION_LENGTH += 1
@@ -145,7 +146,7 @@ def add_smali_reflection_code(class_name, method_name, param_string):
         smali_code += "\tconst/4 v2, {param_num:#x}\n\n".format(param_num=param_index)
         OBFUSCATOR_INSTRUCTION_LENGTH += 1
 
-        class_param = util.SGET_DICT.get(param, None)
+        class_param = common_regex_pattern.SGET_DICT.get(param, None)
         if class_param:
             smali_code += "\tsget-object v3, {param}\n\n".format(param=class_param)
             OBFUSCATOR_INSTRUCTION_LENGTH += 2
@@ -198,7 +199,7 @@ def create_reflection_method(num_of_methods: int, local_count: int, is_virtual_m
         if register.strip()
     ]
 
-    params = split_method_params(invoke_parameters)
+    params = split_params(invoke_parameters)
     param_to_register = []
 
     if is_virtual_method:
@@ -232,14 +233,11 @@ def create_reflection_method(num_of_methods: int, local_count: int, is_virtual_m
                 )
                 register_index += 1
 
-    smali_code = "\tconst/4 #reg1#, {register_num:#x}\n\n".format(
-        register_num=len(params)
-    )
-
+    smali_code = "\tconst/4 #reg1#, {register_num:#x}\n\n".format(register_num=len(params))
     if len(params) > 0:
         smali_code += "\tnew-array #reg1#, #reg1#, [Ljava/lang/Object;\n\n"
         for param_index, param_and_register in enumerate(param_to_register):
-            cast_primitive_to_class = util.CAST_DICT.get(
+            cast_primitive_to_class = common_regex_pattern.CAST_DICT.get(
                 param_and_register[0], None
             )
             if cast_primitive_to_class:
@@ -300,7 +298,7 @@ def create_reflection_method(num_of_methods: int, local_count: int, is_virtual_m
     return smali_code
 
 
-def reflection(list_of_smali_files):
+def add_reflection_algorithm(list_of_smali_files):
     global ANDROID_CLASS_NAMES
     global OBFUSCATOR_INSTRUCTION_LENGTH
     global OBFUSCATOR_INSTRUCTION_LIMIT
@@ -308,8 +306,7 @@ def reflection(list_of_smali_files):
     global METHODS_WITH_REFLECTION
     global CLASS_NAME_TO_SMALI_FILE
     try:
-        for smali_file in util.show_list_progress(list_of_smali_files, interactive=False,
-                                                  description="Class name to smali file mapping", ):
+        for smali_file in list_of_smali_files:
             CLASS_NAME_TO_SMALI_FILE = {}
 
             with open(smali_file, "r", encoding="utf-8") as current_file:
@@ -317,7 +314,7 @@ def reflection(list_of_smali_files):
                 for line in current_file:
                     if not class_name:
                         """ A class can be found in every smali file. """
-                        class_match = util.CLASS_PATTEN.match(line)
+                        class_match = common_regex_pattern.CLASS_PATTEN.match(line)
                         if class_match:
                             CLASS_NAME_TO_SMALI_FILE[class_match.group("class_name")] = smali_file
                             break
@@ -325,8 +322,7 @@ def reflection(list_of_smali_files):
         obfuscator_smali_code: str = ""
         move_result_pattern = re.compile(r"\s+move-result.*?\s(?P<register>[vp0-9]+)")
 
-        for smali_file in util.show_list_progress(list_of_smali_files, interactive=False,
-                                                  description="Obfuscating using reflection"):
+        for smali_file in list_of_smali_files:
             OBFUSCATOR_INSTRUCTION_LENGTH = 0
             OBFUSCATOR_INSTRUCTION_LIMIT = 60000
             if OBFUSCATOR_INSTRUCTION_LENGTH >= OBFUSCATOR_INSTRUCTION_LIMIT:
@@ -344,7 +340,7 @@ def reflection(list_of_smali_files):
                 method_match = common_regex_pattern.METHOD_PATTEN.match(line)
                 if method_match:
                     method_index.append(line_number)
-                    param_count = count_needed_registers(split_method_params(method_match.group("method_param")))
+                    param_count = needed_registers_count(split_params(method_match.group("method_param")))
 
                     """ Save the number of local registers used by this approach. """
                     local_count = 16
@@ -357,23 +353,23 @@ def reflection(list_of_smali_files):
                         assume that all of the local registers are in use. """
                         method_local_count.append(local_count)
 
-                    """ If there are enough registers available, we can conduct some reflection operations. """
+                    """ If there are enough registers available, we can conduct some add_reflection_algorithm operations. """
                     if param_count + local_count <= 11:
                         method_is_reflectable.append(True)
                     else:
                         method_is_reflectable.append(False)
 
             """ Look for method invocations within the methods declared in this smali file and 
-            replace them with reflection invocations. """
+            replace them with add_reflection_algorithm invocations. """
             for method_number, index in enumerate(method_index):
 
-                """ Check if there are enough registers for the reflection operation, and 
+                """ Check if there are enough registers for the add_reflection_algorithm operation, and 
                 check for method invocations within each method's body. """
                 if method_is_reflectable[method_number]:
                     current_line_number = index
                     while not lines[current_line_number].startswith(".end method"):
 
-                        """ Break if there is no room for additional reflection instructions. """
+                        """ Break if there is no room for additional add_reflection_algorithm instructions. """
                         if OBFUSCATOR_INSTRUCTION_LENGTH >= OBFUSCATOR_INSTRUCTION_LIMIT:
                             break
 
@@ -399,13 +395,13 @@ def reflection(list_of_smali_files):
 
                             """ The method to reflect must be public, defined in a public class, 
                             and all of its parameters must be public. """
-                            if not method_is_all_public(invoke_match.group("invoke_object"), method_signature,
-                                                        invoke_match.group("invoke_param")):
+                            if not is_public_method(invoke_match.group("invoke_object"), method_signature,
+                                                    invoke_match.group("invoke_param")):
                                 continue
 
-                            if (invoke_match.group("invoke_type") == "invoke-virtual"):
+                            if invoke_match.group("invoke_type") == "invoke-virtual":
                                 tmp_is_virtual = True
-                            elif (invoke_match.group("invoke_type") == "invoke-static"):
+                            elif invoke_match.group("invoke_type") == "invoke-static":
                                 tmp_is_virtual = False
                             else:
                                 continue
@@ -473,10 +469,10 @@ def reflection(list_of_smali_files):
                                         )
                                     lines[move_result_index] = new_move_result
 
-                            """ Add the initial function to the array of methods by utilizing reflection. """
+                            """ Add the initial function to the array of methods by utilizing add_reflection_algorithm. """
                             obfuscator_smali_code += add_smali_reflection_code(tmp_class_name, tmp_method, tmp_param)
 
-                            """ Replace the original code with code that makes use of reflection. """
+                            """ Replace the original code with code that makes use of add_reflection_algorithm. """
                             lines[current_line_number] = create_reflection_method(
                                 METHODS_WITH_REFLECTION,
                                 method_local_count[method_number],
@@ -502,4 +498,4 @@ def reflection(list_of_smali_files):
             api_reflection_smali.write(reflection_code)
 
     except:
-        print("Something went wrong with the reflection.")
+        print("Something went wrong with the add_reflection_algorithm.")

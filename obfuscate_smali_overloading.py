@@ -6,10 +6,10 @@ import common_regex_pattern
 PARAM_TYPES = ["Ljava/lang/String;", "Z", "B", "S", "C", "I", "F"]
 
 
-def add_method_overloads_to_file(smali_file, overloaded_method_body, class_names_to_ignore):
+def add_method_overloading(smali_file, overloaded_method_body, class_names_to_ignore):
     global PARAM_TYPES
     new_methods_num: int = 0
-    with util.inplace_edit_file(smali_file) as (in_file, out_file):
+    with util.edit_file_content(smali_file) as (in_file, out_file):
 
         skip_remaining_lines = False
         class_name = None
@@ -86,14 +86,13 @@ def get_android_class_names(file_name):
     return util.get_non_empty_lines_from_file(file_name)
 
 
-def add_method_overloads(smali_files, class_names_to_ignore, max_methods_to_add: int = 2, interactive: bool = False):
+def add_method_overloading_algorithm(smali_files, class_names_to_ignore, max_methods_to_add: int = 2):
     overloaded_method_body = util.get_smali_method_overload()
     added_methods = 0
     count = 0
-    for smali_file in util.show_list_progress(smali_files, interactive=interactive, description="Overload smali files"):
-
+    for smali_file in smali_files:
         if added_methods < max_methods_to_add:
-            added_methods += add_method_overloads_to_file(
+            added_methods += add_method_overloading(
                 smali_file, overloaded_method_body, class_names_to_ignore
             )
             count += 1
