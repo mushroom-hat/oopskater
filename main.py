@@ -22,6 +22,8 @@ OUTPUT_FOLDER_PATH = ""  # the absolute path of folder where all decompiled file
 TARGET_FOLDER_PATH = ""
 APPLICATION_NAME = ""
 DECODED_APK_PATH = ""
+SELECTED_ALGORITHM = ""
+KEYSTORE_PATH = ""
 UI_THREAD = None
 
 
@@ -123,7 +125,7 @@ def obfuscate_smali_file(dir):
 
     obfuscate_smali_files.backup_files(list_of_cleaned_smali_files)
     obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME,
-                                    UI_THREAD)
+                                    UI_THREAD, SELECTED_ALGORITHM)
     obfuscate_smali_files.generate_new_files(list_of_cleaned_smali_files)
 
 
@@ -134,11 +136,14 @@ def clean_smali_files_path(file_path):
     return "\\".join(list(filter(lambda x: x != "", obj)))
 
 
-def process_importedFile(importedFile, ui_thread):
-    global TARGET_FOLDER_PATH, UI_THREAD
+def process_importedFile(importedFile, ui_thread, selected_algorithm, keystore_path):
+    global TARGET_FOLDER_PATH, UI_THREAD, SELECTED_ALGORITHM, KEYSTORE_PATH
+    SELECTED_ALGORITHM = selected_algorithm
+    KEYSTORE_PATH = keystore_path
     UI_THREAD = ui_thread
     TARGET_FOLDER_PATH = importedFile
-    print("Starting import")
+
+    print("Imported:", importedFile)
     # if apk is supplied, decompile the apk into current directory
     if importedFile.endswith('.apk'):
         ui_thread.emit("Decompiling APK ... ")

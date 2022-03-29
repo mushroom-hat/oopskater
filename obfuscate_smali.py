@@ -72,7 +72,7 @@ def threader(my_queue):
         my_queue.task_done()
 
 
-def change_all_file(smali_file_list, file_list_size, application_name, ui_thread):
+def change_all_file(smali_file_list, file_list_size, application_name, ui_thread, selected_algorithm):
     global APPLICATION_NAME, ANDROID_MANIFEST_FILE
     global RENAME_COUNT, NOP_REPLACEMENT_COUNT, DEBUG_REPLACEMENT_COUNT, OVERLOADING_REPLACEMENT_COUNT, \
         STRING_ENCRYPTION_COUNT, GOTO_COUNT
