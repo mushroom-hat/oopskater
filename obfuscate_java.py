@@ -4,15 +4,6 @@ import re
 import random
 from timeit import default_timer as timer
 # Change here
-<<<<<<< HEAD
-# TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\JAVA\com\singaporetech\audiorecorder\Exfiltration.JAVA"
-
-import obfuscate_smali_files
-OBFUS_TESTFILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\test.JAVA"
-FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\JAVA\com\singaporetech\audiorecorder\Exfiltration.JAVA"
-VARIABLES_DICT = r"resources\\JAVA\\variables.dict"
-TEST_DIR = r"C:\\Users\\tayzh\\Documents\\SIT\\Year 1 Sem 2\\ICT2207 Mobile Security\\Project\\Coursework2 (Working Dir)\\Java_Test_Files\\"
-=======
 # TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 TIME = 0
 import obfuscate_smali_files
@@ -20,10 +11,9 @@ import obfuscate_smali_files
 #FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 VARIABLES_DICT = r"variables.dict"
 #TEST_DIR = r"C:\\Users\\tayzh\\Documents\\SIT\\Year 1 Sem 2\\ICT2207 Mobile Security\\Project\\Coursework2 (Working Dir)\\Java_Test_Files\\"
->>>>>>> b7894c0eae928922140cc63bb6e5dd259c6c1471
 
 
-# Takes in a JAVA file as parameter, returns a dictionary that has line number as key and line as value.
+# Takes in a java file as parameter, returns a dictionary that has line number as key and line as value.
 # Each line is separate by \r\n
 def readfile(filepath):
     f = open(filepath, "r")
@@ -97,7 +87,7 @@ def remove_comments(line_dict):
 
         #  remove single-line comments
         if "//" in line:
-            line = line.split("//")[0]  # remove JAVA comments
+            line = line.split("//")[0]  # remove java comments
             if line.strip() == "":  # after removing comments, if line is empty string, it is a bad line
                 del line_dict[line_number]
 
@@ -135,7 +125,7 @@ def remove_spaces(line_dict):
 def identify_java_methods(
         each_class):  # returns a list containing each functions i.e., [[function_1], [function_2], [function_3]]
     i = 1
-    methods = []  # a list storing a list of each JAVA functions
+    methods = []  # a list storing a list of each java functions
     temp = []
     class_name = each_class[0]
     class_declarations = []
@@ -191,7 +181,7 @@ def identify_java_methods(
     return methods, class_name, class_declarations
 
 
-# takes in a JAVA source code and dissect it into the Java Structure. We are following the standard JAVA structure for each file
+# takes in a java source code and dissect it into the Java Structure. We are following the standard java structure for each file
 # 1) Package Statement
 # 2) Import Statement
 # 3) Interface Statement
@@ -616,7 +606,7 @@ def insert_opaque_predicates(method):
     return list_of_injected_methods
 
 def obfuscate(directory_path):
-    # loop through each JAVA file, obfuscate it and return a obfuscated JAVA file
+    # loop through each java file, obfuscate it and return a obfuscated java file
     list_of_clean_java_files = []
     list_of_obfuscated_java_files = []
 
@@ -629,7 +619,7 @@ def obfuscate(directory_path):
         if "obfuscated" not in abs_filename:
             line_dict = readfile(directory_path + "\\" + abs_filename)
 
-            #  dissecting JAVA files into smaller functions for easier obfuscation
+            #  dissecting java files into smaller functions for easier obfuscation
             # java_classes = identify_java_classes(line_dict)
 
             # DATA OBFUSCATION -------------------

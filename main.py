@@ -53,7 +53,7 @@ def recompile():
     if TARGET_FOLDER_PATH != "":
         try:
             print("===== COMPILING BACK TO APK =====")
-            os.system("JAVA -jar resources/APK/apktool.jar b \"{}\"".format(TARGET_FOLDER_PATH))
+            os.system("JAVA -jar resources/APK/apktool.jar b \"{}\" --use-aapt2".format(TARGET_FOLDER_PATH))
             print("APK successfully recompiled to {}\\dist\\".format(TARGET_FOLDER_PATH))
             # print("===== GENERATING APK KEY =====")
             # os.system("keytool -genkey -v -keystore igning.keystore -keyalg RSA -keysize 2048 -validity 10000")
@@ -81,7 +81,7 @@ def enumerate_directories(folderpath):
         for file in files:
 
             # check file using their extensions for smali/JAVA/kotlin files
-            if file.lower().endswith('.JAVA'):
+            if file.lower().endswith('.java'):
                 list_of_java_files.append(os.path.join(root, file))
 
             if file.endswith('.kt'):
