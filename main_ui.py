@@ -374,7 +374,7 @@ class Ui_MainWindow(object):
             self.radioButton_renaming.setDisabled(True)
             self.input_keystore.setText("Disabled. Only available if you import an apk")
             self.importKeyStore_button.setText("Disabled")
-        else:
+        elif objectType == "DIR":
             self.radioButton_java_overloading.setEnabled(True)
             self.radioButton_java_prodcdure.setEnabled(True)
             self.radioButton_java_remove_empty_spaces.setEnabled(True)
@@ -389,12 +389,20 @@ class Ui_MainWindow(object):
             self.radioButton_renaming.setDisabled(True)
             self.input_keystore.setText("Disabled. Only available if you import an apk")
             self.importKeyStore_button.setText("Disabled")
+        else:
+            self.input_progression.setText("Please input an item.")
+            self.input_apk.setText("Please input an item.")
 
     def check_imported_item(self, importedObj):
         """ This function check the imported file type. """
         print("Checking Imported Item", importedObj)
-        imported_list = importedObj.split('.')
-        if len(imported_list) < 2:
+        try:
+            imported_list = importedObj.split('.')
+        except:
+            pass
+        if importedObj == 'None' or importedObj is None or len(imported_list) == 0:
+            return None
+        if len(imported_list) < 2 and importedObj is not None and importedObj != "None":
             return "DIR"
         if len(imported_list) > 1 and imported_list[-1] == 'apk':
             return "APK"
