@@ -2,18 +2,18 @@ import base64
 import os
 import re
 import random
-
+from timeit import default_timer as timer
 # Change here
-# TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\JAVA\com\singaporetech\audiorecorder\Exfiltration.JAVA"
-
+# TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
+TIME = 0
 import obfuscate_smali_files
-OBFUS_TESTFILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\test.JAVA"
-FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\JAVA\com\singaporetech\audiorecorder\Exfiltration.JAVA"
-VARIABLES_DICT = r"resources\\JAVA\\variables.dict"
-TEST_DIR = r"C:\\Users\\tayzh\\Documents\\SIT\\Year 1 Sem 2\\ICT2207 Mobile Security\\Project\\Coursework2 (Working Dir)\\Java_Test_Files\\"
+# = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\test.java"
+#FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
+VARIABLES_DICT = r"variables.dict"
+#TEST_DIR = r"C:\\Users\\tayzh\\Documents\\SIT\\Year 1 Sem 2\\ICT2207 Mobile Security\\Project\\Coursework2 (Working Dir)\\Java_Test_Files\\"
 
 
-# Takes in a JAVA file as parameter, returns a dictionary that has line number as key and line as value.
+# Takes in a java file as parameter, returns a dictionary that has line number as key and line as value.
 # Each line is separate by \r\n
 def readfile(filepath):
     f = open(filepath, "r")
@@ -52,6 +52,7 @@ def change_key(line_dict):
 
 # takes in a dictionary of lines and remove empty lines (i.e., new lines)
 def remove_empty_lines(line_dict):
+
     for line_number, line in list(line_dict.items()):
         # remove spaces if there are two or more spaces
         line_dict[line_number] = re.sub(' +', ' ', line)
@@ -68,6 +69,7 @@ def remove_empty_lines(line_dict):
 
 # takes in a dictionary of lines and remove comments
 def remove_comments(line_dict):
+
     for line_number, line in list(line_dict.items()):
 
         #  remove multi-line comments
@@ -85,7 +87,7 @@ def remove_comments(line_dict):
 
         #  remove single-line comments
         if "//" in line:
-            line = line.split("//")[0]  # remove JAVA comments
+            line = line.split("//")[0]  # remove java comments
             if line.strip() == "":  # after removing comments, if line is empty string, it is a bad line
                 del line_dict[line_number]
 
@@ -123,7 +125,7 @@ def remove_spaces(line_dict):
 def identify_java_methods(
         each_class):  # returns a list containing each functions i.e., [[function_1], [function_2], [function_3]]
     i = 1
-    methods = []  # a list storing a list of each JAVA functions
+    methods = []  # a list storing a list of each java functions
     temp = []
     class_name = each_class[0]
     class_declarations = []
@@ -179,7 +181,7 @@ def identify_java_methods(
     return methods, class_name, class_declarations
 
 
-# takes in a JAVA source code and dissect it into the Java Structure. We are following the standard JAVA structure for each file
+# takes in a java source code and dissect it into the Java Structure. We are following the standard java structure for each file
 # 1) Package Statement
 # 2) Import Statement
 # 3) Interface Statement
@@ -238,6 +240,7 @@ def write_to_file(line_dict, output_file_dir, output_file):
     for line_number, line in line_dict.items():
         write_f.write(line)
 
+    write_f.close()
 
 # populate a global dictionary with pre-obfuscated variable name and obfuscated string
 def generate_obfuscated_variables(method):
@@ -544,11 +547,19 @@ def overload_method(methods):
                         if new_method[i] == "static":
                             new_method[i + 1] = "String"
                         temp += new_method[i] + " "
+                    if "{" in each_method[line_number + 1]:
+                        temp += "{" + " "
+                    print([temp])
                     new_method = [temp]
                     METHOD_ADDED = True
 
             line_number += 1
+        global TIME
+        start = timer()
+
         new_methods = insert_opaque_predicates(new_method)
+        end = timer()
+        TIME += end - start
         for method in new_methods:
             methods.insert(index, method)
     return methods
@@ -595,21 +606,20 @@ def insert_opaque_predicates(method):
     return list_of_injected_methods
 
 def obfuscate(directory_path):
-    # loop through each JAVA file, obfuscate it and return a obfuscated JAVA file
+    # loop through each java file, obfuscate it and return a obfuscated java file
     list_of_clean_java_files = []
+    list_of_obfuscated_java_files = []
 
     print("111")
     for filename in os.listdir(directory_path):
         list_of_clean_java_files.append(directory_path + "\\" + filename)
     obfuscate_smali_files.backup_files(list_of_clean_java_files)
 
-    print("2222222==-==-=-")
-
     for abs_filename in os.listdir(directory_path):
         if "obfuscated" not in abs_filename:
             line_dict = readfile(directory_path + "\\" + abs_filename)
 
-            #  dissecting JAVA files into smaller functions for easier obfuscation
+            #  dissecting java files into smaller functions for easier obfuscation
             # java_classes = identify_java_classes(line_dict)
 
             # DATA OBFUSCATION -------------------
@@ -623,11 +633,17 @@ def obfuscate(directory_path):
             obfuscated_classes = []
             for each_class in class_definitions:
                 java_methods, class_name, class_declarations = identify_java_methods(each_class)  # returns a list of methods in each class
+
+
                 for each_method in java_methods:
                     generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
+
                 java_methods = rename_method(java_methods, class_name)
                 java_methods = rename_variables(java_methods)
+
+
                 java_methods = obfuscate_numeric(java_methods)
+
                 java_methods = overload_method(java_methods)
 
                 class_declarations.insert(0, class_name)
@@ -646,11 +662,13 @@ def obfuscate(directory_path):
             filename = abs_filename.split("\\")[-1]
             #output_filename = "obfuscated_" + filename
             output_filename = filename
-
-            write_to_file(line_dict, directory_path, output_filename)
+            new_directory_path = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2-oopskater\oopskater\diffviewer\new"
+            write_to_file(line_dict, new_directory_path, output_filename)
+            #list_of_obfuscated_java_files.append(directory_path + "\\" + output_filename)
             #  write_to_file(code)
-
-    obfuscate_smali_files.generate_new_files(list_of_clean_java_files)
+    print("Average time taken to add opaque predicates")
+    print("to injected methods in all supplied files: {}".format(TIME/7))
+    #obfuscate_smali_files.generate_new_files(list_of_obfuscated_java_files)
 
 
 # write all relevant lines into a dictionary for further writing to a file.
