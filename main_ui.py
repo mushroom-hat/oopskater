@@ -305,9 +305,9 @@ class Ui_MainWindow(object):
             dict['reflection'] = False
 
         if self.radioButton_renaming.isChecked():
-            dict['renaming'] = True
+            dict['renaming_field'] = True
         else:
-            dict['renaming'] = False
+            dict['renaming_field'] = False
 
         if self.radioButton_str_enc.isChecked():
             dict['encrypt'] = True
@@ -330,16 +330,18 @@ class Ui_MainWindow(object):
             dict['numeric'] = False
 
         if self.radioButton_java_overloading.isChecked():
-            dict['overloading'] = True
+            dict['overloading_method'] = True
         else:
-            dict['overloading'] = False
+            dict['overloading_method'] = False
 
         print(dict)
-
-        self.worker = WorkerThreadProcessing(self.importedItem, "keystore_path", dict)
-        self.worker.start()
-        self.worker.finished.connect(self.evt_worker_finished)
-        self.worker.upgrade_progress.connect(self.evt_upgrade_progress)
+        if True in dict.values():
+            self.worker = WorkerThreadProcessing(self.importedItem, "keystore_path", dict)
+            self.worker.start()
+            self.worker.finished.connect(self.evt_worker_finished)
+            self.worker.upgrade_progress.connect(self.evt_upgrade_progress)
+        else:
+            self.input_progression.setText("Please select an algorithm.")
 
 
     def disable_UI_checkbox(self, objectType):
