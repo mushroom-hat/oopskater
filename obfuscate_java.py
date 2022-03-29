@@ -633,19 +633,15 @@ def obfuscate(directory_path):
             obfuscated_classes = []
             for each_class in class_definitions:
                 java_methods, class_name, class_declarations = identify_java_methods(each_class)  # returns a list of methods in each class
-
-
                 for each_method in java_methods:
                     generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
 
                 java_methods = rename_method(java_methods, class_name)
                 java_methods = rename_variables(java_methods)
 
-
                 java_methods = obfuscate_numeric(java_methods)
 
                 java_methods = overload_method(java_methods)
-
                 class_declarations.insert(0, class_name)
                 for i in range(len(class_declarations)):
                     # after obfuscating methods, add back the class name
@@ -662,7 +658,7 @@ def obfuscate(directory_path):
             filename = abs_filename.split("\\")[-1]
             #output_filename = "obfuscated_" + filename
             output_filename = filename
-            new_directory_path = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2-oopskater\oopskater\diffviewer\new"
+            new_directory_path = r"diffviewer\\new\\"
             write_to_file(line_dict, new_directory_path, output_filename)
             #list_of_obfuscated_java_files.append(directory_path + "\\" + output_filename)
             #  write_to_file(code)
