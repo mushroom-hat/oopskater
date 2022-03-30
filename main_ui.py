@@ -18,12 +18,12 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         global MAIN_WINDOW
         MAIN_WINDOW = MainWindow
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setObjectName("Android Obfuscator")
         MainWindow.resize(931, 750)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.mainPanelImage = QtWidgets.QLabel(self.centralwidget)
-        self.mainPanelImage.setGeometry(QtCore.QRect(0, 0, 931, 321))
+        self.mainPanelImage.setGeometry(QtCore.QRect(0, 0, 931, 330))
         self.mainPanelImage.setText("")
         self.mainPanelImage.setPixmap(QtGui.QPixmap("resources/UI/Mainpanel.png"))
         self.mainPanelImage.setScaledContents(True)
@@ -198,6 +198,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -222,8 +223,6 @@ class Ui_MainWindow(object):
         self.radioButton_java_prodcdure.setText(_translate("MainWindow", "JAVA Obfuscate Numeric Value"))
         self.buttonObfuscation.setText(_translate("MainWindow", "Obfuscate "))
         self.input_progression.setText(_translate("MainWindow", "Please click the button below."))
-
-
 
 
     def checkDirectoryOrFile(self):
@@ -270,14 +269,6 @@ class Ui_MainWindow(object):
             self.buttonObfuscation.show()
             self.input_progression.show()
             MAIN_WINDOW.resize(933, 875)
-
-
-
-
-        # self.worker = WorkerThreadProcessing(importedItem)
-        # self.worker.start()
-        # self.worker.finished.connect(self.evt_worker_finished)
-        # self.worker.upgrade_progress.connect(self.evt_upgrade_progress)
 
 
     def importKeyStore(self):
