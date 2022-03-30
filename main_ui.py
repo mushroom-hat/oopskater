@@ -286,7 +286,7 @@ class Ui_MainWindow(object):
             self.disable_UI_checkbox(self.object_type)
             self.buttonObfuscation.show()
             self.input_progression.show()
-            MAIN_WINDOW.resize(933, 875)
+            MAIN_WINDOW.resize(933, 900)
 
 
     def importKeyStore(self):
