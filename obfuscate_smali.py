@@ -50,27 +50,31 @@ def threader(my_queue):
         file = my_queue.get()
 
         time_obj = time.time()
-        status_strEnc = obfuscate_smali_stringenc.encrypt(file, ENC_SECRET)
-        if status_strEnc and SELECTED_ALGORITHM['encrypt'] == True:
-            STRING_ENCRYPTION_COUNT += 1
+        if SELECTED_ALGORITHM['encrypt'] == True:
+            status_strEnc = obfuscate_smali_stringenc.encrypt(file, ENC_SECRET)
+            if status_strEnc:
+                STRING_ENCRYPTION_COUNT += 1
         STR_ENCRYPT_TIME_LIST.append(time.time() - time_obj)
 
         time_obj = time.time()
-        status_debug = obfuscate_smali_debug_removal.add_debug_algorithm(file)
-        if status_debug and  SELECTED_ALGORITHM['goto'] == True:
-            DEBUG_REPLACEMENT_COUNT += 1
+        if SELECTED_ALGORITHM['debug'] == True:
+            status_debug = obfuscate_smali_debug_removal.add_debug_algorithm(file)
+            if status_debug:
+                DEBUG_REPLACEMENT_COUNT += 1
         DEBUG_TIME_LIST.append(time.time() - time_obj)
 
         time_obj = time.time()
-        status_nop = obfuscate_smali_nop.add_nop_algorithm(file)
-        if status_nop and SELECTED_ALGORITHM['nop'] == True:
-            NOP_REPLACEMENT_COUNT += 1
+        if SELECTED_ALGORITHM['nop'] == True:
+            status_nop = obfuscate_smali_nop.add_nop_algorithm(file)
+            if status_nop:
+                NOP_REPLACEMENT_COUNT += 1
         NOP_TIME_LIST.append(time.time() - time_obj)
 
         time_obj = time.time()
-        status_goto = obfuscate_smali_goto.add_goto_algorithm(file)
-        if status_goto and SELECTED_ALGORITHM['goto'] == True:
-            GOTO_COUNT += 1
+        if SELECTED_ALGORITHM['goto'] == True:
+            status_goto = obfuscate_smali_goto.add_goto_algorithm(file)
+            if status_goto:
+                GOTO_COUNT += 1
         GOTO_TIME_LIST.append(time.time() - time_obj)
 
 
@@ -78,16 +82,17 @@ def threader(my_queue):
 
 
 def change_all_file(smali_file_list, file_list_size, application_name, ui_thread, selected_algorithm):
-    global APPLICATION_NAME, ANDROID_MANIFEST_FILE, SELECTED_ALGORITHM
+    global APPLICATION_NAME, SELECTED_ALGORITHM
     global RENAME_COUNT, NOP_REPLACEMENT_COUNT, DEBUG_REPLACEMENT_COUNT, OVERLOADING_REPLACEMENT_COUNT, \
         STRING_ENCRYPTION_COUNT, GOTO_COUNT
     global NOP_TIME_LIST, DEBUG_TIME_LIST, STR_ENCRYPT_TIME_LIST, GOTO_TIME_LIST, RENAME_TIME, \
         REFLECTION_TIME, OVERLOADING_TIME
 
-    ANDROID_MANIFEST_FILE = "\\" + application_name + "\\" + ANDROID_MANIFEST_FILE
     APPLICATION_NAME = application_name
     SELECTED_ALGORITHM = selected_algorithm
     print("Application Name:", APPLICATION_NAME)
+
+
 
 
 
@@ -160,6 +165,17 @@ def print_statistics():
         STRING_ENCRYPTION_COUNT, GOTO_COUNT
     global NOP_TIME_LIST, STR_ENCRYPT_TIME_LIST, DEBUG_TIME_LIST, GOTO_TIME_LIST, RENAME_TIME, \
         OVERLOADING_TIME, REFLECTION_TIME
+
+    global SELECTED_ALGORITHM
+
+    print("\n============ Obfuscation Algorithm Selected =======================")
+    counting = 1
+    for key, value in SELECTED_ALGORITHM.items():
+        if value == True:
+            print(str(counting) + ": " + str(key))
+            counting += 1
+
+
 
     print("\n============ Obfuscation Statistics =======================")
     print("Total Number of line fields renamed: " + str(RENAME_COUNT))

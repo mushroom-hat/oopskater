@@ -9,6 +9,10 @@ import main
 import diffviewer.mainwindow as diffviewer
 
 MAIN_WINDOW = None
+KEYSTORE = None
+APK_NAME = None
+OBJECT_TYPE = None
+
 class Ui_MainWindow(object):
     # self.importFileButton.clicked.connect(self.importFile)
     def setupUi(self, MainWindow):
@@ -65,6 +69,9 @@ class Ui_MainWindow(object):
                                                  "font: 75 8pt \"Arial\" bold;\n"
                                                  "")
         self.importKeyStore_button.setObjectName("importKeyStore_button")
+        self.importKeyStore_button.clicked.connect(self.importKeyStore)
+        self.importKeyStore_button.setEnabled(False)
+
         self.keystore_label = QtWidgets.QLabel(self.centralwidget)
         self.keystore_label.setGeometry(QtCore.QRect(10, 669, 441, 21))
         font = QtGui.QFont()
@@ -198,8 +205,8 @@ class Ui_MainWindow(object):
         self.importFileButton.setText(_translate("MainWindow", "Add File / Directory"))
         self.input_apk.setText(_translate("MainWindow", "Not File / Directory Selected."))
         self.input_keystore.setText(
-            _translate("MainWindow", "If no keystore is loaded, we will load the default key store."))
-        self.importKeyStore_button.setText(_translate("MainWindow", "Add Key Store"))
+            _translate("MainWindow", "Disabled. Only allowed when u select an apk. "))
+        self.importKeyStore_button.setText(_translate("MainWindow", "Disabled."))
         self.keystore_label.setText(_translate("MainWindow", "Key Store"))
         self.apk_Label.setText(_translate("MainWindow", "APK / Directory"))
         self.algorithm_label.setText(_translate("MainWindow", "Algorithm Selected"))
@@ -273,7 +280,24 @@ class Ui_MainWindow(object):
         # self.worker.finished.connect(self.evt_worker_finished)
         # self.worker.upgrade_progress.connect(self.evt_upgrade_progress)
 
+
+    def importKeyStore(self):
+        global KEYSTORE
+        self.op_dir = QFileDialog.getOpenFileName(None, "Open a file", "",
+                                                  "All Files (*.*)'")
+        if self.op_dir != ('', ''):
+            importedKeyStore = self.op_dir[0].replace("/", r"\\")
+
+            if (importedKeyStore.split('\\')[-1]).split('.')[-1] != 'keystore':
+                print("Imported Key Store:", importedKeyStore)
+                self.input_keystore.setText("Imported wrong file format. Please check if the file you importing")
+            else:
+                self.input_keystore.setText(self.op_dir[0])
+                KEYSTORE = self.op_dir[0]
+
+
     def obfuscate(self):
+        global KEYSTORE
         dict = {}
         if self.radioButton_nop.isChecked():
             dict['nop'] = True
@@ -326,13 +350,16 @@ class Ui_MainWindow(object):
             dict['numeric'] = False
 
         if self.radioButton_java_overloading.isChecked():
-            dict['overloading_method'] = True
+            dict['overloading_method'] = Truec
         else:
             dict['overloading_method'] = False
 
         print("Selected Algorithm: ",dict)
         if True in dict.values():
-            self.worker = WorkerThreadProcessing(self.importedItem, "keystore_path", dict)
+            if KEYSTORE == None:
+                KEYSTORE = ""
+            print("Keystore path:", KEYSTORE)
+            self.worker = WorkerThreadProcessing(self.importedItem, KEYSTORE, dict)
             self.worker.start()
             self.worker.finished.connect(self.evt_worker_finished)
             self.worker.upgrade_progress.connect(self.evt_upgrade_progress)
@@ -391,24 +418,79 @@ class Ui_MainWindow(object):
 
     def check_imported_item(self, importedObj):
         """ This function check the imported file type. """
+        global APK_NAME, OBJECT_TYPE, KEYSTORE
         print("Checking Imported Item", importedObj)
         try:
             imported_list = importedObj.split('.')
         except:
             pass
         if importedObj == 'None' or importedObj is None or len(imported_list) == 0:
+            OBJECT_TYPE = None
             return None
         if len(imported_list) < 2 and importedObj is not None and importedObj != "None":
+            self.importKeyStore_button.setEnabled(False)
+            self.input_keystore.setText("Disabled. Only allowed when u select an apk. ")
+            KEYSTORE = None
+            APK_NAME = None
+            OBJECT_TYPE = "DIR"
             return "DIR"
         if len(imported_list) > 1 and imported_list[-1] == 'apk':
+            OBJECT_TYPE = "APK"
+            APK_NAME = imported_list[0].split('\\\\')[-1]
+            self.importKeyStore_button.setEnabled(True)
+            self.importKeyStore_button.setText("Import Keystore")
+            self.input_keystore.setText("If no keystore detect, default keystore will be loaded. ")
             return "APK"
         elif len(imported_list) > 1 and imported_list[-1] == 'java':
+            self.importKeyStore_button.setEnabled(False)
+            self.input_keystore.setText("Disabled. Only allowed when u select an apk. ")
+            KEYSTORE = None
+            APK_NAME = None
+            OBJECT_TYPE = "JAVA"
             return "JAVA"
         else:
             return None
 
     def evt_worker_finished(self):
-        self.input_progression.setText("Completed.")
+        global KEYSTORE, APK_NAME, OBJECT_TYPE
+        self.input_progression.setText("Signing APK.")
+        print("\n===== SIGNING APK w key =====")
+        if len(KEYSTORE) == 0 and OBJECT_TYPE == 'APK':
+            print("Signing with default key store.")
+            KEYSTORE = 'resources/APK/signing.keystore'
+            try:
+                os.system(
+                "build-tools\\32.0.0\\apksigner.bat sign --ks " + KEYSTORE + " --ks-pass pass:123123 " + APK_NAME + "\\dist\\" + APK_NAME + ".apk")
+                self.input_progression.setText("Success.")
+                print("Signed.")
+            except:
+                self.input_progression.setText("Obfuscated. But fail to sign.")
+                print("Fail to sign.")
+
+        elif OBJECT_TYPE == 'APK' and KEYSTORE != 'resources/APK/signing.keystore' and KEYSTORE != None:
+            password, ok = QtWidgets.QInputDialog.getText(
+                None, 'KeyStore', 'Password')
+
+            # text, ok = QInputDialog.getText(None, "Attention", "Password?",
+            #                                 QLineEdit.Password)
+            if ok:
+                # KEYSTORE_PATH = r'//'.join(KEYSTORE_PATH.split('/'))
+                try:
+                    command_line = 'build-tools\\32.0.0\\apksigner.bat sign --ks "' + KEYSTORE + '" --ks-pass pass:'+ str(password) + ' ' + APK_NAME + '\\dist\\' + APK_NAME + '.apk'
+                    print(command_line)
+                    os.system(command_line)
+                    self.input_progression.setText("Success.")
+                    print("Signed.")
+                except:
+                    self.input_progression.setText("Wrong Key Store Password")
+                    self.evt_worker_finished()
+            else:
+                self.input_progression.setText("Obfuscated. But fail to sign.")
+                print("Fail to sign.")
+        else:
+            self.input_progression.setText("Success.")
+
+
         windows_diff = diffviewer.MainWindow()
         windows_diff.start(os.getcwd() + '\\diffviewer\\bak', os.getcwd() + '\\diffviewer\\new')
 

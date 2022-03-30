@@ -1,3 +1,4 @@
+
 # ICT2207 Obfuscator Project
 
 import os
@@ -55,14 +56,6 @@ def recompile():
             print("===== COMPILING BACK TO APK =====")
             os.system("JAVA -jar resources/APK/apktool.jar b \"{}\" --use-aapt2".format(TARGET_FOLDER_PATH))
             print("APK successfully recompiled to {}\\dist\\".format(TARGET_FOLDER_PATH))
-            # print("===== GENERATING APK KEY =====")
-            # os.system("keytool -genkey -v -keystore igning.keystore -keyalg RSA -keysize 2048 -validity 10000")
-            print("\n===== SIGNING APK w key =====")
-            os.system("build-tools\\32.0.0\\apksigner.bat sign --ks resources/APK/signing.keystore --ks-pass pass:123123 " + APPLICATION_NAME  + "\\dist\\" + APPLICATION_NAME + ".apk")
-            print("Signed :)")
-
-
-
         except Exception as e:
             print(e)
     else:
@@ -113,9 +106,9 @@ def obfuscate_smali_file(dir):
     android_internal_files = ['\\androidx', '\\android','\\kotlin', '\\google', '\\org', '\\us\\', '\\de\\', '\\sqldelight\\'
                               ,'\\markdown\\', '\\unity3d\\', '\\sdk\\']
     print("Looping Folder Directory to look for smali files.....")
+    list_of_cleaned_smali_files = []
     try:
         list_of_smali_files = find_smali_files(dir)
-        list_of_cleaned_smali_files = []
         for file_path in list_of_smali_files:
             filtered_file_path = clean_smali_files_path(file_path)
             if all(x not in filtered_file_path for x in android_internal_files) and APPLICATION_NAME in filtered_file_path:
@@ -123,10 +116,17 @@ def obfuscate_smali_file(dir):
     except:
         print("Something went wrong finding smali files.")
 
-    obfuscate_smali_files.backup_files(list_of_cleaned_smali_files)
-    obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME,
-                                    UI_THREAD, SELECTED_ALGORITHM)
-    obfuscate_smali_files.generate_new_files(list_of_cleaned_smali_files)
+    try:
+        print(list_of_cleaned_smali_files)
+        obfuscate_smali_files.backup_files(list_of_cleaned_smali_files)
+        obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME,
+                                        UI_THREAD, SELECTED_ALGORITHM)
+        obfuscate_smali_files.generate_new_files(list_of_cleaned_smali_files)
+        return 1
+    except:
+        print("Something went wrong obfuscating.")
+        UI_THREAD.emit("Something went wrong obfuscating.")
+        return 0
 
 
 def clean_smali_files_path(file_path):
@@ -142,7 +142,6 @@ def process_importedFile(importedFile, ui_thread, selected_algorithm, keystore_p
     KEYSTORE_PATH = keystore_path
     UI_THREAD = ui_thread
     TARGET_FOLDER_PATH = importedFile
-
 
     # if apk is supplied, decompile the apk into current directory
     if importedFile.endswith('.apk'):
@@ -161,11 +160,10 @@ def process_importedFile(importedFile, ui_thread, selected_algorithm, keystore_p
         if java_files:
             obfuscate_java.obfuscate(TARGET_FOLDER_PATH)
         elif smali_files:
-            obfuscate_smali_file(TARGET_FOLDER_PATH)
+            if obfuscate_smali_file(TARGET_FOLDER_PATH):
 
-        # lastly, recompile it back to APK
-        recompile()
+                # lastly, recompile it back to APK
+                recompile()
         return 1
-
 
 

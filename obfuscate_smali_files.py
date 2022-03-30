@@ -5,6 +5,7 @@ import glob
 
 def backup_files(list_of_files):
     backup_path = os.getcwd() + '\\diffviewer\\bak\\'
+
     files = glob.glob(backup_path + '/*')
     for f in files:
         try:
