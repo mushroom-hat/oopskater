@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import QFileDialog, QMessageBox
 import sys
 import main
 import diffviewer.mainwindow as diffviewer
+import subprocess
 
 MAIN_WINDOW = None
 KEYSTORE = ""
@@ -455,10 +456,12 @@ class Ui_MainWindow(object):
         else:
             return None
 
-    def evt_worker_finished(self):
+    def evt_worker_finished(self, text_qns = "Password"):
         global KEYSTORE, APK_NAME, OBJECT_TYPE
+        success = False
         self.input_progression.setText("Signing APK.")
         if OBJECT_TYPE == "DIR":
+            success = True
             self.input_progression.setText("Success.")
 
         else:
@@ -477,28 +480,26 @@ class Ui_MainWindow(object):
 
             elif OBJECT_TYPE == 'APK' and KEYSTORE != 'resources/APK/signing.keystore':
                 password, ok = QtWidgets.QInputDialog.getText(
-                    None, 'KeyStore', 'Password')
+                    None, 'KeyStore', text_qns)
 
-                # text, ok = QInputDialog.getText(None, "Attention", "Password?",
-                #                                 QLineEdit.Password)
                 if ok:
-                    # KEYSTORE_PATH = r'//'.join(KEYSTORE_PATH.split('/'))
-                    try:
-                        command_line = 'build-tools\\32.0.0\\apksigner.bat sign --ks "' + KEYSTORE + '" --ks-pass pass:'+ str(password) + ' ' + APK_NAME + '\\dist\\' + APK_NAME + '.apk'
+                    command_line = 'build-tools\\32.0.0\\apksigner.bat sign --ks "' + KEYSTORE + '" --ks-pass pass:'+ str(password) + ' ' + APK_NAME + '\\dist\\' + APK_NAME + '.apk'
 
-                        if os.system(command_line) != 0:
-                            raise Exception('wrongcommand does not exist')
+                    if os.system(command_line) != 0:
+                        self.input_progression.setText("Wrong Key Store Password")
+                        self.evt_worker_finished("Wrong Password. Try Again")
+                    else:
+                        success = True
                         self.input_progression.setText("Success.")
                         print("Signed.")
-                    except:
-                        self.input_progression.setText("Wrong Key Store Password")
-                        self.evt_worker_finished()
+
                 else:
                     self.input_progression.setText("Obfuscated. But fail to sign.")
                     print("Fail to sign.")
 
-        windows_diff = diffviewer.MainWindow()
-        windows_diff.start(os.getcwd() + '\\diffviewer\\bak', os.getcwd() + '\\diffviewer\\new')
+        if success:
+            windows_diff = diffviewer.MainWindow()
+            windows_diff.start(os.getcwd() + '\\diffviewer\\bak', os.getcwd() + '\\diffviewer\\new')
 
 
 
