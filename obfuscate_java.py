@@ -235,7 +235,6 @@ def dissect_code(line_dict):
 
 def write_to_file(line_dict, output_file_dir, output_file):
     obfus_code = []
-    print("writing to {}".format(output_file_dir + "\\" + output_file))
     write_f = open(output_file_dir + "\\" + output_file, "w")
     for line_number, line in line_dict.items():
         write_f.write(line)
@@ -386,7 +385,7 @@ def rename_variables(methods):
                         line = re.sub(pattern, " " + obfuscated_string + " ", line)
                         each_method[line_counter] = line
 
-                    pattern = '[^a-zA-Z0-9]' + variable_name + '[^a-zA-Z0-9 ]'
+                    pattern = '[^a-zA-Z0-9]' + variable_name + '[^a-zA-Z0-9. ]'
                     match2 = re.search(pattern, line)
 
                     if match2:
@@ -549,7 +548,6 @@ def overload_method(methods):
                         temp += new_method[i] + " "
                     if "{" in each_method[line_number + 1]:
                         temp += "{" + " "
-                    print([temp])
                     new_method = [temp]
                     METHOD_ADDED = True
 
@@ -577,6 +575,8 @@ def insert_opaque_predicates(method):
     variable_types = ["String", "byte", "byte[]", "int", "float", "char", "boolean", "File"]
     match = re.search(r'[ ][a-zA-Z0-9_]+\((.*?)\)[ $]', method[0])
     variable = ""
+    method1 = get_random_string()
+    method2 = get_random_string()
     if match:
         variable = match.group()
         temp = ""
@@ -592,25 +592,27 @@ def insert_opaque_predicates(method):
             variable = temp.split(",")[0]
             variable = variable.split()[1]
 
-        predicate = "int genRanAway = 5;if (genRan(5) == cir(5)) { genRanAway = 1; } return String.valueOf(genRanAway) + String.valueOf(" + variable + "); }\n"
+        predicate = "int genRanAway = 5;if (" + method1 + "(5) == " + method2 + "(5)) { genRanAway = 1; } return String.valueOf(genRanAway) + String.valueOf(" + variable + "); }\n"
     else:
-        predicate = "int genRanAway = 5;if (genRan(5) == cir(5)) { genRanAway = 1; } return String.valueOf(genRanAway); }\n"
+        predicate = "int genRanAway = 5;if (" + method1 + "(5) == " + method2 + "(5)) { genRanAway = 1; } return String.valueOf(genRanAway); }\n"
 
-    method_1 = ["public static double genRan(int cnt) {int m = (int)Math.pow(10, cnt - 1);return cir(m);}\n"]
-    method_2 = ["public static double cir(double m) {m = m * 3.142; return m;}\n"]
+    method_1 = ["public static double " + method1 + "(int cnt) {int m = (int)Math.pow(10, cnt - 1);return " + method2 + "(m);}\n"]
+    method_2 = ["public static double " + method2 + "(double m) {m = m * 3.142; return m;}\n"]
     method.append(predicate)
     list_of_injected_methods.append(method_1)
     list_of_injected_methods.append(method_2)
     list_of_injected_methods.append(method)
 
+    LIST_OF_SET_STRING.append(method1)
+    LIST_OF_SET_STRING.append(method2)
     return list_of_injected_methods
 
-def obfuscate(directory_path):
+def obfuscate(directory_path, selected_algorithms):
     # loop through each java file, obfuscate it and return a obfuscated java file
     list_of_clean_java_files = []
     list_of_obfuscated_java_files = []
 
-    print("111")
+
     for filename in os.listdir(directory_path):
         list_of_clean_java_files.append(directory_path + "\\" + filename)
     obfuscate_smali_files.backup_files(list_of_clean_java_files)
@@ -635,13 +637,15 @@ def obfuscate(directory_path):
                 java_methods, class_name, class_declarations = identify_java_methods(each_class)  # returns a list of methods in each class
                 for each_method in java_methods:
                     generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
+                if selected_algorithms['renaming']:
+                    java_methods = rename_method(java_methods, class_name)
+                    java_methods = rename_variables(java_methods)
 
-                java_methods = rename_method(java_methods, class_name)
-                java_methods = rename_variables(java_methods)
+                if selected_algorithms['numeric']:
+                    java_methods = obfuscate_numeric(java_methods)
 
-                java_methods = obfuscate_numeric(java_methods)
-
-                java_methods = overload_method(java_methods)
+                if selected_algorithms['overloading_method']:
+                    java_methods = overload_method(java_methods)
                 class_declarations.insert(0, class_name)
                 for i in range(len(class_declarations)):
                     # after obfuscating methods, add back the class name
@@ -653,6 +657,9 @@ def obfuscate(directory_path):
             # CONTROL FLOW OBFUSCATION ------------
             # repackage into an apk
             line_dict = repackage(package_statement, set(import_statements), interface_statements, obfuscated_classes)
+
+
+            #if selected_algorithms['rm_empty_space'] == True:
             # line_dict = remove_spaces(line_dict)
 
             filename = abs_filename.split("\\")[-1]
