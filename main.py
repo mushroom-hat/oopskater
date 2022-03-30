@@ -24,7 +24,6 @@ TARGET_FOLDER_PATH = ""
 APPLICATION_NAME = ""
 DECODED_APK_PATH = ""
 SELECTED_ALGORITHM = ""
-KEYSTORE_PATH = ""
 UI_THREAD = None
 
 
@@ -136,10 +135,9 @@ def clean_smali_files_path(file_path):
     return "\\".join(list(filter(lambda x: x != "", obj)))
 
 
-def process_importedFile(importedFile, ui_thread, selected_algorithm, keystore_path):
-    global TARGET_FOLDER_PATH, UI_THREAD, SELECTED_ALGORITHM, KEYSTORE_PATH
+def process_importedFile(importedFile, ui_thread, selected_algorithm):
+    global TARGET_FOLDER_PATH, UI_THREAD, SELECTED_ALGORITHM
     SELECTED_ALGORITHM = selected_algorithm
-    KEYSTORE_PATH = keystore_path
     UI_THREAD = ui_thread
     TARGET_FOLDER_PATH = importedFile
 
@@ -161,7 +159,6 @@ def process_importedFile(importedFile, ui_thread, selected_algorithm, keystore_p
             obfuscate_java.obfuscate(TARGET_FOLDER_PATH)
         elif smali_files:
             if obfuscate_smali_file(TARGET_FOLDER_PATH):
-
                 # lastly, recompile it back to APK
                 recompile()
         return 1

@@ -305,7 +305,6 @@ class Ui_MainWindow(object):
 
 
     def obfuscate(self):
-        global KEYSTORE
         dict = {}
         if self.radioButton_nop.isChecked():
             dict['nop'] = True
@@ -364,10 +363,7 @@ class Ui_MainWindow(object):
 
         print("Selected Algorithm: ",dict)
         if True in dict.values():
-            if KEYSTORE == None:
-                KEYSTORE = ""
-            print("Keystore path:", KEYSTORE)
-            self.worker = WorkerThreadProcessing(self.importedItem, KEYSTORE, dict)
+            self.worker = WorkerThreadProcessing(self.importedItem, dict)
             self.worker.start()
             self.worker.finished.connect(self.evt_worker_finished)
             self.worker.upgrade_progress.connect(self.evt_upgrade_progress)
@@ -511,16 +507,15 @@ class Ui_MainWindow(object):
 class WorkerThreadProcessing(QThread):
     upgrade_progress = pyqtSignal(str)
 
-    def __init__(self, importFile, keystore_path, algorithm_selected_dict):
+    def __init__(self, importFile, algorithm_selected_dict):
         super().__init__()
         self.importItem = importFile
-        self.keystore_path = keystore_path
         self.algorithm_selected_dict = algorithm_selected_dict
 
     def run(self):
         self.upgrade_progress.emit("Processing ... ")
         self.result = main.process_importedFile(self.importItem, self.upgrade_progress,
-                                                self.algorithm_selected_dict, self.keystore_path)
+                                                self.algorithm_selected_dict)
         if self.result == 1:
             self.upgrade_progress.emit("Success :)")
         else:
