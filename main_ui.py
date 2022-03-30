@@ -9,9 +9,9 @@ import main
 import diffviewer.mainwindow as diffviewer
 
 MAIN_WINDOW = None
-KEYSTORE = None
-APK_NAME = None
-OBJECT_TYPE = None
+KEYSTORE = ""
+APK_NAME = ""
+OBJECT_TYPE = ""
 
 class Ui_MainWindow(object):
     # self.importFileButton.clicked.connect(self.importFile)
@@ -485,8 +485,9 @@ class Ui_MainWindow(object):
                     # KEYSTORE_PATH = r'//'.join(KEYSTORE_PATH.split('/'))
                     try:
                         command_line = 'build-tools\\32.0.0\\apksigner.bat sign --ks "' + KEYSTORE + '" --ks-pass pass:'+ str(password) + ' ' + APK_NAME + '\\dist\\' + APK_NAME + '.apk'
-                        print(command_line)
-                        os.system(command_line)
+
+                        if os.system(command_line) != 0:
+                            raise Exception('wrongcommand does not exist')
                         self.input_progression.setText("Success.")
                         print("Signed.")
                     except:
