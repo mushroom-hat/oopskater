@@ -357,7 +357,7 @@ class Ui_MainWindow(object):
             dict['numeric'] = False
 
         if self.radioButton_java_overloading.isChecked():
-            dict['overloading_method'] = Truec
+            dict['overloading_method'] = True
         else:
             dict['overloading_method'] = False
 
@@ -458,42 +458,43 @@ class Ui_MainWindow(object):
     def evt_worker_finished(self):
         global KEYSTORE, APK_NAME, OBJECT_TYPE
         self.input_progression.setText("Signing APK.")
-        print("\n===== SIGNING APK w key =====")
-        if len(KEYSTORE) == 0 and OBJECT_TYPE == 'APK':
-            print("Signing with default key store.")
-            KEYSTORE = 'resources/APK/signing.keystore'
-            try:
-                os.system(
-                "build-tools\\32.0.0\\apksigner.bat sign --ks " + KEYSTORE + " --ks-pass pass:123123 " + APK_NAME + "\\dist\\" + APK_NAME + ".apk")
-                self.input_progression.setText("Success.")
-                print("Signed.")
-            except:
-                self.input_progression.setText("Obfuscated. But fail to sign.")
-                print("Fail to sign.")
+        if OBJECT_TYPE == "DIR":
+            self.input_progression.setText("Success.")
 
-        elif OBJECT_TYPE == 'APK' and KEYSTORE != 'resources/APK/signing.keystore' and KEYSTORE != None:
-            password, ok = QtWidgets.QInputDialog.getText(
-                None, 'KeyStore', 'Password')
-
-            # text, ok = QInputDialog.getText(None, "Attention", "Password?",
-            #                                 QLineEdit.Password)
-            if ok:
-                # KEYSTORE_PATH = r'//'.join(KEYSTORE_PATH.split('/'))
+        else:
+            print("\n===== SIGNING APK w key =====")
+            if len(KEYSTORE) == 0 and OBJECT_TYPE == 'APK':
+                print("Signing with default key store.")
+                KEYSTORE = 'resources/APK/signing.keystore'
                 try:
-                    command_line = 'build-tools\\32.0.0\\apksigner.bat sign --ks "' + KEYSTORE + '" --ks-pass pass:'+ str(password) + ' ' + APK_NAME + '\\dist\\' + APK_NAME + '.apk'
-                    print(command_line)
-                    os.system(command_line)
+                    os.system(
+                    "build-tools\\32.0.0\\apksigner.bat sign --ks " + KEYSTORE + " --ks-pass pass:123123 " + APK_NAME + "\\dist\\" + APK_NAME + ".apk")
                     self.input_progression.setText("Success.")
                     print("Signed.")
                 except:
-                    self.input_progression.setText("Wrong Key Store Password")
-                    self.evt_worker_finished()
-            else:
-                self.input_progression.setText("Obfuscated. But fail to sign.")
-                print("Fail to sign.")
-        else:
-            self.input_progression.setText("Success.")
+                    self.input_progression.setText("Obfuscated. But fail to sign.")
+                    print("Fail to sign.")
 
+            elif OBJECT_TYPE == 'APK' and KEYSTORE != 'resources/APK/signing.keystore':
+                password, ok = QtWidgets.QInputDialog.getText(
+                    None, 'KeyStore', 'Password')
+
+                # text, ok = QInputDialog.getText(None, "Attention", "Password?",
+                #                                 QLineEdit.Password)
+                if ok:
+                    # KEYSTORE_PATH = r'//'.join(KEYSTORE_PATH.split('/'))
+                    try:
+                        command_line = 'build-tools\\32.0.0\\apksigner.bat sign --ks "' + KEYSTORE + '" --ks-pass pass:'+ str(password) + ' ' + APK_NAME + '\\dist\\' + APK_NAME + '.apk'
+                        print(command_line)
+                        os.system(command_line)
+                        self.input_progression.setText("Success.")
+                        print("Signed.")
+                    except:
+                        self.input_progression.setText("Wrong Key Store Password")
+                        self.evt_worker_finished()
+                else:
+                    self.input_progression.setText("Obfuscated. But fail to sign.")
+                    print("Fail to sign.")
 
         windows_diff = diffviewer.MainWindow()
         windows_diff.start(os.getcwd() + '\\diffviewer\\bak', os.getcwd() + '\\diffviewer\\new')
