@@ -1,4 +1,3 @@
-
 # ICT2207 Obfuscator Project
 
 import os
@@ -31,15 +30,16 @@ UI_THREAD = None
 def decompile_apk(filepath):
     global APPLICATION_NAME
     try:
-        print("Filepath :",filepath)
+        print("Filepath :", filepath)
         APPLICATION_NAME = (str(filepath.split("\\")[-1])).split(".")[0]
         print("\n===== DECOMPILING FROM APK =====")
         os.system("JAVA -jar resources/APK/apktool.jar d \"{}\"".format(filepath))
         decompiled_directory = filepath.split(".")[0]
         decompiled_directory = decompiled_directory.split('\\')
         decompiled_directory = '\\'.join([x for x in decompiled_directory if x != 'assets' and x != ''])
-        print("File Directory :",decompiled_directory)
+        print("File Directory :", decompiled_directory)
         print("APK successfully decompiled to {}".format(decompiled_directory))
+
         return decompiled_directory
     except Exception as e:
         print(e)
@@ -84,6 +84,7 @@ def enumerate_directories(folderpath):
 
     return list_of_java_files, list_of_kt_files, list_of_smali_files
 
+
 def find_smali_files(dir):
     global UI_THREAD
     UI_THREAD.emit("Finding Smali Files ... ")
@@ -102,21 +103,22 @@ def obfuscate_smali_file(dir):
     UI_THREAD.emit("Obfuscating Smali Files ... ")
     # # Getting all smali fies in the directory
     global APPLICATION_NAME
-    android_internal_files = ['\\androidx', '\\android','\\kotlin', '\\google', '\\org', '\\us\\', '\\de\\', '\\sqldelight\\'
-                              ,'\\markdown\\', '\\unity3d\\', '\\sdk\\']
+    android_internal_files = ['\\androidx', '\\android', '\\kotlin', '\\google', '\\org', '\\us\\', '\\de\\',
+                              '\\sqldelight\\'
+        , '\\markdown\\', '\\unity3d\\', '\\sdk\\']
     print("Looping Folder Directory to look for smali files.....")
     list_of_cleaned_smali_files = []
     try:
         list_of_smali_files = find_smali_files(dir)
         for file_path in list_of_smali_files:
             filtered_file_path = clean_smali_files_path(file_path)
-            if all(x not in filtered_file_path for x in android_internal_files) and APPLICATION_NAME in filtered_file_path:
+            if all(x not in filtered_file_path for x in
+                   android_internal_files) and APPLICATION_NAME in filtered_file_path:
                 list_of_cleaned_smali_files.append(filtered_file_path)
     except:
         print("Something went wrong finding smali files.")
 
     try:
-        print(list_of_cleaned_smali_files)
         obfuscate_smali_files.backup_files(list_of_cleaned_smali_files)
         obfuscate_smali.change_all_file(list_of_cleaned_smali_files, len(list_of_cleaned_smali_files), APPLICATION_NAME,
                                         UI_THREAD, SELECTED_ALGORITHM)
@@ -162,5 +164,3 @@ def process_importedFile(importedFile, ui_thread, selected_algorithm):
                 # lastly, recompile it back to APK
                 recompile()
         return 1
-
-

@@ -472,8 +472,25 @@ class Ui_MainWindow(object):
                 try:
                     os.system(
                     "build-tools\\32.0.0\\apksigner.bat sign --ks " + KEYSTORE + " --ks-pass pass:123123 " + APK_NAME + "\\dist\\" + APK_NAME + ".apk")
+
+
+                    # print("\n===== REALIGNING APK =====")
+                    old_apk = APK_NAME + "\\dist\\" + APK_NAME + ".apk"
+                    new_apk = APK_NAME + "\\dist\\" + "obfuscated_" + APK_NAME + ".apk"
+                    realignment_command = 'build-tools\\32.0.0\\zipalign -p -f -v 4 "' + old_apk + '" "' + new_apk + '"'
+                    print(realignment_command)
+                    os.popen(realignment_command)
+
+
+                    os.system(
+                        "build-tools\\32.0.0\\apksigner.bat sign --ks " + KEYSTORE + " --ks-pass pass:123123 " + APK_NAME + "\\dist\\" + "obfuscated_" + APK_NAME + ".apk")
                     self.input_progression.setText("Success.")
-                    print("Signed.")
+                    print("Done")
+
+
+
+
+                    success = True
                 except:
                     self.input_progression.setText("Obfuscated. But fail to sign.")
                     print("Fail to sign.")

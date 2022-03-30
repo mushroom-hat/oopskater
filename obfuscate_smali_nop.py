@@ -54,7 +54,7 @@ def add_nop_algorithm(smali_file):
                         op_code = line_op_code.group('opCode')
                         if op_code in valid_nop_code:
                             nop_count = random_nop_interval()
-                            out_file.write('\nnop\n' * nop_count)
+                            out_file.write('\n\tnop\n' * nop_count)
                             overwrite_flag = True
                     count += 1
                 except:
