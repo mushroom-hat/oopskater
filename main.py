@@ -158,7 +158,7 @@ def process_importedFile(importedFile, ui_thread, selected_algorithm):
     # ---- OBFUSCATION PART
     if TARGET_FOLDER_PATH != "":
         if java_files:
-            obfuscate_java.obfuscate(TARGET_FOLDER_PATH)
+            obfuscate_java.obfuscate(TARGET_FOLDER_PATH, selected_algorithm)
         elif smali_files:
             if obfuscate_smali_file(TARGET_FOLDER_PATH):
                 # lastly, recompile it back to APK

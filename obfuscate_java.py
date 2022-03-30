@@ -35,7 +35,7 @@ def get_random_string():
     random_numb = random.randint(0, 9999)
     random_list = f.readlines()
     random_str = random_list[random_numb].replace("\n", "")
-    while random_str not in LIST_OF_SET_STRING:
+    while random_str not in LIST_OF_SET_STRING and random_str not in RENAME_DICT:
         break
     return random_str
 
@@ -258,6 +258,7 @@ def generate_obfuscated_variables(method):
                         LIST_OF_SET_STRING.append(random_string)
 
 
+
 # def rename_method_name(method):
 #     method_line = method[0]
 #     if "@Override" in method_line:  # don't replace method name if it is overwritten from somewhere else i.e., interfaces
@@ -325,14 +326,14 @@ def replace_quoted_words(line, count, list_of_quoted_words):
             if match1:
                 new_line = re.sub(pattern, " " + obfuscated_string + " ", new_line)
 
-            pattern = '[^a-zA-Z0-9]' + variable_name + '[^a-zA-Z0-9]'
+            pattern = '[^a-zA-Z0-9_]' + variable_name + '[^a-zA-Z0-9]'
             match = re.search(pattern, new_line)
             if match:
                 start = match.group(0)[0]
                 end = match.group(0)[-1]
                 new_line = re.sub(pattern, start + obfuscated_string + end, new_line)
 
-            pattern = '[^a-zA-Z0-9 ]' + variable_name + " "
+            pattern = '[^a-zA-Z0-9_ ]' + variable_name + " "
             match3 = re.search(pattern, new_line)
             if match3:
                 start = match3.group(0)[0]
@@ -369,9 +370,12 @@ def replace_quoted_words(line, count, list_of_quoted_words):
     return new_line
 
 
-def rename_variables(methods):
+def rename_variables(methods, class_declarations):
     # obfuscate using that dictionary
     obfuscated_methods = []
+    obfuscated_declarations = []
+
+    methods.append(class_declarations)
     for each_method in methods:
         line_counter = 0
         for line in each_method:
@@ -385,16 +389,18 @@ def rename_variables(methods):
                         line = re.sub(pattern, " " + obfuscated_string + " ", line)
                         each_method[line_counter] = line
 
-                    pattern = '[^a-zA-Z0-9]' + variable_name + '[^a-zA-Z0-9. ]'
+                    pattern = '[^a-zA-Z0-9_]' + variable_name + '[^a-zA-Z0-9 ]'
                     match2 = re.search(pattern, line)
 
                     if match2:
                         start = match2.group(0)[0]
                         end = match2.group(0)[-1]
-                        line = re.sub(pattern, start + obfuscated_string + end, line)
-                        each_method[line_counter] = line
+                        if not (start == "." and end == "."):
+                            print(line)
+                            line = re.sub(pattern, start + obfuscated_string + end, line)
+                            each_method[line_counter] = line
 
-                    pattern = '[^a-zA-Z0-9 ]' + variable_name + " "
+                    pattern = '[^a-zA-Z0-9_ ]' + variable_name + " "
                     match3 = re.search(pattern, line)
                     if match3:
                         start = match3.group(0)[0]
@@ -409,7 +415,8 @@ def rename_variables(methods):
 
             line_counter += 1
         obfuscated_methods.append(each_method)
-    return obfuscated_methods
+    obfuscated_declarations = obfuscated_methods.pop()
+    return obfuscated_methods, obfuscated_declarations
 
 
 def rename_method(methods, class_name):
@@ -436,9 +443,11 @@ def rename_method(methods, class_name):
                             for split in method_split[1:]:
                                 m_rest += split
                             random_str = get_random_string()
-                            RENAME_DICT[m + "()"] = random_str
-                            LIST_OF_SET_STRING.append(random_str)
-
+                            if m not in RENAME_DICT:
+                                RENAME_DICT[m] = random_str
+                                LIST_OF_SET_STRING.append(random_str)
+                            else:
+                                random_str = RENAME_DICT[m]
                             obfuscated_method_name = " " + random_str + "(" + m_rest
                             each_method[line_number] = line.replace(method_name, obfuscated_method_name)
                     break
@@ -610,16 +619,29 @@ def insert_opaque_predicates(method):
 def obfuscate(directory_path, selected_algorithms):
     # loop through each java file, obfuscate it and return a obfuscated java file
     list_of_clean_java_files = []
-    list_of_obfuscated_java_files = []
-
 
     for filename in os.listdir(directory_path):
         list_of_clean_java_files.append(directory_path + "\\" + filename)
     obfuscate_smali_files.backup_files(list_of_clean_java_files)
 
-    for abs_filename in os.listdir(directory_path):
-        if "obfuscated" not in abs_filename:
-            line_dict = readfile(directory_path + "\\" + abs_filename)
+    # loop through each file for getting variable names (does not change file content)
+    for f in os.listdir(directory_path):
+        if "obfuscated" not in f:
+            line_dict = readfile(directory_path + "\\" + f)
+            line_dict = remove_comments(line_dict)
+            line_dict = remove_empty_lines(line_dict)
+            package_statement, import_statements, interface_statements, class_definitions = dissect_code(line_dict)
+            for each_class in class_definitions:
+                java_methods, class_name, class_declarations = identify_java_methods(each_class)  # returns a list of methods in each class
+                for each_method in java_methods:
+                    generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
+
+                rename_method(java_methods, class_name)
+
+    # this loop CHANGES the content
+    for filename in os.listdir(directory_path):
+        if "obfuscated" not in filename:
+            line_dict = readfile(directory_path + "\\" + filename)
 
             #  dissecting java files into smaller functions for easier obfuscation
             # java_classes = identify_java_classes(line_dict)
@@ -633,19 +655,19 @@ def obfuscate(directory_path, selected_algorithms):
             line_dict = remove_empty_lines(line_dict)
             package_statement, import_statements, interface_statements, class_definitions = dissect_code(line_dict)
             obfuscated_classes = []
+
             for each_class in class_definitions:
                 java_methods, class_name, class_declarations = identify_java_methods(each_class)  # returns a list of methods in each class
-                for each_method in java_methods:
-                    generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
                 if selected_algorithms['renaming']:
                     java_methods = rename_method(java_methods, class_name)
-                    java_methods = rename_variables(java_methods)
+                    java_methods, class_declarations = rename_variables(java_methods, class_declarations)
 
                 if selected_algorithms['numeric']:
                     java_methods = obfuscate_numeric(java_methods)
 
                 if selected_algorithms['overloading_method']:
                     java_methods = overload_method(java_methods)
+
                 class_declarations.insert(0, class_name)
                 for i in range(len(class_declarations)):
                     # after obfuscating methods, add back the class name
@@ -662,7 +684,7 @@ def obfuscate(directory_path, selected_algorithms):
             #if selected_algorithms['rm_empty_space'] == True:
             # line_dict = remove_spaces(line_dict)
 
-            filename = abs_filename.split("\\")[-1]
+            filename = filename.split("\\")[-1]
             #output_filename = "obfuscated_" + filename
             output_filename = filename
             new_directory_path = r"diffviewer\\new\\"
