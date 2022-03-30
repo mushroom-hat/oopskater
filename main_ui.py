@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         global MAIN_WINDOW
         MAIN_WINDOW = MainWindow
         MainWindow.setObjectName("Android Obfuscator")
-        MainWindow.resize(931, 750)
+        MainWindow.resize(931, 775)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.mainPanelImage = QtWidgets.QLabel(self.centralwidget)
