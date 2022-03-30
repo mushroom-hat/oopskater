@@ -39,6 +39,9 @@ class Ui_MainWindow(object):
         self.importFileButton.setFont(font)
         self.importFileButton.setStyleSheet("background-color: rgb(34, 196, 255);\n"
                                             "font: 75 8pt \"Arial\" bold;\n"
+                                            "border-radius: 15px;\n"
+                                            "margin-right: 5px;\n"
+                                            "margin-left: 5px;\n"
                                             "")
         self.importFileButton.setObjectName("importFileButton")
         self.importFileButton.clicked.connect(self.importFile)
@@ -51,22 +54,32 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.input_apk.setFont(font)
-        self.input_apk.setStyleSheet("font: 75 8t \"Arial\";\n"
-                                     "border-color: black;\n"
-                                     "background-color: rgb(255, 255, 255);")
+        self.input_apk.setStyleSheet("font: 75 8pt \"Arial\";\n"
+                                     "border: 2px solid #73AD21;\n"
+                                     "border-radius: 15px;\n"
+                                     "background-color: rgb(255, 255, 255);\n"
+                                     "margin-left: 5px;\n"
+                                     "")
+
         self.input_apk.setObjectName("input_apk")
         self.input_apk.setMargin(10)
         self.input_keystore = QtWidgets.QLabel(self.centralwidget)
         self.input_keystore.setGeometry(QtCore.QRect(0, 470, 751, 61))
-        self.input_keystore.setStyleSheet("font: 75 8pt \"Arial\";\n"
-                                          "border-color: black;\n"
-                                          "background-color: rgb(255, 255, 255);")
+        self.input_keystore.setStyleSheet("font: 75 8t \"Arial\";\n"
+                                     "border: 2px solid #73AD21;\n"
+                                     "border-radius: 15px;\n"
+                                     "background-color: rgb(255, 255, 255);\n"
+                                     "margin-left: 5px;\n"
+                                     "")
         self.input_keystore.setObjectName("input_keystore")
         self.input_keystore.setMargin(10)
         self.importKeyStore_button = QtWidgets.QPushButton(self.centralwidget)
         self.importKeyStore_button.setGeometry(QtCore.QRect(750, 470, 181, 61))
         self.importKeyStore_button.setStyleSheet("background-color: rgb(34, 196, 255);\n"
                                                  "font: 75 8pt \"Arial\" bold;\n"
+                                                 "border-radius: 15px;\n"
+                                                 "margin-right: 5px;\n"
+                                                 "margin-left: 5px;\n"
                                                  "")
         self.importKeyStore_button.setObjectName("importKeyStore_button")
         self.importKeyStore_button.clicked.connect(self.importKeyStore)
@@ -175,6 +188,9 @@ class Ui_MainWindow(object):
         self.buttonObfuscation.setGeometry(QtCore.QRect(10, 810, 921, 41))
         self.buttonObfuscation.setStyleSheet("background-color: rgb(0, 215, 104);\n"
                                              "font: 75 12pt \"Arial\" bold;\n"
+                                              "border-radius: 15px;\n"
+                                                "margin-right: 5px;\n"
+                                                 "margin-left: 5px;\n"
                                              "")
         self.buttonObfuscation.setObjectName("buttonObfuscation")
         self.buttonObfuscation.hide()
@@ -182,8 +198,10 @@ class Ui_MainWindow(object):
         self.input_progression = QtWidgets.QLabel(self.centralwidget)
         self.input_progression.setGeometry(QtCore.QRect(10, 740, 921, 61))
         self.input_progression.setStyleSheet("font: 75 11pt \"Arial\";\n"
-                                            "border-color: black;\n"
-                                            "background-color: rgb(255, 255, 255);")
+                                            "border: 2px solid #000000;\n"
+                                     "border-radius: 15px;\n"
+                                             "margin-right:5px;\n"
+                                     "background-color: rgb(255, 255, 255);\n")
         self.input_progression.setObjectName("input_progression")
         self.input_progression.hide()
         MainWindow.setCentralWidget(self.centralwidget)
