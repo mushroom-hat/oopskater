@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
         self.mainPanelImage = QtWidgets.QLabel(self.centralwidget)
         self.mainPanelImage.setGeometry(QtCore.QRect(0, 0, 931, 330))
         self.mainPanelImage.setText("")
-        self.mainPanelImage.setPixmap(QtGui.QPixmap("resources/UI/Mainpanel.png"))
+        self.mainPanelImage.setPixmap(QtGui.QPixmap("resources/UI/Mainpanel_new.png"))
         self.mainPanelImage.setScaledContents(True)
         self.mainPanelImage.setObjectName("mainPanelImage")
         self.importFileButton = QtWidgets.QPushButton(self.centralwidget)
@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
         font.setWeight(9)
         self.importFileButton.setFont(font)
         self.importFileButton.setStyleSheet("background-color: rgb(34, 196, 255);\n"
-                                            "font: 75 11pt \"Arial\" bold;\n"
+                                            "font: 75 8pt \"Arial\" bold;\n"
                                             "")
         self.importFileButton.setObjectName("importFileButton")
         self.importFileButton.clicked.connect(self.importFile)
@@ -51,14 +51,14 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(9)
         self.input_apk.setFont(font)
-        self.input_apk.setStyleSheet("font: 75 11pt \"Arial\";\n"
+        self.input_apk.setStyleSheet("font: 75 8t \"Arial\";\n"
                                      "border-color: black;\n"
                                      "background-color: rgb(255, 255, 255);")
         self.input_apk.setObjectName("input_apk")
         self.input_apk.setMargin(10)
         self.input_keystore = QtWidgets.QLabel(self.centralwidget)
         self.input_keystore.setGeometry(QtCore.QRect(0, 470, 751, 61))
-        self.input_keystore.setStyleSheet("font: 75 11pt \"Arial\";\n"
+        self.input_keystore.setStyleSheet("font: 75 8pt \"Arial\";\n"
                                           "border-color: black;\n"
                                           "background-color: rgb(255, 255, 255);")
         self.input_keystore.setObjectName("input_keystore")
@@ -66,7 +66,7 @@ class Ui_MainWindow(object):
         self.importKeyStore_button = QtWidgets.QPushButton(self.centralwidget)
         self.importKeyStore_button.setGeometry(QtCore.QRect(750, 470, 181, 61))
         self.importKeyStore_button.setStyleSheet("background-color: rgb(34, 196, 255);\n"
-                                                 "font: 75 11pt \"Arial\" bold;\n"
+                                                 "font: 75 8pt \"Arial\" bold;\n"
                                                  "")
         self.importKeyStore_button.setObjectName("importKeyStore_button")
         self.importKeyStore_button.clicked.connect(self.importKeyStore)
