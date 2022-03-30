@@ -637,6 +637,15 @@ def obfuscate(directory_path, selected_algorithms):
                     generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
 
                 rename_method(java_methods, class_name)
+                
+    # removes files (if any) from the folder to get a clean folder that will be containing the obfuscated files
+    new_directory_path = r"diffviewer\\new\\"
+    new_files = glob.glob(new_directory_path + '/*')
+    for f in new_files:
+        try:
+            os.remove(f)
+        except OSError as e:
+            print("Error: %s : %s" % (f, e.strerror))
 
     # this loop CHANGES the content
     for filename in os.listdir(directory_path):
