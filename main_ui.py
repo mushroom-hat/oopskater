@@ -201,7 +201,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Android / JAVA Obfuscator"))
         self.importFileButton.setText(_translate("MainWindow", "Add File / Directory"))
         self.input_apk.setText(_translate("MainWindow", "Not File / Directory Selected."))
         self.input_keystore.setText(
