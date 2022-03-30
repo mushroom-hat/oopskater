@@ -478,7 +478,6 @@ class Ui_MainWindow(object):
                     old_apk = APK_NAME + "\\dist\\" + APK_NAME + ".apk"
                     new_apk = APK_NAME + "\\dist\\" + "obfuscated_" + APK_NAME + ".apk"
                     realignment_command = 'build-tools\\32.0.0\\zipalign -p -f -v 4 "' + old_apk + '" "' + new_apk + '"'
-                    print(realignment_command)
                     os.popen(realignment_command)
 
 
@@ -506,6 +505,14 @@ class Ui_MainWindow(object):
                         self.input_progression.setText("Wrong Key Store Password")
                         self.evt_worker_finished("Wrong Password. Try Again")
                     else:
+                        # print("\n===== REALIGNING APK =====")
+                        old_apk = APK_NAME + "\\dist\\" + APK_NAME + ".apk"
+                        new_apk = APK_NAME + "\\dist\\" + "obfuscated_" + APK_NAME + ".apk"
+                        realignment_command = 'build-tools\\32.0.0\\zipalign -p -f -v 4 "' + old_apk + '" "' + new_apk + '"'
+                        os.popen(realignment_command)
+                        os.system(
+                            'build-tools\\32.0.0\\apksigner.bat sign --ks "' + KEYSTORE + '" --ks-pass pass:'+ str(password) + ' ' + APK_NAME + '\\dist\\obfuscated_' + APK_NAME + '.apk')
+
                         success = True
                         self.input_progression.setText("Success.")
                         print("Signed.")
