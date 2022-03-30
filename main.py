@@ -143,7 +143,7 @@ def process_importedFile(importedFile, ui_thread, selected_algorithm, keystore_p
     UI_THREAD = ui_thread
     TARGET_FOLDER_PATH = importedFile
 
-    print("Imported:", importedFile)
+
     # if apk is supplied, decompile the apk into current directory
     if importedFile.endswith('.apk'):
         ui_thread.emit("Decompiling APK ... ")

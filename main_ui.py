@@ -215,7 +215,7 @@ class Ui_MainWindow(object):
         self.radioButton_java_remove_empty_spaces.setText(_translate("MainWindow", "JAVA Remove Empty Spaces"))
         self.radioButton_java_prodcdure.setText(_translate("MainWindow", "JAVA Obfuscate Numeric Value"))
         self.buttonObfuscation.setText(_translate("MainWindow", "Obfuscate "))
-        self.input_progression.setText(_translate("MainWindow", "PROGRESSION"))
+        self.input_progression.setText(_translate("MainWindow", "Please click the button below."))
 
 
 
@@ -252,7 +252,7 @@ class Ui_MainWindow(object):
             if self.op_dir != ('', ''):
                 importedItem = self.op_dir.replace("/", r"\\")
                 self.input_apk.setText(self.op_dir)
-                print("Imported Item: " + importedItem)
+
 
 
         self.importedItem = importedItem
@@ -265,10 +265,6 @@ class Ui_MainWindow(object):
             self.input_progression.show()
             MAIN_WINDOW.resize(933, 1125)
 
-
-
-
-        print("Object Type Detected:", self.object_type)
 
 
 
@@ -334,7 +330,7 @@ class Ui_MainWindow(object):
         else:
             dict['overloading_method'] = False
 
-        print(dict)
+        print("Selected Algorithm: ",dict)
         if True in dict.values():
             self.worker = WorkerThreadProcessing(self.importedItem, "keystore_path", dict)
             self.worker.start()
