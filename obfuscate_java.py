@@ -2,15 +2,13 @@ import base64
 import os
 import re
 import random
+import glob
 from timeit import default_timer as timer
 # Change here
 # TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 TIME = 0
 import obfuscate_smali_files
-# = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework2 (Working Dir)\test.java"
-#FILEPATH = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
 VARIABLES_DICT = r"resources\\JAVA\\variables.dict"
-#TEST_DIR = r"C:\\Users\\tayzh\\Documents\\SIT\\Year 1 Sem 2\\ICT2207 Mobile Security\\Project\\Coursework2 (Working Dir)\\Java_Test_Files\\"
 
 
 # Takes in a java file as parameter, returns a dictionary that has line number as key and line as value.
@@ -99,9 +97,9 @@ def remove_spaces(line_dict):
     for line_number, line in list(line_dict.items()):
         # remove two or spaces in a line
         line = re.sub(' +', ' ', line)
-        if "+" in line:
+        if " + " in line:
             line = line.replace(" + ", "+")
-        if "=" in line:
+        if " = " in line:
             line = line.replace(" = ", "=")
         if ") " in line:
             line = line.replace(") ", ")")
@@ -637,6 +635,7 @@ def obfuscate(directory_path, selected_algorithms):
                     generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
 
                 rename_method(java_methods, class_name)
+                
 
     # this loop CHANGES the content
     for filename in os.listdir(directory_path):
@@ -666,7 +665,7 @@ def obfuscate(directory_path, selected_algorithms):
                     java_methods = obfuscate_numeric(java_methods)
 
                 if selected_algorithms['overloading_method']:
-                    java_methods = overload_method(java_methods)
+                     java_methods = overload_method(java_methods)
 
                 class_declarations.insert(0, class_name)
                 for i in range(len(class_declarations)):
@@ -681,8 +680,8 @@ def obfuscate(directory_path, selected_algorithms):
             line_dict = repackage(package_statement, set(import_statements), interface_statements, obfuscated_classes)
 
 
-            #if selected_algorithms['rm_empty_space'] == True:
-            # line_dict = remove_spaces(line_dict)
+            if selected_algorithms['rm_empty_space']:
+                line_dict = remove_spaces(line_dict)
 
             filename = filename.split("\\")[-1]
             #output_filename = "obfuscated_" + filename
