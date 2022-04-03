@@ -39,17 +39,10 @@ def add_nop_algorithm(smali_file):
 
         with util.edit_file_content(smali_file) as (in_file, out_file):
             for line in in_file:
-
-                # Print original instruction.
                 out_file.write(line)
-
-                # Check if this line contains an op code at the beginning
-                # of the string.
                 match = pattern.match(line)
                 if match:
                     op_code = match.group("op_code")
-                    # If this is a valid op code, insert some nop instructions
-                    # after it.
                     if op_code in op_codes:
                         nop_count = random_nop_interval()
                         out_file.write("\tnop\n" * nop_count)
