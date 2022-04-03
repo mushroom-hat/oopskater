@@ -1,9 +1,0 @@
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes2\com\example\myapplication\R$color.smali
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes2\com\example\myapplication\R$drawable.smali
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes2\com\example\myapplication\R$layout.smali
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes2\com\example\myapplication\R$mipmap.smali
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes2\com\example\myapplication\R$string.smali
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes2\com\example\myapplication\R$style.smali
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes2\com\example\myapplication\R.smali
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes3\com\example\myapplication\BuildConfig.smali
-C:\Users\Jia Zhe\Desktop\Github\ICT2207\Remote\Project\Coursework2\oopskater\application\smali_classes3\com\example\myapplication\MainActivity.smali

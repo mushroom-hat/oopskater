@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         global MAIN_WINDOW
         MAIN_WINDOW = MainWindow
         MainWindow.setObjectName("Android Obfuscator")
-        MainWindow.resize(931, 775)
+        MainWindow.setFixedSize(931, 775)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.mainPanelImage = QtWidgets.QLabel(self.centralwidget)
@@ -275,18 +275,24 @@ class Ui_MainWindow(object):
 
         self.importedItem = importedItem
         self.object_type = self.check_imported_item(str(importedItem))
-        number_of_files = len(
-            [item for item in os.listdir(importedItem) if os.path.isfile(os.path.join(importedItem, item))])
         if self.object_type == None:
             self.input_apk.setText("Input wrong format file. Please double check.")
-        elif number_of_files < 1:
-            self.input_apk.setText("Ensure that the directory loaded consist more than 1 file.")
+        elif self.object_type == 'DIR':
+            number_of_files = len(
+                [item for item in os.listdir(importedItem) if os.path.isfile(os.path.join(importedItem, item))])
+            if number_of_files < 1:
+                self.input_apk.setText("Ensure that the directory loaded consist more than 1 file.")
+            else:
+                print("Number of files detected:", str(number_of_files))
+                self.disable_UI_checkbox(self.object_type)
+                self.buttonObfuscation.show()
+                self.input_progression.show()
+                MAIN_WINDOW.setFixedSize(933, 900)
         else:
-            print("Number of files detected:", str(number_of_files))
             self.disable_UI_checkbox(self.object_type)
             self.buttonObfuscation.show()
             self.input_progression.show()
-            MAIN_WINDOW.resize(933, 900)
+            MAIN_WINDOW.setFixedSize(933, 900)
 
 
     def importKeyStore(self):
