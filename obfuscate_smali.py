@@ -13,7 +13,6 @@ import obfuscate_smali_stringenc
 import time
 from queue import Queue
 
-
 NOP_REPLACEMENT_COUNT = 0
 DEBUG_REPLACEMENT_COUNT = 0
 OVERLOADING_REPLACEMENT_COUNT = 0
@@ -34,7 +33,6 @@ APPLICATION_NAME = ""
 SELECTED_ALGORITHM = {}
 
 
-
 def threader(my_queue):
     # This function will get the item from the queue and run the function add_nop_algorithm()
     global NOP_REPLACEMENT_COUNT
@@ -50,33 +48,32 @@ def threader(my_queue):
         file = my_queue.get()
 
         time_obj = time.time()
-        if SELECTED_ALGORITHM['encrypt'] == True:
-            status_strEnc = obfuscate_smali_stringenc.encrypt(file, ENC_SECRET)
-            if status_strEnc:
-                STRING_ENCRYPTION_COUNT += 1
-        STR_ENCRYPT_TIME_LIST.append(time.time() - time_obj)
-
-        time_obj = time.time()
-        if SELECTED_ALGORITHM['debug'] == True:
-            status_debug = obfuscate_smali_debug_removal.add_debug_algorithm(file)
-            if status_debug:
-                DEBUG_REPLACEMENT_COUNT += 1
-        DEBUG_TIME_LIST.append(time.time() - time_obj)
-
-        time_obj = time.time()
-        if SELECTED_ALGORITHM['nop'] == True:
+        if True:
             status_nop = obfuscate_smali_nop.add_nop_algorithm(file)
             if status_nop:
                 NOP_REPLACEMENT_COUNT += 1
         NOP_TIME_LIST.append(time.time() - time_obj)
 
         time_obj = time.time()
-        if SELECTED_ALGORITHM['goto'] == True:
+        if SELECTED_ALGORITHM['encrypt']:
+            status_strEnc = obfuscate_smali_stringenc.encrypt(file, ENC_SECRET)
+            if status_strEnc:
+                STRING_ENCRYPTION_COUNT += 1
+        STR_ENCRYPT_TIME_LIST.append(time.time() - time_obj)
+
+        time_obj = time.time()
+        if SELECTED_ALGORITHM['debug']:
+            status_debug = obfuscate_smali_debug_removal.add_debug_algorithm(file)
+            if status_debug:
+                DEBUG_REPLACEMENT_COUNT += 1
+        DEBUG_TIME_LIST.append(time.time() - time_obj)
+
+        time_obj = time.time()
+        if SELECTED_ALGORITHM['goto']:
             status_goto = obfuscate_smali_goto.add_goto_algorithm(file)
             if status_goto:
                 GOTO_COUNT += 1
         GOTO_TIME_LIST.append(time.time() - time_obj)
-
 
         my_queue.task_done()
 
@@ -91,10 +88,6 @@ def change_all_file(smali_file_list, file_list_size, application_name, ui_thread
     APPLICATION_NAME = application_name
     SELECTED_ALGORITHM = selected_algorithm
     print("Application Name:", APPLICATION_NAME)
-
-
-
-
 
     """============================================="""
     """ ======= Creating Multi Thread Queue ========"""
@@ -113,7 +106,7 @@ def change_all_file(smali_file_list, file_list_size, application_name, ui_thread
     my_file = open('obfuscated_file_list.txt', 'w')
     for item in smali_file_list:
         my_file.write(item + '\n')
-    my_file.close
+    my_file.close()
 
     """================================================================"""
     """    Adding NOP, Overloading. Removing Debugging lines. GOTO    """
@@ -124,29 +117,27 @@ def change_all_file(smali_file_list, file_list_size, application_name, ui_thread
         my_queue.put(smali_file)
     my_queue.join()
 
-
-
     """=========================================================="""
     """ ======== Rename, Overloading Reflection Feature  ======="""
     """========================================================="""
     ui_thread.emit("Adding Rename, Overloading Reflection algorithm over Smali Files ... ")
     rename_start_time = time.time()
-    if SELECTED_ALGORITHM['renaming_field'] == True:
+    if SELECTED_ALGORITHM['renaming_field']:
         RENAME_COUNT = obfuscate_smali_field_renaming.add_renaming_field_algorithm(smali_file_list)
     RENAME_TIME = (time.time() - rename_start_time) / len(smali_file_list)
 
     overloading_start_time = time.time()
-    if SELECTED_ALGORITHM['overloading'] == True:
-        OVERLOADING_REPLACEMENT_COUNT = obfuscate_smali_overloading.add_method_overloading_algorithm(smali_file_list, [], 2)
+    if SELECTED_ALGORITHM['overloading']:
+        OVERLOADING_REPLACEMENT_COUNT = obfuscate_smali_overloading.add_method_overloading_algorithm(smali_file_list,
+                                                                                                     [], 2)
     OVERLOADING_TIME = (time.time() - overloading_start_time) / len(smali_file_list)
 
     reflection_start_time = time.time()
-    if SELECTED_ALGORITHM['reflection'] == True:
+    if SELECTED_ALGORITHM['reflection']:
         obfuscate_smali_reflection.add_reflection_algorithm(smali_file_list)
     REFLECTION_TIME = (time.time() - reflection_start_time) / len(smali_file_list)
 
     if STRING_ENCRYPTION_COUNT > 0:
-        # add decryptstring file to app
         destination_dir = os.path.dirname(smali_file_list[-1])
         destination_file = os.path.join(destination_dir, "DecryptString.smali")
         # print("insertingFile with"+ENC_SECRET)
@@ -165,72 +156,107 @@ def print_statistics():
         STRING_ENCRYPTION_COUNT, GOTO_COUNT
     global NOP_TIME_LIST, STR_ENCRYPT_TIME_LIST, DEBUG_TIME_LIST, GOTO_TIME_LIST, RENAME_TIME, \
         OVERLOADING_TIME, REFLECTION_TIME
-
     global SELECTED_ALGORITHM
 
+    result_file = open('difference_benchmark/Result.txt', 'w')
+
+    result_file.writelines("\n============ Obfuscation Algorithm Selected =======================\n")
     print("\n============ Obfuscation Algorithm Selected =======================")
     counting = 1
     for key, value in SELECTED_ALGORITHM.items():
-        if value == True:
-            print(str(counting) + ": " + str(key))
+        if value:
+            item = str(counting) + ": " + str(key)
+            print(item)
+            result_file.write(item)
             counting += 1
 
-
-
+    result_file.writelines("\n\n============ Obfuscation Statistics =======================\n")
     print("\n============ Obfuscation Statistics =======================")
     print("Total Number of line fields renamed: " + str(RENAME_COUNT))
-    print("Total Number of files with generated NOP: " + str(NOP_REPLACEMENT_COUNT))
+    result_file.writelines("Total Number of line fields renamed: " + str(RENAME_COUNT))
+    # print("Total Number of files with generated NOP: " + str(NOP_REPLACEMENT_COUNT))
     print("Total Number of files with removed debugging line: " + str(DEBUG_REPLACEMENT_COUNT))
+    result_file.writelines("\nTotal Number of files with removed debugging line: " + str(DEBUG_REPLACEMENT_COUNT))
     print("Total Number of files with overloading features added: " + str(OVERLOADING_REPLACEMENT_COUNT))
+    result_file.writelines(
+        "\nTotal Number of files with overloading features added: " + str(OVERLOADING_REPLACEMENT_COUNT))
     print("Total Number of files with goto lines added: " + str(GOTO_COUNT))
+    result_file.writelines("\nTotal Number of files with goto lines added: " + str(GOTO_COUNT))
     print("Total Number of files with encrypted strings: " + str(STRING_ENCRYPTION_COUNT))
-
-    nop_time = 0
-    for time_item in NOP_TIME_LIST:
-        nop_time += time_item
+    result_file.writelines("\nTotal Number of files with encrypted strings: " + str(STRING_ENCRYPTION_COUNT))
+    #
+    # nop_time = 0
+    # for time_item in NOP_TIME_LIST:
+    #     nop_time += time_item
+    # print("-------------------------------------------------------------------------------------------")
+    # print("Average Time taken to obfuscate smali file with NOP algorithm: " + str(nop_time / len(NOP_TIME_LIST)))
+    # print("Total Time in NOP Algorithm: " + str(nop_time))
     print("-------------------------------------------------------------------------------------------")
-    print("Average Time taken to obfuscate smali file with NOP algorithm: " + str(nop_time / len(NOP_TIME_LIST)))
-    print("Total Time in NOP Algorithm: " + str(nop_time))
-    print("-------------------------------------------------------------------------------------------")
+    result_file.writelines(
+        "\n-------------------------------------------------------------------------------------------")
 
     str_encrypt_time = 0
     for time_item in STR_ENCRYPT_TIME_LIST:
         str_encrypt_time += time_item
     print("Average Time taken to obfuscate smali file with String Encryption algorithm: " + str(
         str_encrypt_time / len(STR_ENCRYPT_TIME_LIST)))
+    result_file.writelines("\nAverage Time taken to obfuscate smali file with String Encryption algorithm: " + str(
+        str_encrypt_time / len(STR_ENCRYPT_TIME_LIST)))
     print("Total Time in String Encryption Algorithm: " + str(str_encrypt_time))
+    result_file.writelines("\nTotal Time in String Encryption Algorithm: " + str(str_encrypt_time))
     print("-------------------------------------------------------------------------------------------")
+    result_file.writelines(
+        "\n-------------------------------------------------------------------------------------------")
 
     debug_time = 0
     for time_item in DEBUG_TIME_LIST:
         debug_time += time_item
     print("Average Time taken to obfuscate smali file with Removing Debugging Line algorithm: " + str(
         debug_time / len(DEBUG_TIME_LIST)))
+    result_file.writelines(
+        "\nAverage Time taken to obfuscate smali file with Removing Debugging Line algorithm: " + str(
+            debug_time / len(DEBUG_TIME_LIST)))
     print("Total Time in Removing Debugging Line algorithm: " + str(debug_time))
+    result_file.writelines("\nTotal Time in Removing Debugging Line algorithm: " + str(debug_time))
     print("-------------------------------------------------------------------------------------------")
+    result_file.writelines(
+        "\n-------------------------------------------------------------------------------------------")
 
     goto_time = 0
     for time_item in GOTO_TIME_LIST:
         goto_time += time_item
     print("Average Time taken to obfuscate smali file with Adding GOTO Statements algorithm: " + str(
         goto_time / len(GOTO_TIME_LIST)))
+    result_file.writelines("\nAverage Time taken to obfuscate smali file with Adding GOTO Statements algorithm: " + str(
+        goto_time / len(GOTO_TIME_LIST)))
     print("Total Time in Adding GOTO Statements algorithm: " + str(goto_time))
+    result_file.writelines("\nTotal Time in Adding GOTO Statements algorithm: " + str(goto_time))
     print("-------------------------------------------------------------------------------------------")
+    result_file.writelines(
+        "\n-------------------------------------------------------------------------------------------")
 
     print("Average Time taken to obfuscate smali file with Renaming algorithm: " + str(
+        RENAME_TIME))
+    result_file.write("\nAverage Time taken to obfuscate smali file with Renaming algorithm: " + str(
         RENAME_TIME))
 
     print("Average Time taken to obfuscate smali file with Overloading algorithm: " + str(
         OVERLOADING_TIME))
+    result_file.writelines("\nAverage Time taken to obfuscate smali file with Overloading algorithm: " + str(
+        OVERLOADING_TIME))
 
     print("Average Time taken to obfuscate smali file with Reflection algorithm: " + str(
         REFLECTION_TIME))
+    result_file.writelines("\nAverage Time taken to obfuscate smali file with Reflection algorithm: " + str(
+        REFLECTION_TIME))
 
     print("\n")
+    result_file.writelines("\n")
+    result_file.close()
 
 
 def genSec(size):
-    keysec = str(Fernet.generate_key())
-    se = "".join(ch for ch in keysec if ch.isalnum())
-    keysec = se[2:size + 2]
-    return keysec
+    key_sec = str(Fernet.generate_key())
+    se = "".join(ch for ch in key_sec if ch.isalnum())
+    key_sec = se[2:size + 2]
+    return key_sec

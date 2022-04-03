@@ -1,0 +1,24 @@
+============ Obfuscation Statistics =======================
+Total Number of line fields renamed: 1641
+Total Number of files with removed debugging line: 386
+Total Number of files with overloading features added: 1
+Total Number of files with goto lines added: 386
+Total Number of files with encrypted strings: 204
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with NOP algorithm: 2.5873974814933815e-06
+Total Time in NOP Algorithm: 0.0009987354278564453
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with String Encryption algorithm: 0.38347922335016915
+Total Time in String Encryption Algorithm: 148.02298021316528
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with Removing Debugging Line algorithm: 0.07889124395933794
+Total Time in Removing Debugging Line algorithm: 30.452020168304443
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with Adding GOTO Statements algorithm: 0.10051042860653733
+Total Time in Adding GOTO Statements algorithm: 38.79702544212341
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with Renaming algorithm: 0.013097249164482473
+Average Time taken to obfuscate smali file with Overloading algorithm: 1.4377999182192155e-05
+Average Time taken to obfuscate smali file with Reflection algorithm: 0.004638051121963738
+
+

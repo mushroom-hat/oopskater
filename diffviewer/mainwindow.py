@@ -85,6 +85,7 @@ class MainWindow:
 
     # Recursive method to fill the treevie with given directory hierarchy
     def __browse_process_directory(self, parent, leftPath, rightPath):
+        count = 0
         if parent == '':
             leftPath = leftPath.rstrip('/')
             rightPath = rightPath.rstrip('/')
@@ -110,6 +111,7 @@ class MainWindow:
             # Item in both dirs
             else:
                 # If one of the diffed items is a file and the other is a directory, show in yellow indicating a difference
+
                 if (not os.path.isdir(newLeftPath) and os.path.isdir(newRightPath)) or (os.path.isdir(newLeftPath) and not os.path.isdir(newRightPath)):
                     self.__main_window_ui.fileTreeView.insert(parent, 'end', text=l, value=bindValue, open=False, tags=('yellow','simple'))
                     painted = TRUE
@@ -127,6 +129,9 @@ class MainWindow:
                         else:
                             oid = self.__main_window_ui.fileTreeView.insert(parent, 'end', text=l, value=bindValue, open=False, tags=('yellow','simple'))
                             painted = TRUE
+                            count += 1
+
+        print("Total files modified: " + str(count))
         return painted
 
     def __load_file(self, pos):

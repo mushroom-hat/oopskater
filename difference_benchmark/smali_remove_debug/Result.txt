@@ -1,0 +1,25 @@
+=============== Obfuscating Smali Files ===============
+Total Number of Files to Scan: 386
+
+============ Obfuscation Algorithm Selected =======================
+1: debug
+
+============ Obfuscation Statistics =======================
+Total Number of line fields renamed: 0
+Total Number of files with removed debugging line: 386
+Total Number of files with overloading features added: 0
+Total Number of files with goto lines added: 0
+Total Number of files with encrypted strings: 0
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with String Encryption algorithm: 0.0
+Total Time in String Encryption Algorithm: 0.0
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with Removing Debugging Line algorithm: 0.07746939152633588
+Total Time in Removing Debugging Line algorithm: 29.90318512916565
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with Adding GOTO Statements algorithm: 0.0
+Total Time in Adding GOTO Statements algorithm: 0.0
+-------------------------------------------------------------------------------------------
+Average Time taken to obfuscate smali file with Renaming algorithm: 0.0
+Average Time taken to obfuscate smali file with Overloading algorithm: 0.0
+Average Time taken to obfuscate smali file with Reflection algorithm: 0.0

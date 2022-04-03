@@ -21,7 +21,7 @@ def add_method_overloading(smali_file, overloaded_method_body, class_names_to_ig
 
             if not class_name:
                 class_match = common_regex_pattern.CLASS_PATTEN.match(line)
-                # If this is an enum class, skip it.
+                """Check if this is an enum class, skip it."""
                 if " enum " in line:
                     skip_remaining_lines = True
                     out_file.write(line)
@@ -29,14 +29,12 @@ def add_method_overloading(smali_file, overloaded_method_body, class_names_to_ig
                 elif class_match:
                     class_name = class_match.group("class_name")
                     if class_name in class_names_to_ignore:
-                        # The methods of this class should be ignored when
-                        # renaming, so proceed with the next class.
+                        """The methods of this class should be ignored when renaming, so proceed with the next class."""
                         skip_remaining_lines = True
                     out_file.write(line)
                     continue
 
-            # Skip virtual methods, consider only the direct methods defined
-            # earlier in the file.
+            """Skip virtual methods, consider only the direct methods defined earlier in the file."""
             if line.startswith("# virtual methods"):
                 skip_remaining_lines = True
                 out_file.write(line)
@@ -92,9 +90,7 @@ def add_method_overloading_algorithm(smali_files, class_names_to_ignore, max_met
     count = 0
     for smali_file in smali_files:
         if added_methods < max_methods_to_add:
-            added_methods += add_method_overloading(
-                smali_file, overloaded_method_body, class_names_to_ignore
-            )
+            added_methods += add_method_overloading(smali_file, overloaded_method_body, class_names_to_ignore)
             count += 1
         else:
             break

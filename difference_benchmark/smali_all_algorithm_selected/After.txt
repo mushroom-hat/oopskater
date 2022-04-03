@@ -1,0 +1,1003 @@
+.class public final Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;
+.super Ljava/lang/Object;
+.source "AppSettings.kt"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;
+
+.field public static final f76425f17GEcVNDes:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;
+
+.field public static final f76425f17HBhcEcik:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;
+
+.field public static final f76425f17nDsbuAbr:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;
+
+.field public static faaf8af2d:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static faaf8af2dPjawRyJK:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static faaf8af2dqeSCiSZC:Lkotlin/jvm/functions/Function2;
+
+.field public static faaf8af2daaOtNQyY:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static faaf8af2dwloZqCJC:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+
+
+
+
+
+
+
+
+
+
+
+.field public static fc06a159d:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static fc06a159ddZVbzbcg:Lkotlin/jvm/functions/Function2;
+
+.field public static fc06a159dXvvcldeA:Lkotlin/jvm/functions/Function2;
+
+.field public static fc06a159dAmRTbJby:Lkotlin/jvm/functions/Function2;
+
+.field public static fc06a159dixcOyvFB:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static f326774d7:Lkotlin/jvm/functions/Function2;
+
+.field public static f326774d7RHRPhyaB:Lkotlin/jvm/functions/Function2;
+
+.field public static f326774d7QKvGufll:Lkotlin/jvm/functions/Function2;
+
+.field public static f326774d7WuInLqHK:Lkotlin/jvm/functions/Function2;
+
+.field public static f326774d7XQqvzETt:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static f2013cdb7:Lkotlin/jvm/functions/Function2;
+
+.field public static f2013cdb7tAyVUeIc:Lkotlin/jvm/functions/Function2;
+
+.field public static f2013cdb7aDBOScVi:Lkotlin/jvm/functions/Function2;
+
+.field public static f2013cdb7nMEyTLqT:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static f990a5178:Lkotlin/jvm/functions/Function2;
+
+.field public static f990a5178kaITnXJj:Lkotlin/jvm/functions/Function2;
+
+.field public static f990a5178UUjblFqS:Lkotlin/jvm/functions/Function2;
+
+.field public static f990a5178sqnjlftI:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static f67f7b4e7:Lkotlin/jvm/functions/Function2;
+
+.field public static f67f7b4e7uaqRlHyS:Lkotlin/jvm/functions/Function2;
+
+.field public static f67f7b4e7UcIpicwt:Lkotlin/jvm/functions/Function2;
+
+.field public static f67f7b4e7JcBRMBgy:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static f3a703060:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static f3a703060yXidDmtK:Lkotlin/jvm/functions/Function2;
+
+.field public static f3a703060AekNKDIJ:Lkotlin/jvm/functions/Function2;
+
+.field public static f3a703060PGEvqFXI:Lkotlin/jvm/functions/Function2;
+
+.field public static f3a703060uDUAvOyc:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static fc0d675ae:Lkotlin/jvm/functions/Function3;
+
+.field public static fc0d675aeIkivaPof:Lkotlin/jvm/functions/Function3;
+
+.field public static fc0d675aemMDfAzrS:Lkotlin/jvm/functions/Function3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function3<",
+            "Landroidx/compose/foundation/layout/PaddingValues;",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static ff660ccd4:Lkotlin/jvm/functions/Function2;
+
+.field public static ff660ccd4HieoJiuR:Lkotlin/jvm/functions/Function2;
+
+.field public static ff660ccd4TEnkCLzO:Lkotlin/jvm/functions/Function2;
+
+.field public static ff660ccd4UriCMCMO:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static f0f68d17a:Lkotlin/jvm/functions/Function2;
+
+.field public static f0f68d17adIjCOeGC:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static f1938d6cb:Lkotlin/jvm/functions/Function2;
+
+.field public static f1938d6cbQtgrmTlz:Lkotlin/jvm/functions/Function2;
+
+.field public static f1938d6cbgtHXANIb:Lkotlin/jvm/functions/Function2;
+
+.field public static f1938d6cbYRnmowpx:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static f4449d0d5:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static f4449d0d5cASbMrFq:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static f4449d0d5MSZvuApv:Lkotlin/jvm/functions/Function2;
+
+.field public static f4449d0d5xJYWQRxQ:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static fba64d47d:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static fba64d47dwBAhqtFg:Lkotlin/jvm/functions/Function2;
+
+.field public static fba64d47dPyranxQW:Lkotlin/jvm/functions/Function2;
+
+
+
+
+
+
+
+
+
+
+
+.field public static fba64d47dkyXXnnsD:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+
+    new-instance v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;
+
+    invoke-direct {v0}, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;-><init>()V
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-1$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-1$1;
+
+    const v1, -0x3abe093e
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->faaf8af2d:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-2$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-2$1;
+
+    const v1, -0x3abe09ec
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f67f7b4e7:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-3$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-3$1;
+
+    const v1, -0x3abe09a2
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f3a703060:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-4$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-4$1;
+
+    const v1, -0x3abe068e
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function3;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->fc0d675ae:Lkotlin/jvm/functions/Function3;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-5$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-5$1;
+
+    const v1, -0x3abe04b3
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->ff660ccd4:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-6$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-6$1;
+
+    const v1, -0x3abe0509
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f0f68d17a:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-7$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-7$1;
+
+    const v1, -0x3abe03e3
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f1938d6cb:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-8$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-8$1;
+
+    const v1, -0x3abe01a9
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f4449d0d5:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-9$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-9$1;
+
+    const v1, -0x3abe1e63
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->fba64d47d:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-10$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-10$1;
+
+    const v1, -0x3abe1f5e
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->fc06a159d:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-11$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-11$1;
+
+    const v1, -0x3abe1c55
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f326774d7:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-12$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-12$1;
+
+    const v1, -0x3abe1d57
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f2013cdb7:Lkotlin/jvm/functions/Function2;
+
+
+    
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-13$1;->f76425f17:Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt$lambda-13$1;
+
+    const v1, -0x3abe182b
+
+    invoke-static {v1, v2, v0}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->composableLambdaInstance(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/ComposableLambda;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/jvm/functions/Function2;
+
+    sput-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f990a5178:Lkotlin/jvm/functions/Function2;
+
+    return-void
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+
+# virtual methods
+.method public final getLambda-1$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->faaf8af2d:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-10$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->fc06a159d:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-11$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f326774d7:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-12$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f2013cdb7:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-13$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f990a5178:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-2$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f67f7b4e7:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-3$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f3a703060:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-4$app_debug()Lkotlin/jvm/functions/Function3;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/jvm/functions/Function3<",
+            "Landroidx/compose/foundation/layout/PaddingValues;",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->fc0d675ae:Lkotlin/jvm/functions/Function3;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-5$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->ff660ccd4:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-6$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f0f68d17a:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-7$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f1938d6cb:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-8$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->f4449d0d5:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
+.method public final getLambda-9$app_debug()Lkotlin/jvm/functions/Function2;
+    .locals 1
+
+	goto/16 :after_last_instruction
+
+	:before_first_instruction
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+
+
+
+
+
+            "()",
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/Composer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/singaporetech/notepad/ui/routes/ComposableSingletons$AppSettingsKt;->fba64d47d:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+
+	:after_last_instruction
+
+	goto/16 :before_first_instruction
+
+.end method
+
