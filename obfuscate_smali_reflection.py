@@ -25,7 +25,7 @@ def is_public_and_declared_class(class_name):
 
     with open(smali_file, "r", encoding="utf-8") as current_file:
         for line in current_file:
-            # Check for public non-abstract classes
+            """Check for public non-abstract classes"""
             class_match = common_regex_pattern.CLASS_PATTEN.match(line)
             if class_match:
                 if " public " in line and " abstract " not in line:

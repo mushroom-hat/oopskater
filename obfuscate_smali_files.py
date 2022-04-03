@@ -4,6 +4,8 @@ import glob
 
 
 def backup_files(list_of_files):
+    """ This will back up a list of files given,
+    it will be used to compare the difference between the before and after. """
     backup_path = os.getcwd() + '\\diffviewer\\bak\\'
     new_path = os.getcwd() + '\\diffviewer\\new\\'
 
@@ -27,6 +29,8 @@ def backup_files(list_of_files):
 
 
 def generate_new_files(list_of_files):
+    """ This will generate a list of new files after obfuscation, to show the difference,
+    that will be used by the pydiff GUI."""
     new_path = os.getcwd() + '\\diffviewer\\new\\'
 
     files = glob.glob(new_path + '/*')

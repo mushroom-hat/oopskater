@@ -2,6 +2,7 @@ import re
 
 
 def add_debug_algorithm(file):
+    """ This algorithm will loop through the file and remove .line xxx"""
     try:
         pattern = r'.line [0-9]*'
         with open(file, "r+", encoding="utf-8") as in_file:

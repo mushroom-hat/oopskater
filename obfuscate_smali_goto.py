@@ -3,6 +3,8 @@ import util
 
 
 def add_goto_algorithm(smali_file):
+    """ This function will take in a smali files,
+    and insert GOTO Statements into the files if it is possible."""
     try:
         with util.edit_file_content(smali_file) as (in_file, out_file):
             editing_method = False

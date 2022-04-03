@@ -8,10 +8,6 @@ from Crypto.Cipher import AES
 from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Util.Padding import pad
 
-#from obfuscapk import obfuscator_category
-# import util
-#from obfuscapk.obfuscation import Obfuscation
-
 encryption_secret = "This-key-need-to-be-32-character"
 # .class <other_optional_stuff> <class_name;>  # Every class name ends with ;
 classPattern = re.compile(r"\.class.+?(?P<class_name>\S+?;)", re.UNICODE)

@@ -9,7 +9,7 @@ def rename_field(field_name):
 
 
 def get_class_names(smali_files):
-    """ THis function will take in a list of smali files and return the classes found. """
+    """ This function will take in a list of smali files and return the classes found. """
     class_names = set()
     for smali_file in smali_files:
         with open(smali_file, "r", encoding="utf-8") as current_file:
