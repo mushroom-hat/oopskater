@@ -2,6 +2,7 @@ import base64
 import os
 import re
 import random
+import glob
 from timeit import default_timer as timer
 # Change here
 # TEST_FILE = r"C:\Users\tayzh\Documents\SIT\Year 1 Sem 2\ICT2207 Mobile Security\Project\Coursework1\ict2207-labP5-team4-2022-coursework\Coursework1\Project\app\src\main\java\com\singaporetech\audiorecorder\Exfiltration.java"
@@ -634,6 +635,15 @@ def obfuscate(directory_path, selected_algorithms):
                     generate_obfuscated_variables(each_method)  # use each method to generate obfuscated variables
 
                 rename_method(java_methods, class_name)
+                
+    # removes files (if any) from the folder to get a clean folder that will be containing the obfuscated files
+    new_directory_path = r"diffviewer\\new\\"
+    new_files = glob.glob(new_directory_path + '/*')
+    for f in new_files:
+        try:
+            os.remove(f)
+        except OSError as e:
+            print("Error: %s : %s" % (f, e.strerror))
 
     # this loop CHANGES the content
     for filename in os.listdir(directory_path):
