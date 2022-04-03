@@ -243,8 +243,8 @@ class Ui_MainWindow(object):
         self.messageBox.setWindowTitle("Import Options")
         self.messageBox.setText("Are you importing a file or directory?")
 
-        self.buttonoptionDirectory = self.messageBox.addButton("Directory", QMessageBox.YesRole)
-        self.buttonoptionFile = self.messageBox.addButton("File", QMessageBox.AcceptRole)
+        self.buttonoptionDirectory = self.messageBox.addButton("Java Directory", QMessageBox.YesRole)
+        self.buttonoptionFile = self.messageBox.addButton("Android APK", QMessageBox.AcceptRole)
         self.messageBox.setDefaultButton(self.buttonoptionFile)
 
         self.messageBox.exec_()
@@ -275,9 +275,14 @@ class Ui_MainWindow(object):
 
         self.importedItem = importedItem
         self.object_type = self.check_imported_item(str(importedItem))
+        number_of_files = len(
+            [item for item in os.listdir(importedItem) if os.path.isfile(os.path.join(importedItem, item))])
         if self.object_type == None:
             self.input_apk.setText("Input wrong format file. Please double check.")
+        elif number_of_files < 1:
+            self.input_apk.setText("Ensure that the directory loaded consist more than 1 file.")
         else:
+            print("Number of files detected:", str(number_of_files))
             self.disable_UI_checkbox(self.object_type)
             self.buttonObfuscation.show()
             self.input_progression.show()
