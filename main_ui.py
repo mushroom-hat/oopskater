@@ -8,6 +8,7 @@ import sys
 import main
 import diffviewer.mainwindow as diffviewer
 import subprocess
+import obfuscate_smali_files
 
 MAIN_WINDOW = None
 KEYSTORE = ""
@@ -524,6 +525,10 @@ class WorkerThreadProcessing(QThread):
         super().__init__()
         self.importItem = importFile
         self.algorithm_selected_dict = algorithm_selected_dict
+        try:
+            obfuscate_smali_files.check_dir()
+        except:
+            pass
 
     def run(self):
         self.upgrade_progress.emit("Processing ... ")

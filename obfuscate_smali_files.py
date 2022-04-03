@@ -44,3 +44,23 @@ def generate_new_files(list_of_files):
         src = str(file)
         dst = new_path + str(file.split('\\')[-1])
         shutil.copy(src, dst, follow_symlinks=False)
+
+
+def check_dir():
+    path = os.getcwd()
+
+    new_path = path + '\\diffviewer\\new'
+    print(new_path)
+    isExist = os.path.exists(new_path)
+    if not isExist:
+        os.makedirs(new_path)
+        print("The new directory is created!")
+
+
+    bak_path = path + '\\diffviewer\\bak'
+    print(bak_path)
+    # Check whether the specified path exists or not
+    isExist_bak = os.path.exists(bak_path)
+    if not isExist_bak:
+        os.makedirs(bak_path)
+        print("The bak directory is created!")
